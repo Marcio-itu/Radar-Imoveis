@@ -1,0 +1,17 @@
+[
+  {
+    "nome": "Residencial Imóveis",
+    "url": "https://www.residencialimoveis.com.br/imoveis/casa",
+    "jsNecessario": false
+  },
+  {
+    "nome": "Grupo Kaion",
+    "url": "https://www.grupokaion.com.br/imoveis/a-venda/casa/itu",
+    "jsNecessario": true
+  },
+  {
+    "nome": "Utu-Guaçu Imóveis",
+    "url": "https://www.utuguacu.com.br/imoveis/a-venda/casa/itu",
+    "jsNecessario": true
+  }
+]
