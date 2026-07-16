@@ -2,15 +2,13 @@ name: Buscar imóveis
 
 on:
   schedule:
+    # Roda a cada 12 horas. Horário em UTC (Brasil = UTC-3, sem horário de verão).
     - cron: "0 */12 * * *"
   workflow_dispatch: {}
+    # Isso permite rodar manualmente: no GitHub, aba "Actions" > "Buscar imóveis" > "Run workflow"
 
 permissions:
   contents: write
-
-concurrency:
-  group: buscar-imoveis
-  cancel-in-progress: false
 
 jobs:
   buscar:
