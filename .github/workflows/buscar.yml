@@ -45,15 +45,15 @@ jobs:
             git commit -m "Atualiza imoveis.json [automático]"
             git fetch origin main
 
-            if ! git rebase origin/main; then
+            if ! git git pull origin/main; then
               # imoveis.json é 100% gerado automaticamente (ninguém edita à
               # mão), então em caso de conflito é seguro manter a versão que
               # acabou de ser coletada nesta execução, em vez de travar o
               # workflow esperando resolução manual.
-              echo "Conflito em imoveis.json durante o rebase — mantendo a versão recém-coletada."
+              echo "Conflito em imoveis.json durante o git pull — mantendo a versão recém-coletada."
               git checkout --ours -- imoveis.json
               git add imoveis.json
-              git rebase --continue
+              git git pull --continue
             fi
 
             git push
