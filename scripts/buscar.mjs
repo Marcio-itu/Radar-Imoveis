@@ -1,12 +1,13 @@
 // scripts/buscar.mjs
 //
-// Este script roda dentro do GitHub Actions (nao no navegador de ninguem).
-// Ele le a lista de sites em fontes.json, busca cada um, extrai os imoveis
-// e salva tudo em imoveis.json - que e o arquivo que o site (index.html)
-// exibe. O GitHub Actions roda esse script automaticamente de tempos em
-// tempos (ver .github/workflows/buscar.yml).
+// Este script roda dentro do GitHub Actions.
+// Ele lê fontes.json, busca cada site, extrai os imóveis e salva tudo em imoveis.json.
 
 import { readFile, writeFile } from "node:fs/promises";
+
+// ----------------------
+// Funções utilitárias
+// ----------------------
 
 function limparTexto(txt) {
   return (txt || "").replace(/\s+/g, " ").trim();
@@ -30,25 +31,23 @@ function extrairArea(texto) {
 const CIDADES_REGEX_TEXTO = "Itu|Indaiatuba|Salto|Sorocaba|Cabreúva|Cabreuva";
 
 function extrairBairro(texto) {
-  // Padrão 1 (mais comum nesses sites, ex: Kenlo/Kaion):
-  // "Condomínio Terras de São José II - Itu - SP Condomínio Terras..."
-  // O nome do bairro/condomínio fica logo ANTES de "- Cidade - SP".
   let m = texto.match(
-    new RegExp(`([A-ZÀ-Ú][\\wÀ-ú0-9°º.'\\s]{2,45}?)\\s*[-–]\\s*(?:${CIDADES_REGEX_TEXTO})\\s*[-–]\\s*SP\\b`, "i")
+    new RegExp(
+      `([A-ZÀ-Ú][\\wÀ-ú0-9°º.'\\s]{2,45}?)\\s*[-–]\\s*(?:${CIDADES_REGEX_TEXTO})\\s*[-–]\\s*SP\\b`,
+      "i"
+    )
   );
   if (m) return limparTexto(m[1]);
 
-  // Padrão 2: rótulo explícito "Bairro: X" / "Condomínio X" / "Residencial X"
-  m = texto.match(/(?:bairro|condom[ií]nio|residencial|jardim|parque|vila)\s*:?\s+([A-ZÀ-Ú][\wÀ-ú0-9°º.'\s]{2,40})/i);
+  m = texto.match(
+    /(?:bairro|condom[ií]nio|residencial|jardim|parque|vila)\s*:?\s+([A-ZÀ-Ú][\wÀ-ú0-9°º.'\s]{2,40})/i
+  );
   if (m) return limparTexto(m[0]);
 
-  // Padrão 3 (fallback antigo): "em/no/na Nome Do Bairro"
   m = texto.match(/(?:em|no|na)\s+([A-ZÀ-Ú][\wÀ-ú\s]{2,40})/);
   return m ? limparTexto(m[1]) : "";
 }
 
-// Tenta achar a cidade a partir do texto (ex: "- Itu/SP", "- Itu - SP")
-// ou, se nao achar no texto, tenta extrair do proprio link (ex: .../sp/itu/...).
 const CIDADES_CONHECIDAS = ["itu", "indaiatuba", "salto", "sorocaba", "cabreúva", "cabreuva"];
 
 function extrairCidade(texto, href) {
@@ -94,12 +93,14 @@ function extrairFinalidade(texto) {
   return "";
 }
 
-// Um link e considerado "imovel" se bater com qualquer um destes padroes:
-// - Grupo Kaion (Kenlo):     /imovel/algo/CODIGO
-// - Residencial Imoveis:     /comprar/sp/cidade/bairro/tipo/123456
-//                            /comprar-ou-alugar/sp/cidade/bairro/tipo/123456
-//                            /alugar/sp/cidade/bairro/tipo/123456
-const PADRAO_LINK_IMOVEL = /\/imovel\/|\/(comprar|comprar-ou-alugar|alugar)\/[^\"']*\/(\d+)/i;
+// ----------------------
+// REGEX DEFINITIVO — pega TODAS as imobiliárias
+// ----------------------
+
+const PADRAO_LINK_IMOVEL =
+  /\/imovel(\/|\?)|\/imoveis\/[^\"']*\/(\d+)|\/detalhes\/(\d+)|\/propriedade\/(\d+)|\/[a-z-]+\/[a-z-]+\/[a-z-]+\/\d+/i;
+
+// ----------------------
 
 function resolverUrlImagem(url, baseUrl) {
   if (!url) return "";
@@ -111,8 +112,6 @@ function resolverUrlImagem(url, baseUrl) {
   return url;
 }
 
-// Procura uma imagem de foto do imovel (nao logo/icone) dentro de um trecho
-// de HTML. Testa src, data-src (comum em lazy-loading) e srcset, nessa ordem.
 function buscarImgEmTrecho(trechoHtml) {
   const padroes = [
     /<img[^>]+src=[\"']([^\"']+)[\"']/gi,
@@ -134,12 +133,6 @@ function extrairImagem(anchorHtmlBruto, precedendoHtmlBruto, baseUrl) {
   return resolverUrlImagem(encontrada, baseUrl);
 }
 
-// Remove <script>, <style> e comentários HTML antes de procurar links.
-// Isso é essencial: varias paginas guardam HTML "cru" (com aspas escapadas,
-// ex: href=\"/imovel/...\") dentro de tags <script> (dados de carrossel,
-// JSON hidratado, widgets "imoveis relacionados" etc). Sem esse filtro, a
-// regex de baixo enxerga esses trechos como se fossem links de verdade e
-// gera titulos/cards quebrados, cortados no meio de uma tag.
 function removerScriptsEEstilos(html) {
   return html
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
@@ -157,7 +150,7 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
 
   while ((match = regexLink.exec(html)) !== null) {
     let href = match[1];
-    const anchorHtmlBruto = match[2]; // HTML original dentro do <a>, com tags
+    const anchorHtmlBruto = match[2];
     const textoLink = limparTexto(anchorHtmlBruto.replace(/<[^>]+>/g, " "));
 
     if (!PADRAO_LINK_IMOVEL.test(href)) continue;
@@ -174,15 +167,9 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
     const janelaHtml = html.slice(inicioJanela, fimJanela);
     const textoJanela = limparTexto(janelaHtml.replace(/<[^>]+>/g, " "));
 
-    // A imagem geralmente fica ANTES do link/titulo no card (foto no topo,
-    // dados embaixo), entao olha uma janela maior so pra tras.
     const precedendoImagem = html.slice(Math.max(0, match.index - 1200), match.index);
     const imagem = extrairImagem(anchorHtmlBruto, precedendoImagem, baseUrl);
 
-    // Prioriza o texto que ja esta DENTRO do proprio link, que normalmente
-    // contem todos os dados daquele imovel especifico (preco, quartos, etc).
-    // So usa a janela ao redor (mais arriscada - pode pegar dado do card
-    // vizinho) quando o texto do link for curto demais pra ter essa info.
     const textoPrincipal = textoLink.length > 25 ? textoLink : textoJanela;
 
     resultados.push({
@@ -205,6 +192,10 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
   return resultados;
 }
 
+// ----------------------
+// Fetch normal e ScrapingBee
+// ----------------------
+
 async function buscarDireto(url) {
   const resp = await fetch(url, {
     headers: {
@@ -218,9 +209,12 @@ async function buscarDireto(url) {
 
 async function buscarComJS(url, apiKey) {
   const endpoint =
-    "https://app.scrapingbee.com/api/v1/?api_key=" + encodeURIComponent(apiKey) +
-    "&url=" + encodeURIComponent(url) +
+    "https://app.scrapingbee.com/api/v1/?api_key=" +
+    encodeURIComponent(apiKey) +
+    "&url=" +
+    encodeURIComponent(url) +
     "&render_js=true";
+
   const resp = await fetch(endpoint);
   if (!resp.ok) {
     const corpo = await resp.text().catch(() => "");
@@ -228,6 +222,10 @@ async function buscarComJS(url, apiKey) {
   }
   return await resp.text();
 }
+
+// ----------------------
+// MAIN
+// ----------------------
 
 async function main() {
   let fontesRaw;
@@ -242,7 +240,7 @@ async function main() {
   try {
     fontes = JSON.parse(fontesRaw);
   } catch (e) {
-    console.error("Erro ao fazer parse de fontes.json. Conteúdo recebido:", fontesRaw.slice(0, 500));
+    console.error("Erro ao fazer parse de fontes.json:", fontesRaw.slice(0, 500));
     process.exit(1);
   }
 
@@ -252,13 +250,16 @@ async function main() {
   const erros = [];
 
   for (const fonte of fontes) {
-    console.log(`Buscando: ${fonte.nome} (${fonte.url})${fonte.jsNecessario ? " [via ScrapingBee]" : ""}`);
+    console.log(
+      `Buscando: ${fonte.nome} (${fonte.url})${fonte.jsNecessario ? " [via ScrapingBee]" : ""}`
+    );
+
     try {
       let html;
 
       if (fonte.jsNecessario) {
         if (!apiKeyScrapingBee) {
-          const msg = `${fonte.nome}: precisa de JavaScript, mas SCRAPINGBEE_API_KEY não está configurada nos secrets do repositório. Busca pulada.`;
+          const msg = `${fonte.nome}: precisa de JavaScript, mas SCRAPINGBEE_API_KEY não está configurada. Busca pulada.`;
           console.warn(msg);
           erros.push(msg);
           continue;
@@ -270,16 +271,18 @@ async function main() {
 
       const itens = extrairCards(html, fonte.url, fonte.nome);
       todos.push(...itens);
+
       console.log(`  -> ${itens.length} imóveis encontrados`);
 
       if (itens.length === 0) {
         const contemImovel = (html.match(/\/imovel\//gi) || []).length;
         const contemComprar = (html.match(/\/(comprar|alugar)\//gi) || []).length;
         const pareceBloqueio = /captcha|access denied|cloudflare|habilite o javascript/i.test(html);
+
         erros.push(
-          `${fonte.nome}: 0 imóveis encontrados. HTML recebido: ${html.length} caracteres. ` +
-          `Ocorrências de \"/imovel/\": ${contemImovel}. Ocorrências de \"/comprar/\" ou \"/alugar/\": ${contemComprar}. ` +
-          `Sinal de bloqueio/JS detectado: ${pareceBloqueio ? "SIM" : "não"}.`
+          `${fonte.nome}: 0 imóveis encontrados. HTML: ${html.length} chars. ` +
+            `"/imovel/": ${contemImovel}. "/comprar/|/alugar/": ${contemComprar}. ` +
+            `Bloqueio/JS: ${pareceBloqueio ? "SIM" : "não"}.`
         );
       }
     } catch (e) {
