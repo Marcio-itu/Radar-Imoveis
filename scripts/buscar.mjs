@@ -84,7 +84,7 @@ function extrairFinalidade(texto) {
 // - Residencial Imoveis:     /comprar/sp/cidade/bairro/tipo/123456
 //                            /comprar-ou-alugar/sp/cidade/bairro/tipo/123456
 //                            /alugar/sp/cidade/bairro/tipo/123456
-const PADRAO_LINK_IMOVEL = /\/imovel\/|\/(comprar|comprar-ou-alugar|alugar)\/[^"']*\/\d+/i;
+const PADRAO_LINK_IMOVEL = /\/imovel\/|\/(comprar|comprar-ou-alugar|alugar)\/[^\"']*\/(\d+)/i;
 
 function resolverUrlImagem(url, baseUrl) {
   if (!url) return "";
@@ -100,9 +100,9 @@ function resolverUrlImagem(url, baseUrl) {
 // de HTML. Testa src, data-src (comum em lazy-loading) e srcset, nessa ordem.
 function buscarImgEmTrecho(trechoHtml) {
   const padroes = [
-    /<img[^>]+src=["']([^"']+)["']/gi,
-    /<img[^>]+data-src=["']([^"']+)["']/gi,
-    /<img[^>]+srcset=["']([^"',\s]+)/gi,
+    /<img[^>]+src=[\"']([^\"']+)[\"']/gi,
+    /<img[^>]+data-src=[\"']([^\"']+)[\"']/gi,
+    /<img[^>]+srcset=[\"']([^\"',\s]+)/gi,
   ];
   for (const padrao of padroes) {
     const encontrados = [...trechoHtml.matchAll(padrao)]
@@ -123,7 +123,7 @@ function extrairCards(html, baseUrl, nomeFonte) {
   const resultados = [];
   const vistos = new Set();
 
-  const regexLink = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+  const regexLink = /<a\b[^>]*href=[\"']([^\"']+)[\"'][^>]*>([\s\S]*?)<\/a>/gi;
   let match;
 
   while ((match = regexLink.exec(html)) !== null) {
@@ -201,8 +201,21 @@ async function buscarComJS(url, apiKey) {
 }
 
 async function main() {
-  const fontesRaw = await readFile(new URL("../fontes.json", import.meta.url), "utf-8");
-  const fontes = JSON.parse(fontesRaw);
+  let fontesRaw;
+  try {
+    fontesRaw = await readFile(new URL("../fontes.json", import.meta.url), "utf-8");
+  } catch (e) {
+    console.error("Erro ao ler fontes.json:", e.message);
+    process.exit(1);
+  }
+
+  let fontes;
+  try {
+    fontes = JSON.parse(fontesRaw);
+  } catch (e) {
+    console.error("Erro ao fazer parse de fontes.json. Conteúdo recebido:", fontesRaw.slice(0, 500));
+    process.exit(1);
+  }
 
   const apiKeyScrapingBee = process.env.SCRAPINGBEE_API_KEY || "";
 
@@ -236,7 +249,7 @@ async function main() {
         const pareceBloqueio = /captcha|access denied|cloudflare|habilite o javascript/i.test(html);
         erros.push(
           `${fonte.nome}: 0 imóveis encontrados. HTML recebido: ${html.length} caracteres. ` +
-          `Ocorrências de "/imovel/": ${contemImovel}. Ocorrências de "/comprar/" ou "/alugar/": ${contemComprar}. ` +
+          `Ocorrências de \"/imovel/\": ${contemImovel}. Ocorrências de \"/comprar/\" ou \"/alugar/\": ${contemComprar}. ` +
           `Sinal de bloqueio/JS detectado: ${pareceBloqueio ? "SIM" : "não"}.`
         );
       }
