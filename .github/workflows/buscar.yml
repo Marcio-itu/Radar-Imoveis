@@ -32,5 +32,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add imoveis.json
-          git diff --staged --quiet || git commit -m "Atualiza imoveis.json [automático]"
-          git push
+          if ! git diff --staged --quiet; then
+            git commit -m "Atualiza imoveis.json [automático]"
+            git pull --rebase origin main
+            git push
+          else
+            echo "Nada mudou em imoveis.json, nada para salvar."
+          fi
