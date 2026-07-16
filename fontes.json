@@ -73,10 +73,5 @@
     "nome": "Ferraz e Luiz Imóveis",
     "url": "https://www.ferrazeluizimoveis.com.br/imovel/?tipo=casa&finalidade=venda&cidade=itu",
     "jsNecessario": false
-  },
-  {
-    "nome": "VivaReal",
-    "url": "https://www.vivareal.com.br/venda/sp/itu/",
-    "jsNecessario": false
   }
 ]
