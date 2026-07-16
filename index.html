@@ -755,7 +755,12 @@ function aplicarFiltrosEExibir(){
       if(isNaN(area) || area < parseFloat(areaMinima)) return false;
     }
 
-    if(bairroFiltro && !(item.bairro || "").toLowerCase().includes(bairroFiltro)) return false;
+    // FIX: Filtro de bairro — limpa e normaliza ANTES de comparar
+    if(bairroFiltro){
+      const bairroItem = limparTexto(item.bairro || "").toLowerCase();
+      if(!bairroItem.includes(bairroFiltro)) return false;
+    }
+
     if(cidadeFiltro && item.cidade !== cidadeFiltro) return false;
 
     return true;
