@@ -1,12 +1,12 @@
 // scripts/buscar.mjs
 //
-// Este script roda dentro do GitHub Actions.
-// Ele lê fontes.json, busca cada site, extrai os imóveis e salva tudo em imoveis.json.
+// Roda no GitHub Actions.
+// Lê fontes.json, busca cada site, extrai imóveis e salva em imoveis.json + histórico por data.
 
 import { readFile, writeFile } from "node:fs/promises";
 
 // ----------------------
-// Funções utilitárias
+// Utilitários básicos
 // ----------------------
 
 function limparTexto(txt) {
@@ -14,8 +14,18 @@ function limparTexto(txt) {
 }
 
 function extrairPreco(texto) {
-  const m = texto.match(/R\$\s?[\d.,]+/);
-  return m ? m[0] : "";
+  // Formatos comuns: "R$ 1.200.000", "R$1.200.000,00", etc.
+  let m = texto.match(/R\$\s?[\d.,]+/);
+  if (m) return m[0];
+
+  // Fallback: "valor: R$ 1.200.000"
+  m = texto.match(/valor[: ]+R\$\s?[\d.,]+/i);
+  if (m) return m[0].replace(/valor[: ]+/i, "").trim();
+
+  // "sob consulta"
+  if (/sob consulta/i.test(texto)) return "Sob consulta";
+
+  return "";
 }
 
 function extrairQuartos(texto) {
@@ -94,12 +104,14 @@ function extrairFinalidade(texto) {
 }
 
 // ----------------------
-// REGEX DEFINITIVO — pega TODAS as imobiliárias
+// Regex mais abrangente para links de imóveis
 // ----------------------
 
 const PADRAO_LINK_IMOVEL =
-  /\/imovel(\/|\?)|\/imoveis\/[^\"']*\/(\d+)|\/detalhes\/(\d+)|\/propriedade\/(\d+)|\/[a-z-]+\/[a-z-]+\/[a-z-]+\/\d+/i;
+  /\/imovel(\/|\?)|\/imoveis\/[^"']*\/(\d+)|\/detalhes\/(\d+)|\/propriedade\/(\d+)|\/[a-z-]+\/[a-z-]+\/[a-z-]+\/\d+/i;
 
+// ----------------------
+// Imagens
 // ----------------------
 
 function resolverUrlImagem(url, baseUrl) {
@@ -114,16 +126,26 @@ function resolverUrlImagem(url, baseUrl) {
 
 function buscarImgEmTrecho(trechoHtml) {
   const padroes = [
-    /<img[^>]+src=[\"']([^\"']+)[\"']/gi,
-    /<img[^>]+data-src=[\"']([^\"']+)[\"']/gi,
-    /<img[^>]+srcset=[\"']([^\"',\s]+)/gi,
+    /<img[^>]+src=["']([^"']+)["']/gi,
+    /<img[^>]+data-src=["']([^"']+)["']/gi,
+    /<img[^>]+srcset=["']([^"',\s]+)/gi
   ];
+
   for (const padrao of padroes) {
     const encontrados = [...trechoHtml.matchAll(padrao)]
       .map(m => m[1])
-      .filter(url => url && !/logo|icone|icon|avatar|placeholder|\.svg/i.test(url));
+      .filter(
+        url =>
+          url &&
+          !/logo|icone|icon|avatar|placeholder|\.svg/i.test(url)
+      );
     if (encontrados.length > 0) return encontrados[encontrados.length - 1];
   }
+
+  // fallback para lazy-loading
+  const lazy = trechoHtml.match(/data-src=["']([^"']+)["']/i);
+  if (lazy) return lazy[1];
+
   return "";
 }
 
@@ -133,6 +155,10 @@ function extrairImagem(anchorHtmlBruto, precedendoHtmlBruto, baseUrl) {
   return resolverUrlImagem(encontrada, baseUrl);
 }
 
+// ----------------------
+// Limpeza de HTML
+// ----------------------
+
 function removerScriptsEEstilos(html) {
   return html
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
@@ -140,12 +166,19 @@ function removerScriptsEEstilos(html) {
     .replace(/<!--[\s\S]*?-->/g, " ");
 }
 
+// ----------------------
+// Extração de cards
+// ----------------------
+
 function extrairCards(htmlBruto, baseUrl, nomeFonte) {
   const resultados = [];
   const vistos = new Set();
+
+  // remove scripts/estilos/comentários
   const html = removerScriptsEEstilos(htmlBruto);
 
-  const regexLink = /<a\b[^>]*href=[\"']([^\"']+)[\"'][^>]*>([\s\S]*?)<\/a>/gi;
+  // captura links em <a href="...">
+  const regexLink = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
   let match;
 
   while ((match = regexLink.exec(html)) !== null) {
@@ -153,23 +186,29 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
     const anchorHtmlBruto = match[2];
     const textoLink = limparTexto(anchorHtmlBruto.replace(/<[^>]+>/g, " "));
 
+    // se o href não parece link de imóvel, pula
     if (!PADRAO_LINK_IMOVEL.test(href)) continue;
 
+    // normaliza href relativo
     if (href.startsWith("/")) {
       const base = new URL(baseUrl);
       href = base.origin + href;
     }
+
     if (vistos.has(href)) continue;
     vistos.add(href);
 
-    const inicioJanela = Math.max(0, match.index - 400);
-    const fimJanela = Math.min(html.length, match.index + 400);
+    // janelas maiores para capturar preço/imagem/bairro/cidade
+    const inicioJanela = Math.max(0, match.index - 2500);
+    const fimJanela = Math.min(html.length, match.index + 2500);
     const janelaHtml = html.slice(inicioJanela, fimJanela);
     const textoJanela = limparTexto(janelaHtml.replace(/<[^>]+>/g, " "));
 
-    const precedendoImagem = html.slice(Math.max(0, match.index - 1200), match.index);
+    // imagem geralmente fica bem antes do link
+    const precedendoImagem = html.slice(Math.max(0, match.index - 3500), match.index);
     const imagem = extrairImagem(anchorHtmlBruto, precedendoImagem, baseUrl);
 
+    // prioriza texto dentro do link; se for curto, usa janela
     const textoPrincipal = textoLink.length > 25 ? textoLink : textoJanela;
 
     resultados.push({
@@ -185,7 +224,46 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       cidade: extrairCidade(textoPrincipal, href),
       tipo: extrairTipo(textoPrincipal, href),
       finalidade: extrairFinalidade(textoPrincipal),
-      link: href,
+      link: href
+    });
+  }
+
+  // captura links em onclick="location.href='...'"
+  const regexOnclick = /onclick=["']location\.href=['"]([^"']+)['"]/gi;
+  let m2;
+  while ((m2 = regexOnclick.exec(html)) !== null) {
+    let href = m2[1];
+    if (!PADRAO_LINK_IMOVEL.test(href)) continue;
+
+    if (href.startsWith("/")) {
+      const base = new URL(baseUrl);
+      href = base.origin + href;
+    }
+    if (vistos.has(href)) continue;
+    vistos.add(href);
+
+    const inicioJanela = Math.max(0, m2.index - 2500);
+    const fimJanela = Math.min(html.length, m2.index + 2500);
+    const janelaHtml = html.slice(inicioJanela, fimJanela);
+    const textoJanela = limparTexto(janelaHtml.replace(/<[^>]+>/g, " "));
+
+    const precedendoImagem = html.slice(Math.max(0, m2.index - 3500), m2.index);
+    const imagem = extrairImagem(janelaHtml, precedendoImagem, baseUrl);
+
+    resultados.push({
+      fonte: nomeFonte,
+      titulo: textoJanela.slice(0, 70) || "Imóvel",
+      imagem,
+      preco: extrairPreco(textoJanela),
+      quartos: extrairQuartos(textoJanela),
+      suites: extrairSuites(textoJanela),
+      vagas: extrairVagas(textoJanela),
+      area: extrairArea(textoJanela),
+      bairro: extrairBairro(textoJanela),
+      cidade: extrairCidade(textoJanela, href),
+      tipo: extrairTipo(textoJanela, href),
+      finalidade: extrairFinalidade(textoJanela),
+      link: href
     });
   }
 
@@ -200,8 +278,8 @@ async function buscarDireto(url) {
   const resp = await fetch(url, {
     headers: {
       "User-Agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
-    },
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+    }
   });
   if (!resp.ok) throw new Error("HTTP " + resp.status);
   return await resp.text();
@@ -277,7 +355,8 @@ async function main() {
       if (itens.length === 0) {
         const contemImovel = (html.match(/\/imovel\//gi) || []).length;
         const contemComprar = (html.match(/\/(comprar|alugar)\//gi) || []).length;
-        const pareceBloqueio = /captcha|access denied|cloudflare|habilite o javascript/i.test(html);
+        const pareceBloqueio =
+          /captcha|access denied|cloudflare|habilite o javascript/i.test(html);
 
         erros.push(
           `${fonte.nome}: 0 imóveis encontrados. HTML: ${html.length} chars. ` +
@@ -291,14 +370,25 @@ async function main() {
     }
   }
 
+  const dataHoje = new Date().toISOString().split("T")[0];
+
   const saida = {
     atualizadoEm: new Date().toISOString(),
+    geradoEm: dataHoje,
+    total: todos.length,
     imoveis: todos,
-    erros,
+    erros
   };
 
   await writeFile(
     new URL("../imoveis.json", import.meta.url),
+    JSON.stringify(saida, null, 2),
+    "utf-8"
+  );
+
+  // histórico diário
+  await writeFile(
+    new URL(`../historico/imoveis-${dataHoje}.json`, import.meta.url),
     JSON.stringify(saida, null, 2),
     "utf-8"
   );
