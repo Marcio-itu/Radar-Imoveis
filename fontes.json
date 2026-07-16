@@ -50,58 +50,8 @@
     "jsNecessario": true
   },
   {
-    "nome": "Camilo Martins Imóveis",
-    "url": "https://www.camilomartinsimoveis.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Carmo Imóveis Itu",
-    "url": "https://www.carmoimoveisitu.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Douglas Navarro Imóveis",
-    "url": "https://douglasnavarro.com.br/venda/casa/itu/",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Ferraz e Luiz Imóveis",
-    "url": "https://www.ferrazeluizimoveis.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Imperial Imóveis Itu",
-    "url": "https://www.imperialimoveisitu.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "LG Imóveis Itu",
-    "url": "https://www.lgimoveisitu.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "MN Imóveis Itu",
-    "url": "https://www.mnimoveisitu.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Prime Itu Imóveis",
-    "url": "https://www.primeituimoveis.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
     "nome": "Regina Marchi Imóveis",
     "url": "https://www.reginamarchi.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Ricardo Iarussi Imóveis",
-    "url": "https://www.ricardoiarussi.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Silvana Carvalho Imóveis",
-    "url": "https://www.silvanacarvalho.com.br/imoveis/a-venda/casa/itu",
     "jsNecessario": true
   },
   {
@@ -110,13 +60,23 @@
     "jsNecessario": true
   },
   {
-    "nome": "Trivellato Santana Imóveis",
-    "url": "https://www.trivellatosantana.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
     "nome": "Proimóvel Itu",
     "url": "https://www.proimovel-itu.com.br/imoveis/a-venda/casa/itu",
     "jsNecessario": true
+  },
+  {
+    "nome": "Carmo Imóveis Itu",
+    "url": "https://www.carmoimoveisitu.com.br/imovel/?tipo=casa&finalidade=venda&cidade=itu",
+    "jsNecessario": false
+  },
+  {
+    "nome": "Ferraz e Luiz Imóveis",
+    "url": "https://www.ferrazeluizimoveis.com.br/imovel/?tipo=casa&finalidade=venda&cidade=itu",
+    "jsNecessario": false
+  },
+  {
+    "nome": "VivaReal",
+    "url": "https://www.vivareal.com.br/venda/sp/itu/",
+    "jsNecessario": false
   }
 ]
