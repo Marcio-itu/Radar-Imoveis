@@ -2,14 +2,12 @@ name: Buscar imóveis
 
 on:
   schedule:
-    # Roda a cada 12 horas. Horário em UTC (Brasil = UTC-3).
     - cron: "0 */12 * * *"
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
-# Garante que só uma execução roda por vez
 concurrency:
   group: buscar-imoveis
   cancel-in-progress: false
