@@ -1047,8 +1047,9 @@ document.querySelectorAll("#opcoes-quartos input, #opcoes-tipo input, #faixa-val
 document.getElementById("area-minima").addEventListener("input", aplicarFiltrosEExibir);
 document.getElementById("bairro-filtro").addEventListener("input", aplicarFiltrosEExibir);
 
-if(!tentarRenderizarModoCliente()){
-  carregarDados();
+window.addEventListener("DOMContentLoaded", () => {
+  if(!tentarRenderizarModoCliente()){
+    carregarDados();
 }
 </script>
 
