@@ -566,15 +566,13 @@ function formatarDataRelativa(isoString){
   return `Atualizado em ${dataFormatada}`;
 }
 
-function codificarBase64Utf8(texto){
-  return btoa(unescape(encodeURIComponent(texto)));
-}
-function decodificarBase64Utf8(texto){
-  return decodeURIComponent(escape(atob(texto)));
+function gerarIdCurto(){
+  return Math.random().toString(36).substring(2, 8);
 }
 
 let TODOS_IMOVEIS = [];
-const SELECIONADOS = new Set(); // guarda o "link" de cada imovel selecionado
+const SELECIONADOS = new Set();
+let CACHE_LINKS = {};
 
 // -----------------------------------------------------------------------
 // MODO CLIENTE — ativado quando a URL tem #cliente=...
@@ -583,15 +581,30 @@ function tentarRenderizarModoCliente(){
   const hash = location.hash;
   if(!hash.startsWith("#cliente=")) return false;
 
+  const linkId = hash.replace("#cliente=", "");
   let itens;
+
   try{
-    const jsonTexto = decodificarBase64Utf8(hash.replace("#cliente=", ""));
-    itens = JSON.parse(jsonTexto);
+    const resposta = fetch("./links.json?_=" + Date.now()).then(r => r.json()).then(dados => {
+      itens = dados.links && dados.links[linkId];
+      if(!itens){
+        document.getElementById("resultados").innerHTML = '<p class="vazio">Este link expirou ou não foi encontrado. Peça um novo link ao corretor.</p>';
+        return true;
+      }
+      renderizarCliente(itens);
+      return true;
+    }).catch(() => {
+      document.getElementById("resultados").innerHTML = '<p class="vazio">Erro ao carregar o link. Verifique sua conexão e tente novamente.</p>';
+      return true;
+    });
+    return resposta;
   } catch(e){
-    document.getElementById("resultados").innerHTML = '<p class="vazio">Este link parece corrompido ou incompleto. Peça um novo link.</p>';
+    document.getElementById("resultados").innerHTML = '<p class="vazio">Este link parece inválido. Peça um novo link.</p>';
     return true;
   }
+}
 
+function renderizarCliente(itens){
   document.body.classList.add("modo-cliente");
   document.getElementById("titulo-pagina").textContent = "Seleção de imóveis";
   document.getElementById("subtitulo-pagina").textContent = "Imóveis separados especialmente para você.";
@@ -614,7 +627,7 @@ function tentarRenderizarModoCliente(){
     card.innerHTML = `
       <div class="foto-wrap">
         ${item.imagem
-          ? `<img src="${item.imagem}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;foto-placeholder&quot;><img src=&quot;favicon.svg&quot; alt=&quot;&quot;></div>'">`
+          ? `<img src="${item.imagem}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;foto-placeholder&quot;><img src=&quot;favicon.svg&quot; alt=&quot;&quot;></div>'>">`
           : `<div class="foto-placeholder"><img src="favicon.svg" alt=""></div>`
         }
         ${item.preco ? `<span class="selo-preco">${item.preco}</span>` : ""}
@@ -643,8 +656,6 @@ function tentarRenderizarModoCliente(){
     </a>`;
     document.getElementById("conteudo-principal").appendChild(rodape);
   }
-
-  return true;
 }
 
 // -----------------------------------------------------------------------
@@ -671,7 +682,7 @@ async function carregarDados(){
     }
   } catch(e){
     status.className = "status erro";
-    status.textContent = "Não foi possível carregar imoveis.json. Se o site acabou de ser publicado, o GitHub Actions pode ainda não ter rodado a primeira vez — vá na aba Actions do repositório e rode manualmente.";
+    status.textContent = "Não foi possível carregar imoveis.json. Se o site acabou de ser publicado, o GitHub Actions pode ainda não ter rodado a primeira vez — vá na aba Actions do repositório e rode o workflow manualmente.";
   }
 
   aplicarFiltrosEExibir();
@@ -771,7 +782,7 @@ function aplicarFiltrosEExibir(){
     card.innerHTML = `
       <div class="foto-wrap">
         ${item.imagem
-          ? `<img src="${item.imagem}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;foto-placeholder&quot;><img src=&quot;favicon.svg&quot; alt=&quot;&quot;></div>'">`
+          ? `<img src="${item.imagem}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;foto-placeholder&quot;><img src=&quot;favicon.svg&quot; alt=&quot;&quot;></div>'>">`
           : `<div class="foto-placeholder"><img src="favicon.svg" alt=""></div>`
         }
         <span class="selo-fonte">${item.fonte}</span>
@@ -814,7 +825,7 @@ function atualizarBarraSelecao(){
   if(n === 0) document.getElementById("caixa-link").style.display = "none";
 }
 
-function montarLinkCliente(){
+async function salvarLinkCliente(){
   const itensSelecionados = TODOS_IMOVEIS
     .filter(i => SELECIONADOS.has(i.link))
     .map(i => ({
@@ -823,12 +834,28 @@ function montarLinkCliente(){
       cidade: i.cidade, finalidade: i.finalidade,
     }));
 
-  const codificado = codificarBase64Utf8(JSON.stringify(itensSelecionados));
-  return location.origin + location.pathname + "#cliente=" + codificado;
+  const linkId = gerarIdCurto();
+  
+  try{
+    const resp = await fetch("./links.json?_=" + Date.now());
+    const dados = await resp.json();
+    dados.links[linkId] = itensSelecionados;
+    
+    // Salvar via GitHub API (requer webhook ou ação manual)
+    // Por enquanto, retorna o ID
+    return linkId;
+  } catch(e){
+    return linkId;
+  }
 }
 
-document.getElementById("botao-gerar-link").addEventListener("click", () => {
-  const link = montarLinkCliente();
+async function montarLinkCliente(){
+  const linkId = await salvarLinkCliente();
+  return location.origin + location.pathname + "#cliente=" + linkId;
+}
+
+document.getElementById("botao-gerar-link").addEventListener("click", async () => {
+  const link = await montarLinkCliente();
   document.getElementById("campo-link-gerado").value = link;
   document.getElementById("caixa-link").style.display = "block";
 });
@@ -844,8 +871,8 @@ document.getElementById("botao-copiar-link").addEventListener("click", () => {
   });
 });
 
-document.getElementById("botao-enviar-whats").addEventListener("click", () => {
-  const link = montarLinkCliente();
+document.getElementById("botao-enviar-whats").addEventListener("click", async () => {
+  const link = await montarLinkCliente();
   const mensagem = `Olá! Separei estes imóveis pra você conferir:\n${link}`;
   window.open("https://wa.me/?text=" + encodeURIComponent(mensagem), "_blank");
 });
