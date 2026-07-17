@@ -1042,15 +1042,17 @@ document.getElementById("botao-limpar-selecao").addEventListener("click", () => 
 document.getElementById("botao-limpar-filtros").addEventListener("click", limparFiltros);
 
 document.querySelectorAll("#opcoes-quartos input, #opcoes-tipo input, #faixa-valor, #finalidade, #vagas-minimo, #suites-minimo, #cidade-filtro")
-  .forEach(el => el.addEventListener("change", aplicarFiltrosExibir));
-});
+  .forEach(el => el.addEventListener("change", aplicarFiltrosEExibir));
+
 document.getElementById("area-minima").addEventListener("input", aplicarFiltrosEExibir);
 document.getElementById("bairro-filtro").addEventListener("input", aplicarFiltrosEExibir);
 
 window.addEventListener("DOMContentLoaded", () => {
   if(!tentarRenderizarModoCliente()){
     carregarDados();
-}
+  }
+});
+
 </script>
 
 </body>
