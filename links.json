@@ -1,6 +1,6 @@
 {
   "links": {
-    "7doh7h": {
+    "vnep7r": {
       "itens": [
         {
           "titulo": "quot;#span_maximo2&quot;).html($(this).val());\" onfocus=\"$(this).val(&",
@@ -29,37 +29,9 @@
           "cidade": "ITU",
           "finalidade": "venda",
           "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-parque-ytu-xapada/casa/34952548"
-        },
-        {
-          "titulo": "iv> 2 vagas 156 m² Venda R$ 415.000,00 CB02820 CASA Condomínio Parque ",
-          "imagem": "",
-          "preco": "R$ 415.000,00",
-          "tipo": "casa",
-          "quartos": "4",
-          "suites": "4",
-          "vagas": "2",
-          "area": "156",
-          "bairro": "Condomínio Parque Ytu Xapada",
-          "cidade": "Itu",
-          "finalidade": "venda e aluguel",
-          "link": "https://www.residencialimoveis.com.br/comprar-ou-alugar/sp/itu/condominio-jardim-plaza-athenee/casa/69353002"
-        },
-        {
-          "titulo": "class=\"descricao\"> Venda R$ 1.500.000,00 CC03859 CASA Condomínio Jardi",
-          "imagem": "",
-          "preco": "R$ 1.500.000,00",
-          "tipo": "casa",
-          "quartos": "4",
-          "suites": "4",
-          "vagas": "2",
-          "area": "1001",
-          "bairro": "Condomínio Jardim Plaza Athénée",
-          "cidade": "ITU",
-          "finalidade": "venda e aluguel",
-          "link": "https://www.residencialimoveis.com.br/comprar/sp/salto/condominio-residencial-costa-das-areias/casa/70115793"
         }
       ],
-      "criadoEm": "2026-07-18T11:02:36.705Z"
+      "criadoEm": "2026-07-18T11:02:43.071Z"
     }
   }
 }
