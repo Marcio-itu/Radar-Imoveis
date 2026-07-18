@@ -14,15 +14,12 @@ function limparTexto(txt) {
 }
 
 function extrairPreco(texto) {
-  // Formatos comuns: "R$ 1.200.000", "R$1.200.000,00", etc.
   let m = texto.match(/R\$\s?[\d.,]+/);
   if (m) return m[0];
 
-  // Fallback: "valor: R$ 1.200.000"
   m = texto.match(/valor[: ]+R\$\s?[\d.,]+/i);
   if (m) return m[0].replace(/valor[: ]+/i, "").trim();
 
-  // "sob consulta"
   if (/sob consulta/i.test(texto)) return "Sob consulta";
 
   return "";
@@ -142,7 +139,6 @@ function buscarImgEmTrecho(trechoHtml) {
     if (encontrados.length > 0) return encontrados[encontrados.length - 1];
   }
 
-  // fallback para lazy-loading
   const lazy = trechoHtml.match(/data-src=["']([^"']+)["']/i);
   if (lazy) return lazy[1];
 
@@ -171,13 +167,32 @@ function removerScriptsEEstilos(html) {
 // ----------------------
 
 function extrairCards(htmlBruto, baseUrl, nomeFonte) {
-  const resultados = [];
-  const vistos = new Set();
+  const porLink = new Map(); // href -> resultado (permite atualizar com dado melhor)
 
-  // remove scripts/estilos/comentários
   const html = removerScriptsEEstilos(htmlBruto);
 
-  // captura links em <a href="...">
+  function registrar(href, candidato) {
+    const existente = porLink.get(href);
+    if (!existente) {
+      porLink.set(href, candidato);
+      return;
+    }
+    porLink.set(href, {
+      ...existente,
+      imagem: existente.imagem || candidato.imagem,
+      preco: existente.preco || candidato.preco,
+      quartos: existente.quartos || candidato.quartos,
+      suites: existente.suites || candidato.suites,
+      vagas: existente.vagas || candidato.vagas,
+      area: existente.area || candidato.area,
+      bairro: existente.bairro || candidato.bairro,
+      cidade: existente.cidade || candidato.cidade,
+      tipo: existente.tipo || candidato.tipo,
+      finalidade: existente.finalidade || candidato.finalidade,
+      titulo: (existente.titulo && existente.titulo !== "Imóvel") ? existente.titulo : candidato.titulo,
+    });
+  }
+
   const regexLink = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
   let match;
 
@@ -186,32 +201,24 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
     const anchorHtmlBruto = match[2];
     const textoLink = limparTexto(anchorHtmlBruto.replace(/<[^>]+>/g, " "));
 
-    // se o href não parece link de imóvel, pula
     if (!PADRAO_LINK_IMOVEL.test(href)) continue;
 
-    // normaliza href relativo
     if (href.startsWith("/")) {
       const base = new URL(baseUrl);
       href = base.origin + href;
     }
 
-    if (vistos.has(href)) continue;
-    vistos.add(href);
-
-    // janelas maiores para capturar preço/imagem/bairro/cidade
     const inicioJanela = Math.max(0, match.index - 2500);
     const fimJanela = Math.min(html.length, match.index + 2500);
     const janelaHtml = html.slice(inicioJanela, fimJanela);
     const textoJanela = limparTexto(janelaHtml.replace(/<[^>]+>/g, " "));
 
-    // imagem geralmente fica bem antes do link
     const precedendoImagem = html.slice(Math.max(0, match.index - 3500), match.index);
     const imagem = extrairImagem(anchorHtmlBruto, precedendoImagem, baseUrl);
 
-    // prioriza texto dentro do link; se for curto, usa janela
     const textoPrincipal = textoLink.length > 25 ? textoLink : textoJanela;
 
-    resultados.push({
+    registrar(href, {
       fonte: nomeFonte,
       titulo: textoLink || textoJanela.slice(0, 70) || "Imóvel",
       imagem,
@@ -228,7 +235,6 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
     });
   }
 
-  // captura links em onclick="location.href='...'"
   const regexOnclick = /onclick=["']location\.href=['"]([^"']+)['"]/gi;
   let m2;
   while ((m2 = regexOnclick.exec(html)) !== null) {
@@ -239,8 +245,6 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       const base = new URL(baseUrl);
       href = base.origin + href;
     }
-    if (vistos.has(href)) continue;
-    vistos.add(href);
 
     const inicioJanela = Math.max(0, m2.index - 2500);
     const fimJanela = Math.min(html.length, m2.index + 2500);
@@ -250,7 +254,7 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
     const precedendoImagem = html.slice(Math.max(0, m2.index - 3500), m2.index);
     const imagem = extrairImagem(janelaHtml, precedendoImagem, baseUrl);
 
-    resultados.push({
+    registrar(href, {
       fonte: nomeFonte,
       titulo: textoJanela.slice(0, 70) || "Imóvel",
       imagem,
@@ -267,7 +271,7 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
     });
   }
 
-  return resultados;
+  return Array.from(porLink.values());
 }
 
 // ----------------------
