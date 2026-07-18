@@ -108,7 +108,7 @@
       ],
       "criadoEm": "2026-07-18T11:10:28.556Z"
     },
-    "khf656": {
+    "zfo3bm": {
       "itens": [
         {
           "titulo": "i class=\"icon expand\"> 420 m² Venda R$ 1.450.000,00 CC04391 Casa resid",
@@ -165,9 +165,79 @@
           "cidade": "ITU",
           "finalidade": "venda",
           "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-saint-paul/casa/72677681"
+        },
+        {
+          "titulo": "CA8916-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 354 m² 4 Quartos 4 Suítes 4 Banheiros 3 Vagas Venda R$ 3.490.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3120-dJw0sgkM4jXe65lgiO46W55ejDtUjI-b37iO-S8u-NV+fz+KlllIn0PEGdlLE9cdM7KmR1eOtiZC6yDpe5ECVp8miK+0fKZON5eHVN0wMrwSdr2XD8dsCW83IU1TygOfrgky+gE63rDFVTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oLwFffjnJmQZo1oFL4hPXoH4xwTV65f1uvISux44RMDv+uPFRGHlB-PhPAuPZuqVtdXmqdXlFmVGLIa7k3pldfDg-T-bRyPM1Zv8L3K--SzNf3vXe20c32tg4xO9JHXKIcKa5qoCiQJEGZ4M3BJqRO29rnGsACzNWqH.jpg",
+          "preco": "R$ 3.490.000",
+          "tipo": "casa",
+          "quartos": "4",
+          "suites": "4",
+          "vagas": "3",
+          "area": "354",
+          "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-354-m/CA8916-UTG?from=sale"
+        },
+        {
+          "titulo": "CA9086-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 284.38 m² 3 Quartos 4 Banheiros 6 Vagas Venda R$ 2.890.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2tj4Isy9hM+tMcFZ5rmoXS-8YSkwPXArkG224LsuL6B+uDGZezS+IAh9r7OJVeemZJeWtIQM0JgXcR-ZwDrfKeCESZppiCGvUzHRbFCQ0lR8QE3lT1cmgSXT6Tzx0MSxA2oMsTokByPEv-YBWdlQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oLwFffjnJmQZo1oFL4hPXoH4xwTV65f1uvISux44RMDv+uPFRGHlB-PhPAuPZuqVtdXmqdXlFmVGLIa7k3pldfDg-T-bRyPM1Zv8L3K--SzNf3vXe20c32tg4xO9JHXKIcKa5qoCiQJEGZ4M3BJqRO29rnGsACzNWqH.jpg",
+          "preco": "R$ 2.890.000",
+          "tipo": "casa",
+          "quartos": "3",
+          "suites": "",
+          "vagas": "6",
+          "area": "284.38",
+          "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-284-m/CA9086-UTG?from=sale"
+        },
+        {
+          "titulo": "CA9232-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 285.03 m² 4 Quartos 4 Suítes 4 Banheiros 6 Vagas Venda R$ 5.000.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1hp4fNF30g4sOdBRqGGgTu+5ZmXvdmpgRir+MPOs+-nzsjSeJvX+Js86a+uME7xgqxITZkVL11XW8V4ai3QD77FAmNonWO3qmSQEbB2f1II5gUuuTlLzlm5bZGTslgU+RyKFPjC9hzcRaa7LUNGO9hHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+SuKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbwFk1vATeRN6kq-ldaU16GrPh6EYlo98Oqa-ae2Ovz7G7S0YH2rlZgA49DaI8VcaNvoHWhCEDo1MD0AqUq2ubmF4k35IGDNpE8=.jpg",
+          "preco": "R$ 5.000.000",
+          "tipo": "casa",
+          "quartos": "4",
+          "suites": "4",
+          "vagas": "6",
+          "area": "285.03",
+          "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-285-m/CA9232-UTG?from=sale"
+        },
+        {
+          "titulo": "CA8157-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 513 m² 5 Quartos 4 Suítes 6 Banheiros Venda R$ 4.450.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3BZ+o1V3CU+qvgJeefhuzi18pu+19u1qXm80871r73J8sjdVf3ElN8W2rLVE3ClurVbWes6GFInZfRfayvFAqGOIklKkxewh12SRZ92TmxO8x4WmQdo2VCGGLv1r0cfxyj8O971gDOpR5-BWl5xSbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuW9ZBg6UHwwyVTbFOvhrolNeUgKL9PE-XOlM4p72arfW3PvfxBey1YW+5gZoWu5-UIM0WdMS2A2EHHjRnLyFRsVL3+LeLr1KrOG3K6Q==.jpg",
+          "preco": "R$ 4.450.000",
+          "tipo": "casa",
+          "quartos": "5",
+          "suites": "4",
+          "vagas": "",
+          "area": "513",
+          "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-513-m/CA8157-UTG?from=sale"
+        },
+        {
+          "titulo": "CA7810-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 590 m² 5 Quartos 5 Suítes 7 Banheiros 4 Vagas Venda R$ 4.500.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3lsyPF3-joFpeUDV4bnhiuEwJStyNSEkHa7o6HntrLi-PHTX9z455k-7qfaG1OsqIVpdNNiMEZ5O8t5fyDhQqybO2pfrTeP-lT-ZOprbkNpjjgUnhxC-0qQfoLzx3kU9ya3N+zKlTTdZuXRUQxnKLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuW9ZBg6UHwwyVTbFOvhrolNeUgKL9PE-XOlM4p72arfW3PvfxBey1YW+5gZoWu5-UIM0WdMS2A2EHHjRnLyFRsVL3+LeLr1KrOG3K6Q==.jpg",
+          "preco": "R$ 4.500.000",
+          "tipo": "casa",
+          "quartos": "5",
+          "suites": "5",
+          "vagas": "4",
+          "area": "590",
+          "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-590-m/CA7810-UTG?from=sale"
         }
       ],
-      "criadoEm": "2026-07-18T11:46:14.681Z"
+      "criadoEm": "2026-07-18T11:50:18.151Z"
     }
   }
 }
