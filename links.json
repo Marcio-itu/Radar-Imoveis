@@ -534,6 +534,45 @@
         }
       ],
       "criadoEm": "2026-07-18T18:37:18.716Z"
+    },
+    "3gosgf": {
+      "itens": [
+        {
+          "titulo": "CA0965-MBK Casa Jardim Aeroporto I - Itu - SP 120 m² 1 Quarto 1 Banheiro 2 Vagas Venda R$ 320.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3w4yuhv6SARzeg7d+exlTaKxYvLw+e6g0iS5rbumuLa5d3zDd-Q85E7lP-cGFWGiK9OfuAbE2x9fcVKexq3WKrROFty+Si0p3SISoV5SVJL4BsgkEpW3AqYcMKl-gQg2H26AO-3qheqRqz9WU5DQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWtVtdPg-ZXkw2SE7JJ7Uy4lNeV0qGobE2AM1Vu9LnL-qGzNfanBfr3JzD81MFUu5nce8kWcYnzXSsdAXQibTFKvkisuK6QokC4NHSQ5FVHVhONg99q7HY0JwoN-44c9SWvi4c=.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3w4yuhv6SARzeg7d+exlTaKxYvLw+e6g0iS5rbumuLa5d3zDd-Q85E7lP-cGFWGiK9OfuAbE2x9fcVKexq3WKrROFty+Si0p3SISoV5SVJL4BsgkEpW3AqYcMKl-gQg2H26AO-3qheqRqz9WU5DQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWtVtdPg-ZXkw2SE7JJ7Uy4lNeV0qGobE2AM1Vu9LnL-qGzNfanBfr3JzD81MFUu5nce8kWcYnzXSsdAXQibTFKvkisuK6QokC4NHSQ5FVHVhONg99q7HY0JwoN-44c9SWvi4c=.jpg"
+          ],
+          "preco": "R$ 320.000",
+          "tipo": "casa",
+          "quartos": "1",
+          "suites": "",
+          "vagas": "2",
+          "area": "120",
+          "bairro": "MBK Casa Jardim Aeroporto I",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-1-quarto-120-m/CA0965-MBK?from=sale"
+        },
+        {
+          "titulo": "CA0873-MBK Casa Jardim das Rosas - Itu - SP 122.51 m² 3 Quartos 2 Banheiros 2 Vagas Venda R$ 320.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv8mo86-Jq5jMMs9E2UK2mugLW3J2rxNmJlXa1xpn1hqPdjJ6ndZmB54Qb4bzLS3KXuoFDF90OCHpTa94hWz-uUIuxeSAMowuuu0bgEKNLZzYFxz4SyDt942O-TMmtxW8Ijj78U6mE7y7TEvCsRRZDX7RPBdst-h5D+he1R0In6B8d9MPz5XKCcLmqf8vj1GBMVEgz+5WrU7mum5jMZpl7V6wlM3od60YVF7QQwPyVQOxj609Y87eXTRWXxV-D3bJyJcisDI0ayqcHlA-FG7Qd6x-vwNfFja35ch6AMFs98bCY5ablOK3vHPr0JCX005tWu56BepIDJ9--D2QUBDh9MDVRp1LkteiL+gD6Z3jWtl0VWAvI3NE=.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv8mo86-Jq5jMMs9E2UK2mugLW3J2rxNmJlXa1xpn1hqPdjJ6ndZmB54Qb4bzLS3KXuoFDF90OCHpTa94hWz-uUIuxeSAMowuuu0bgEKNLZzYFxz4SyDt942O-TMmtxW8Ijj78U6mE7y7TEvCsRRZDX7RPBdst-h5D+he1R0In6B8d9MPz5XKCcLmqf8vj1GBMVEgz+5WrU7mum5jMZpl7V6wlM3od60YVF7QQwPyVQOxj609Y87eXTRWXxV-D3bJyJcisDI0ayqcHlA-FG7Qd6x-vwNfFja35ch6AMFs98bCY5ablOK3vHPr0JCX005tWu56BepIDJ9--D2QUBDh9MDVRp1LkteiL+gD6Z3jWtl0VWAvI3NE=.jpg"
+          ],
+          "preco": "R$ 320.000",
+          "tipo": "casa",
+          "quartos": "3",
+          "suites": "",
+          "vagas": "2",
+          "area": "122.51",
+          "bairro": "MBK Casa Jardim das Rosas",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-123-m/CA0873-MBK?from=sale"
+        }
+      ],
+      "criadoEm": "2026-07-18T19:43:35.126Z"
     }
   }
 }
