@@ -722,6 +722,113 @@
         }
       ],
       "criadoEm": "2026-07-18T23:21:42.841Z"
+    },
+    "malw22": {
+      "itens": [
+        {
+          "titulo": "CA0614-GK Casa Vila Padre Bento - Itu - SP 300 m² 2 Quartos 1 Suíte 3 Banheiros 2 Vagas Venda R$ 690.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1pJ4c9qoxkbycYDUr6MpjWL0qiI-9Oeo2mbobX17rTkjJ-aVu3++Zwk36TYKWOLqIFkGsIuGH9pP+N2WC3ldpqHZFNUmCGCmF2UUp5MGkQP0hwpnSVsw1+SfYGxy08v0HmsIsHKlySmR6bXAlphOLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtNn6UDiFyQSuFH6h67lY2S16L+PEiPYQJv9LCc8PGwOKv2HPilOUypk5AE+NiKf9leKM-0XWhKX3MycmJWuUii-6mQ7lLnZXjWtkIKCRPHzs9q+nYoMgob69ER.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1pJ4c9qoxkbycYDUr6MpjWL0qiI-9Oeo2mbobX17rTkjJ-aVu3++Zwk36TYKWOLqIFkGsIuGH9pP+N2WC3ldpqHZFNUmCGCmF2UUp5MGkQP0hwpnSVsw1+SfYGxy08v0HmsIsHKlySmR6bXAlphOLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtNn6UDiFyQSuFH6h67lY2S16L+PEiPYQJv9LCc8PGwOKv2HPilOUypk5AE+NiKf9leKM-0XWhKX3MycmJWuUii-6mQ7lLnZXjWtkIKCRPHzs9q+nYoMgob69ER.jpg"
+          ],
+          "preco": "R$ 690.000",
+          "tipo": "casa",
+          "quartos": "2",
+          "suites": "1",
+          "vagas": "2",
+          "area": "300",
+          "bairro": "GK Casa Vila Padre Bento",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.grupokaion.com.br/imovel/casa-itu-2-quartos-300-m/CA0614-GK?from=sale"
+        },
+        {
+          "titulo": "CA0986-GK Casa Portal dos Sabiás - Itu - SP 83 m² 2 Quartos 1 Suíte 2 Banheiros 2 Vagas Venda R$ 690.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1851dFzxC45k8o4cO6DvQah6aS+-9eBi2OO0riGmrbZxfrfYdXS94km-bHhFQS+vbQ0e407OnhIYe5WSxDBBpuYZSBxlCXXghSISLJlYEV3hjkJyQ9d2F2BUJyU5QYC-haqFerB8nSoc4XlOEd-F95HR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNmaAFlxCQSOMd4x67xtfO0farPR6DOgFsp7mX+-qyPfqnHK2gcCWIhYoK8ZOdfZpIIIfjXzZLXXtyZWBDrkKs7L6b+Qz5bD3YuBAVFULf1o4r9HhlLVgD59dcqg==.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1851dFzxC45k8o4cO6DvQah6aS+-9eBi2OO0riGmrbZxfrfYdXS94km-bHhFQS+vbQ0e407OnhIYe5WSxDBBpuYZSBxlCXXghSISLJlYEV3hjkJyQ9d2F2BUJyU5QYC-haqFerB8nSoc4XlOEd-F95HR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNmaAFlxCQSOMd4x67xtfO0farPR6DOgFsp7mX+-qyPfqnHK2gcCWIhYoK8ZOdfZpIIIfjXzZLXXtyZWBDrkKs7L6b+Qz5bD3YuBAVFULf1o4r9HhlLVgD59dcqg==.jpg"
+          ],
+          "preco": "R$ 690.000",
+          "tipo": "casa",
+          "quartos": "2",
+          "suites": "1",
+          "vagas": "2",
+          "area": "83",
+          "bairro": "GK Casa Portal dos Sabiás",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.grupokaion.com.br/imovel/casa-itu-2-quartos-83-m/CA0986-GK?from=sale"
+        },
+        {
+          "titulo": "CA2675-GK Casa Jardim Rosinha - Itu - SP 200 m² 3 Quartos 1 Suíte 2 Banheiros 2 Vagas Venda R$ 770.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1tV6vdfxiYJlOYEAKLmpSuCgaG22t61q2eVprrf743Ejpz0UJ302IU++6LjMkOyufI9Y4U7MxphY8RDbB3VaMKEPllvgROVvEznEZYYYXhPmhoFwB1L7Vu9cd287UUMxT2OPNfUiwGCUYv+P0FrSbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtNn6UDiFyQSuFH6h67lY2S16L+PEiPYQJv9LCc8PGwOKv2HPilOUypk5AE+NiKf9leKM-0XWhKX3MycmJWuUii-6mQ7lLnZXjWtkIKCRPHzs9q+nYoMgob69ER.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1tV6vdfxiYJlOYEAKLmpSuCgaG22t61q2eVprrf743Ejpz0UJ302IU++6LjMkOyufI9Y4U7MxphY8RDbB3VaMKEPllvgROVvEznEZYYYXhPmhoFwB1L7Vu9cd287UUMxT2OPNfUiwGCUYv+P0FrSbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtNn6UDiFyQSuFH6h67lY2S16L+PEiPYQJv9LCc8PGwOKv2HPilOUypk5AE+NiKf9leKM-0XWhKX3MycmJWuUii-6mQ7lLnZXjWtkIKCRPHzs9q+nYoMgob69ER.jpg"
+          ],
+          "preco": "R$ 770.000",
+          "tipo": "casa",
+          "quartos": "3",
+          "suites": "1",
+          "vagas": "2",
+          "area": "200",
+          "bairro": "GK Casa Jardim Rosinha",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-200-m/CA2675-GK?from=sale"
+        },
+        {
+          "titulo": "CA2246-GK Casa Portal dos Sabiás - Itu - SP 96 m² 3 Quartos 1 Suíte 2 Banheiros 2 Vagas Venda R$ 770.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2JN4YNh4RUdtNEmW7CFrSCYgaudyuuinUK7-6LLlprFx-LGUviEyawS87ThNmTwloNfXMIlCkVleOMkfRbAb46EEH1O5jC+nhzjZJRvQ2ULmhAikSVr+XmSU8ib6Vg39jqcMNKHhB+Pd5-GJndiUOhHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNmaAFlxCQSOMd4x67xtfO0farPR6DOgFsp7mX+-qyPfqnHK2gcCWIhYoK8ZOdfZpIIIfjXzZLXXtyZWBDrkKs7L6b+Qz5bD3YuBAVFULf1o4r9HhlLVgD59dcqg==.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2JN4YNh4RUdtNEmW7CFrSCYgaudyuuinUK7-6LLlprFx-LGUviEyawS87ThNmTwloNfXMIlCkVleOMkfRbAb46EEH1O5jC+nhzjZJRvQ2ULmhAikSVr+XmSU8ib6Vg39jqcMNKHhB+Pd5-GJndiUOhHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNmaAFlxCQSOMd4x67xtfO0farPR6DOgFsp7mX+-qyPfqnHK2gcCWIhYoK8ZOdfZpIIIfjXzZLXXtyZWBDrkKs7L6b+Qz5bD3YuBAVFULf1o4r9HhlLVgD59dcqg==.jpg"
+          ],
+          "preco": "R$ 770.000",
+          "tipo": "casa",
+          "quartos": "3",
+          "suites": "1",
+          "vagas": "2",
+          "area": "96",
+          "bairro": "GK Casa Portal dos Sabiás",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-96-m/CA2246-GK?from=sale"
+        },
+        {
+          "titulo": "CA9232-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 285.03 m² 4 Quartos 4 Suítes 4 Banheiros 6 Vagas Venda R$ 5.000.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1hp4fNF30g4sOdBRqGGgTu+5ZmXvdmpgRir+MPOs+-nzsjSeJvX+Js86a+uME7xgqxITZkVL11XW8V4ai3QD77FAmNonWO3qmSQEbB2f1II5gUuuTlLzlm5bZGTslgU+RyKFPjC9hzcRaa7LUNGO9hHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+SuKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbwFk1vATeRN6kq-ldaU16GrPh6EYlo98Oqa-ae2Ovz7G7S0YH2rlZgA49DaI8VcaNvoHWhCEDo1MD0AqUq2ubmF4k35IGDNpE8=.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1hp4fNF30g4sOdBRqGGgTu+5ZmXvdmpgRir+MPOs+-nzsjSeJvX+Js86a+uME7xgqxITZkVL11XW8V4ai3QD77FAmNonWO3qmSQEbB2f1II5gUuuTlLzlm5bZGTslgU+RyKFPjC9hzcRaa7LUNGO9hHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+SuKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbwFk1vATeRN6kq-ldaU16GrPh6EYlo98Oqa-ae2Ovz7G7S0YH2rlZgA49DaI8VcaNvoHWhCEDo1MD0AqUq2ubmF4k35IGDNpE8=.jpg"
+          ],
+          "preco": "R$ 5.000.000",
+          "tipo": "casa",
+          "quartos": "4",
+          "suites": "4",
+          "vagas": "6",
+          "area": "285.03",
+          "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-285-m/CA9232-UTG?from=sale"
+        },
+        {
+          "titulo": "CA8157-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 513 m² 5 Quartos 4 Suítes 6 Banheiros Venda R$ 4.450.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3BZ+o1V3CU+qvgJeefhuzi18pu+19u1qXm80871r73J8sjdVf3ElN8W2rLVE3ClurVbWes6GFInZfRfayvFAqGOIklKkxewh12SRZ92TmxO8x4WmQdo2VCGGLv1r0cfxyj8O971gDOpR5-BWl5xSbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuW9ZBg6UHwwyVTbFOvhrolNeUgKL9PE-XOlM4p72arfW3PvfxBey1YW+5gZoWu5-UIM0WdMS2A2EHHjRnLyFRsVL3+LeLr1KrOG3K6Q==.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3BZ+o1V3CU+qvgJeefhuzi18pu+19u1qXm80871r73J8sjdVf3ElN8W2rLVE3ClurVbWes6GFInZfRfayvFAqGOIklKkxewh12SRZ92TmxO8x4WmQdo2VCGGLv1r0cfxyj8O971gDOpR5-BWl5xSbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuW9ZBg6UHwwyVTbFOvhrolNeUgKL9PE-XOlM4p72arfW3PvfxBey1YW+5gZoWu5-UIM0WdMS2A2EHHjRnLyFRsVL3+LeLr1KrOG3K6Q==.jpg"
+          ],
+          "preco": "R$ 4.450.000",
+          "tipo": "casa",
+          "quartos": "5",
+          "suites": "4",
+          "vagas": "",
+          "area": "513",
+          "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-513-m/CA8157-UTG?from=sale"
+        }
+      ],
+      "criadoEm": "2026-07-18T23:52:48.605Z"
     }
   }
 }
