@@ -107,6 +107,67 @@
         }
       ],
       "criadoEm": "2026-07-18T11:10:28.556Z"
+    },
+    "khf656": {
+      "itens": [
+        {
+          "titulo": "i class=\"icon expand\"> 420 m² Venda R$ 1.450.000,00 CC04391 Casa resid",
+          "imagem": "",
+          "preco": "R$ 1.450.000,00",
+          "tipo": "casa",
+          "quartos": "3",
+          "suites": "3",
+          "vagas": "2",
+          "area": "420",
+          "bairro": "residencial para Venda",
+          "cidade": "ITU",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-residencial-parque-do-varvito/casa/72484919"
+        },
+        {
+          "titulo": "ao\"> Venda R$ 1.200.000,00 CC04469 CASA Condomínio Residencial Parque ",
+          "imagem": "",
+          "preco": "R$ 1.200.000,00",
+          "tipo": "casa",
+          "quartos": "3",
+          "suites": "1",
+          "vagas": "3",
+          "area": "260",
+          "bairro": "Condomínio Residencial Parque Do Varvito",
+          "cidade": "ITU",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-portal-dos-sabias/casa/72535142"
+        },
+        {
+          "titulo": "=\"icon expand\"> 260 m² Venda R$ 1.200.000,00 CC04548 CASA Condominio P",
+          "imagem": "",
+          "preco": "R$ 1.200.000,00",
+          "tipo": "casa",
+          "quartos": "3",
+          "suites": "1",
+          "vagas": "4",
+          "area": "260",
+          "bairro": "Condominio Portal dos sabias",
+          "cidade": "itu",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-residencial-parque-do-varvito/casa/72643787"
+        },
+        {
+          "titulo": "ao\"> Venda R$ 690.000,00 CC04555 CASA CONDOMINIO RESIDENCIAL PARQUE DO",
+          "imagem": "",
+          "preco": "R$ 690.000,00",
+          "tipo": "casa",
+          "quartos": "3",
+          "suites": "1",
+          "vagas": "4",
+          "area": "316",
+          "bairro": "CONDOMINIO RESIDENCIAL PARQUE DO VARVITO",
+          "cidade": "ITU",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-saint-paul/casa/72677681"
+        }
+      ],
+      "criadoEm": "2026-07-18T11:46:14.681Z"
     }
   }
 }
