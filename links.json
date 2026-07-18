@@ -33,24 +33,80 @@
       ],
       "criadoEm": "2026-07-18T11:02:43.071Z"
     },
-    "l0uej9": {
+    "18315h": {
       "itens": [
         {
-          "titulo": "iv> 2 vagas 156 m² Venda R$ 415.000,00 CB02820 CASA Condomínio Parque ",
-          "imagem": "",
-          "preco": "R$ 415.000,00",
-          "tipo": "casa",
-          "quartos": "4",
-          "suites": "4",
+          "titulo": "SO0076-MBK Sobrado Vila Fragnani - Itu - SP 200 m² 3 Quartos 1 Suíte 1 Banheiro 2 Vagas Venda R$ 390.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNvpWdOi85N2BoJq-QHQo+fpzCZxNqruvqCiEqo9Jr7jqLU+MygZcjO9pk+843KH1mKqfdGHN8iF0ogUOdebx3XbauuLWlSmBSXj2HWXpFaQkZ5xxxougtU9gW5QqSD6Uxrwy7wFKqA8HLJTP+4URYYX-lYCt407ENDsQK-XFB8p0pK9JGl+XaFOuW-M4DugSALG1In8oevXbnpmdnCJ5YnGrlrPXoH40EZTKZew-iTSP984RIB5LyYW0fclAmW1+N9Ip2oDN0az-FVkwvAG7RO7E26x9DB16elZxibYFU+-bib8PWsaKr2S7T1dz38zcFQ9MiVLJMOfdKkWD9HUCchbjgD7FK4+OvGswCzICmfth5HFUHf1pl4qw==.jpg",
+          "preco": "R$ 390.000",
+          "tipo": "",
+          "quartos": "3",
+          "suites": "1",
           "vagas": "2",
-          "area": "156",
-          "bairro": "Condomínio Parque Ytu Xapada",
+          "area": "200",
+          "bairro": "MBK Sobrado Vila Fragnani",
           "cidade": "Itu",
-          "finalidade": "venda e aluguel",
-          "link": "https://www.residencialimoveis.com.br/comprar-ou-alugar/sp/itu/condominio-jardim-plaza-athenee/casa/69353002"
+          "finalidade": "venda",
+          "link": "https://www.slaimobiliariaitu.com.br/imovel/sobrado-itu-3-quartos-200-m/SO0076-MBK?from=sale"
+        },
+        {
+          "titulo": "CA0759-MBK Casa Liberdade - Itu - SP 130 m² 3 Quartos 1 Suíte 1 Banheiro 4 Vagas Venda R$ 400.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgi4IzvFBiy5ZEG+Tu4XOthtS4y4vA9BzJob395e+K+JylDev0mNEWj4KtTgGF6vRIF417Gm0nOLQlGkCsXZ+PdjwbvHPe+xiVC-FfCTgKh0V4jxIalhG5QYS07Ax3nCqpDaqetCeIUa3pCF1VU+0VXcVjrkAGoUnkGAkk4BJQt9-i42+QOP2qLpe00mFfURB0-8r6De-iy5XCKp09TPh0bCtY4QNBXPUShqDfSKBytlNS+7qYVV2XlVnByLYmJ5qyVt0amb5QngrLE+BL40zpx4LZ3uX7fVGUcwx+57KNu6ejIOytWLv7ITix.jpg",
+          "preco": "R$ 400.000",
+          "tipo": "casa",
+          "quartos": "3",
+          "suites": "1",
+          "vagas": "4",
+          "area": "130",
+          "bairro": "MBK Casa Liberdade",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-130-m/CA0759-MBK?from=sale"
+        },
+        {
+          "titulo": "CA1544-PR3 Casa Jardim Aeroporto I - Itu - SP 130 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 300.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu19-+eJ0-zVggJcFR6fl7BS6+6GI2u6rnVWL5LrNopiAje75XpuOk4Q+yf6qLkCumL5fHoMEDBtFZ-VQYEDpbrinGCYAoGejumeSU7gaU1IM-hAKyQt6wnmnX8Lz2Fcf5QWFNc70shKlFfHvXVt+CrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg",
+          "preco": "R$ 300.000",
+          "tipo": "casa",
+          "quartos": "2",
+          "suites": "",
+          "vagas": "2",
+          "area": "130",
+          "bairro": "PR3 Casa Jardim Aeroporto I",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-130-m/CA1544-PR3?from=sale"
+        },
+        {
+          "titulo": "CA1607-PR3 Casa Parque Residencial Potiguara - Itu - SP 53 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 300.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu31gi8pO5yw4j5s5Vp+05XK-4avE-8W+8FmWpr+PlO37x-Pif-WB978D0YDRMXmMnpF8R8YCIn96WM9xfSDzU4G6GHkPpzu++0D3QIpBGGBM0R85igkA4UqaRpOXyWIvgjC4F9KHr3SnEInFBWJ+LLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg",
+          "preco": "R$ 300.000",
+          "tipo": "casa",
+          "quartos": "2",
+          "suites": "",
+          "vagas": "2",
+          "area": "53",
+          "bairro": "PR3 Casa Parque Residencial Potiguara",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-53-m/CA1607-PR3?from=sale"
+        },
+        {
+          "titulo": "CA0982-PR3 Casa Parque América - Itu - SP 116 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 350.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNvrBsi7I5r50tmzMcEVu7goxOp0amY6emp8FqKpo7WtIrZhJLUVZ2OkpsQ4+vfSXuK6IhVYdciPxxBf7ciYTXVfb2JbHJI-QiVoniRT5t+dFdJ8Swvmj5p2GzhbcSpq2Uy9gucXuyB8nTQCaC5XwwWUawNEtE06V9N4lGnUVdgqR9Qu4m9s2qFPub2JoCihipUBAow-56-X7-hkZaPK5RkVqk2dXwP61MDUbcUm+6GWehj7QEYoKGRUUHF3gmVgOd3JJmpCooZnvBRlweSE7oc7B29w9fB0KauOxiCLi9CgseK+vLMTZyBabzzJEzp0ski0aj5YdpVIsjqT3ZKQTQtYjwEqVy2teuL+hW5fw==.jpg",
+          "preco": "R$ 350.000",
+          "tipo": "casa",
+          "quartos": "2",
+          "suites": "",
+          "vagas": "2",
+          "area": "116",
+          "bairro": "PR3 Casa Parque América",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-116-m/CA0982-PR3?from=sale"
         }
       ],
-      "criadoEm": "2026-07-18T11:08:30.149Z"
+      "criadoEm": "2026-07-18T11:10:28.556Z"
     }
   }
 }
