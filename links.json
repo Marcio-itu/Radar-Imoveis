@@ -426,6 +426,75 @@
         }
       ],
       "criadoEm": "2026-07-18T16:27:01.295Z"
+    },
+    "fg9t4m": {
+      "itens": [
+        {
+          "titulo": "quot;#span_maximo2&quot;).html($(this).val());\" onfocus=\"$(this).val(&",
+          "imagem": "https://www.residencialimoveis.com.br/images/selo_permuta.png",
+          "imagens": [
+            "https://www.residencialimoveis.com.br/images/selo_permuta.png"
+          ],
+          "preco": "R$ 415.000,00",
+          "tipo": "casa",
+          "quartos": "3",
+          "suites": "1",
+          "vagas": "2",
+          "area": "156",
+          "bairro": "Bairro Crescente Decrescente 12 Imóveis 24 Imóve",
+          "cidade": "ITU",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/vila-lucinda/casa/4681325"
+        },
+        {
+          "titulo": ");\" class=\"ui icon button botoes botoes_selected\"> CASA VILA LUCINDA -",
+          "imagem": "https://www.residencialimoveis.com.br/images/selo_permuta.png",
+          "imagens": [
+            "https://www.residencialimoveis.com.br/images/selo_permuta.png"
+          ],
+          "preco": "R$ 415.000,00",
+          "tipo": "casa",
+          "quartos": "3",
+          "suites": "1",
+          "vagas": "2",
+          "area": "156",
+          "bairro": "VILA LUCINDA",
+          "cidade": "ITU",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-parque-ytu-xapada/casa/34952548"
+        },
+        {
+          "titulo": "R$ 4.500.000,00 Locação R$ 18.500,00 CC04149 CASA Condomínio Residenci",
+          "imagem": "",
+          "imagens": [],
+          "preco": "R$ 4.500.000,00",
+          "tipo": "casa",
+          "quartos": "4",
+          "suites": "2",
+          "vagas": "2",
+          "area": "350",
+          "bairro": "Condomínio Residencial Costa Das Areias",
+          "cidade": "SALTO",
+          "finalidade": "venda e aluguel",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/salto/mirante-dos-ypes/casa/71003765"
+        },
+        {
+          "titulo": "2 vagas 350 m² Venda R$ 1.500.000,00 CC04264 CASA Mirante dos Ypês - S",
+          "imagem": "",
+          "imagens": [],
+          "preco": "R$ 1.500.000,00",
+          "tipo": "casa",
+          "quartos": "4",
+          "suites": "1",
+          "vagas": "2",
+          "area": "350",
+          "bairro": "residencial para Venda",
+          "cidade": "Salto",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/portal-da-vila-rica/casa/71710646"
+        }
+      ],
+      "criadoEm": "2026-07-18T16:37:47.820Z"
     }
   }
 }
