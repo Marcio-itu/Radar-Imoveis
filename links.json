@@ -627,6 +627,28 @@
         }
       ],
       "criadoEm": "2026-07-18T23:03:46.646Z"
+    },
+    "7w6j55": {
+      "itens": [
+        {
+          "titulo": "CA2593-GK Casa Pinheirinho - Itu - SP 105.36 m² 3 Quartos 1 Suíte 2 Banheiros 2 Vagas Venda R$ 640.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3A7zIxg5kcCsvYIV6GCvTeDw7S7x-m4ikq645fr4K3UhYbeTdXUzIES0KTNFXmQnbRnTNJiPUpfeLBrGB3MaN6bMiZOjyWpo2TUa4RsXnJa5zsTigd573SZaqaX3FUyyiy6JvzJ9j+qCf38PUJlQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwW9tLmqMcxFySSLtO6h7oz9GUg-f-akTUYgE8-buX+-O1afr2Sf3sUG2-iZ4Ns8+IPM9WYNj2A2lIVzMlcHdBs0ax6KKHsEzuIHbY5F0WWAvfj45k9Ds3YBIX7Zw=.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3A7zIxg5kcCsvYIV6GCvTeDw7S7x-m4ikq645fr4K3UhYbeTdXUzIES0KTNFXmQnbRnTNJiPUpfeLBrGB3MaN6bMiZOjyWpo2TUa4RsXnJa5zsTigd573SZaqaX3FUyyiy6JvzJ9j+qCf38PUJlQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwW9tLmqMcxFySSLtO6h7oz9GUg-f-akTUYgE8-buX+-O1afr2Sf3sUG2-iZ4Ns8+IPM9WYNj2A2lIVzMlcHdBs0ax6KKHsEzuIHbY5F0WWAvfj45k9Ds3YBIX7Zw=.jpg"
+          ],
+          "preco": "R$ 640.000",
+          "tipo": "casa",
+          "quartos": "3",
+          "suites": "1",
+          "vagas": "2",
+          "area": "105.36",
+          "bairro": "GK Casa Pinheirinho",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-105-m/CA2593-GK?from=sale"
+        }
+      ],
+      "criadoEm": "2026-07-18T23:20:38.560Z"
     }
   }
 }
