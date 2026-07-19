@@ -989,6 +989,95 @@
         }
       ],
       "criadoEm": "2026-07-19T12:06:54.001Z"
+    },
+    "wscaeh": {
+      "itens": [
+        {
+          "titulo": "R$ 4.500.000,00 Locação R$ 18.500,00 CC04149 CASA Condomínio Residenci",
+          "imagem": "",
+          "imagens": [
+            "https://cdnuso.com/922/2022/05/mini_343ef4b8cb0ded03b34f4113a48a1d02.jpg",
+            "https://cdnuso.com/922/2021/03/mini_140058634.jpg",
+            "https://cdnuso.com/922/2021/03/mini_141998514.jpg",
+            "https://cdnuso.com/922/2021/09/mini_5ab6b819a974151b54aaa11fa68afaa5.jpg"
+          ],
+          "preco": "R$ 4.500.000,00",
+          "tipo": "casa",
+          "quartos": "4",
+          "fonte": "Residencial Imóveis",
+          "suites": "2",
+          "vagas": "2",
+          "area": "350",
+          "bairro": "Condomínio Residencial Costa Das Areias",
+          "cidade": "SALTO",
+          "finalidade": "venda e aluguel",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/salto/mirante-dos-ypes/casa/71003765"
+        },
+        {
+          "titulo": "2 vagas 350 m² Venda R$ 1.500.000,00 CC04264 CASA Mirante dos Ypês - S",
+          "imagem": "",
+          "imagens": [
+            "https://cdnuso.com/922/2022/10/mini_54c2497f3e8edd96dd39438d3a1094cf.jpg",
+            "https://cdnuso.com/922/2021/03/mini_141998514.jpg",
+            "https://cdnuso.com/922/2021/09/mini_5ab6b819a974151b54aaa11fa68afaa5.jpg",
+            "https://cdnuso.com/922/2022/05/mini_343ef4b8cb0ded03b34f4113a48a1d02.jpg"
+          ],
+          "preco": "R$ 1.500.000,00",
+          "tipo": "casa",
+          "quartos": "4",
+          "fonte": "Residencial Imóveis",
+          "suites": "1",
+          "vagas": "2",
+          "area": "350",
+          "bairro": "residencial para Venda",
+          "cidade": "Salto",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/portal-da-vila-rica/casa/71710646"
+        },
+        {
+          "titulo": "i class=\"icon expand\"> 420 m² Venda R$ 1.450.000,00 CC04391 Casa resid",
+          "imagem": "",
+          "imagens": [
+            "https://cdnuso.com/922/2023/02/mini_e468d0deed1971c827c40f82f200fc65.jpg",
+            "https://cdnuso.com/922/2021/09/mini_5ab6b819a974151b54aaa11fa68afaa5.jpg",
+            "https://cdnuso.com/922/2022/05/mini_343ef4b8cb0ded03b34f4113a48a1d02.jpg",
+            "https://cdnuso.com/922/2022/10/mini_54c2497f3e8edd96dd39438d3a1094cf.jpg"
+          ],
+          "preco": "R$ 1.450.000,00",
+          "tipo": "casa",
+          "quartos": "3",
+          "fonte": "Residencial Imóveis",
+          "suites": "3",
+          "vagas": "2",
+          "area": "420",
+          "bairro": "residencial para Venda",
+          "cidade": "ITU",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-residencial-parque-do-varvito/casa/72484919"
+        },
+        {
+          "titulo": "ao\"> Venda R$ 1.200.000,00 CC04469 CASA Condomínio Residencial Parque ",
+          "imagem": "",
+          "imagens": [
+            "https://cdnuso.com/922/2023/03/mini_db026b88e7e438c206e873391b64a6af.jpg",
+            "https://cdnuso.com/922/2022/05/mini_343ef4b8cb0ded03b34f4113a48a1d02.jpg",
+            "https://cdnuso.com/922/2022/10/mini_54c2497f3e8edd96dd39438d3a1094cf.jpg",
+            "https://cdnuso.com/922/2023/02/mini_e468d0deed1971c827c40f82f200fc65.jpg"
+          ],
+          "preco": "R$ 1.200.000,00",
+          "tipo": "casa",
+          "quartos": "3",
+          "fonte": "Residencial Imóveis",
+          "suites": "1",
+          "vagas": "3",
+          "area": "260",
+          "bairro": "Condomínio Residencial Parque Do Varvito",
+          "cidade": "ITU",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-portal-dos-sabias/casa/72535142"
+        }
+      ],
+      "criadoEm": "2026-07-19T12:08:12.306Z"
     }
   }
 }
