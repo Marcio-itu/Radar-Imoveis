@@ -829,6 +829,45 @@
         }
       ],
       "criadoEm": "2026-07-18T23:52:48.605Z"
+    },
+    "2z9urw": {
+      "itens": [
+        {
+          "titulo": "CA8096-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 295 m² 4 Quartos 4 Suítes 6 Banheiros 3 Vagas Venda R$ 3.200.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuwJm5+9W2SwezscgBZSDtRmo1Yurve+TrlW7+rnElpL5++rnbtz9mNskzvejG3vzgYtkYPo2K21TR9RdRSexVqy-bUkKgGLWkR-kcOJ5TTpw1jgwnxIMmHCeUJ+q6Fwb8SyoBv-x7y6Se5fjPAVRCrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuW9ZBg6UHwwyVTbFOvhrolNeUgKL9PE-XOlM4p72arfW3PvfxBey1YW+5gZoWu5-UIM0WdMS2A2EHHjRnLyFRsVL3+LeLr1KrOG3K6Q==.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuwJm5+9W2SwezscgBZSDtRmo1Yurve+TrlW7+rnElpL5++rnbtz9mNskzvejG3vzgYtkYPo2K21TR9RdRSexVqy-bUkKgGLWkR-kcOJ5TTpw1jgwnxIMmHCeUJ+q6Fwb8SyoBv-x7y6Se5fjPAVRCrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuW9ZBg6UHwwyVTbFOvhrolNeUgKL9PE-XOlM4p72arfW3PvfxBey1YW+5gZoWu5-UIM0WdMS2A2EHHjRnLyFRsVL3+LeLr1KrOG3K6Q==.jpg"
+          ],
+          "preco": "R$ 3.200.000",
+          "tipo": "casa",
+          "quartos": "4",
+          "suites": "4",
+          "vagas": "3",
+          "area": "295",
+          "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-295-m/CA8096-UTG?from=sale"
+        },
+        {
+          "titulo": "CA7232-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II Venda R$ 2.800.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv-kgi7ftPxjYdj+Uid7uJgAqH-YG+3IbDvW-O0Y3snq-C7f3OUPiCzYxvjLHMSwS2jYF1ZdsHIU0gPdRQXDu1WYi9GWB+gzKgnxv6Tpl-W3d4xR0MzktbwVjhWICG2HAihyiPLc-E8gGRTIzIJVMJCr9KAt8stFhX+AKpSRdyvwgS5oel4CDLfaapPtjgx3QYXVAy7sjlFbvklsaPPpplDa4jO3IPrFEfVe0TxraATORw8wkerqHXAwSWgwDDl+lqI5+nV8FOmPcAwVnAG+ZKuUzolYDA1fauPkSGNgE48O2Y-vC4P+O3XOymYWmvldQB+pLfYpsVNYShTyoHQnlkYmhR6FK4+PTZ4hi+Mic=.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv-kgi7ftPxjYdj+Uid7uJgAqH-YG+3IbDvW-O0Y3snq-C7f3OUPiCzYxvjLHMSwS2jYF1ZdsHIU0gPdRQXDu1WYi9GWB+gzKgnxv6Tpl-W3d4xR0MzktbwVjhWICG2HAihyiPLc-E8gGRTIzIJVMJCr9KAt8stFhX+AKpSRdyvwgS5oel4CDLfaapPtjgx3QYXVAy7sjlFbvklsaPPpplDa4jO3IPrFEfVe0TxraATORw8wkerqHXAwSWgwDDl+lqI5+nV8FOmPcAwVnAG+ZKuUzolYDA1fauPkSGNgE48O2Y-vC4P+O3XOymYWmvldQB+pLfYpsVNYShTyoHQnlkYmhR6FK4+PTZ4hi+Mic=.jpg"
+          ],
+          "preco": "R$ 2.800.000",
+          "tipo": "casa",
+          "quartos": "",
+          "suites": "",
+          "vagas": "",
+          "area": "",
+          "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.utuguacu.com.br/imovel/casa-itu/CA7232-UTG?from=sale"
+        }
+      ],
+      "criadoEm": "2026-07-19T02:59:03.398Z"
     }
   }
 }
