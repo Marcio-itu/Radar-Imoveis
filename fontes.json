@@ -1,77 +1,117 @@
 [
-  {
-    "nome": "Residencial Imóveis",
-    "url": "https://www.residencialimoveis.com.br/imoveis/casa",
-    "jsNecessario": false
-  },
-  {
-    "nome": "Grupo Kaion",
-    "url": "https://www.grupokaion.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Utu-Guaçu Imóveis",
-    "url": "https://www.utuguacu.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Danilo Ferreira Imóveis",
-    "url": "https://www.daniloferreiraimoveis.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Opção Imóveis Itu",
-    "url": "https://www.opcaoimoveisitu.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Teixeira Imóveis",
-    "url": "https://www.teixeiraimoveisitu.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "GS Imóveis Itu",
-    "url": "https://www.gsimoveisitu.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Cury Massoca Brokers",
-    "url": "https://www.curymassoca.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "AP Imóveis Itu",
-    "url": "https://www.apimoveisitu.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Bem Aqui Imóveis",
-    "url": "https://www.bemaquiimoveis.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Regina Marchi Imóveis",
-    "url": "https://www.reginamarchi.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "SLA Imobiliária Itu",
-    "url": "https://www.slaimobiliariaitu.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Proimóvel Itu",
-    "url": "https://www.proimovel-itu.com.br/imoveis/a-venda/casa/itu",
-    "jsNecessario": true
-  },
-  {
-    "nome": "Carmo Imóveis Itu",
-    "url": "https://www.carmoimoveisitu.com.br/imovel/?tipo=casa&finalidade=venda&cidade=itu",
-    "jsNecessario": false
-  },
-  {
-    "nome": "Ferraz e Luiz Imóveis",
-    "url": "https://www.ferrazeluizimoveis.com.br/imovel/?tipo=casa&finalidade=venda&cidade=itu",
-    "jsNecessario": false
-  }
+    {
+        "nome": "Residencial Imóveis",
+        "url": "https://www.residencialimoveis.com.br/imoveis/casa",
+        "jsNecessario": false
+    },
+    {
+        "nome": "Grupo Kaion",
+        "url": "https://www.grupokaion.com.br/imoveis/a-venda/casa/itu",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Utu-Guaçu Imóveis",
+        "url": "https://www.utuguacu.com.br/imoveis/a-venda/casa/itu",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Danilo Ferreira Imóveis",
+        "url": "https://www.daniloferreiraimoveis.com.br/imoveis/a-venda/casa/itu",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Opção Imóveis Itu",
+        "url": "https://www.opcaoimoveisitu.com.br/imoveis/a-venda/casa/itu",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Teixeira Imóveis",
+        "url": "https://www.teixeiraimoveisitu.com.br/imoveis/a-venda/casa/itu",
+        "jsNecessario": true
+    },
+    {
+        "nome": "GS Imóveis Itu",
+        "url": "https://www.gsimoveisitu.com.br/imoveis/a-venda/casa/itu",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Cury Massoca Brokers",
+        "url": "https://www.curymassoca.com.br/imoveis/a-venda/casa/itu",
+        "jsNecessario": true
+    },
+    {
+        "nome": "AP Imóveis Itu",
+        "url": "https://www.apimoveisitu.com.br/imoveis/a-venda/casa/itu",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Bem Aqui Imóveis",
+        "url": "https://www.bemaquiimoveis.com.br/imoveis/a-venda/casa/itu",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Regina Marchi Imóveis",
+        "url": "https://www.reginamarchi.com.br/imoveis/a-venda/casa/itu",
+        "jsNecessario": true
+    },
+    {
+        "nome": "SLA Imobiliária Itu",
+        "url": "https://www.slaimobiliariaitu.com.br/imoveis/a-venda/casa/itu",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Proimóvel Itu",
+        "url": "https://www.proimovel-itu.com.br/imoveis/a-venda/casa/itu",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Carmo Imóveis Itu",
+        "url": "https://www.carmoimoveisitu.com.br/imovel/?tipo=casa&finalidade=venda&cidade=itu",
+        "jsNecessario": false
+    },
+    {
+        "nome": "Ferraz e Luiz Imóveis",
+        "url": "https://www.ferrazeluizimoveis.com.br/imovel/?tipo=casa&finalidade=venda&cidade=itu",
+        "jsNecessario": false
+    },
+    {
+        "nome": "Costa Rocha Imóveis",
+        "url": "https://www.imobiliariacostarocha.com.br/imoveis/a-venda/casa/itu",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Wlace Dias Imóveis",
+        "url": "https://www.walacedias.com.br",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Camilo Martins Imóveis",
+        "url": "https://www.camilomartinsimoveis.com.br",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Sérgio Duarte Corretor",
+        "url": "https://www.sergioduartecorretor.com.br",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Bochini Imóveis",
+        "url": "https://www.bochiniimoveis.com.br/mobile/",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Beto Imóveis",
+        "url": "https://www.betoimoveis.com.br",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Imperial Imóveis Itu",
+        "url": "https://www.imperialimoveisitu.com.br/",
+        "jsNecessario": true
+    },
+    {
+        "nome": "Adore Imóveis",
+        "url": "https://adoreimoveis.com.br/",
+        "jsNecessario": true
+    }
 ]
