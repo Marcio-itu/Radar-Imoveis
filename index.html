@@ -520,6 +520,28 @@
     margin:0 0 12px;
     color:var(--tinta-suave);
   }
+  .linha-imovel .info .fonte-discreta{
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-style:italic;
+    font-size:11px;
+    color:var(--tinta-suave);
+    opacity:.65;
+    margin:10px 0 0;
+  }
+  .aviso-juridico{
+    grid-column:1 / -1;
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-style:italic;
+    font-size:11.5px;
+    line-height:1.6;
+    color:var(--tinta-suave);
+    opacity:.75;
+    max-width:70ch;
+    margin:12px auto 0;
+    padding-top:16px;
+    border-top:1px solid var(--linha);
+    text-align:center;
+  }
   @media (max-width: 720px){
     .linha-imovel{ grid-template-columns:1fr; }
     .linha-imovel .galeria-scroll{ aspect-ratio:16 / 10; }
@@ -942,6 +964,22 @@ const SELECIONADOS = new Set();
 // -----------------------------------------------------------------------
 // MODO CLIENTE — ativado quando a URL tem #cliente=...
 // -----------------------------------------------------------------------
+const esperar = (ms) => new Promise(r => setTimeout(r, ms));
+
+// Se o link acabou de ser gerado e aberto quase na hora (ex: enviado pra si
+// mesmo), o GitHub as vezes ainda nao "espalhou" o commit por todos os
+// servidores dele. Por isso, se o codigo nao for encontrado de primeira,
+// tenta de novo mais 2 vezes com um pequeno intervalo antes de desistir.
+async function buscarEntradaComRetry(codigo, tentativas){
+  for(let i = 0; i < tentativas; i++){
+    const dados = await lerLinksJson();
+    const entrada = dados.links && dados.links[codigo];
+    if(entrada) return entrada;
+    if(i < tentativas - 1) await esperar(1500);
+  }
+  return null;
+}
+
 function tentarRenderizarModoCliente(){
   const hash = location.hash;
 
@@ -956,8 +994,7 @@ function tentarRenderizarModoCliente(){
   // Formato novo: #l=codigo (link curto, dados ficam em links.json)
   if(hash.startsWith("#l=")){
     const codigo = hash.replace("#l=", "");
-    lerLinksJson().then(dados => {
-      const entrada = dados.links && dados.links[codigo];
+    buscarEntradaComRetry(codigo, 3).then(entrada => {
       if(!entrada){
         document.getElementById("resultados").innerHTML = '<p class="vazio">Este link não foi encontrado. Peça um novo ao corretor.</p>';
         return;
@@ -1033,7 +1070,7 @@ function renderizarExpirado(){
   adicionarBotaoWhatsCliente("Olá! O link de imóveis que você me enviou expirou — pode me mandar uma seleção atualizada?");
 }
 
-function renderizarCliente(itens){
+async function renderizarCliente(itens){
   prepararTelaModoCliente();
 
   const resultadosDiv = document.getElementById("resultados");
@@ -1046,15 +1083,50 @@ function renderizarCliente(itens){
   contagem.textContent = `${itens.length} imóvel(is) selecionado(s) para você`;
   resultadosDiv.appendChild(contagem);
 
+  // Confere quais desses imoveis ainda existem na busca mais recente - um
+  // imovel pode ter sido vendido/retirado do site original desde que esse
+  // link foi gerado. Se sumiu da base atual, mostra um aviso gentil em vez
+  // do card normal, em vez de simplesmente aparecer quebrado.
+  let linksAindaDisponiveis = null;
+  try{
+    const resp = await fetch("./imoveis.json?_=" + Date.now());
+    if(resp.ok){
+      const dadosAtuais = await resp.json();
+      linksAindaDisponiveis = new Set((dadosAtuais.imoveis || []).map(i => i.link));
+    }
+  } catch(e){
+    // se nao conseguir checar, assume que todos ainda estao disponiveis
+    // (melhor mostrar de mais do que esconder por engano)
+  }
+
   itens.forEach(item => {
+    const aindaDisponivel = linksAindaDisponiveis === null || linksAindaDisponiveis.has(item.link);
+
+    const linha = document.createElement("div");
+    linha.className = "linha-imovel";
+
+    if(!aindaDisponivel){
+      linha.innerHTML = `
+        <div class="galeria-wrap">
+          <div class="foto-placeholder" style="aspect-ratio:4/3;"><img src="favicon.svg" alt=""></div>
+        </div>
+        <div class="info">
+          <p class="titulo" style="color:var(--tinta); font-weight:600;">Este imóvel não está mais disponível</p>
+          <p class="fonte-discreta" style="font-style:normal; opacity:.85;">
+            Pode já ter sido vendido ou retirado do anúncio pela imobiliária. Fale comigo pra ver outras opções parecidas.
+          </p>
+        </div>
+      `;
+      resultadosDiv.appendChild(linha);
+      return;
+    }
+
     // Compatibilidade: links antigos (#c=) podem ter só "imagem" (1 foto),
     // links novos (#l=) trazem "imagens" (lista completa).
     const listaImagens = (item.imagens && item.imagens.length > 0)
       ? item.imagens
       : (item.imagem ? [item.imagem] : []);
 
-    const linha = document.createElement("div");
-    linha.className = "linha-imovel";
     linha.innerHTML = `
       <div class="galeria-wrap">
         <div class="galeria-scroll">
@@ -1076,10 +1148,20 @@ function renderizarCliente(itens){
           ${item.area ? `<span>${item.area} m²</span>` : ""}
           ${(item.bairro || item.cidade) ? `<span>${[item.bairro, item.cidade].filter(Boolean).join(", ")}</span>` : ""}
         </div>
+        ${item.fonte ? `<p class="fonte-discreta">Fonte: ${item.fonte}</p>` : ""}
       </div>
     `;
     resultadosDiv.appendChild(linha);
   });
+
+  const aviso = document.createElement("p");
+  aviso.className = "aviso-juridico";
+  aviso.innerHTML =
+    "Os imóveis aqui apresentados podem ou não estar com parceria já alinhada entre nós. " +
+    "Caso tenha interesse em algum dos imóveis selecionados, ou em qualquer outro do seu interesse, " +
+    "basta sinalizar — cuido da intermediação junto à imobiliária ou corretor responsável pelo imóvel, " +
+    "salvo se você preferir manter esse profissional como contato principal para sua aquisição ou locação.";
+  resultadosDiv.appendChild(aviso);
 
   adicionarBotaoWhatsCliente("Olá! Vi a seleção de imóveis que você separou pra mim e quero saber mais.");
 }
@@ -1261,7 +1343,7 @@ function itensSelecionadosParaLink(){
     .filter(i => SELECIONADOS.has(i.link))
     .map(i => ({
       titulo: i.titulo, imagem: i.imagem, imagens: i.imagens || (i.imagem ? [i.imagem] : []),
-      preco: i.preco, tipo: i.tipo, quartos: i.quartos,
+      preco: i.preco, tipo: i.tipo, quartos: i.quartos, fonte: i.fonte,
       suites: i.suites, vagas: i.vagas, area: i.area, bairro: i.bairro,
       cidade: i.cidade, finalidade: i.finalidade, link: i.link,
     }));
