@@ -195,6 +195,52 @@
     outline:none;
     border-color:var(--ouro);
   }
+  .faixa-valor-wrap{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .faixa-valor-linha{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .faixa-valor-rotulo{
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--tinta-suave);
+    width:28px;
+    flex-shrink:0;
+  }
+  .faixa-valor-linha input[type=range]{
+    flex:1;
+    accent-color:var(--verde);
+    height:4px;
+    cursor:pointer;
+  }
+  .faixa-valor-num{
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--tinta);
+    width:78px;
+    flex-shrink:0;
+    text-align:right;
+  }
+  .faixa-valor-acima{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:12.5px;
+    color:var(--tinta-suave);
+    cursor:pointer;
+  }
+  .faixa-valor-acima input{
+    accent-color:var(--verde);
+    cursor:pointer;
+  }
   .atualizacao{
     font-family:'Segoe UI', Arial, sans-serif;
     font-size:12.5px;
@@ -609,16 +655,24 @@
         </div>
       </fieldset>
 
-      <fieldset>
+      <fieldset style="min-width:260px;">
         <legend>Faixa de valor</legend>
-        <select id="faixa-valor">
-          <option value="">Todas</option>
-          <option value="0-300000">Até 300 mil</option>
-          <option value="300000-500000">300 a 500 mil</option>
-          <option value="500000-800000">500 a 800 mil</option>
-          <option value="800000-1200000">800 mil a 1,2 milhão</option>
-          <option value="1200000-999999999">Acima de 1,2 milhão</option>
-        </select>
+        <div class="faixa-valor-wrap">
+          <div class="faixa-valor-linha">
+            <span class="faixa-valor-rotulo">De:</span>
+            <input type="range" id="valor-de" min="100000" max="3000000" step="50000" value="100000">
+            <span class="faixa-valor-num" id="valor-de-num">R$ 100 mil</span>
+          </div>
+          <div class="faixa-valor-linha">
+            <span class="faixa-valor-rotulo">Até:</span>
+            <input type="range" id="valor-ate" min="100000" max="3000000" step="50000" value="3000000">
+            <span class="faixa-valor-num" id="valor-ate-num">R$ 3 mi</span>
+          </div>
+          <label class="faixa-valor-acima">
+            <input type="checkbox" id="valor-acima-3mi">
+            Incluir acima de R$ 3 milhões
+          </label>
+        </div>
       </fieldset>
 
       <fieldset>
@@ -900,35 +954,53 @@ async function lerLinksJson(){
 }
 
 // Escrita exige token (so o corretor faz isso, nunca o cliente).
-async function escreverLinksJson(dadosNovos, mensagemCommit){
+// Em vez de receber o JSON final pronto, recebe uma FUNCAO que descreve a
+// mudanca (ex: "adiciona este codigo") e aplica ela sobre os dados mais
+// recentes. Isso permite tentar de novo automaticamente se der conflito
+// (HTTP 409 - outro navegador/aba salvou algo no meio do caminho): busca a
+// versao atual de novo, reaplica a MESMA mudanca por cima, e tenta salvar
+// de novo, em vez de sobrescrever com um dado desatualizado.
+async function escreverLinksJson(aplicarMudanca, mensagemCommit, tentativas = 3){
   const token = obterToken();
   if(!token) throw new Error("Token do GitHub não configurado. Abra \"Configuração\" acima e cole seu token.");
 
   const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${LINKS_PATH}`;
 
-  const respAtual = await fetch(apiUrl + `?ref=${GITHUB_BRANCH}`, {
-    headers: { "Authorization": "Bearer " + token, "Accept": "application/vnd.github+json" }
-  });
-  if(!respAtual.ok) throw new Error("Não consegui acessar o repositório (HTTP " + respAtual.status + "). Confira se o token está certo e tem permissão de escrita em Contents.");
-  const atual = await respAtual.json();
+  for(let tentativa = 1; tentativa <= tentativas; tentativa++){
+    const respAtual = await fetch(apiUrl + `?ref=${GITHUB_BRANCH}&_=${Date.now()}`, {
+      headers: { "Authorization": "Bearer " + token, "Accept": "application/vnd.github+json" }
+    });
+    if(!respAtual.ok) throw new Error("Não consegui acessar o repositório (HTTP " + respAtual.status + "). Confira se o token está certo e tem permissão de escrita em Contents.");
+    const atual = await respAtual.json();
 
-  const conteudoBase64 = btoa(unescape(encodeURIComponent(JSON.stringify(dadosNovos, null, 2))));
+    const conteudoAtualTexto = decodeURIComponent(escape(atob(atual.content.replace(/\n/g, ""))));
+    const dadosAtuais = JSON.parse(conteudoAtualTexto);
+    const dadosNovos = aplicarMudanca(dadosAtuais);
 
-  const respPut = await fetch(apiUrl, {
-    method: "PUT",
-    headers: {
-      "Authorization": "Bearer " + token,
-      "Accept": "application/vnd.github+json",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      message: mensagemCommit,
-      content: conteudoBase64,
-      sha: atual.sha,
-      branch: GITHUB_BRANCH,
-    })
-  });
-  if(!respPut.ok){
+    const conteudoBase64 = btoa(unescape(encodeURIComponent(JSON.stringify(dadosNovos, null, 2))));
+
+    const respPut = await fetch(apiUrl, {
+      method: "PUT",
+      headers: {
+        "Authorization": "Bearer " + token,
+        "Accept": "application/vnd.github+json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        message: mensagemCommit,
+        content: conteudoBase64,
+        sha: atual.sha,
+        branch: GITHUB_BRANCH,
+      })
+    });
+
+    if(respPut.ok) return;
+
+    if(respPut.status === 409 && tentativa < tentativas){
+      await esperar(600); // pequena pausa antes de tentar de novo
+      continue;
+    }
+
     const erro = await respPut.json().catch(() => ({}));
     throw new Error("Falha ao salvar no GitHub (HTTP " + respPut.status + "): " + (erro.message || "erro desconhecido"));
   }
@@ -949,12 +1021,22 @@ async function reativarLinkExistente(codigoOuLink){
   const codigo = extrairCodigoDeLinkOuTexto(codigoOuLink);
   if(!codigo) throw new Error("Cole o link ou o código antes de reativar.");
 
-  const dados = await lerLinksJson();
-  if(!dados.links || !dados.links[codigo]){
+  // confere primeiro se o codigo existe (fora do retry - so pra dar o erro certo)
+  const dadosVerificacao = await lerLinksJson();
+  if(!dadosVerificacao.links || !dadosVerificacao.links[codigo]){
     throw new Error("Código não encontrado. Confira se copiou certo.");
   }
-  dados.links[codigo].criadoEm = new Date().toISOString();
-  await escreverLinksJson(dados, `Reativa link de cliente: ${codigo}`);
+
+  await escreverLinksJson((dadosAtuais) => {
+    if(!dadosAtuais.links) dadosAtuais.links = {};
+    if(!dadosAtuais.links[codigo]){
+      // sumiu entre a verificacao e agora (raro) - recria com o que tinhamos
+      dadosAtuais.links[codigo] = dadosVerificacao.links[codigo];
+    }
+    dadosAtuais.links[codigo].criadoEm = new Date().toISOString();
+    return dadosAtuais;
+  }, `Reativa link de cliente: ${codigo}`);
+
   return codigo;
 }
 
@@ -1209,7 +1291,10 @@ function preencherFiltroCidade(){
 
 function limparFiltros(){
   document.querySelectorAll("#opcoes-quartos input, #opcoes-tipo input").forEach(i => i.checked = false);
-  document.getElementById("faixa-valor").value = "";
+  document.getElementById("valor-de").value = "100000";
+  document.getElementById("valor-ate").value = "3000000";
+  document.getElementById("valor-acima-3mi").checked = false;
+  atualizarRotulosFaixaValor();
   document.getElementById("finalidade").value = "";
   document.getElementById("vagas-minimo").value = "0";
   document.getElementById("suites-minimo").value = "0";
@@ -1219,13 +1304,27 @@ function limparFiltros(){
   aplicarFiltrosEExibir();
 }
 
+function formatarValorCurto(valor){
+  if(valor >= 1000000){
+    const milhoes = valor / 1000000;
+    return "R$ " + (milhoes % 1 === 0 ? milhoes.toFixed(0) : milhoes.toFixed(1).replace(".", ",")) + " mi";
+  }
+  return "R$ " + Math.round(valor / 1000) + " mil";
+}
+
+function atualizarRotulosFaixaValor(){
+  const de = Number(document.getElementById("valor-de").value);
+  const ate = Number(document.getElementById("valor-ate").value);
+  document.getElementById("valor-de-num").textContent = formatarValorCurto(de);
+  document.getElementById("valor-ate-num").textContent = formatarValorCurto(ate) + (ate >= 3000000 ? "+" : "");
+}
+
 function aplicarFiltrosEExibir(){
   const resultadosDiv = document.getElementById("resultados");
   resultadosDiv.innerHTML = "";
 
   const quartosMarcados = Array.from(document.querySelectorAll("#opcoes-quartos input:checked")).map(i => i.value);
   const tiposMarcados = Array.from(document.querySelectorAll("#opcoes-tipo input:checked")).map(i => i.value);
-  const faixaSelecionada = document.getElementById("faixa-valor").value;
   const finalidadeSelecionada = document.getElementById("finalidade").value;
   const vagasMarcadas = document.getElementById("vagas-minimo").value;
   const suitesMarcadas = document.getElementById("suites-minimo").value;
@@ -1233,11 +1332,16 @@ function aplicarFiltrosEExibir(){
   const bairroFiltro = limparTexto(document.getElementById("bairro-filtro").value).toLowerCase();
   const cidadeFiltro = document.getElementById("cidade-filtro").value;
 
-  let faixaMin = null, faixaMax = null;
-  if(faixaSelecionada){
-    const [min, max] = faixaSelecionada.split("-").map(Number);
-    faixaMin = min; faixaMax = max;
-  }
+  // Faixa de valor: duas barras (De/Até) + opção de incluir acima de 3mi.
+  // Se as duas barras estiverem nos extremos (100 mil a 3 mi) e "acima de
+  // 3mi" estiver marcado, na pratica esta sem filtro nenhum de valor.
+  let faixaDe = Number(document.getElementById("valor-de").value);
+  let faixaAte = Number(document.getElementById("valor-ate").value);
+  if(faixaDe > faixaAte){ [faixaDe, faixaAte] = [faixaAte, faixaDe]; }
+  const incluirAcimaDe3Mi = document.getElementById("valor-acima-3mi").checked;
+  const faixaMin = faixaDe;
+  const faixaMax = incluirAcimaDe3Mi ? Infinity : faixaAte;
+  const semFiltroDeValor = faixaMin <= 100000 && faixaMax === Infinity;
 
   const filtrados = TODOS_IMOVEIS.filter(item => {
     if(quartosMarcados.length > 0){
@@ -1246,9 +1350,9 @@ function aplicarFiltrosEExibir(){
       if(!bate) return false;
     }
 
-    if(faixaMin !== null){
+    if(!semFiltroDeValor){
       const valor = precoParaNumero(item.preco);
-      if(valor === null || valor < faixaMin || valor >= faixaMax) return false;
+      if(valor === null || valor < faixaMin || valor > faixaMax) return false;
     }
 
     if(tiposMarcados.length > 0 && !tiposMarcados.includes(item.tipo)) return false;
@@ -1362,18 +1466,23 @@ async function montarLinkCliente(){
     return CACHE_LINK_GERADO.url;
   }
 
-  const dados = await lerLinksJson().catch(() => ({ links: {} }));
-  if(!dados.links) dados.links = {};
-
+  // Gera o codigo ANTES, olhando o estado atual so pra reduzir chance de
+  // colisao - o escreverLinksJson confere de novo com dado fresco na hora
+  // de salvar de verdade (por causa do retry em caso de conflito).
+  const dadosParaEscolherCodigo = await lerLinksJson().catch(() => ({ links: {} }));
   let codigo = gerarCodigoCurto();
-  while(dados.links[codigo]) codigo = gerarCodigoCurto();
+  while(dadosParaEscolherCodigo.links && dadosParaEscolherCodigo.links[codigo]) codigo = gerarCodigoCurto();
 
-  dados.links[codigo] = {
-    itens,
-    criadoEm: new Date().toISOString(),
-  };
-
-  await escreverLinksJson(dados, `Novo link de cliente: ${codigo}`);
+  await escreverLinksJson((dadosAtuais) => {
+    if(!dadosAtuais.links) dadosAtuais.links = {};
+    // se por azar colidiu com algo criado nesse meio tempo, gera outro
+    while(dadosAtuais.links[codigo]) codigo = gerarCodigoCurto();
+    dadosAtuais.links[codigo] = {
+      itens,
+      criadoEm: new Date().toISOString(),
+    };
+    return dadosAtuais;
+  }, `Novo link de cliente: ${codigo}`);
 
   const urlFinal = location.origin + location.pathname + "#l=" + codigo;
   CACHE_LINK_GERADO = { chave, url: urlFinal };
@@ -1477,8 +1586,13 @@ document.getElementById("botao-limpar-selecao").addEventListener("click", () => 
 
 document.getElementById("botao-limpar-filtros").addEventListener("click", limparFiltros);
 
-document.querySelectorAll("#opcoes-quartos input, #opcoes-tipo input, #faixa-valor, #finalidade, #vagas-minimo, #suites-minimo, #cidade-filtro")
+document.querySelectorAll("#opcoes-quartos input, #opcoes-tipo input, #finalidade, #vagas-minimo, #suites-minimo, #cidade-filtro")
   .forEach(el => el.addEventListener("change", aplicarFiltrosEExibir));
+
+document.getElementById("valor-de").addEventListener("input", () => { atualizarRotulosFaixaValor(); aplicarFiltrosEExibir(); });
+document.getElementById("valor-ate").addEventListener("input", () => { atualizarRotulosFaixaValor(); aplicarFiltrosEExibir(); });
+document.getElementById("valor-acima-3mi").addEventListener("change", aplicarFiltrosEExibir);
+atualizarRotulosFaixaValor();
 
 document.getElementById("area-minima").addEventListener("input", aplicarFiltrosEExibir);
 document.getElementById("bairro-filtro").addEventListener("input", aplicarFiltrosEExibir);

@@ -22,6 +22,19 @@ function removerTags(html) {
   return (html || "").replace(/<(?:[^>"']|"[^"]*"|'[^']*')*>/g, " ");
 }
 
+// Rede de seguranca: alguns sites tem widgets (sliders, filtros) cujo
+// codigo JS/HTML as vezes vaza pro texto capturado, mesmo depois de limpar
+// as tags. Em vez de tentar prever cada variacao possivel, rejeita qualquer
+// texto que "cheire" a codigo em vez de descricao de imovel.
+function pareceCodigoVazado(texto) {
+  return /class=|onfocus=|onclick=|&quot;|function\s*\(|\$\(this\)|span_maximo|span_minimo|\.val\(|botoes_selected/i.test(texto);
+}
+
+function tituloSeguro(candidato) {
+  if (candidato && !pareceCodigoVazado(candidato)) return candidato;
+  return "";
+}
+
 function extrairPreco(texto) {
   // Formatos comuns: "R$ 1.200.000", "R$1.200.000,00", etc.
   let m = texto.match(/R\$\s?[\d.,]+/);
@@ -49,6 +62,10 @@ function extrairArea(texto) {
 
 const CIDADES_REGEX_TEXTO = "Itu|Indaiatuba|Salto|Sorocaba|Cabreúva|Cabreuva";
 
+function pareceControleDePagina(texto) {
+  return /crescente|decrescente|\d+\s*im[oó]ve(l|is)|ordenar\s*por/i.test(texto);
+}
+
 function extrairBairro(texto) {
   let m = texto.match(
     new RegExp(
@@ -56,15 +73,16 @@ function extrairBairro(texto) {
       "i"
     )
   );
-  if (m) return limparTexto(m[1]);
+  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
 
   m = texto.match(
     /(?:bairro|condom[ií]nio|residencial|jardim|parque|vila)\s*:?\s+([A-ZÀ-Ú][\wÀ-ú0-9°º.'\s]{2,40})/i
   );
-  if (m) return limparTexto(m[0]);
+  if (m && !pareceControleDePagina(m[0])) return limparTexto(m[0]);
 
   m = texto.match(/(?:em|no|na)\s+([A-ZÀ-Ú][\wÀ-ú\s]{2,40})/);
-  return m ? limparTexto(m[1]) : "";
+  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
+  return "";
 }
 
 const CIDADES_CONHECIDAS = ["itu", "indaiatuba", "salto", "sorocaba", "cabreúva", "cabreuva"];
@@ -264,8 +282,8 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
     }
 
     // janelas maiores para capturar preço/imagem/bairro/cidade
-    const inicioJanela = Math.max(0, match.index - 2500);
-    const fimJanela = Math.min(html.length, match.index + 2500);
+    const inicioJanela = Math.max(0, match.index - 700);
+    const fimJanela = Math.min(html.length, match.index + 700);
     const janelaHtml = html.slice(inicioJanela, fimJanela);
     const textoJanela = limparTexto(removerTags(janelaHtml));
 
@@ -278,7 +296,7 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
 
     registrar(href, {
       fonte: nomeFonte,
-      titulo: textoLink || textoJanela.slice(0, 70) || "Imóvel",
+      titulo: tituloSeguro(textoLink) || tituloSeguro(textoJanela.slice(0, 70)) || "Imóvel",
       imagens,
       imagem: imagens[0] || "",
       _origemConfiavel: origemConfiavel,
@@ -307,8 +325,8 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       href = base.origin + href;
     }
 
-    const inicioJanela = Math.max(0, m2.index - 2500);
-    const fimJanela = Math.min(html.length, m2.index + 2500);
+    const inicioJanela = Math.max(0, m2.index - 700);
+    const fimJanela = Math.min(html.length, m2.index + 700);
     const janelaHtml = html.slice(inicioJanela, fimJanela);
     const textoJanela = limparTexto(removerTags(janelaHtml));
 
@@ -317,7 +335,7 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
 
     registrar(href, {
       fonte: nomeFonte,
-      titulo: textoJanela.slice(0, 70) || "Imóvel",
+      titulo: tituloSeguro(textoJanela.slice(0, 70)) || "Imóvel",
       imagens,
       imagem: imagens[0] || "",
       _origemConfiavel: origemConfiavel,
@@ -358,7 +376,8 @@ async function buscarComUmaChave(url, apiKey) {
     encodeURIComponent(apiKey) +
     "&url=" +
     encodeURIComponent(url) +
-    "&render_js=true";
+    "&render_js=true" +
+    "&wait=2500"; // da tempo pro carrossel/galeria (lazy-load) terminar de carregar antes do "print"
 
   const resp = await fetch(endpoint);
   if (!resp.ok) {
@@ -588,6 +607,47 @@ async function main() {
   if (erros.length > 0) {
     console.log(`Avisos/erros: ${erros.length}`);
   }
+
+  await mostrarCreditosRestantes(chavesScrapingBee);
+}
+
+// Consulta o saldo de credito de cada chave ScrapingBee configurada e soma
+// tudo, pra facilitar acompanhar o orcamento total disponivel sem precisar
+// entrar em cada painel separadamente.
+async function mostrarCreditosRestantes(chaves) {
+  if (chaves.length === 0) return;
+
+  console.log(`\n--- Créditos ScrapingBee (${chaves.length} chave(s) configurada(s)) ---`);
+  let total = 0;
+  let algumaFalhou = false;
+
+  for (let i = 0; i < chaves.length; i++) {
+    try {
+      const resp = await fetch(
+        "https://app.scrapingbee.com/api/v1/account?api_key=" + encodeURIComponent(chaves[i])
+      );
+      if (!resp.ok) throw new Error("HTTP " + resp.status);
+      const dados = await resp.json();
+      // o nome do campo pode variar - tenta os formatos conhecidos
+      const restante =
+        dados.max_api_credit != null && dados.used_api_credit != null
+          ? dados.max_api_credit - dados.used_api_credit
+          : dados.credit ?? dados.remaining_credit ?? null;
+
+      if (restante == null) {
+        console.log(`  Chave #${i + 1}: resposta inesperada (${JSON.stringify(dados).slice(0, 150)})`);
+        algumaFalhou = true;
+        continue;
+      }
+      console.log(`  Chave #${i + 1}: ${restante} créditos restantes`);
+      total += restante;
+    } catch (e) {
+      console.log(`  Chave #${i + 1}: não consegui checar (${e.message})`);
+      algumaFalhou = true;
+    }
+  }
+
+  console.log(`  TOTAL somado: ${total} créditos${algumaFalhou ? " (parcial - uma ou mais chaves falharam ao checar)" : ""}`);
 }
 
 main().catch(e => {
