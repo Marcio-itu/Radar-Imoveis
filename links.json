@@ -2537,6 +2537,30 @@
         }
       ],
       "criadoEm": "2026-07-19T21:20:05.248Z"
+    },
+    "4hbfqu": {
+      "itens": [
+        {
+          "titulo": "quot;#span_maximo2&quot;).html($(this).val());\" onfocus=\"$(this).val(&",
+          "imagem": "https://www.residencialimoveis.com.br/images/selo_permuta.png",
+          "imagens": [
+            "https://cdnuso.com/922/2017/06/mini_54712231.jpg",
+            "https://www.residencialimoveis.com.br/images/selo_permuta.png"
+          ],
+          "preco": "R$ 415.000,00",
+          "tipo": "casa",
+          "quartos": "3",
+          "fonte": "Residencial Imóveis",
+          "suites": "1",
+          "vagas": "2",
+          "area": "156",
+          "bairro": "Bairro Crescente Decrescente 12 Imóveis 24 Imóve",
+          "cidade": "ITU",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/vila-lucinda/casa/4681325"
+        }
+      ],
+      "criadoEm": "2026-07-19T22:10:11.574Z"
     }
   }
 }
