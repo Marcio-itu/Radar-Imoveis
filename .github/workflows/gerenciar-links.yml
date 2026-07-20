@@ -30,7 +30,7 @@ jobs:
       - name: Executar script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACAO: ${{ inputs.acao }}
+          ACAO: ${{ github.event.inputs.acao }}
         run: node scripts/gerenciar-links.js
 
       - name: Commit changes
@@ -39,4 +39,9 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add links.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "limpar links expirados" && git push)
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "🗑️ Remove links expirados"
+            git push
+          else
+            echo "Nenhuma alteração para commitar"
+          fi
