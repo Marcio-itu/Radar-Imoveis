@@ -416,7 +416,11 @@ async function buscarComUmaChave(url, apiKey, opcoes = {}) {
   const resp = await fetch(endpoint);
   if (!resp.ok) {
     const corpo = await resp.text().catch(() => "");
-    const semCredito = resp.status === 402 || /credit|quota|insufficient/i.test(corpo);
+    const semCredito =
+      resp.status === 402 ||
+      resp.status === 401 ||
+      resp.status === 429 ||
+      /credit|quota|insufficient|limit reached|too many requests|exceeded/i.test(corpo);
     const erro = new Error("ScrapingBee HTTP " + resp.status + " " + corpo.slice(0, 200));
     erro.semCredito = semCredito;
     throw erro;
