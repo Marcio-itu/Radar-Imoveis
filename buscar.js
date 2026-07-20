@@ -172,6 +172,36 @@ function buscarImagensEmTrecho(trechoHtml) {
   return encontradas;
 }
 
+// "Porta dos fundos": muitos sites embutem um bloco de dados estruturados
+// (JSON-LD, <script type="application/ld+json">) destinado ao Google indexar
+// fotos na busca - isso ja vem pronto no HTML, sem depender de clique nem de
+// JavaScript rodando. Vale a pena checar sempre, é de graca.
+function buscarImagensViaJsonLd(html) {
+  const encontradas = [];
+  const regexBloco = /<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+
+  for (const m of html.matchAll(regexBloco)) {
+    try {
+      const dados = JSON.parse(m[1].trim());
+      const itens = Array.isArray(dados) ? dados : [dados];
+      for (const item of itens) {
+        let img = item.image;
+        if (!img) continue;
+        const lista = Array.isArray(img) ? img : [img];
+        for (const entrada of lista) {
+          const url = typeof entrada === "string" ? entrada : (entrada && entrada.url);
+          if (url && !PADRAO_IMAGEM_INVALIDA.test(url) && !encontradas.includes(url)) {
+            encontradas.push(url);
+          }
+        }
+      }
+    } catch (e) {
+      // bloco nao era JSON valido - ignora e segue
+    }
+  }
+  return encontradas;
+}
+
 // Retorna uma LISTA de imagens (nao so uma), priorizando as que estao DENTRO
 // do proprio link (mais confiavel - pertence garantidamente aquele imovel)
 // e so complementando com as que estao no texto ao redor (menos confiavel,
@@ -296,7 +326,7 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
 
     registrar(href, {
       fonte: nomeFonte,
-      titulo: tituloSeguro(textoLink) || tituloSeguro(textoJanela.slice(0, 70)) || "Imóvel",
+      titulo: tituloSeguro(textoLink) || "Imóvel",
       imagens,
       imagem: imagens[0] || "",
       _origemConfiavel: origemConfiavel,
@@ -335,7 +365,7 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
 
     registrar(href, {
       fonte: nomeFonte,
-      titulo: tituloSeguro(textoJanela.slice(0, 70)) || "Imóvel",
+      titulo: "Imóvel",
       imagens,
       imagem: imagens[0] || "",
       _origemConfiavel: origemConfiavel,
@@ -370,14 +400,18 @@ async function buscarDireto(url) {
   return await resp.text();
 }
 
-async function buscarComUmaChave(url, apiKey) {
-  const endpoint =
+async function buscarComUmaChave(url, apiKey, opcoes = {}) {
+  let endpoint =
     "https://app.scrapingbee.com/api/v1/?api_key=" +
     encodeURIComponent(apiKey) +
     "&url=" +
     encodeURIComponent(url) +
     "&render_js=true" +
     "&wait=2500"; // da tempo pro carrossel/galeria (lazy-load) terminar de carregar antes do "print"
+
+  if (opcoes.jsScenario) {
+    endpoint += "&js_scenario=" + encodeURIComponent(JSON.stringify(opcoes.jsScenario));
+  }
 
   const resp = await fetch(endpoint);
   if (!resp.ok) {
@@ -394,11 +428,11 @@ async function buscarComUmaChave(url, apiKey) {
 // (HTTP 402, ou mensagem de credito/quota esgotada), tenta a proxima
 // automaticamente. Se falhar por outro motivo (site fora do ar, etc), nao
 // adianta trocar de chave - propaga o erro direto.
-async function buscarComJS(url, chaves) {
+async function buscarComJS(url, chaves, opcoes = {}) {
   let ultimoErro = null;
   for (let i = 0; i < chaves.length; i++) {
     try {
-      return await buscarComUmaChave(url, chaves[i]);
+      return await buscarComUmaChave(url, chaves[i], opcoes);
     } catch (e) {
       ultimoErro = e;
       if (!e.semCredito) throw e; // erro que trocar de chave nao resolve
@@ -408,6 +442,18 @@ async function buscarComJS(url, chaves) {
   throw ultimoErro;
 }
 
+// Cenario pra abrir a galeria de fotos antes de capturar a pagina. Varios
+// sites (confirmado na Kenlo) so carregam as fotos extras quando alguem
+// clica no botao/link "Fotos" - sem isso, so a foto de capa aparece no HTML,
+// mesmo com JavaScript habilitado e tempo de espera.
+const CENARIO_ABRIR_GALERIA = {
+  instructions: [
+    { wait: 1200 },
+    { click: "//*[contains(text(),'Fotos') or contains(text(),'fotos')]" },
+    { wait: 2000 },
+  ],
+};
+
 const esperar = (ms) => new Promise(r => setTimeout(r, ms));
 
 // Visita a pagina INDIVIDUAL de um imovel (nao a listagem) pra pegar a
@@ -416,8 +462,13 @@ const esperar = (ms) => new Promise(r => setTimeout(r, ms));
 // So faz isso pra sites SEM JavaScript (fetch direto, sem custo de credito).
 async function buscarGaleriaCompleta(url) {
   try {
-    const html = removerScriptsEEstilos(await buscarDireto(url));
-    const imagens = buscarImagensEmTrecho(html);
+    const htmlBruto = await buscarDireto(url);
+    // JSON-LD precisa ser lido ANTES de remover scripts (ele mora dentro
+    // de uma tag <script>)
+    const doJsonLd = buscarImagensViaJsonLd(htmlBruto);
+    const html = removerScriptsEEstilos(htmlBruto);
+    const doHtml = buscarImagensEmTrecho(html);
+    const imagens = [...new Set([...doJsonLd, ...doHtml])];
     return imagens.map(u => resolverUrlImagem(u, url)).slice(0, 20);
   } catch (e) {
     return [];
@@ -559,8 +610,12 @@ async function main() {
       await esperar(400); // educado com o servidor - nao martela requisicoes
     } else if (chavesScrapingBee.length > 0) {
       try {
-        const html = removerScriptsEEstilos(await buscarComJS(item.link, chavesScrapingBee));
-        const galeria = buscarImagensEmTrecho(html).map(u => resolverUrlImagem(u, item.link)).slice(0, 20);
+        const htmlBrutoJS = await buscarComJS(item.link, chavesScrapingBee, { jsScenario: CENARIO_ABRIR_GALERIA });
+        const doJsonLd = buscarImagensViaJsonLd(htmlBrutoJS);
+        const html = removerScriptsEEstilos(htmlBrutoJS);
+        const doHtml = buscarImagensEmTrecho(html);
+        const galeria = [...new Set([...doJsonLd, ...doHtml])]
+          .map(u => resolverUrlImagem(u, item.link)).slice(0, 20);
         if (galeria.length > 0) {
           item.imagens = [...new Set([...(item.imagens || []), ...galeria])];
           item.imagem = item.imagens[0] || item.imagem;
@@ -582,12 +637,16 @@ async function main() {
   // remove os campos internos de controle antes de salvar
   const todosLimpos = todos.map(({ _semJS, ...resto }) => resto);
 
+  const infoCreditos = await calcularCreditosRestantes(chavesScrapingBee);
+
   const saida = {
     atualizadoEm: new Date().toISOString(),
     geradoEm: dataHoje,
     total: todosLimpos.length,
     imoveis: todosLimpos,
-    erros
+    erros,
+    creditosScrapingBee: infoCreditos.total,
+    creditosScrapingBeeParcial: infoCreditos.algumaFalhou,
   };
 
   await writeFile(
@@ -607,15 +666,14 @@ async function main() {
   if (erros.length > 0) {
     console.log(`Avisos/erros: ${erros.length}`);
   }
-
-  await mostrarCreditosRestantes(chavesScrapingBee);
 }
 
 // Consulta o saldo de credito de cada chave ScrapingBee configurada e soma
 // tudo, pra facilitar acompanhar o orcamento total disponivel sem precisar
-// entrar em cada painel separadamente.
-async function mostrarCreditosRestantes(chaves) {
-  if (chaves.length === 0) return;
+// entrar em cada painel separadamente. Devolve o total pra ser salvo no
+// imoveis.json (e assim aparecer no proprio site), alem de logar no console.
+async function calcularCreditosRestantes(chaves) {
+  if (chaves.length === 0) return { total: null, algumaFalhou: false };
 
   console.log(`\n--- Créditos ScrapingBee (${chaves.length} chave(s) configurada(s)) ---`);
   let total = 0;
@@ -648,6 +706,7 @@ async function mostrarCreditosRestantes(chaves) {
   }
 
   console.log(`  TOTAL somado: ${total} créditos${algumaFalhou ? " (parcial - uma ou mais chaves falharam ao checar)" : ""}`);
+  return { total, algumaFalhou };
 }
 
 main().catch(e => {

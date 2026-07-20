@@ -75,19 +75,24 @@
         "jsNecessario": false
     },
     {
+        "nome": "VivaReal",
+        "url": "https://www.vivareal.com.br/venda/sp/itu/",
+        "jsNecessario": false
+    },
+    {
         "nome": "Costa Rocha Imóveis",
         "url": "https://www.imobiliariacostarocha.com.br/imoveis/a-venda/casa/itu",
         "jsNecessario": true
     },
     {
-        "nome": "Wlace Dias Imóveis",
-        "url": "https://www.walacedias.com.br",
-        "jsNecessario": true
+        "nome": "Walace Dias Imóveis",
+        "url": "https://www.walacedias.com.br/imoveis/casa",
+        "jsNecessario": false
     },
     {
         "nome": "Camilo Martins Imóveis",
-        "url": "https://www.camilomartinsimoveis.com.br",
-        "jsNecessario": true
+        "url": "https://www.camilomartinsimoveis.com.br/imovel/?finalidade=venda&tipo=casa",
+        "jsNecessario": false
     },
     {
         "nome": "Sérgio Duarte Corretor",
@@ -96,22 +101,17 @@
     },
     {
         "nome": "Bochini Imóveis",
-        "url": "https://www.bochiniimoveis.com.br/mobile/",
-        "jsNecessario": true
+        "url": "https://www.bochiniimoveis.com.br/imovel/?tipo=casa&finalidade=venda&cidade=itu",
+        "jsNecessario": false
     },
     {
         "nome": "Beto Imóveis",
-        "url": "https://www.betoimoveis.com.br",
-        "jsNecessario": true
-    },
-    {
-        "nome": "Imperial Imóveis Itu",
-        "url": "https://www.imperialimoveisitu.com.br/",
+        "url": "https://www.betoimoveis.com.br/imoveis/a-venda/casa/itu",
         "jsNecessario": true
     },
     {
         "nome": "Adore Imóveis",
-        "url": "https://adoreimoveis.com.br/",
+        "url": "https://adoreimoveis.com.br/venda/",
         "jsNecessario": true
     }
 ]

@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Buscador de Imóveis · Itu/SP</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="icon" type="image/png" href="favicon-marcio-32.png">
+<link rel="apple-touch-icon" href="favicon-marcio.png">
 <style>
   :root{
     /* Paleta identica ao simulador de financiamento (mesma marca) */
@@ -617,12 +617,13 @@
 <body>
 
 <div class="topo">
-  <img src="favicon.svg" alt="">
+  <img src="favicon-marcio.png" alt="Márcio Santos" style="border-radius:50%; object-fit:cover;">
   <div>
-    <p class="eyebrow">Inteligência Imobiliária · Construindo Confiança</p>
+    <p class="eyebrow">Inteligência Imobiliária Construindo Confiança</p>
     <h1 id="titulo-pagina">Buscador de imóveis</h1>
-    <p class="subtitulo" id="subtitulo-pagina">Resultados atualizados automaticamente a cada 6 horas pelo GitHub Actions.</p>
+    <p class="subtitulo" id="subtitulo-pagina">Resultados atualizados automaticamente a cada 48 horas pelo GitHub Actions.</p>
     <p class="atualizacao" id="ultima-atualizacao"></p>
+    <p class="atualizacao" id="creditos-scrapingbee"></p>
   </div>
 </div>
 
@@ -1239,10 +1240,12 @@ async function renderizarCliente(itens){
   const aviso = document.createElement("p");
   aviso.className = "aviso-juridico";
   aviso.innerHTML =
-    "Os imóveis aqui apresentados podem ou não estar com parceria já alinhada entre nós. " +
-    "Caso tenha interesse em algum dos imóveis selecionados, ou em qualquer outro do seu interesse, " +
-    "basta sinalizar — cuido da intermediação junto à imobiliária ou corretor responsável pelo imóvel, " +
-    "salvo se você preferir manter esse profissional como contato principal para sua aquisição ou locação.";
+    "Os imóveis apresentados aqui podem ou não já contar com parceria previamente alinhada comigo, " +
+    "corretor Márcio Santos, CRECI-SP 276471-F. " +
+    "Se você tiver interesse em qualquer imóvel, seja um desta seleção ou outro que tenha encontrado, " +
+    "basta me sinalizar. Eu faço a intermediação direta com a imobiliária ou corretor responsável — " +
+    "caso não exista parceria estabelecida, meu trabalho é buscar essa conexão para melhor atender você! " +
+    "<strong>Conte comigo!</strong>";
   resultadosDiv.appendChild(aviso);
 
   adicionarBotaoWhatsCliente("Olá! Vi a seleção de imóveis que você separou pra mim e quero saber mais.");
@@ -1263,6 +1266,14 @@ async function carregarDados(){
     TODOS_IMOVEIS = dados.imoveis || [];
     document.getElementById("ultima-atualizacao").textContent = formatarDataRelativa(dados.atualizadoEm);
     preencherFiltroCidade();
+
+    const elCreditos = document.getElementById("creditos-scrapingbee");
+    if(dados.creditosScrapingBee != null){
+      elCreditos.textContent = `Créditos disponíveis: ${dados.creditosScrapingBee.toLocaleString("pt-BR")}` +
+        (dados.creditosScrapingBeeParcial ? " (parcial)" : "");
+    } else {
+      elCreditos.textContent = "";
+    }
 
     if(dados.erros && dados.erros.length > 0){
       status.className = "status erro";
