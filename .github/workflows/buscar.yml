@@ -2,12 +2,13 @@ name: Buscar imóveis
 
 on:
   schedule:
-    # Roda a cada 48 horas de verdade (campo de DIA, nao de hora - o campo de
-    # hora so vai de 0 a 23, entao "*/48" nesse campo nao funciona como
-    # 48 horas, na pratica vira "todo dia"). Meia-noite UTC = 21h em Brasília.
     - cron: "0 0 */2 * *"
-  workflow_dispatch: {}
-    # Isso permite rodar manualmente: no GitHub, aba "Actions" > "Buscar imóveis" > "Run workflow"
+  workflow_dispatch:
+    inputs:
+      chave_adicional:
+        description: 'Chave ScrapingBee extra (opcional)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -42,9 +43,6 @@ jobs:
             git commit -m "Atualiza imoveis.json [automático]"
             git fetch origin main
             if ! git rebase origin/main; then
-              # imoveis.json é gerado automaticamente (ninguém edita à mão),
-              # então em caso de conflito é seguro manter a versão que
-              # acabou de ser coletada nesta execução.
               echo "Conflito durante o rebase - mantendo a versão recém-coletada."
               git checkout --ours -- imoveis.json
               git add imoveis.json
