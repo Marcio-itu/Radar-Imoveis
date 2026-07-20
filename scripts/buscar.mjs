@@ -183,7 +183,6 @@ function buscarImagensViaJsonLd(html) {
   return encontradas;
 }
 
-// ========== EXTRAÇÃO DE IMAGENS CORRIGIDA ==========
 function extrairImagens(anchorHtmlBruto, htmlCompleto, matchIndex, baseUrl) {
   const doAncora = buscarImagensEmTrecho(anchorHtmlBruto);
   
@@ -259,7 +258,6 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
     });
   }
 
-  // captura links em <a href="...">
   const regexLink = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
   let match;
 
@@ -299,7 +297,6 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
     });
   }
 
-  // captura links em onclick="location.href='...'"
   const regexOnclick = /onclick=["']location\.href=['"]([^"']+)['"]/gi;
   let m2;
   while ((m2 = regexOnclick.exec(html)) !== null) {
@@ -382,28 +379,72 @@ async function buscarComUmaChave(url, apiKey, opcoes = {}) {
   return await resp.text();
 }
 
-// ========== BUSCA EM PARALELO COM MÚLTIPLAS CHAVES ==========
-async function buscarComJSMelhorado(url, chaves, opcoes = {}) {
-  console.log(`  🚀 Tentando ${chaves.length} chaves em paralelo...`);
+// ========== FUNÇÃO PARA TESTAR QUAL CHAVE TEM CRÉDITO ==========
+async function encontrarChaveComCredito(chaves) {
+  if (chaves.length === 0) return null;
   
-  const promessas = chaves.map((chave, idx) => 
-    buscarComUmaChave(url, chave, opcoes)
-      .then(html => ({ sucesso: true, html, chave, idx }))
-      .catch(erro => ({ sucesso: false, erro, chave, idx }))
-  );
-
-  const resultados = await Promise.all(promessas);
+  console.log(`  🔍 Testando ${chaves.length} chaves para encontrar uma com crédito...`);
   
-  for (const resultado of resultados) {
-    if (resultado.sucesso) {
-      console.log(`  ✅ Busca bem-sucedida com chave #${resultado.idx + 1}`);
-      return resultado.html;
+  // Testa cada chave fazendo uma requisição simples (sem custo)
+  for (let i = 0; i < chaves.length; i++) {
+    try {
+      const resp = await fetch(
+        "https://app.scrapingbee.com/api/v1/account?api_key=" + encodeURIComponent(chaves[i])
+      );
+      if (!resp.ok) {
+        console.log(`  Chave #${i + 1}: HTTP ${resp.status} - ignorando`);
+        continue;
+      }
+      const dados = await resp.json();
+      const restante = dados.credit ?? dados.remaining_credit ?? 
+                      (dados.max_api_credit - dados.used_api_credit);
+      
+      if (restante != null && restante > 10) {
+        console.log(`  ✅ Chave #${i + 1} tem ${restante} créditos - será usada!`);
+        return chaves[i];
+      } else {
+        console.log(`  Chave #${i + 1}: sem crédito suficiente (${restante})`);
+      }
+    } catch (e) {
+      console.log(`  Chave #${i + 1}: erro ao testar (${e.message})`);
     }
   }
   
-  const primeiroErro = resultados.find(r => !r.sucesso)?.erro || new Error("Todas as chaves falharam");
-  console.log(`  ❌ Todas as chaves falharam. Último erro: ${primeiroErro.message}`);
-  throw primeiroErro;
+  // Se nenhuma chave passou no teste, usa a primeira como fallback
+  console.log(`  ⚠️ Nenhuma chave confirmada com crédito, usando chave #1 como fallback`);
+  return chaves[0];
+}
+
+// ========== BUSCA COM CHAVE PRIORITÁRIA ==========
+async function buscarComJS(url, chaves, opcoes = {}) {
+  // Primeiro, encontra a melhor chave
+  const chavePrioritaria = await encontrarChaveComCredito(chaves);
+  if (!chavePrioritaria) {
+    throw new Error("Nenhuma chave ScrapingBee disponível");
+  }
+  
+  console.log(`  🚀 Buscando com chave prioritária...`);
+  
+  // Tenta com a chave prioritária primeiro
+  try {
+    return await buscarComUmaChave(url, chavePrioritaria, opcoes);
+  } catch (e) {
+    if (!e.semCredito) throw e; // erro não relacionado a crédito
+    
+    console.log(`  ⚠️ Chave prioritária falhou (sem crédito), tentando outras...`);
+    
+    // Fallback: tenta as outras chaves
+    for (const chave of chaves) {
+      if (chave === chavePrioritaria) continue;
+      try {
+        return await buscarComUmaChave(url, chave, opcoes);
+      } catch (e2) {
+        if (!e2.semCredito) throw e2;
+        console.log(`  ⚠️ Chave fallback também falhou`);
+      }
+    }
+    throw new Error("Todas as chaves ScrapingBee falharam (sem crédito)");
+  }
 }
 
 // Cenario pra abrir a galeria de fotos
@@ -477,6 +518,12 @@ async function main() {
 
   console.log(`🔑 ${chavesScrapingBee.length} chave(s) ScrapingBee configurada(s)`);
 
+  // Encontra a melhor chave uma vez e reutiliza
+  const chaveParaGaleria = chavesScrapingBee.length > 0 ? await encontrarChaveComCredito(chavesScrapingBee) : null;
+  if (chaveParaGaleria) {
+    console.log(`✅ Chave selecionada para galerias: ${chaveParaGaleria.slice(0, 10)}...`);
+  }
+
   const todos = [];
   const erros = [];
 
@@ -493,7 +540,7 @@ async function main() {
           erros.push(msg);
           continue;
         }
-        html = await buscarComJSMelhorado(fonte.url, chavesScrapingBee);
+        html = await buscarComJS(fonte.url, chavesScrapingBee);
       } else {
         html = await buscarDireto(fonte.url);
       }
@@ -523,7 +570,7 @@ async function main() {
 
   const dataHoje = new Date().toISOString().split("T")[0];
 
-  // Segunda passada: galerias completas
+  // Segunda passada: galerias completas - USANDO A CHAVE PRIORITÁRIA
   let doCache = 0, buscadosGratis = 0, buscadosComCredito = 0, semGaleria = 0;
 
   for (const item of todos) {
@@ -549,9 +596,10 @@ async function main() {
         semGaleria++;
       }
       await esperar(400);
-    } else if (chavesScrapingBee.length > 0) {
+    } else if (chaveParaGaleria) {
       try {
-        const htmlBrutoJS = await buscarComJSMelhorado(item.link, chavesScrapingBee, { jsScenario: CENARIO_ABRIR_GALERIA });
+        // Usa a chave que já sabemos que tem crédito
+        const htmlBrutoJS = await buscarComUmaChave(item.link, chaveParaGaleria, { jsScenario: CENARIO_ABRIR_GALERIA });
         const doJsonLd = buscarImagensViaJsonLd(htmlBrutoJS);
         const html = removerScriptsEEstilos(htmlBrutoJS);
         const doHtml = buscarImagensEmTrecho(html);
@@ -604,7 +652,6 @@ async function main() {
   }
 }
 
-// ========== VERIFICAÇÃO DE CRÉDITOS ==========
 async function calcularCreditosRestantes(chaves) {
   if (chaves.length === 0) return { total: null, algumaFalhou: false };
 
