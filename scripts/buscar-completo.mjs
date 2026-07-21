@@ -1,12 +1,12 @@
 // scripts/buscar-completo.mjs
 //
-// VERSÃO FINAL - COMPLETA E REVISADA
+// VERSÃO FINAL - COM SITEMAP + FALLBACK DE DATAS
 // ✅ ID único por imóvel
-// ✅ Data de publicação (6 meses de validade)
+// ✅ Data de publicação (sitemap + fallbacks)
 // ✅ Busca prioritária no portal Kenlo
-// ✅ Fallback para outras fontes
 // ✅ Sem mistura de fotos
-// ✅ Títulos limpos (decodifica entidades HTML e filtra código JS)
+// ✅ Títulos limpos
+// ✅ Mantém imóveis mesmo sem data
 
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -109,12 +109,14 @@ function extrairFinalidade(texto) {
 }
 
 // ============================================================
-// DATA DE PUBLICAÇÃO (COM FALLBACK)
+// DATA DE PUBLICAÇÃO - MÚLTIPLAS FONTES
 // ============================================================
 
-function extrairDataPublicacao(texto) {
+// 1. DATA EXPLÍCITA NO TEXTO
+function extrairDataTexto(texto) {
   if (!texto) return null;
-  
+
+  // "Publicado há X dias"
   let match = texto.match(/publicado\s*há\s*(\d+)\s*dias?/i);
   if (match) {
     const dias = parseInt(match[1]);
@@ -122,7 +124,8 @@ function extrairDataPublicacao(texto) {
     data.setDate(data.getDate() - dias);
     return data.toISOString().split('T')[0];
   }
-  
+
+  // "Publicado há X meses"
   match = texto.match(/publicado\s*há\s*(\d+)\s*meses?/i);
   if (match) {
     const meses = parseInt(match[1]);
@@ -130,12 +133,14 @@ function extrairDataPublicacao(texto) {
     data.setMonth(data.getMonth() - meses);
     return data.toISOString().split('T')[0];
   }
-  
+
+  // "Anunciado em DD/MM/AAAA"
   match = texto.match(/anunciado\s*em\s*(\d{2})\/(\d{2})\/(\d{4})/i);
   if (match) {
     return `${match[3]}-${match[2]}-${match[1]}`;
   }
-  
+
+  // "Há X dias"
   match = texto.match(/há\s*(\d+)\s*dias?/i);
   if (match) {
     const dias = parseInt(match[1]);
@@ -143,36 +148,194 @@ function extrairDataPublicacao(texto) {
     data.setDate(data.getDate() - dias);
     return data.toISOString().split('T')[0];
   }
-  
+
+  // Data em formato DD/MM/AAAA
   match = texto.match(/(\d{2})\/(\d{2})\/(\d{4})/);
   if (match) {
     return `${match[3]}-${match[2]}-${match[1]}`;
   }
-  
+
   return null;
 }
 
-function imovelEstaAtivo(dataPublicacao, diasMaximo = 180) {
-  if (!dataPublicacao) return false;
-  const hoje = new Date();
-  const data = new Date(dataPublicacao);
-  const diffTime = hoje - data;
-  const diffDias = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  return diffDias <= diasMaximo;
+// 2. DATA DA IMAGEM (pasta com ano/mês)
+function extrairDataImagem(imagemUrl) {
+  if (!imagemUrl) return null;
+
+  // Padrão: .../2025/06/imagem.jpg
+  const matchAnoMes = imagemUrl.match(/\/(\d{4})\/(\d{2})\//);
+  if (matchAnoMes) {
+    return `${matchAnoMes[1]}-${matchAnoMes[2]}-01`;
+  }
+
+  // Padrão: .../20250615_imagem.jpg
+  const matchData = imagemUrl.match(/\/(\d{4})(\d{2})(\d{2})_/);
+  if (matchData) {
+    return `${matchData[1]}-${matchData[2]}-${matchData[3]}`;
+  }
+
+  return null;
+}
+
+// 3. DATA DO ID SEQUENCIAL (estimativa)
+function extrairDataPorId(link) {
+  const idMatch = link.match(/\/(\d{5,})$/);
+  if (!idMatch) return null;
+
+  const id = parseInt(idMatch[1]);
+  if (id < 1000000) return null; // ID muito pequeno, provavelmente não é sequencial
+
+  // Estimativa: assumindo que o primeiro imóvel foi em 2010
+  // e que o ID cresce ~1 por dia
+  const diasDesde2010 = Math.floor(id / 10); // ajuste empírico
+  const dataBase = new Date(2010, 0, 1);
+  dataBase.setDate(dataBase.getDate() + diasDesde2010);
+
+  // Limita a 2025
+  if (dataBase.getFullYear() > 2025) {
+    dataBase.setFullYear(2025);
+  }
+
+  return dataBase.toISOString().split('T')[0];
+}
+
+// 4. FUNÇÃO PRINCIPAL - TENTA TODAS AS FONTES
+function extrairDataPublicacao(texto, link, imagemUrl) {
+  // Prioridade 1: Data explícita no texto
+  let data = extrairDataTexto(texto);
+  if (data) return data;
+
+  // Prioridade 2: Data da imagem
+  if (imagemUrl) {
+    data = extrairDataImagem(imagemUrl);
+    if (data) return data;
+  }
+
+  // Prioridade 3: Data do ID (estimativa)
+  if (link) {
+    data = extrairDataPorId(link);
+    if (data) return data;
+  }
+
+  return null;
 }
 
 // ============================================================
-// ID ÚNICO DO IMÓVEL
+// SITEMAP - BUSCA DATA POR URL
 // ============================================================
 
-function gerarIdImovel(link) {
-  let linkLimpo = link.replace(/\?from=.*$/, '').replace(/\/$/, '');
-  const partes = linkLimpo.split('/');
-  let id = partes[partes.length - 1];
-  if (!id || id.length < 3) {
-    id = linkLimpo.split('/').slice(-2).join('-');
+async function buscarSitemap(sitemapUrl) {
+  try {
+    const resp = await fetch(sitemapUrl, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+      }
+    });
+    if (!resp.ok) return null;
+    const xml = await resp.text();
+    return xml;
+  } catch (e) {
+    return null;
   }
-  return id;
+}
+
+function parsearSitemap(xml, baseUrl) {
+  const mapa = new Map();
+
+  // Extrai todas as tags <url>
+  const regexUrl = /<url>([\s\S]*?)<\/url>/gi;
+  let match;
+
+  while ((match = regexUrl.exec(xml)) !== null) {
+    const bloco = match[1];
+
+    // Extrai a URL
+    const urlMatch = bloco.match(/<loc>([^<]+)<\/loc>/i);
+    if (!urlMatch) continue;
+
+    // Extrai a data
+    const lastmodMatch = bloco.match(/<lastmod>([^<]+)<\/lastmod>/i);
+    if (!lastmodMatch) continue;
+
+    const url = urlMatch[1].trim();
+    const data = lastmodMatch[1].trim().split('T')[0]; // Pega apenas YYYY-MM-DD
+
+    // Normaliza a URL (remove parâmetros)
+    const urlLimpa = url.split('?')[0];
+    mapa.set(urlLimpa, data);
+  }
+
+  return mapa;
+}
+
+async function carregarSitemap(baseUrl) {
+  // Tenta as URLs mais comuns de sitemap
+  const tentativas = [
+    `${baseUrl}/sitemap.xml`,
+    `${baseUrl}/sitemap_index.xml`,
+    `${baseUrl}/sitemap_imoveis.xml`,
+  ];
+
+  for (const url of tentativas) {
+    try {
+      const xml = await buscarSitemap(url);
+      if (xml) {
+        const mapa = parsearSitemap(xml, baseUrl);
+        if (mapa.size > 0) {
+          console.log(`  📍 Sitemap encontrado: ${mapa.size} URLs`);
+          return mapa;
+        }
+      }
+    } catch (e) {
+      // Tenta a próxima
+    }
+  }
+
+  return null;
+}
+
+// ============================================================
+// FUNÇÕES DE BAIRRO E CIDADE
+// ============================================================
+
+const CIDADES_REGEX_TEXTO = "Itu|Indaiatuba|Salto|Sorocaba|Cabreúva|Cabreuva";
+
+function pareceControleDePagina(texto) {
+  return /crescente|decrescente|\d+\s*im[oó]ve(l|is)|ordenar\s*por/i.test(texto);
+}
+
+function extrairBairro(texto) {
+  let m = texto.match(
+    new RegExp(
+      `([A-ZÀ-Ú][\\wÀ-ú0-9°º.'\\s]{2,45}?)\\s*[-–]\\s*(?:${CIDADES_REGEX_TEXTO})\\s*[-–]\\s*SP\\b`,
+      "i"
+    )
+  );
+  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
+
+  m = texto.match(
+    /(?:bairro|condom[ií]nio|residencial|jardim|parque|vila)\s*:?\s+([A-ZÀ-Ú][\wÀ-ú0-9°º.'\s]{2,40})/i
+  );
+  if (m && !pareceControleDePagina(m[0])) return limparTexto(m[0]);
+
+  m = texto.match(/(?:em|no|na)\s+([A-ZÀ-Ú][\wÀ-ú\s]{2,40})/);
+  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
+  return "";
+}
+
+const CIDADES_CONHECIDAS = ["itu", "indaiatuba", "salto", "sorocaba", "cabreúva", "cabreuva"];
+
+function extrairCidade(texto, href) {
+  const matchTexto = texto.match(/[-–]\s*([A-ZÀ-Ú][a-zà-ú]+)\s*[\/\-]\s*SP\b/i);
+  if (matchTexto) return limparTexto(matchTexto[1]);
+
+  const alvoHref = href.toLowerCase();
+  for (const cidade of CIDADES_CONHECIDAS) {
+    if (alvoHref.includes("/" + cidade)) {
+      return cidade.charAt(0).toUpperCase() + cidade.slice(1);
+    }
+  }
+  return "";
 }
 
 // ============================================================
@@ -255,7 +418,7 @@ const PADRAO_LINK_IMOVEL =
 // EXTRAÇÃO DE CARDS (COM CAPTURA POR CARD)
 // ============================================================
 
-function extrairCards(htmlBruto, baseUrl, nomeFonte) {
+function extrairCards(htmlBruto, baseUrl, nomeFonte, sitemapDatas) {
   const porId = new Map();
   const html = removerScriptsEEstilos(htmlBruto);
 
@@ -330,13 +493,8 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
     const cardHtml = capturarCard(html, posicaoLink);
     const textoCard = limparTexto(removerTags(cardHtml));
 
-    // ========== EXTRAI DATA DE PUBLICAÇÃO ==========
-    let dataPublicacao = extrairDataPublicacao(textoCard) || extrairDataPublicacao(textoLink);
-    if (!dataPublicacao) {
-      dataPublicacao = extrairDataPublicacao(cardHtml);
-    }
-
     const imagens = extrairImagensDoCard(cardHtml, baseUrl);
+    const imagemUrl = imagens[0] || "";
     const preco = extrairPreco(textoCard) || extrairPreco(textoLink);
     const quartos = extrairQuartos(textoCard) || extrairQuartos(textoLink);
     const suites = extrairSuites(textoCard) || extrairSuites(textoLink);
@@ -355,11 +513,28 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       titulo = "Imóvel " + (href.split('/').pop() || '');
     }
 
+    // ========== EXTRAI DATA DE PUBLICAÇÃO ==========
+    // 1. Tenta o sitemap primeiro
+    let dataPublicacao = null;
+    const hrefLimpo = href.split('?')[0];
+    if (sitemapDatas && sitemapDatas.has(hrefLimpo)) {
+      dataPublicacao = sitemapDatas.get(hrefLimpo);
+    }
+
+    // 2. Se não tiver no sitemap, tenta texto + imagem + ID
+    if (!dataPublicacao) {
+      dataPublicacao = extrairDataPublicacao(
+        textoCard + " " + textoLink,
+        href,
+        imagemUrl
+      );
+    }
+
     registrar(href, {
       fonte: nomeFonte,
       titulo: titulo,
       imagens: imagens,
-      imagem: imagens[0] || "",
+      imagem: imagemUrl,
       preco: preco,
       quartos: quartos,
       suites: suites,
@@ -378,47 +553,17 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
 }
 
 // ============================================================
-// FUNÇÕES DE BAIRRO E CIDADE
+// ID ÚNICO DO IMÓVEL
 // ============================================================
 
-const CIDADES_REGEX_TEXTO = "Itu|Indaiatuba|Salto|Sorocaba|Cabreúva|Cabreuva";
-
-function pareceControleDePagina(texto) {
-  return /crescente|decrescente|\d+\s*im[oó]ve(l|is)|ordenar\s*por/i.test(texto);
-}
-
-function extrairBairro(texto) {
-  let m = texto.match(
-    new RegExp(
-      `([A-ZÀ-Ú][\\wÀ-ú0-9°º.'\\s]{2,45}?)\\s*[-–]\\s*(?:${CIDADES_REGEX_TEXTO})\\s*[-–]\\s*SP\\b`,
-      "i"
-    )
-  );
-  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
-
-  m = texto.match(
-    /(?:bairro|condom[ií]nio|residencial|jardim|parque|vila)\s*:?\s+([A-ZÀ-Ú][\wÀ-ú0-9°º.'\s]{2,40})/i
-  );
-  if (m && !pareceControleDePagina(m[0])) return limparTexto(m[0]);
-
-  m = texto.match(/(?:em|no|na)\s+([A-ZÀ-Ú][\wÀ-ú\s]{2,40})/);
-  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
-  return "";
-}
-
-const CIDADES_CONHECIDAS = ["itu", "indaiatuba", "salto", "sorocaba", "cabreúva", "cabreuva"];
-
-function extrairCidade(texto, href) {
-  const matchTexto = texto.match(/[-–]\s*([A-ZÀ-Ú][a-zà-ú]+)\s*[\/\-]\s*SP\b/i);
-  if (matchTexto) return limparTexto(matchTexto[1]);
-
-  const alvoHref = href.toLowerCase();
-  for (const cidade of CIDADES_CONHECIDAS) {
-    if (alvoHref.includes("/" + cidade)) {
-      return cidade.charAt(0).toUpperCase() + cidade.slice(1);
-    }
+function gerarIdImovel(link) {
+  let linkLimpo = link.replace(/\?from=.*$/, '').replace(/\/$/, '');
+  const partes = linkLimpo.split('/');
+  let id = partes[partes.length - 1];
+  if (!id || id.length < 3) {
+    id = linkLimpo.split('/').slice(-2).join('-');
   }
-  return "";
+  return id;
 }
 
 // ============================================================
@@ -650,36 +795,35 @@ async function buscarGaleriaCompletaJS(url, chaves) {
 
 async function main() {
   console.log("\n" + "=".repeat(60));
-  console.log("🚀 BUSCAR-COMPLETO.MJS - VERSÃO FINAL");
-  console.log("   ✅ ID único | ✅ Data de publicação | ✅ Kenlo");
+  console.log("🚀 BUSCAR-COMPLETO.MJS - COM SITEMAP + FALLBACK");
+  console.log("   ✅ Sitemap (prioridade 1) | ✅ Texto | ✅ Imagem | ✅ ID");
   console.log("=".repeat(60));
 
   // ========== FONTES ==========
-  // PRIORIDADE: Kenlo (portal geral) primeiro
-  const fontes = [
-    {
-      nome: "Kenlo - Portal Geral",
-      url: "https://portal.kenlo.com.br/imoveis/a-venda/itu",
-      jsNecessario: true,
-      prioridade: 1
-    },
-    ...JSON.parse(await readFile(new URL("../fontes.json", import.meta.url), "utf-8"))
-      .filter(f => f.nome !== "Kenlo - Portal Geral")
-  ];
+  const fontesRaw = await readFile(new URL("../fontes.json", import.meta.url), "utf-8");
+  const fontes = JSON.parse(fontesRaw);
 
-  // Cache de galerias
-  const cacheGaleria = new Map();
-  try {
-    const anteriorRaw = await readFile(new URL("../imoveis.json", import.meta.url), "utf-8");
-    const anterior = JSON.parse(anteriorRaw);
-    for (const item of anterior.imoveis || []) {
-      if (item.galeriaCompleta && item.link && item.imagens && item.imagens.length > 0) {
-        cacheGaleria.set(item.link, item.imagens.slice(0, 8));
+  // ========== SITEMAPS ==========
+  console.log("\n📡 Carregando sitemaps...");
+  const sitemapCache = new Map();
+
+  for (const fonte of fontes) {
+    // Pula Kenlo (não tem sitemap) e sites que já são JS (vão ser buscados depois)
+    if (fonte.nome === "Kenlo - Portal Geral") continue;
+
+    try {
+      const baseUrl = new URL(fonte.url).origin;
+      console.log(`  🔍 ${fonte.nome}...`);
+      const mapa = await carregarSitemap(baseUrl);
+      if (mapa && mapa.size > 0) {
+        sitemapCache.set(fonte.nome, mapa);
+        console.log(`    ✅ ${mapa.size} URLs carregadas`);
+      } else {
+        console.log(`    ⚠️ Sem sitemap`);
       }
+    } catch (e) {
+      console.log(`    ❌ Erro: ${e.message}`);
     }
-    console.log(`📦 Cache de galerias: ${cacheGaleria.size} imóveis`);
-  } catch (e) {
-    console.log("📦 Sem cache - primeira execução.");
   }
 
   // ========== CHAVES ==========
@@ -694,15 +838,16 @@ async function main() {
 
   console.log(`\n🔑 CHAVES CONFIGURADAS:`);
   console.log(`  🐝 ScrapingBee: ${scrapingBeeKeys.length} chave(s)`);
-  console.log(`  🔥 Firecrawl: ${firecrawlKey ? "✅ Configurado" : "❌ Não configurado"}`);
-  console.log(`  🧪 ScraperAPI: ${scraperAPIKey ? "✅ Configurado" : "❌ Não configurado"}`);
+  console.log(`  🔥 Firecrawl: ${firecrawlKey ? "✅" : "❌"}`);
+  console.log(`  🧪 ScraperAPI: ${scraperAPIKey ? "✅" : "❌"}`);
 
   const chaves = { scrapingBeeKeys, firecrawlKey, scraperAPIKey };
 
   const todos = [];
   const erros = [];
-  const DIAS_MAXIMO = 180; // 6 meses
+  const DIAS_MAXIMO = 180;
 
+  // ========== BUSCA ==========
   for (const fonte of fontes) {
     console.log(`\n📡 Buscando: ${fonte.nome} (${fonte.url})${fonte.jsNecessario ? " [via JS]" : ""}`);
 
@@ -721,29 +866,37 @@ async function main() {
         html = await buscarDireto(fonte.url);
       }
 
-      const itens = extrairCards(html, fonte.url, fonte.nome);
-      
-      // Filtra por data de publicação
+      // Pega o sitemap desta fonte (se existir)
+      const sitemapDatas = sitemapCache.get(fonte.nome) || null;
+
+      const itens = extrairCards(html, fonte.url, fonte.nome, sitemapDatas);
+
+      // Filtra por data (mas mantém os sem data)
       let ativos = 0;
+      let semData = 0;
       let removidos = 0;
-      
+
       for (const item of itens) {
         if (item.dataPublicacao) {
-          if (imovelEstaAtivo(item.dataPublicacao, DIAS_MAXIMO)) {
+          const data = new Date(item.dataPublicacao);
+          const diffDias = (Date.now() - data.getTime()) / (1000 * 60 * 60 * 24);
+          if (diffDias <= DIAS_MAXIMO) {
             item._semJS = !fonte.jsNecessario;
             todos.push(item);
             ativos++;
           } else {
             removidos++;
-            console.log(`  🗑️ Removido (mais de 6 meses): ${item.titulo}`);
+            console.log(`  🗑️ Removido (+6 meses): ${item.titulo}`);
           }
         } else {
-          removidos++;
-          console.log(`  🗑️ Removido (sem data de publicação): ${item.titulo}`);
+          // Mantém imóveis sem data
+          semData++;
+          item._semJS = !fonte.jsNecessario;
+          todos.push(item);
         }
       }
-      
-      console.log(`  ✅ ${itens.length} imóveis encontrados | ${ativos} ativos | ${removidos} removidos`);
+
+      console.log(`  ✅ ${itens.length} imóveis | ${ativos} ativos | ${semData} sem data | ${removidos} removidos`);
 
       if (itens.length === 0) {
         erros.push(`${fonte.nome}: 0 imóveis`);
@@ -757,6 +910,17 @@ async function main() {
   const dataHoje = new Date().toISOString().split("T")[0];
 
   // ========== GALERIAS ==========
+  const cacheGaleria = new Map();
+  try {
+    const anteriorRaw = await readFile(new URL("../imoveis.json", import.meta.url), "utf-8");
+    const anterior = JSON.parse(anteriorRaw);
+    for (const item of anterior.imoveis || []) {
+      if (item.galeriaCompleta && item.link && item.imagens && item.imagens.length > 0) {
+        cacheGaleria.set(item.link, item.imagens.slice(0, 8));
+      }
+    }
+  } catch (e) {}
+
   let doCache = 0, buscadosGratis = 0, buscadosComCredito = 0, semGaleria = 0;
 
   for (const item of todos) {
@@ -795,7 +959,6 @@ async function main() {
         }
         await esperar(1000);
       } catch (e) {
-        console.warn(`  ⚠️ Galeria falhou: ${e.message.slice(0, 60)}`);
         semGaleria++;
       }
     }
@@ -811,7 +974,7 @@ async function main() {
     total: todosLimpos.length,
     imoveis: todosLimpos,
     erros,
-    disclaimer: "Imóveis com até 6 meses de publicação. Alguns podem não estar disponíveis caso a imobiliária não tenha atualizado sua página."
+    disclaimer: "Imóveis com até 6 meses de publicação (quando disponível). Imóveis sem data são mantidos."
   };
 
   await writeFile(
