@@ -1,6 +1,6 @@
 {
-  "atualizadoEm": "2026-07-20T23:24:30.380Z",
-  "geradoEm": "2026-07-20",
+  "atualizadoEm": "2026-07-21T00:11:58.403Z",
+  "geradoEm": "2026-07-21",
   "total": 140,
   "imoveis": [
     {
@@ -3527,24 +3527,22 @@
     }
   ],
   "erros": [
-    "Grupo Kaion: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "Utu-Guaçu Imóveis: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "Danilo Ferreira Imóveis: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "Opção Imóveis Itu: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "Teixeira Imóveis: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "GS Imóveis Itu: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "Cury Massoca Brokers: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "AP Imóveis Itu: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "Bem Aqui Imóveis: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "Regina Marchi Imóveis: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "SLA Imobiliária Itu: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "Proimóvel Itu: Todas as chaves ScrapingBee falharam (sem crédito)",
+    "Grupo Kaion: Todas as 1 chaves falharam (sem crédito).",
+    "Utu-Guaçu Imóveis: Todas as 1 chaves falharam (sem crédito).",
+    "Danilo Ferreira Imóveis: Todas as 1 chaves falharam (sem crédito).",
+    "Opção Imóveis Itu: Todas as 1 chaves falharam (sem crédito).",
+    "Teixeira Imóveis: Todas as 1 chaves falharam (sem crédito).",
+    "GS Imóveis Itu: Todas as 1 chaves falharam (sem crédito).",
+    "Cury Massoca Brokers: Todas as 1 chaves falharam (sem crédito).",
+    "AP Imóveis Itu: Todas as 1 chaves falharam (sem crédito).",
+    "Bem Aqui Imóveis: Todas as 1 chaves falharam (sem crédito).",
+    "Regina Marchi Imóveis: Todas as 1 chaves falharam (sem crédito).",
+    "SLA Imobiliária Itu: Todas as 1 chaves falharam (sem crédito).",
+    "Proimóvel Itu: Todas as 1 chaves falharam (sem crédito).",
     "VivaReal: HTTP 403",
-    "Costa Rocha Imóveis: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "Sérgio Duarte Corretor: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "Beto Imóveis: Todas as chaves ScrapingBee falharam (sem crédito)",
-    "Adore Imóveis: Todas as chaves ScrapingBee falharam (sem crédito)"
-  ],
-  "creditosScrapingBee": 500,
-  "creditosScrapingBeeParcial": true
+    "Costa Rocha Imóveis: Todas as 1 chaves falharam (sem crédito).",
+    "Sérgio Duarte Corretor: Todas as 1 chaves falharam (sem crédito).",
+    "Beto Imóveis: Todas as 1 chaves falharam (sem crédito).",
+    "Adore Imóveis: Todas as 1 chaves falharam (sem crédito)."
+  ]
 }
