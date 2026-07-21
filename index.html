@@ -111,6 +111,8 @@
     justify-content:space-between;
     align-items:center;
     margin-bottom:18px;
+    flex-wrap:wrap;
+    gap:10px;
   }
   .painel h2{
     font-family:'Segoe UI', Arial, sans-serif;
@@ -255,6 +257,34 @@
   }
   .status.erro{color:var(--erro);}
 
+  /* ========== BOTÃO DE VOZ ========== */
+  .botoes-voz{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:12px;
+  }
+  .botao-voz{
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:13px;
+    font-weight:600;
+    padding:10px 18px;
+    border-radius:7px;
+    border:none;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:transform .12s, box-shadow .12s, background .12s;
+    background:var(--ouro);
+    color:#fff;
+  }
+  .botao-voz:hover{ transform:translateY(-1px); background:var(--ouro-escuro); }
+  .botao-voz-whats{
+    background:var(--verde-whats);
+    color:#fff;
+  }
+  .botao-voz-whats:hover{ background:#1f6e3f; }
+  .botao-voz:disabled{ opacity:.45; cursor:not-allowed; transform:none; }
+
   .barra-selecao{
     position:sticky;
     top:0;
@@ -323,18 +353,6 @@
     background:#fff;
     border-radius:7px;
   }
-
-  .disclaimer{
-    background:var(--ouro-claro);
-    border-left:4px solid var(--ouro);
-    border-radius:var(--raio);
-    padding:14px 18px;
-    margin-bottom:20px;
-    font-family:'Segoe UI', Arial, sans-serif;
-    font-size:12.5px;
-    color:var(--tinta-suave);
-  }
-  .disclaimer strong{ color:var(--tinta); }
 
   .resultados{
     margin-top:10px;
@@ -653,10 +671,14 @@
 </div>
 
 <main id="conteudo-principal">
+  <!-- ========== PAINEL DE FILTROS ========== -->
   <div class="painel" id="painel-filtros">
     <div class="painel-cabecalho">
       <h2>Filtros</h2>
-      <button class="link-limpo" id="botao-limpar-filtros">Limpar filtros</button>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <button class="botao-voz" id="botao-ouvir-comando" style="font-size:12px; padding:6px 14px;">🎤 Falar comando</button>
+        <button class="link-limpo" id="botao-limpar-filtros">Limpar filtros</button>
+      </div>
     </div>
     <div class="linha-filtros">
       <fieldset>
@@ -746,14 +768,14 @@
         <input type="number" id="area-minima" min="0" placeholder="Ex: 100" style="width:100px;">
       </fieldset>
     </div>
-    <div class="status" id="status"></div>
-  </div>
 
-  <!-- ========== DISCLAIMER ========== -->
-  <div class="disclaimer" id="disclaimer-principal">
-    <strong>📢 Atenção:</strong> Este radar exibe apenas imóveis com <strong>até 6 meses de publicação</strong>.
-    Alguns imóveis podem não estar mais disponíveis caso a imobiliária não tenha atualizado sua página.
-    Recomendamos sempre verificar a disponibilidade diretamente com a imobiliária anunciante.
+    <!-- ========== BOTÕES DE VOZ ADICIONAIS ========== -->
+    <div class="botoes-voz">
+      <button class="botao-voz" id="botao-ouvir-resultados">🔊 Ouvir resultados</button>
+      <button class="botao-voz botao-voz-whats" id="botao-voz-whats">📱 Enviar por voz + WhatsApp</button>
+    </div>
+
+    <div class="status" id="status"></div>
   </div>
 
   <details class="painel" id="painel-config" style="padding:16px 24px;">
@@ -786,15 +808,13 @@
     </div>
   </details>
 
-  <!-- ========== BARRA DE SELEÇÃO COM VOZ E WHATSAPP ========== -->
+  <!-- ========== BARRA DE SELEÇÃO ========== -->
   <div class="barra-selecao" id="barra-selecao" style="display:none;">
     <span class="contagem-selecao" id="contagem-selecao">0 imóveis selecionados</span>
     <div class="acoes">
       <button class="botao botao-fantasma" id="botao-limpar-selecao">Limpar seleção</button>
       <button class="botao botao-ouro" id="botao-gerar-link">Gerar link para cliente</button>
       <button class="botao botao-whats" id="botao-enviar-whats">Enviar por WhatsApp</button>
-      <button class="botao botao-ouro" id="botao-ouvir-comando" style="background:var(--ouro); color:#fff;">🎤 Falar comando</button>
-      <button class="botao botao-fantasma" id="botao-ouvir-resultados" style="background:rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.4);">🔊 Ouvir imóveis</button>
     </div>
   </div>
 
@@ -959,30 +979,18 @@ recognition.onresult = function(event) {
   // Aplica e fala o resultado
   aplicarFiltrosEExibir();
   
-  const total = document.querySelectorAll('.card-imovel:not(.selecionado)').length || 
-                document.querySelectorAll('.card-imovel').length;
+  const total = document.querySelectorAll('.card-imovel').length;
   falar(`Encontrei ${total} imóveis com esses filtros.`);
-  
-  // Marca os imóveis encontrados automaticamente
-  setTimeout(() => {
-    const cards = document.querySelectorAll('.card-imovel');
-    cards.forEach(card => {
-      const checkbox = card.querySelector('input[type="checkbox"]');
-      if (checkbox && !checkbox.checked) {
-        checkbox.checked = true;
-        checkbox.dispatchEvent(new Event('change'));
-      }
-    });
-    atualizarBarraSelecao();
-  }, 500);
 };
 
 recognition.onend = function() {
-  document.getElementById("botao-ouvir-comando").textContent = "🎤 Falar comando";
+  const botao = document.getElementById("botao-ouvir-comando");
+  if (botao) botao.textContent = "🎤 Falar comando";
 };
 
 recognition.onerror = function(event) {
-  document.getElementById("botao-ouvir-comando").textContent = "🎤 Falar comando";
+  const botao = document.getElementById("botao-ouvir-comando");
+  if (botao) botao.textContent = "🎤 Falar comando";
   if (event.error === 'not-allowed') {
     falar("Permissão de microfone negada. Ative no navegador.");
   } else if (event.error === 'no-speech') {
@@ -1001,28 +1009,28 @@ function ouvirResultados() {
     return;
   }
   
-  const filtrados = [];
+  const selecionados = [];
   cards.forEach(card => {
     const checkbox = card.querySelector('input[type="checkbox"]');
     if (checkbox && checkbox.checked) {
       const titulo = card.querySelector('.titulo')?.textContent || "Imóvel";
       const preco = card.querySelector('.selo-preco')?.textContent || "preço sob consulta";
-      filtrados.push({ titulo, preco });
+      selecionados.push({ titulo, preco });
     }
   });
   
-  if (filtrados.length === 0) {
+  if (selecionados.length === 0) {
     falar("Nenhum imóvel selecionado. Selecione alguns imóveis primeiro.");
     return;
   }
   
-  let mensagem = `Você selecionou ${filtrados.length} imóveis. `;
-  const primeiros = filtrados.slice(0, 5);
+  let mensagem = `Você selecionou ${selecionados.length} imóveis. `;
+  const primeiros = selecionados.slice(0, 5);
   primeiros.forEach((item, i) => {
     mensagem += `Imóvel ${i+1}: ${item.titulo}, por ${item.preco}. `;
   });
-  if (filtrados.length > 5) {
-    mensagem += `E mais ${filtrados.length - 5} imóveis. `;
+  if (selecionados.length > 5) {
+    mensagem += `E mais ${selecionados.length - 5} imóveis. `;
   }
   mensagem += "Quer gerar o link para enviar ao cliente?";
   
@@ -1050,17 +1058,19 @@ async function enviarPorVozWhatsApp() {
     return;
   }
   
-  // Gera o link
-  const link = await montarLinkCliente();
-  document.getElementById("campo-link-gerado").value = link;
-  document.getElementById("caixa-link").style.display = "block";
-  
-  // Envia para o WhatsApp
-  const telefone = prompt("Digite o telefone do cliente (com DDD):", "5511");
-  if (telefone) {
-    const mensagem = `Olá! Encontrei ${selecionados.length} imóveis para você: ${link}`;
-    window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`, "_blank");
-    falar(`Link enviado para o WhatsApp. ${selecionados.length} imóveis compartilhados.`);
+  try {
+    const link = await montarLinkCliente();
+    document.getElementById("campo-link-gerado").value = link;
+    document.getElementById("caixa-link").style.display = "block";
+    
+    const telefone = prompt("Digite o telefone do cliente (com DDD):", "5511");
+    if (telefone) {
+      const mensagem = `Olá! Encontrei ${selecionados.length} imóveis para você: ${link}`;
+      window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`, "_blank");
+      falar(`Link enviado para o WhatsApp. ${selecionados.length} imóveis compartilhados.`);
+    }
+  } catch(e) {
+    falar("Erro ao gerar o link. Verifique se o token do GitHub está configurado.");
   }
 }
 
@@ -1315,7 +1325,6 @@ function prepararTelaModoCliente(){
   document.getElementById("painel-config").style.display = "none";
   document.getElementById("barra-selecao").style.display = "none";
   document.getElementById("aviso-rodape").style.display = "none";
-  document.getElementById("disclaimer-principal").style.display = "none";
 }
 
 function adicionarBotaoWhatsCliente(mensagem){
@@ -1355,13 +1364,12 @@ async function renderizarCliente(itens){
   contagem.textContent = `${itens.length} imóvel(is) selecionado(s) para você`;
   resultadosDiv.appendChild(contagem);
 
-  // Disclaimer de 6 meses
+  // ========== DISCLAIMER DO CLIENTE (SEM "RECOMENDAMOS") ==========
   const disclaimer = document.createElement("div");
   disclaimer.className = "aviso-disclaimer-cliente";
   disclaimer.innerHTML = `
-    <strong>📢 Atenção:</strong> Esta seleção contém imóveis com <strong>até 6 meses de publicação</strong>.
-    Alguns podem não estar mais disponíveis caso a imobiliária não tenha atualizado sua página.
-    Recomendamos verificar a disponibilidade com a imobiliária anunciante.
+    <strong>📢 Atenção:</strong> Este radar exibe apenas imóveis com <strong>até 6 meses de publicação</strong>.
+    Alguns imóveis podem não estar mais disponíveis caso a imobiliária não tenha atualizado sua página.
   `;
   resultadosDiv.appendChild(disclaimer);
 
@@ -1744,6 +1752,7 @@ document.getElementById("botao-enviar-whats").addEventListener("click", async (e
   });
 });
 
+// ========== BOTÕES DE VOZ ==========
 document.getElementById("botao-ouvir-comando").addEventListener("click", () => {
   const botao = document.getElementById("botao-ouvir-comando");
   try {
@@ -1757,6 +1766,8 @@ document.getElementById("botao-ouvir-comando").addEventListener("click", () => {
 });
 
 document.getElementById("botao-ouvir-resultados").addEventListener("click", ouvirResultados);
+
+document.getElementById("botao-voz-whats").addEventListener("click", enviarPorVozWhatsApp);
 
 document.getElementById("botao-salvar-token").addEventListener("click", () => {
   const campo = document.getElementById("campo-token-github");
@@ -1814,26 +1825,6 @@ window.addEventListener("DOMContentLoaded", () => {
     carregarDados();
     if(obterToken()){
       document.getElementById("status-token").textContent = "Token salvo neste navegador ✓";
-    }
-  }
-});
-
-// ============================================================
-// FUNÇÃO PARA ENVIAR POR VOZ + WHATSAPP (adicional)
-// ============================================================
-
-// Adiciona um botão extra na barra de seleção para envio por voz
-document.addEventListener("DOMContentLoaded", function() {
-  const barra = document.getElementById("barra-selecao");
-  if (barra) {
-    const acoes = barra.querySelector(".acoes");
-    if (acoes) {
-      const botaoVozWhats = document.createElement("button");
-      botaoVozWhats.className = "botao botao-whats";
-      botaoVozWhats.id = "botao-voz-whats";
-      botaoVozWhats.textContent = "🎤 Enviar por voz";
-      botaoVozWhats.addEventListener("click", enviarPorVozWhatsApp);
-      acoes.appendChild(botaoVozWhats);
     }
   }
 });
