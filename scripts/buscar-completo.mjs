@@ -1,8 +1,8 @@
 // scripts/buscar-completo.mjs
 //
-// VERSÃO CORRIGIDA - Mantém imóveis mesmo sem data de publicação
-// ✅ ID único | ✅ Data de publicação (quando disponível) | ✅ Kenlo
-// ✅ Sem descarte de imóveis sem data
+// VERSÃO SIMPLIFICADA - MANTÉM TODOS OS IMÓVEIS
+// ✅ ID único | ✅ Kenlo prioritário | ✅ Títulos limpos
+// ❌ SEM verificação de data (todos os imóveis são mantidos)
 
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -105,93 +105,6 @@ function extrairFinalidade(texto) {
 }
 
 // ============================================================
-// DATA DE PUBLICAÇÃO (COM FALLBACK)
-// ============================================================
-
-function extrairDataPublicacao(texto) {
-  if (!texto) return null;
-  
-  let match = texto.match(/publicado\s*há\s*(\d+)\s*dias?/i);
-  if (match) {
-    const dias = parseInt(match[1]);
-    const data = new Date();
-    data.setDate(data.getDate() - dias);
-    return data.toISOString().split('T')[0];
-  }
-  
-  match = texto.match(/publicado\s*há\s*(\d+)\s*meses?/i);
-  if (match) {
-    const meses = parseInt(match[1]);
-    const data = new Date();
-    data.setMonth(data.getMonth() - meses);
-    return data.toISOString().split('T')[0];
-  }
-  
-  match = texto.match(/anunciado\s*em\s*(\d{2})\/(\d{2})\/(\d{4})/i);
-  if (match) {
-    return `${match[3]}-${match[2]}-${match[1]}`;
-  }
-  
-  match = texto.match(/h[áa]\s*(\d+)\s*dias?/i);
-  if (match) {
-    const dias = parseInt(match[1]);
-    const data = new Date();
-    data.setDate(data.getDate() - dias);
-    return data.toISOString().split('T')[0];
-  }
-  
-  match = texto.match(/(\d{2})\/(\d{2})\/(\d{4})/);
-  if (match) {
-    return `${match[3]}-${match[2]}-${match[1]}`;
-  }
-  
-  return null;
-}
-
-// Data da imagem (pasta com ano/mês)
-function extrairDataImagem(imagemUrl) {
-  if (!imagemUrl) return null;
-  const matchAnoMes = imagemUrl.match(/\/(\d{4})\/(\d{2})\//);
-  if (matchAnoMes) {
-    return `${matchAnoMes[1]}-${matchAnoMes[2]}-01`;
-  }
-  const matchData = imagemUrl.match(/\/(\d{4})(\d{2})(\d{2})_/);
-  if (matchData) {
-    return `${matchData[1]}-${matchData[2]}-${matchData[3]}`;
-  }
-  return null;
-}
-
-// Data do ID sequencial (estimativa)
-function extrairDataPorId(link) {
-  const idMatch = link.match(/\/(\d{5,})$/);
-  if (!idMatch) return null;
-  const id = parseInt(idMatch[1]);
-  if (id < 1000000) return null;
-  const diasDesde2010 = Math.floor(id / 10);
-  const dataBase = new Date(2010, 0, 1);
-  dataBase.setDate(dataBase.getDate() + diasDesde2010);
-  if (dataBase.getFullYear() > 2025) {
-    dataBase.setFullYear(2025);
-  }
-  return dataBase.toISOString().split('T')[0];
-}
-
-function extrairDataPublicacaoCompleta(texto, link, imagemUrl) {
-  let data = extrairDataPublicacao(texto);
-  if (data) return data;
-  if (imagemUrl) {
-    data = extrairDataImagem(imagemUrl);
-    if (data) return data;
-  }
-  if (link) {
-    data = extrairDataPorId(link);
-    if (data) return data;
-  }
-  return null;
-}
-
-// ============================================================
 // ID ÚNICO DO IMÓVEL
 // ============================================================
 
@@ -282,7 +195,7 @@ const PADRAO_LINK_IMOVEL =
   /\/imovel(\/|\?)|\/imoveis\/[^"']*\/(\d+)|\/detalhes\/(\d+)|\/propriedade\/(\d+)|\/[a-z-]+\/[a-z-]+\/[a-z-]+\/\d+|CA\d{4}-[A-Z0-9]+|SO\d{4}-[A-Z0-9]+/i;
 
 // ============================================================
-// EXTRAÇÃO DE CARDS (COM CAPTURA POR CARD)
+// EXTRAÇÃO DE CARDS
 // ============================================================
 
 function extrairCards(htmlBruto, baseUrl, nomeFonte) {
@@ -380,13 +293,6 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       titulo = "Imóvel " + (href.split('/').pop() || '');
     }
 
-    // ========== EXTRAI DATA DE PUBLICAÇÃO ==========
-    const dataPublicacao = extrairDataPublicacaoCompleta(
-      textoCard + " " + textoLink,
-      href,
-      imagemUrl
-    );
-
     registrar(href, {
       fonte: nomeFonte,
       titulo: titulo,
@@ -401,7 +307,6 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       cidade: cidade,
       tipo: tipo,
       finalidade: finalidade,
-      dataPublicacao: dataPublicacao,
       link: href
     });
   }
@@ -682,8 +587,8 @@ async function buscarGaleriaCompletaJS(url, chaves) {
 
 async function main() {
   console.log("\n" + "=".repeat(60));
-  console.log("🚀 BUSCAR-COMPLETO.MJS - VERSÃO CORRIGIDA");
-  console.log("   ✅ Mantém imóveis mesmo sem data de publicação");
+  console.log("🚀 BUSCAR-COMPLETO.MJS - VERSÃO SIMPLIFICADA");
+  console.log("   ✅ MANTÉM TODOS OS IMÓVEIS (sem filtro de data)");
   console.log("=".repeat(60));
 
   // ========== FONTES ==========
@@ -724,7 +629,6 @@ async function main() {
 
   const todos = [];
   const erros = [];
-  const DIAS_MAXIMO = 180;
 
   for (const fonte of fontes) {
     console.log(`\n📡 Buscando: ${fonte.nome} (${fonte.url})${fonte.jsNecessario ? " [via JS]" : ""}`);
@@ -746,37 +650,24 @@ async function main() {
 
       const itens = extrairCards(html, fonte.url, fonte.nome);
       
-      // ========== FILTRA POR DATA ==========
-      // 🔴 CORREÇÃO: mantém imóveis mesmo sem data
-      let ativos = 0;
-      let semData = 0;
-      let removidos = 0;
-      
+      // 🔴 MANTÉM TODOS OS IMÓVEIS - SEM FILTRO DE DATA
       for (const item of itens) {
-        if (item.dataPublicacao) {
-          const data = new Date(item.dataPublicacao);
-          const diffDias = (Date.now() - data.getTime()) / (1000 * 60 * 60 * 24);
-          if (diffDias <= DIAS_MAXIMO) {
-            item._semJS = !fonte.jsNecessario;
-            todos.push(item);
-            ativos++;
-          } else {
-            removidos++;
-            console.log(`  🗑️ Removido (+6 meses): ${item.titulo}`);
-          }
-        } else {
-          // 🔴 MANTÉM imóveis sem data
-          semData++;
-          item._semJS = !fonte.jsNecessario;
-          todos.push(item);
-          // Não loga cada um para não poluir
-        }
+        item._semJS = !fonte.jsNecessario;
+        todos.push(item);
       }
       
-      console.log(`  ✅ ${itens.length} imóveis encontrados | ${ativos} ativos | ${semData} sem data (mantidos) | ${removidos} removidos`);
+      console.log(`  ✅ ${itens.length} imóveis encontrados (todos mantidos)`);
 
       if (itens.length === 0) {
-        erros.push(`${fonte.nome}: 0 imóveis`);
+        const contemImovel = (html.match(/\/imovel\//gi) || []).length;
+        const contemComprar = (html.match(/\/(comprar|alugar)\//gi) || []).length;
+        const pareceBloqueio = /captcha|access denied|cloudflare|habilite o javascript/i.test(html);
+
+        erros.push(
+          `${fonte.nome}: 0 imóveis. HTML: ${html.length} chars. ` +
+          `"/imovel/": ${contemImovel}. "/comprar/|/alugar/": ${contemComprar}. ` +
+          `Bloqueio: ${pareceBloqueio ? "SIM" : "não"}.`
+        );
       }
     } catch (e) {
       console.error(`  ❌ ERRO: ${e.message}`);
@@ -840,7 +731,7 @@ async function main() {
     total: todosLimpos.length,
     imoveis: todosLimpos,
     erros,
-    disclaimer: "Imóveis com até 6 meses de publicação (quando disponível). Imóveis sem data são mantidos."
+    disclaimer: "Todos os imóveis encontrados são mantidos (sem filtro de data)."
   };
 
   await writeFile(
