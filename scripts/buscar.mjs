@@ -380,8 +380,6 @@ async function buscarComChave(url, apiKey, opcoes = {}) {
 }
 
 // ========== SIMPLES: TENTA CADA CHAVE EM ORDEM ==========
-// Sem testes. Se uma falha por falta de crédito, tenta a próxima.
-// Se falha por outro motivo, interrompe.
 async function buscarComJS(url, chaves, opcoes = {}) {
   if (chaves.length === 0) {
     throw new Error("Nenhuma chave ScrapingBee configurada");
@@ -395,7 +393,6 @@ async function buscarComJS(url, chaves, opcoes = {}) {
     } catch (e) {
       ultimoErro = e;
       if (!e.semCredito) throw e;
-      // Se foi sem crédito, tenta a próxima chave
     }
   }
   
@@ -549,7 +546,6 @@ async function main() {
     }
 
     if (item._semJS) {
-      // Sites sem JS: busca grátis
       const galeria = await buscarGaleriaCompletaSemJS(item.link);
       if (galeria.length > 0) {
         item.imagens = [...new Set([...(item.imagens || []), ...galeria])].slice(0, 8);
@@ -561,7 +557,6 @@ async function main() {
       }
       await esperar(400);
     } else if (chavesScrapingBee.length > 0) {
-      // Sites com JS: busca com ScrapingBee
       try {
         const galeria = await buscarGaleriaCompletaJS(item.link, chavesScrapingBee);
         if (galeria.length > 0) {
@@ -578,8 +573,6 @@ async function main() {
         semGaleria++;
         if (e.message.includes("limit reached")) {
           console.log(`  ⛔ Parando busca de galerias (sem crédito)`);
-          // Não quebra o loop, só para de tentar JS
-          // (continua com os próximos, mas todos vão falhar)
         }
       }
     }
