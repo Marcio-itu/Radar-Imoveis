@@ -1,5 +1,11 @@
 [
     {
+        "nome": "Kenlo - Portal Geral",
+        "url": "https://portal.kenlo.com.br/imoveis/a-venda/itu",
+        "jsNecessario": true,
+        "prioridade": 1
+    },
+    {
         "nome": "Residencial Imóveis",
         "url": "https://www.residencialimoveis.com.br/imoveis/casa",
         "jsNecessario": false
