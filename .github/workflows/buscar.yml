@@ -31,13 +31,11 @@ jobs:
           SCRAPINGBEE_API_KEY: ${{ secrets.SCRAPINGBEE_API_KEY }}
           SCRAPINGBEE_API_KEY_2: ${{ secrets.SCRAPINGBEE_API_KEY_2 }}
           SCRAPINGBEE_API_KEY_3: ${{ secrets.SCRAPINGBEE_API_KEY_3 }}
-          SCRAPINGBEE_API_KEY_4: ${{ secrets.SCRAPINGBEE_API_KEY_4 }}
-          SCRAPINGBEE_API_KEY_5: ${{ secrets.SCRAPINGBEE_API_KEY_5 }}
           # Firecrawl
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           # ScraperAPI
           SCRAPERAPI_API_KEY: ${{ secrets.SCRAPERAPI_API_KEY }}
-        run: node scripts/buscar.mjs
+        run: node scripts/buscar-completo.mjs
 
       - name: Salvar resultado no repositório
         run: |
