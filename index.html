@@ -8,7 +8,6 @@
 <link rel="apple-touch-icon" href="favicon-marcio.png">
 <style>
   :root{
-    /* Paleta identica ao simulador de financiamento (mesma marca) */
     --tinta: #1a1a2e;
     --tinta-suave: #64748b;
     --papel: #F7F8FA;
@@ -325,6 +324,18 @@
     border-radius:7px;
   }
 
+  .disclaimer{
+    background:var(--ouro-claro);
+    border-left:4px solid var(--ouro);
+    border-radius:var(--raio);
+    padding:14px 18px;
+    margin-bottom:20px;
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:12.5px;
+    color:var(--tinta-suave);
+  }
+  .disclaimer strong{ color:var(--tinta); }
+
   .resultados{
     margin-top:10px;
     display:grid;
@@ -588,6 +599,20 @@
     border-top:1px solid var(--linha);
     text-align:center;
   }
+  .aviso-disclaimer-cliente{
+    grid-column:1 / -1;
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:11.5px;
+    line-height:1.6;
+    color:var(--tinta-suave);
+    background:var(--ouro-claro);
+    border-left:4px solid var(--ouro);
+    border-radius:var(--raio);
+    padding:14px 18px;
+    margin-top:8px;
+    text-align:center;
+  }
+  .aviso-disclaimer-cliente strong{ color:var(--tinta); }
   @media (max-width: 720px){
     .linha-imovel{ grid-template-columns:1fr; }
     .linha-imovel .galeria-scroll{ aspect-ratio:16 / 10; }
@@ -724,6 +749,13 @@
     <div class="status" id="status"></div>
   </div>
 
+  <!-- ========== DISCLAIMER ========== -->
+  <div class="disclaimer" id="disclaimer-principal">
+    <strong>📢 Atenção:</strong> Este radar exibe apenas imóveis com <strong>até 6 meses de publicação</strong>.
+    Alguns imóveis podem não estar mais disponíveis caso a imobiliária não tenha atualizado sua página.
+    Recomendamos sempre verificar a disponibilidade diretamente com a imobiliária anunciante.
+  </div>
+
   <details class="painel" id="painel-config" style="padding:16px 24px;">
     <summary style="cursor:pointer; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:600; color:var(--tinta-suave);">⚙️ Configuração (token do GitHub, uma vez só)</summary>
     <div style="margin-top:14px; font-family:Arial, Helvetica, sans-serif; font-size:13px;">
@@ -754,15 +786,19 @@
     </div>
   </details>
 
+  <!-- ========== BARRA DE SELEÇÃO COM VOZ E WHATSAPP ========== -->
   <div class="barra-selecao" id="barra-selecao" style="display:none;">
     <span class="contagem-selecao" id="contagem-selecao">0 imóveis selecionados</span>
     <div class="acoes">
       <button class="botao botao-fantasma" id="botao-limpar-selecao">Limpar seleção</button>
       <button class="botao botao-ouro" id="botao-gerar-link">Gerar link para cliente</button>
       <button class="botao botao-whats" id="botao-enviar-whats">Enviar por WhatsApp</button>
+      <button class="botao botao-ouro" id="botao-ouvir-comando" style="background:var(--ouro); color:#fff;">🎤 Falar comando</button>
+      <button class="botao botao-fantasma" id="botao-ouvir-resultados" style="background:rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.4);">🔊 Ouvir imóveis</button>
     </div>
   </div>
 
+  <!-- ========== CAIXA DE LINK ========== -->
   <div class="caixa-link" id="caixa-link" style="display:none;">
     <p class="rotulo">Link pronto — envie para o seu cliente. Ele verá só os imóveis selecionados, sem saber qual imobiliária anunciou cada um. Expira em 10 dias (dá pra reativar depois, no painel de configuração acima).</p>
     <div class="campo-url">
@@ -771,6 +807,7 @@
     </div>
   </div>
 
+  <!-- ========== RESULTADOS ========== -->
   <div class="resultados" id="resultados"></div>
 
   <p class="aviso" id="aviso-rodape">
@@ -782,10 +819,16 @@
 </main>
 
 <script>
-// Se você quiser um botão de WhatsApp fixo na visão do CLIENTE (pra ele falar
-// direto com você), preencha seu número aqui no formato DDI+DDD+numero, só
-// dígitos (ex: "5511987654321"). Deixe vazio ("") pra não mostrar esse botão.
-const WHATSAPP_CORRETOR = "551132806090";
+// ============================================================
+// CONFIGURAÇÕES
+// ============================================================
+
+const WHATSAPP_CORRETOR = "551132806090"; // Seu número
+const DIAS_EXPIRAR = 10;
+
+// ============================================================
+// UTILITÁRIOS
+// ============================================================
 
 function limparTexto(txt){
   return (txt || "").replace(/\s+/g, " ").trim();
@@ -813,22 +856,217 @@ function formatarDataRelativa(isoString){
   const diffMs = agora - data;
   const diffMin = Math.round(diffMs / 60000);
   const diffH = Math.round(diffMin / 60);
-
   const dataFormatada = data.toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
-
   if(diffMin < 60) return `Atualizado há ${diffMin} minuto(s) — ${dataFormatada}`;
   if(diffH < 48) return `Atualizado há ${diffH} hora(s) — ${dataFormatada}`;
   return `Atualizado em ${dataFormatada}`;
 }
 
-// -----------------------------------------------------------------------
-// LINK DO CLIENTE — autocontido (sem precisar salvar nada no servidor)
-// -----------------------------------------------------------------------
-// Como o site é 100% estático (GitHub Pages), não existe "banco de dados"
-// pra guardar o link. Em vez disso, os imóveis selecionados vão comprimidos
-// (gzip) e codificados em base64 direto na própria URL, depois de "#c=".
-// Isso funciona sempre, não depende de nada externo, e continua funcionando
-// mesmo se o repositório for atualizado depois.
+// ============================================================
+// VOZ (Speech Synthesis)
+// ============================================================
+
+function falar(texto, callback) {
+  if (!window.speechSynthesis) {
+    console.log("Voz não suportada neste navegador.");
+    if (callback) callback();
+    return;
+  }
+  
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(texto);
+  utterance.lang = 'pt-BR';
+  utterance.rate = 0.9;
+  utterance.pitch = 1;
+  utterance.volume = 1;
+  
+  if (callback) {
+    utterance.onend = callback;
+  }
+  
+  window.speechSynthesis.speak(utterance);
+}
+
+// ============================================================
+// RECONHECIMENTO DE VOZ (Speech Recognition)
+// ============================================================
+
+const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+recognition.lang = 'pt-BR';
+recognition.continuous = false;
+recognition.interimResults = false;
+
+recognition.onresult = function(event) {
+  const comando = event.results[0][0].transcript;
+  console.log("Comando ouvido:", comando);
+  
+  // Extrai preços
+  let precoMin = null;
+  let precoMax = null;
+  
+  // Padrão: "entre 300 e 350 mil"
+  const matchEntre = comando.match(/entre\s*(\d+)\s*e\s*(\d+)\s*mil/i);
+  if (matchEntre) {
+    precoMin = parseInt(matchEntre[1]) * 1000;
+    precoMax = parseInt(matchEntre[2]) * 1000;
+  }
+  
+  // Padrão: "até 350 mil"
+  const matchAte = comando.match(/at[ée]\s*(\d+)\s*mil/i);
+  if (matchAte && precoMin === null) {
+    precoMin = 100000;
+    precoMax = parseInt(matchAte[1]) * 1000;
+  }
+  
+  // Padrão: "a partir de 300 mil"
+  const matchApartir = comando.match(/a\s*partir\s*de\s*(\d+)\s*mil/i);
+  if (matchApartir && precoMin === null) {
+    precoMin = parseInt(matchApartir[1]) * 1000;
+    precoMax = 3000000;
+  }
+  
+  // Extrai quartos
+  let quartos = null;
+  const matchQuartos = comando.match(/(\d+)\s*quartos?/i);
+  if (matchQuartos) {
+    quartos = matchQuartos[1];
+  }
+  
+  // Extrai bairro
+  let bairro = null;
+  const matchBairro = comando.match(/bairro\s*([A-Za-zÀ-ú\s]+)/i);
+  if (matchBairro) {
+    bairro = limparTexto(matchBairro[1]);
+  }
+  
+  // Aplica os filtros
+  if (precoMin !== null && precoMax !== null) {
+    document.getElementById("valor-de").value = precoMin;
+    document.getElementById("valor-ate").value = precoMax;
+    atualizarRotulosFaixaValor();
+  }
+  
+  if (quartos !== null) {
+    document.querySelectorAll('#opcoes-quartos input').forEach(el => {
+      el.checked = (el.value === quartos || (el.value === "4+" && parseInt(quartos) >= 4));
+    });
+  }
+  
+  if (bairro !== null) {
+    document.getElementById("bairro-filtro").value = bairro;
+  }
+  
+  // Aplica e fala o resultado
+  aplicarFiltrosEExibir();
+  
+  const total = document.querySelectorAll('.card-imovel:not(.selecionado)').length || 
+                document.querySelectorAll('.card-imovel').length;
+  falar(`Encontrei ${total} imóveis com esses filtros.`);
+  
+  // Marca os imóveis encontrados automaticamente
+  setTimeout(() => {
+    const cards = document.querySelectorAll('.card-imovel');
+    cards.forEach(card => {
+      const checkbox = card.querySelector('input[type="checkbox"]');
+      if (checkbox && !checkbox.checked) {
+        checkbox.checked = true;
+        checkbox.dispatchEvent(new Event('change'));
+      }
+    });
+    atualizarBarraSelecao();
+  }, 500);
+};
+
+recognition.onend = function() {
+  document.getElementById("botao-ouvir-comando").textContent = "🎤 Falar comando";
+};
+
+recognition.onerror = function(event) {
+  document.getElementById("botao-ouvir-comando").textContent = "🎤 Falar comando";
+  if (event.error === 'not-allowed') {
+    falar("Permissão de microfone negada. Ative no navegador.");
+  } else if (event.error === 'no-speech') {
+    falar("Não ouvi nada. Tente novamente.");
+  }
+};
+
+// ============================================================
+// FUNÇÃO PARA OUVIR RESULTADOS
+// ============================================================
+
+function ouvirResultados() {
+  const cards = document.querySelectorAll('.card-imovel');
+  if (cards.length === 0) {
+    falar("Não encontrei imóveis com os filtros selecionados.");
+    return;
+  }
+  
+  const filtrados = [];
+  cards.forEach(card => {
+    const checkbox = card.querySelector('input[type="checkbox"]');
+    if (checkbox && checkbox.checked) {
+      const titulo = card.querySelector('.titulo')?.textContent || "Imóvel";
+      const preco = card.querySelector('.selo-preco')?.textContent || "preço sob consulta";
+      filtrados.push({ titulo, preco });
+    }
+  });
+  
+  if (filtrados.length === 0) {
+    falar("Nenhum imóvel selecionado. Selecione alguns imóveis primeiro.");
+    return;
+  }
+  
+  let mensagem = `Você selecionou ${filtrados.length} imóveis. `;
+  const primeiros = filtrados.slice(0, 5);
+  primeiros.forEach((item, i) => {
+    mensagem += `Imóvel ${i+1}: ${item.titulo}, por ${item.preco}. `;
+  });
+  if (filtrados.length > 5) {
+    mensagem += `E mais ${filtrados.length - 5} imóveis. `;
+  }
+  mensagem += "Quer gerar o link para enviar ao cliente?";
+  
+  falar(mensagem);
+}
+
+// ============================================================
+// FUNÇÃO PARA ENVIAR POR VOZ + WHATSAPP
+// ============================================================
+
+async function enviarPorVozWhatsApp() {
+  const cards = document.querySelectorAll('.card-imovel');
+  const selecionados = [];
+  cards.forEach(card => {
+    const checkbox = card.querySelector('input[type="checkbox"]');
+    if (checkbox && checkbox.checked) {
+      const titulo = card.querySelector('.titulo')?.textContent || "Imóvel";
+      const preco = card.querySelector('.selo-preco')?.textContent || "preço sob consulta";
+      selecionados.push({ titulo, preco });
+    }
+  });
+  
+  if (selecionados.length === 0) {
+    falar("Nenhum imóvel selecionado. Selecione alguns imóveis primeiro.");
+    return;
+  }
+  
+  // Gera o link
+  const link = await montarLinkCliente();
+  document.getElementById("campo-link-gerado").value = link;
+  document.getElementById("caixa-link").style.display = "block";
+  
+  // Envia para o WhatsApp
+  const telefone = prompt("Digite o telefone do cliente (com DDD):", "5511");
+  if (telefone) {
+    const mensagem = `Olá! Encontrei ${selecionados.length} imóveis para você: ${link}`;
+    window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`, "_blank");
+    falar(`Link enviado para o WhatsApp. ${selecionados.length} imóveis compartilhados.`);
+  }
+}
+
+// ============================================================
+// LINK DO CLIENTE
+// ============================================================
 
 function base64UrlDoBuffer(buffer){
   let binario = "";
@@ -849,7 +1087,6 @@ function bufferDoBase64Url(base64url){
 async function comprimirItens(itens){
   const texto = JSON.stringify(itens);
   if (typeof CompressionStream === "undefined") {
-    // Navegador muito antigo: manda sem compressão (o link fica maior, mas funciona).
     return "0" + base64UrlDoBuffer(new TextEncoder().encode(texto).buffer);
   }
   const stream = new Blob([texto]).stream().pipeThrough(new CompressionStream("gzip"));
@@ -871,28 +1108,14 @@ async function descomprimirItens(codificado){
   return JSON.parse(texto);
 }
 
-// Encurta a URL final usando a API pública e gratuita do is.gd (sem chave,
-// sem cadastro). MANTIDO só pra compatibilidade com links antigos que já
-// foram enviados no formato #c=... - não é mais usado para gerar links novos.
-async function encurtarLink(urlLonga){
-  try{
-    const resp = await fetch("https://is.gd/create.php?format=json&url=" + encodeURIComponent(urlLonga));
-    if(!resp.ok) return urlLonga;
-    const dados = await resp.json();
-    return dados.shorturl || urlLonga;
-  } catch(e){
-    return urlLonga;
-  }
-}
+// ============================================================
+// SISTEMA DE LINKS CURTOS
+// ============================================================
 
-// -----------------------------------------------------------------------
-// SISTEMA DE LINKS CURTOS via links.json no proprio repositorio GitHub
-// -----------------------------------------------------------------------
 const GITHUB_OWNER = "Marcio-itu";
 const GITHUB_REPO = "Radar-Imoveis";
 const GITHUB_BRANCH = "main";
 const LINKS_PATH = "links.json";
-const DIAS_PARA_EXPIRAR = 10;
 
 function obterToken(){
   return localStorage.getItem("radar_github_token") || "";
@@ -901,12 +1124,6 @@ function salvarTokenLocal(token){
   localStorage.setItem("radar_github_token", token);
 }
 
-// Leitura via API do GitHub primeiro (sem cache de CDN, sempre atual). Se
-// falhar por qualquer motivo (ex: limite de requisições sem token, que é
-// baixo - 60/hora por IP, e comum de bater em rede 4G onde varias pessoas
-// dividem o mesmo IP), cai pro raw.githubusercontent.com como plano B -
-// funciona quase sempre, só pode estar levemente desatualizado por causa
-// do cache de CDN dele.
 async function lerLinksJsonViaApi(){
   const token = obterToken();
   const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${LINKS_PATH}?ref=${GITHUB_BRANCH}&_=${Date.now()}`;
@@ -914,17 +1131,11 @@ async function lerLinksJsonViaApi(){
   if(token) headers["Authorization"] = "Bearer " + token;
 
   const resp = await fetch(apiUrl, { headers });
-  if(!resp.ok){
-    let detalhe = "HTTP " + resp.status;
-    if(resp.status === 403 || resp.status === 429) detalhe += " (provavelmente limite de requisições da API do GitHub)";
-    throw new Error(detalhe);
-  }
+  if(!resp.ok) throw new Error("HTTP " + resp.status);
 
   const bruto = await resp.text();
   const parseado = JSON.parse(bruto);
 
-  // Se veio o "envelope" da API (tem .content em base64) em vez do JSON puro,
-  // decodifica. Se já veio o JSON puro (tem .links), usa direto.
   if(parseado && typeof parseado.content === "string" && !("links" in parseado)){
     const conteudo = decodeURIComponent(escape(atob(parseado.content.replace(/\n/g, ""))));
     return JSON.parse(conteudo);
@@ -946,24 +1157,14 @@ async function lerLinksJson(){
     try{
       return await lerLinksJsonViaRaw();
     } catch(erroRaw){
-      throw new Error(
-        "Não consegui ler links.json. Via API: " + erroApi.message +
-        ". Via cópia pública: " + erroRaw.message + "."
-      );
+      throw new Error("Não consegui ler links.json.");
     }
   }
 }
 
-// Escrita exige token (so o corretor faz isso, nunca o cliente).
-// Em vez de receber o JSON final pronto, recebe uma FUNCAO que descreve a
-// mudanca (ex: "adiciona este codigo") e aplica ela sobre os dados mais
-// recentes. Isso permite tentar de novo automaticamente se der conflito
-// (HTTP 409 - outro navegador/aba salvou algo no meio do caminho): busca a
-// versao atual de novo, reaplica a MESMA mudanca por cima, e tenta salvar
-// de novo, em vez de sobrescrever com um dado desatualizado.
 async function escreverLinksJson(aplicarMudanca, mensagemCommit, tentativas = 3){
   const token = obterToken();
-  if(!token) throw new Error("Token do GitHub não configurado. Abra \"Configuração\" acima e cole seu token.");
+  if(!token) throw new Error("Token do GitHub não configurado.");
 
   const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${LINKS_PATH}`;
 
@@ -971,7 +1172,7 @@ async function escreverLinksJson(aplicarMudanca, mensagemCommit, tentativas = 3)
     const respAtual = await fetch(apiUrl + `?ref=${GITHUB_BRANCH}&_=${Date.now()}`, {
       headers: { "Authorization": "Bearer " + token, "Accept": "application/vnd.github+json" }
     });
-    if(!respAtual.ok) throw new Error("Não consegui acessar o repositório (HTTP " + respAtual.status + "). Confira se o token está certo e tem permissão de escrita em Contents.");
+    if(!respAtual.ok) throw new Error("Não consegui acessar o repositório.");
     const atual = await respAtual.json();
 
     const conteudoAtualTexto = decodeURIComponent(escape(atob(atual.content.replace(/\n/g, ""))));
@@ -998,12 +1199,12 @@ async function escreverLinksJson(aplicarMudanca, mensagemCommit, tentativas = 3)
     if(respPut.ok) return;
 
     if(respPut.status === 409 && tentativa < tentativas){
-      await esperar(600); // pequena pausa antes de tentar de novo
+      await new Promise(r => setTimeout(r, 600));
       continue;
     }
 
     const erro = await respPut.json().catch(() => ({}));
-    throw new Error("Falha ao salvar no GitHub (HTTP " + respPut.status + "): " + (erro.message || "erro desconhecido"));
+    throw new Error("Falha ao salvar no GitHub.");
   }
 }
 
@@ -1022,16 +1223,14 @@ async function reativarLinkExistente(codigoOuLink){
   const codigo = extrairCodigoDeLinkOuTexto(codigoOuLink);
   if(!codigo) throw new Error("Cole o link ou o código antes de reativar.");
 
-  // confere primeiro se o codigo existe (fora do retry - so pra dar o erro certo)
   const dadosVerificacao = await lerLinksJson();
   if(!dadosVerificacao.links || !dadosVerificacao.links[codigo]){
-    throw new Error("Código não encontrado. Confira se copiou certo.");
+    throw new Error("Código não encontrado.");
   }
 
   await escreverLinksJson((dadosAtuais) => {
     if(!dadosAtuais.links) dadosAtuais.links = {};
     if(!dadosAtuais.links[codigo]){
-      // sumiu entre a verificacao e agora (raro) - recria com o que tinhamos
       dadosAtuais.links[codigo] = dadosVerificacao.links[codigo];
     }
     dadosAtuais.links[codigo].criadoEm = new Date().toISOString();
@@ -1041,18 +1240,15 @@ async function reativarLinkExistente(codigoOuLink){
   return codigo;
 }
 
+// ============================================================
+// MODO CLIENTE
+// ============================================================
+
 let TODOS_IMOVEIS = [];
 const SELECIONADOS = new Set();
 
-// -----------------------------------------------------------------------
-// MODO CLIENTE — ativado quando a URL tem #cliente=...
-// -----------------------------------------------------------------------
 const esperar = (ms) => new Promise(r => setTimeout(r, ms));
 
-// Se o link acabou de ser gerado e aberto quase na hora (ex: enviado pra si
-// mesmo), o GitHub as vezes ainda nao "espalhou" o commit por todos os
-// servidores dele. Por isso, se o codigo nao for encontrado de primeira,
-// tenta de novo mais 2 vezes com um pequeno intervalo antes de desistir.
 async function buscarEntradaComRetry(codigo, tentativas){
   for(let i = 0; i < tentativas; i++){
     const dados = await lerLinksJson();
@@ -1068,13 +1264,9 @@ function tentarRenderizarModoCliente(){
 
   if(!hash.startsWith("#l=") && !hash.startsWith("#c=")) return false;
 
-  // Esconde a tela do corretor e mostra "carregando" JA, sem esperar o fetch
-  // terminar - antes disso, o cliente via a tela de filtros por engano
-  // enquanto os dados ainda estavam a caminho.
   prepararTelaModoCliente();
   document.getElementById("resultados").innerHTML = '<p class="vazio" style="grid-column:1/-1;">Carregando sua seleção…</p>';
 
-  // Formato novo: #l=codigo (link curto, dados ficam em links.json)
   if(hash.startsWith("#l=")){
     const codigo = hash.replace("#l=", "");
     buscarEntradaComRetry(codigo, 3).then(entrada => {
@@ -1084,7 +1276,7 @@ function tentarRenderizarModoCliente(){
       }
       const criadoEm = new Date(entrada.criadoEm);
       const diasPassados = (Date.now() - criadoEm.getTime()) / (1000 * 60 * 60 * 24);
-      if(diasPassados > DIAS_PARA_EXPIRAR){
+      if(diasPassados > DIAS_EXPIRAR){
         renderizarExpirado();
       } else {
         renderizarCliente(entrada.itens);
@@ -1092,24 +1284,21 @@ function tentarRenderizarModoCliente(){
     }).catch((erro) => {
       document.getElementById("resultados").innerHTML =
         '<p class="vazio">Não foi possível carregar esta seleção agora. ' +
-        '<button class="link-limpo" onclick="location.reload()">Tentar de novo</button></p>' +
-        '<p class="vazio" style="font-size:11px; opacity:.7;">Detalhe técnico: ' + erro.message + '</p>';
+        '<button class="link-limpo" onclick="location.reload()">Tentar de novo</button></p>';
     });
     return true;
   }
 
-  // Formato antigo: #c=dados-comprimidos (compatibilidade com links ja
-  // enviados antes de existir o sistema de codigo curto - nao expira).
   if(hash.startsWith("#c=")){
     const dadosCodificados = hash.replace("#c=", "");
     descomprimirItens(dadosCodificados).then(itens => {
       if(!itens || !itens.length){
-        document.getElementById("resultados").innerHTML = '<p class="vazio">Este link parece inválido ou incompleto. Peça um novo link ao corretor.</p>';
+        document.getElementById("resultados").innerHTML = '<p class="vazio">Este link parece inválido ou incompleto.</p>';
         return;
       }
       renderizarCliente(itens);
     }).catch(() => {
-      document.getElementById("resultados").innerHTML = '<p class="vazio">Este link parece inválido ou incompleto. Peça um novo link ao corretor.</p>';
+      document.getElementById("resultados").innerHTML = '<p class="vazio">Este link parece inválido ou incompleto.</p>';
     });
     return true;
   }
@@ -1126,6 +1315,7 @@ function prepararTelaModoCliente(){
   document.getElementById("painel-config").style.display = "none";
   document.getElementById("barra-selecao").style.display = "none";
   document.getElementById("aviso-rodape").style.display = "none";
+  document.getElementById("disclaimer-principal").style.display = "none";
 }
 
 function adicionarBotaoWhatsCliente(mensagem){
@@ -1142,7 +1332,6 @@ function adicionarBotaoWhatsCliente(mensagem){
 function renderizarExpirado(){
   prepararTelaModoCliente();
   document.getElementById("subtitulo-pagina").textContent = "";
-
   document.getElementById("resultados").innerHTML = `
     <p class="vazio" style="grid-column:1/-1; max-width:60ch;">
       Esta seleção de imóveis expirou. Nesse período, alguns podem já ter sido vendidos
@@ -1166,10 +1355,16 @@ async function renderizarCliente(itens){
   contagem.textContent = `${itens.length} imóvel(is) selecionado(s) para você`;
   resultadosDiv.appendChild(contagem);
 
-  // Confere quais desses imoveis ainda existem na busca mais recente - um
-  // imovel pode ter sido vendido/retirado do site original desde que esse
-  // link foi gerado. Se sumiu da base atual, mostra um aviso gentil em vez
-  // do card normal, em vez de simplesmente aparecer quebrado.
+  // Disclaimer de 6 meses
+  const disclaimer = document.createElement("div");
+  disclaimer.className = "aviso-disclaimer-cliente";
+  disclaimer.innerHTML = `
+    <strong>📢 Atenção:</strong> Esta seleção contém imóveis com <strong>até 6 meses de publicação</strong>.
+    Alguns podem não estar mais disponíveis caso a imobiliária não tenha atualizado sua página.
+    Recomendamos verificar a disponibilidade com a imobiliária anunciante.
+  `;
+  resultadosDiv.appendChild(disclaimer);
+
   let linksAindaDisponiveis = null;
   try{
     const resp = await fetch("./imoveis.json?_=" + Date.now());
@@ -1177,10 +1372,7 @@ async function renderizarCliente(itens){
       const dadosAtuais = await resp.json();
       linksAindaDisponiveis = new Set((dadosAtuais.imoveis || []).map(i => i.link));
     }
-  } catch(e){
-    // se nao conseguir checar, assume que todos ainda estao disponiveis
-    // (melhor mostrar de mais do que esconder por engano)
-  }
+  } catch(e){}
 
   itens.forEach(item => {
     const aindaDisponivel = linksAindaDisponiveis === null || linksAindaDisponiveis.has(item.link);
@@ -1204,8 +1396,6 @@ async function renderizarCliente(itens){
       return;
     }
 
-    // Compatibilidade: links antigos (#c=) podem ter só "imagem" (1 foto),
-    // links novos (#l=) trazem "imagens" (lista completa).
     const listaImagens = (item.imagens && item.imagens.length > 0)
       ? item.imagens
       : (item.imagem ? [item.imagem] : []);
@@ -1251,9 +1441,9 @@ async function renderizarCliente(itens){
   adicionarBotaoWhatsCliente("Olá! Vi a seleção de imóveis que você separou pra mim e quero saber mais.");
 }
 
-// -----------------------------------------------------------------------
-// MODO NORMAL (corretor)
-// -----------------------------------------------------------------------
+// ============================================================
+// MODO NORMAL (CORRETOR)
+// ============================================================
 
 async function carregarDados(){
   const status = document.getElementById("status");
@@ -1283,7 +1473,7 @@ async function carregarDados(){
     }
   } catch(e){
     status.className = "status erro";
-    status.textContent = "Não foi possível carregar imoveis.json. Se o site acabou de ser publicado, o GitHub Actions pode ainda não ter rodado a primeira vez — vá na aba Actions do repositório e rode o workflow manualmente.";
+    status.textContent = "Não foi possível carregar imoveis.json.";
   }
 
   aplicarFiltrosEExibir();
@@ -1330,7 +1520,7 @@ function atualizarRotulosFaixaValor(){
   document.getElementById("valor-ate-num").textContent = formatarValorCurto(ate) + (ate >= 3000000 ? "+" : "");
 }
 
-function aplicarFiltrosEExibir(){
+function aplicarFiltrosEExibir(retornaFiltrados = false){
   const resultadosDiv = document.getElementById("resultados");
   resultadosDiv.innerHTML = "";
 
@@ -1343,9 +1533,6 @@ function aplicarFiltrosEExibir(){
   const bairroFiltro = limparTexto(document.getElementById("bairro-filtro").value).toLowerCase();
   const cidadeFiltro = document.getElementById("cidade-filtro").value;
 
-  // Faixa de valor: duas barras (De/Até) + opção de incluir acima de 3mi.
-  // Se as duas barras estiverem nos extremos (100 mil a 3 mi) e "acima de
-  // 3mi" estiver marcado, na pratica esta sem filtro nenhum de valor.
   let faixaDe = Number(document.getElementById("valor-de").value);
   let faixaAte = Number(document.getElementById("valor-ate").value);
   if(faixaDe > faixaAte){ [faixaDe, faixaAte] = [faixaAte, faixaDe]; }
@@ -1378,7 +1565,6 @@ function aplicarFiltrosEExibir(){
       if(isNaN(area) || area < parseFloat(areaMinima)) return false;
     }
 
-    // FIX: Filtro de bairro — limpa e normaliza ANTES de comparar
     if(bairroFiltro){
       const bairroItem = limparTexto(item.bairro || "").toLowerCase();
       if(!bairroItem.includes(bairroFiltro)) return false;
@@ -1389,6 +1575,8 @@ function aplicarFiltrosEExibir(){
     return true;
   });
 
+  if(retornaFiltrados) return filtrados;
+
   const contagem = document.createElement("p");
   contagem.className = "contagem";
   contagem.textContent = `${filtrados.length} imóvel(is) encontrado(s) de ${TODOS_IMOVEIS.length} coletados`;
@@ -1398,10 +1586,10 @@ function aplicarFiltrosEExibir(){
     const vazio = document.createElement("p");
     vazio.className = "vazio";
     vazio.textContent = TODOS_IMOVEIS.length === 0
-      ? "Ainda não há imóveis carregados. Confira se o GitHub Actions já rodou pelo menos uma vez."
-      : "Nenhum imóvel bateu com os filtros selecionados. Tente ampliar a faixa de valor, remover algum filtro ou limpar tudo com o botão acima.";
+      ? "Ainda não há imóveis carregados."
+      : "Nenhum imóvel bateu com os filtros selecionados. Tente ampliar a faixa de valor ou limpar os filtros.";
     resultadosDiv.appendChild(vazio);
-    return;
+    return filtrados;
   }
 
   filtrados.forEach(item => {
@@ -1443,6 +1631,8 @@ function aplicarFiltrosEExibir(){
       atualizarBarraSelecao();
     });
   });
+
+  return filtrados;
 }
 
 function atualizarBarraSelecao(){
@@ -1464,9 +1654,6 @@ function itensSelecionadosParaLink(){
     }));
 }
 
-// Monta o link do cliente salvando a seleção em links.json (via GitHub API)
-// com um código curto. Guarda em cache pra não gerar de novo se a seleção
-// não mudou entre um clique e outro (evita commits repetidos à toa).
 let CACHE_LINK_GERADO = { chave: null, url: null };
 
 async function montarLinkCliente(){
@@ -1477,16 +1664,12 @@ async function montarLinkCliente(){
     return CACHE_LINK_GERADO.url;
   }
 
-  // Gera o codigo ANTES, olhando o estado atual so pra reduzir chance de
-  // colisao - o escreverLinksJson confere de novo com dado fresco na hora
-  // de salvar de verdade (por causa do retry em caso de conflito).
   const dadosParaEscolherCodigo = await lerLinksJson().catch(() => ({ links: {} }));
   let codigo = gerarCodigoCurto();
   while(dadosParaEscolherCodigo.links && dadosParaEscolherCodigo.links[codigo]) codigo = gerarCodigoCurto();
 
   await escreverLinksJson((dadosAtuais) => {
     if(!dadosAtuais.links) dadosAtuais.links = {};
-    // se por azar colidiu com algo criado nesse meio tempo, gera outro
     while(dadosAtuais.links[codigo]) codigo = gerarCodigoCurto();
     dadosAtuais.links[codigo] = {
       itens,
@@ -1511,6 +1694,10 @@ async function comEstadoDeCarregamento(botao, textoCarregando, fn){
     botao.textContent = textoOriginal;
   }
 }
+
+// ============================================================
+// EVENT LISTENERS
+// ============================================================
 
 document.getElementById("botao-gerar-link").addEventListener("click", async (ev) => {
   const status = document.getElementById("status-token");
@@ -1557,6 +1744,20 @@ document.getElementById("botao-enviar-whats").addEventListener("click", async (e
   });
 });
 
+document.getElementById("botao-ouvir-comando").addEventListener("click", () => {
+  const botao = document.getElementById("botao-ouvir-comando");
+  try {
+    recognition.start();
+    botao.textContent = "🎤 Ouvindo...";
+    falar("Fale o que você procura. Por exemplo: entre 300 e 350 mil, 3 quartos.");
+  } catch(e) {
+    botao.textContent = "🎤 Falar comando";
+    falar("Não foi possível ativar o microfone. Verifique as permissões do navegador.");
+  }
+});
+
+document.getElementById("botao-ouvir-resultados").addEventListener("click", ouvirResultados);
+
 document.getElementById("botao-salvar-token").addEventListener("click", () => {
   const campo = document.getElementById("campo-token-github");
   const status = document.getElementById("status-token");
@@ -1579,7 +1780,7 @@ document.getElementById("botao-reativar").addEventListener("click", async (ev) =
     try{
       const codigo = await reativarLinkExistente(campo.value);
       status.className = "status";
-      status.textContent = `Link reativado por mais ${DIAS_PARA_EXPIRAR} dias ✓ (código: ${codigo})`;
+      status.textContent = `Link reativado por mais ${DIAS_EXPIRAR} dias ✓ (código: ${codigo})`;
       campo.value = "";
     } catch(e){
       status.className = "status erro";
@@ -1617,6 +1818,25 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// ============================================================
+// FUNÇÃO PARA ENVIAR POR VOZ + WHATSAPP (adicional)
+// ============================================================
+
+// Adiciona um botão extra na barra de seleção para envio por voz
+document.addEventListener("DOMContentLoaded", function() {
+  const barra = document.getElementById("barra-selecao");
+  if (barra) {
+    const acoes = barra.querySelector(".acoes");
+    if (acoes) {
+      const botaoVozWhats = document.createElement("button");
+      botaoVozWhats.className = "botao botao-whats";
+      botaoVozWhats.id = "botao-voz-whats";
+      botaoVozWhats.textContent = "🎤 Enviar por voz";
+      botaoVozWhats.addEventListener("click", enviarPorVozWhatsApp);
+      acoes.appendChild(botaoVozWhats);
+    }
+  }
+});
 </script>
 
 </body>
