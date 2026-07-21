@@ -3518,6 +3518,111 @@
         }
       ],
       "criadoEm": "2026-07-21T03:16:54.850Z"
+    },
+    "btwkw2": {
+      "itens": [
+        {
+          "titulo": "CASA VILA LUCINDA - ITU/SP 3 dormitórios 1 suíte 2 vagas 156 m² Venda R$ 415.000,00 CB02820",
+          "imagem": "https://cdnuso.com/922/2017/06/mini_54712231.jpg",
+          "imagens": [
+            "https://cdnuso.com/922/2017/06/mini_54712231.jpg",
+            "https://www.residencialimoveis.com.br/images/selo_permuta.png",
+            "https://www.residencialimoveis.com.br/images/btn_fav.png",
+            "https://cdnuso.com/922/2017/06/54712231.jpg",
+            "https://cdnuso.com/922/2017/06/54712234.jpg",
+            "https://cdnuso.com/922/2017/06/54712236.jpg",
+            "https://cdnuso.com/922/2017/06/54712237.jpg",
+            "https://cdnuso.com/922/2017/06/54712239.jpg"
+          ],
+          "preco": "R$ 415.000,00",
+          "tipo": "casa",
+          "quartos": "3",
+          "fonte": "Residencial Imóveis",
+          "suites": "1",
+          "vagas": "2",
+          "area": "156",
+          "bairro": "VILA LUCINDA",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/vila-lucinda/casa/4681325"
+        },
+        {
+          "titulo": "CASA Condomínio Parque Ytu Xapada - Itu/SP 4 dormitórios 4 suítes 2 vagas 1000 m² Venda R$ 1.500.000,00 CC03859",
+          "imagem": "https://cdnuso.com/922/2021/03/mini_140058634.jpg",
+          "imagens": [
+            "https://cdnuso.com/922/2021/03/mini_140058634.jpg",
+            "https://cdnuso.com/922/2017/06/mini_54712231.jpg",
+            "https://www.residencialimoveis.com.br/images/selo_permuta.png",
+            "https://www.residencialimoveis.com.br/images/btn_fav.png",
+            "https://cdnuso.com/922/2021/03/140058634.jpg",
+            "https://cdnuso.com/922/2021/03/140058644.jpg",
+            "https://cdnuso.com/922/2021/03/140058649.jpg",
+            "https://cdnuso.com/922/2021/03/140058657.jpg"
+          ],
+          "preco": "R$ 415.000,00",
+          "tipo": "casa",
+          "quartos": "4",
+          "fonte": "Residencial Imóveis",
+          "suites": "4",
+          "vagas": "2",
+          "area": "156",
+          "bairro": "Condomínio Parque Ytu Xapada",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-parque-ytu-xapada/casa/34952548"
+        },
+        {
+          "titulo": "CASA Condomínio Jardim Plaza Athénée - ITU/SP 4 dormitórios 4 suítes 2 vagas 1001 m² Venda R$ 4.500.000,00 Locação R$ 18.500,00 CC04149",
+          "imagem": "https://cdnuso.com/922/2021/03/mini_141998514.jpg",
+          "imagens": [
+            "https://cdnuso.com/922/2021/03/mini_141998514.jpg",
+            "https://cdnuso.com/922/2017/06/mini_54712231.jpg",
+            "https://cdnuso.com/922/2021/03/mini_140058634.jpg",
+            "https://www.residencialimoveis.com.br/images/btn_fav.png",
+            "https://cdnuso.com/922/2021/03/141998514.jpg",
+            "https://cdnuso.com/922/2021/03/141998520.jpg",
+            "https://cdnuso.com/922/2021/03/141998523.jpg",
+            "https://cdnuso.com/922/2021/03/141998530.jpg"
+          ],
+          "preco": "R$ 1.500.000,00",
+          "tipo": "casa",
+          "quartos": "4",
+          "fonte": "Residencial Imóveis",
+          "suites": "4",
+          "vagas": "2",
+          "area": "1000",
+          "bairro": "Condomínio Jardim Plaza Athénée",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar-ou-alugar/sp/itu/condominio-jardim-plaza-athenee/casa/69353002"
+        },
+        {
+          "titulo": "CASA Mirante dos Ypês - Salto/SP 4 dormitórios 1 suíte 6 vagas 420 m² Venda R$ 1.450.000,00 CC04391",
+          "imagem": "https://cdnuso.com/922/2022/05/mini_343ef4b8cb0ded03b34f4113a48a1d02.jpg",
+          "imagens": [
+            "https://cdnuso.com/922/2022/05/mini_343ef4b8cb0ded03b34f4113a48a1d02.jpg",
+            "https://cdnuso.com/922/2021/03/mini_140058634.jpg",
+            "https://cdnuso.com/922/2021/03/mini_141998514.jpg",
+            "https://cdnuso.com/922/2021/09/mini_5ab6b819a974151b54aaa11fa68afaa5.jpg",
+            "https://www.residencialimoveis.com.br/images/btn_fav.png",
+            "https://cdnuso.com/922/2022/05/343ef4b8cb0ded03b34f4113a48a1d02.jpg",
+            "https://cdnuso.com/922/2022/05/2c066a3f1ee842830f13f2223af0ac2e.jpg",
+            "https://cdnuso.com/922/2022/05/2d3df280b0155bcdd4d81810dccbe793.jpg"
+          ],
+          "preco": "R$ 1.500.000,00",
+          "tipo": "casa",
+          "quartos": "4",
+          "fonte": "Residencial Imóveis",
+          "suites": "1",
+          "vagas": "2",
+          "area": "350",
+          "bairro": "",
+          "cidade": "Salto",
+          "finalidade": "venda",
+          "link": "https://www.residencialimoveis.com.br/comprar/sp/salto/mirante-dos-ypes/casa/71003765"
+        }
+      ],
+      "criadoEm": "2026-07-21T14:43:14.704Z"
     }
   }
 }
