@@ -45,12 +45,12 @@ jobs:
           if ! git diff --staged --quiet; then
             git commit -m "Atualiza imoveis.json [automático]"
             git fetch origin main
-            if ! git rebase origin/main; then
-              echo "Conflito durante o rebase - mantendo a versão recém-coletada."
-              git checkout --ours -- imoveis.json
-              git add imoveis.json
+            git rebase origin/main || (
+              echo "🔁 Conflito detectado. Mantendo versão recém-gerada..."
+              git checkout --ours -- imoveis.json historico/*.json
+              git add imoveis.json historico/*.json
               git rebase --continue
-            fi
+            )
             git push
           else
             echo "Nada mudou em imoveis.json, nada para salvar."
