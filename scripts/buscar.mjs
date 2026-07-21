@@ -2,6 +2,7 @@
 //
 // Roda no GitHub Actions.
 // Suporta: ScrapingBee, Firecrawl e ScraperAPI com fallback automático.
+// COM DIAGNÓSTICO DETALHADO DAS CHAVES
 
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -382,6 +383,8 @@ async function buscarScrapingBee(url, apiKey, opcoes = {}) {
 
 // ========== FIRECRAWL ==========
 async function buscarFirecrawl(url, apiKey) {
+  console.log(`  🔥 Firecrawl: testando chave...`);
+  
   const response = await fetch("https://api.firecrawl.dev/v1/scrape", {
     method: "POST",
     headers: {
@@ -398,6 +401,7 @@ async function buscarFirecrawl(url, apiKey) {
 
   if (!response.ok) {
     const erro = await response.text().catch(() => "");
+    console.log(`  🔥 Firecrawl resposta: HTTP ${response.status}`);
     if (response.status === 402 || response.status === 401 || /limit|quota|credit/i.test(erro)) {
       const e = new Error("Firecrawl: sem créditos ou limite atingido");
       e.semCredito = true;
@@ -416,11 +420,14 @@ async function buscarFirecrawl(url, apiKey) {
     throw new Error("Firecrawl: HTML vazio ou muito curto");
   }
 
+  console.log(`  🔥 Firecrawl: sucesso! ${html.length} caracteres`);
   return html;
 }
 
 // ========== SCRAPERAPI ==========
 async function buscarScraperAPI(url, apiKey) {
+  console.log(`  🧪 ScraperAPI: testando chave...`);
+  
   const endpoint =
     "http://api.scraperapi.com?api_key=" +
     encodeURIComponent(apiKey) +
@@ -433,6 +440,7 @@ async function buscarScraperAPI(url, apiKey) {
   const resp = await fetch(endpoint);
   if (!resp.ok) {
     const corpo = await resp.text().catch(() => "");
+    console.log(`  🧪 ScraperAPI resposta: HTTP ${resp.status}`);
     const semCredito =
       resp.status === 402 ||
       resp.status === 401 ||
@@ -442,7 +450,10 @@ async function buscarScraperAPI(url, apiKey) {
     erro.semCredito = semCredito;
     throw erro;
   }
-  return await resp.text();
+  
+  const html = await resp.text();
+  console.log(`  🧪 ScraperAPI: sucesso! ${html.length} caracteres`);
+  return html;
 }
 
 // ========== BUSCA COM FALLBACK MÚLTIPLO ==========
@@ -473,8 +484,10 @@ async function buscarComJS(url, chaves, opcoes = {}) {
       return result;
     } catch (e) {
       if (!e.semCredito) throw e;
-      console.log(`  ⚠️ Firecrawl sem crédito`);
+      console.log(`  ⚠️ Firecrawl sem crédito: ${e.message}`);
     }
+  } else {
+    console.log(`  🔥 Firecrawl: chave não configurada`);
   }
 
   // 3. Tenta ScraperAPI
@@ -486,8 +499,10 @@ async function buscarComJS(url, chaves, opcoes = {}) {
       return result;
     } catch (e) {
       if (!e.semCredito) throw e;
-      console.log(`  ⚠️ ScraperAPI sem crédito`);
+      console.log(`  ⚠️ ScraperAPI sem crédito: ${e.message}`);
     }
+  } else {
+    console.log(`  🧪 ScraperAPI: chave não configurada`);
   }
 
   throw new Error(`Todos os serviços falharam (sem crédito).`);
@@ -600,26 +615,37 @@ async function main() {
     console.log("Sem imoveis.json anterior - primeira execução.");
   }
 
-  // ========== CHAVES ==========
-  // Nomes EXATOS como estão no GitHub
-  const scrapingBeeKeys = [
-    process.env.SCRAPINGBEE_API_KEY,
-    process.env.SCRAPINGBEE_API_KEY_2,
-    process.env.SCRAPINGBEE_API_KEY_3,
-  ].filter(Boolean);
+  // ========== CHAVES COM DIAGNÓSTICO ==========
+  console.log("\n" + "=".repeat(50));
+  console.log("🔍 DIAGNÓSTICO DE CHAVES");
+  console.log("=".repeat(50));
+  
+  // ScrapingBee
+  const sb1 = process.env.SCRAPINGBEE_API_KEY || "";
+  const sb2 = process.env.SCRAPINGBEE_API_KEY_2 || "";
+  const sb3 = process.env.SCRAPINGBEE_API_KEY_3 || "";
+  const scrapingBeeKeys = [sb1, sb2, sb3].filter(Boolean);
+  
+  console.log(`🐝 SCRAPINGBEE_API_KEY: ${sb1 ? `✅ ${sb1.slice(0, 8)}... (${sb1.length} caracteres)` : "❌ VAZIO"}`);
+  console.log(`🐝 SCRAPINGBEE_API_KEY_2: ${sb2 ? `✅ ${sb2.slice(0, 8)}... (${sb2.length} caracteres)` : "❌ VAZIO"}`);
+  console.log(`🐝 SCRAPINGBEE_API_KEY_3: ${sb3 ? `✅ ${sb3.slice(0, 8)}... (${sb3.length} caracteres)` : "❌ VAZIO"}`);
+  console.log(`  → Total: ${scrapingBeeKeys.length} chave(s) configurada(s)`);
 
-  const firecrawlKey = process.env.FIRECRAWL_API_KEY || "";
-  const scraperAPIKey = process.env.SCRAPERAPI_API_KEY || "";
+  // Firecrawl
+  const fc = process.env.FIRECRAWL_API_KEY || "";
+  console.log(`🔥 FIRECRAWL_API_KEY: ${fc ? `✅ ${fc.slice(0, 8)}... (${fc.length} caracteres)` : "❌ VAZIO"}`);
+
+  // ScraperAPI
+  const sa = process.env.SCRAPERAPI_API_KEY || "";
+  console.log(`🧪 SCRAPERAPI_API_KEY: ${sa ? `✅ ${sa.slice(0, 8)}... (${sa.length} caracteres)` : "❌ VAZIO"}`);
+  
+  console.log("=".repeat(50) + "\n");
 
   const chaves = {
     scrapingBeeKeys,
-    firecrawlKey,
-    scraperAPIKey,
+    firecrawlKey: fc,
+    scraperAPIKey: sa,
   };
-
-  console.log(`🐝 ScrapingBee: ${scrapingBeeKeys.length} chave(s)`);
-  console.log(`🔥 Firecrawl: ${firecrawlKey ? "✅ Configurado" : "❌ Não configurado"}`);
-  console.log(`🧪 ScraperAPI: ${scraperAPIKey ? "✅ Configurado" : "❌ Não configurado"}`);
 
   const todos = [];
   const erros = [];
@@ -631,7 +657,7 @@ async function main() {
       let html;
 
       if (fonte.jsNecessario) {
-        const temAlgumaChave = scrapingBeeKeys.length > 0 || firecrawlKey || scraperAPIKey;
+        const temAlgumaChave = scrapingBeeKeys.length > 0 || fc || sa;
         if (!temAlgumaChave) {
           const msg = `${fonte.nome}: precisa de JavaScript, mas nenhuma chave está configurada.`;
           console.warn(msg);
@@ -695,7 +721,7 @@ async function main() {
       }
       await esperar(400);
     } else {
-      const temAlgumaChave = scrapingBeeKeys.length > 0 || firecrawlKey || scraperAPIKey;
+      const temAlgumaChave = scrapingBeeKeys.length > 0 || fc || sa;
       if (temAlgumaChave) {
         try {
           const galeria = await buscarGaleriaCompletaJS(item.link, chaves);
