@@ -1,6 +1,11 @@
 // scripts/buscar-completo.mjs
 //
-// VERSÃO NOVA - Suporta ScrapingBee, Firecrawl e ScraperAPI
+// VERSÃO FINAL - COMPLETA E REVISADA
+// ✅ ID único por imóvel
+// ✅ Data de publicação (6 meses de validade)
+// ✅ Busca prioritária no portal Kenlo
+// ✅ Fallback para outras fontes
+// ✅ Sem mistura de fotos
 
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -44,46 +49,6 @@ function extrairArea(texto) {
   return m ? m[1] : "";
 }
 
-const CIDADES_REGEX_TEXTO = "Itu|Indaiatuba|Salto|Sorocaba|Cabreúva|Cabreuva";
-
-function pareceControleDePagina(texto) {
-  return /crescente|decrescente|\d+\s*im[oó]ve(l|is)|ordenar\s*por/i.test(texto);
-}
-
-function extrairBairro(texto) {
-  let m = texto.match(
-    new RegExp(
-      `([A-ZÀ-Ú][\\wÀ-ú0-9°º.'\\s]{2,45}?)\\s*[-–]\\s*(?:${CIDADES_REGEX_TEXTO})\\s*[-–]\\s*SP\\b`,
-      "i"
-    )
-  );
-  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
-
-  m = texto.match(
-    /(?:bairro|condom[ií]nio|residencial|jardim|parque|vila)\s*:?\s+([A-ZÀ-Ú][\wÀ-ú0-9°º.'\s]{2,40})/i
-  );
-  if (m && !pareceControleDePagina(m[0])) return limparTexto(m[0]);
-
-  m = texto.match(/(?:em|no|na)\s+([A-ZÀ-Ú][\wÀ-ú\s]{2,40})/);
-  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
-  return "";
-}
-
-const CIDADES_CONHECIDAS = ["itu", "indaiatuba", "salto", "sorocaba", "cabreúva", "cabreuva"];
-
-function extrairCidade(texto, href) {
-  const matchTexto = texto.match(/[-–]\s*([A-ZÀ-Ú][a-zà-ú]+)\s*[\/\-]\s*SP\b/i);
-  if (matchTexto) return limparTexto(matchTexto[1]);
-
-  const alvoHref = href.toLowerCase();
-  for (const cidade of CIDADES_CONHECIDAS) {
-    if (alvoHref.includes("/" + cidade)) {
-      return cidade.charAt(0).toUpperCase() + cidade.slice(1);
-    }
-  }
-  return "";
-}
-
 function extrairVagas(texto) {
   const m = texto.match(/(\d+)\s*vagas?/i);
   return m ? m[1] : "";
@@ -114,8 +79,79 @@ function extrairFinalidade(texto) {
   return "";
 }
 
-const PADRAO_LINK_IMOVEL = 
-  /\/imovel(\/|\?)|\/imoveis\/[^"']*\/(\d+)|\/detalhes\/(\d+)|\/propriedade\/(\d+)|\/[a-z-]+\/[a-z-]+\/[a-z-]+\/\d+|CA\d{4}-[A-Z0-9]+|SO\d{4}-[A-Z0-9]+/i;
+// ============================================================
+// DATA DE PUBLICAÇÃO (COM FALLBACK)
+// ============================================================
+
+function extrairDataPublicacao(texto) {
+  if (!texto) return null;
+  
+  // Padrão 1: "Publicado há X dias"
+  let match = texto.match(/publicado\s*há\s*(\d+)\s*dias?/i);
+  if (match) {
+    const dias = parseInt(match[1]);
+    const data = new Date();
+    data.setDate(data.getDate() - dias);
+    return data.toISOString().split('T')[0];
+  }
+  
+  // Padrão 2: "Publicado há X meses"
+  match = texto.match(/publicado\s*há\s*(\d+)\s*meses?/i);
+  if (match) {
+    const meses = parseInt(match[1]);
+    const data = new Date();
+    data.setMonth(data.getMonth() - meses);
+    return data.toISOString().split('T')[0];
+  }
+  
+  // Padrão 3: "Anunciado em DD/MM/AAAA"
+  match = texto.match(/anunciado\s*em\s*(\d{2})\/(\d{2})\/(\d{4})/i);
+  if (match) {
+    return `${match[3]}-${match[2]}-${match[1]}`;
+  }
+  
+  // Padrão 4: "Há X dias"
+  match = texto.match(/há\s*(\d+)\s*dias?/i);
+  if (match) {
+    const dias = parseInt(match[1]);
+    const data = new Date();
+    data.setDate(data.getDate() - dias);
+    return data.toISOString().split('T')[0];
+  }
+  
+  // Padrão 5: Data em formato DD/MM/AAAA
+  match = texto.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+  if (match) {
+    return `${match[3]}-${match[2]}-${match[1]}`;
+  }
+  
+  return null;
+}
+
+function imovelEstaAtivo(dataPublicacao, diasMaximo = 180) {
+  if (!dataPublicacao) return false;
+  
+  const hoje = new Date();
+  const data = new Date(dataPublicacao);
+  const diffTime = hoje - data;
+  const diffDias = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  
+  return diffDias <= diasMaximo;
+}
+
+// ============================================================
+// ID ÚNICO DO IMÓVEL
+// ============================================================
+
+function gerarIdImovel(link) {
+  let linkLimpo = link.replace(/\?from=.*$/, '').replace(/\/$/, '');
+  const partes = linkLimpo.split('/');
+  let id = partes[partes.length - 1];
+  if (!id || id.length < 3) {
+    id = linkLimpo.split('/').slice(-2).join('-');
+  }
+  return id;
+}
 
 // ============================================================
 // IMAGENS
@@ -176,25 +212,11 @@ function buscarImagensViaJsonLd(html) {
   return encontradas;
 }
 
-function extrairImagens(anchorHtmlBruto, htmlCompleto, matchIndex, baseUrl) {
-  const doAncora = buscarImagensEmTrecho(anchorHtmlBruto);
-  
-  if (doAncora.length > 0) {
-    return {
-      imagens: doAncora.map(url => resolverUrlImagem(url, baseUrl)).slice(0, 8),
-      origemConfiavel: true
-    };
-  }
-  
-  const inicioJanela = Math.max(0, matchIndex - 800);
-  const fimJanela = Math.min(htmlCompleto.length, matchIndex + 200);
-  const trechoProximo = htmlCompleto.slice(inicioJanela, fimJanela);
-  const daJanela = buscarImagensEmTrecho(trechoProximo);
-  
-  return {
-    imagens: daJanela.map(url => resolverUrlImagem(url, baseUrl)).slice(0, 8),
-    origemConfiavel: false
-  };
+function extrairImagensDoCard(cardHtml, baseUrl) {
+  const doHtml = buscarImagensEmTrecho(cardHtml);
+  const doJsonLd = buscarImagensViaJsonLd(cardHtml);
+  const todas = [...new Set([...doJsonLd, ...doHtml])];
+  return todas.map(url => resolverUrlImagem(url, baseUrl)).slice(0, 8);
 }
 
 function removerScriptsEEstilos(html) {
@@ -204,47 +226,67 @@ function removerScriptsEEstilos(html) {
     .replace(/<!--[\s\S]*?-->/g, " ");
 }
 
+const PADRAO_LINK_IMOVEL = 
+  /\/imovel(\/|\?)|\/imoveis\/[^"']*\/(\d+)|\/detalhes\/(\d+)|\/propriedade\/(\d+)|\/[a-z-]+\/[a-z-]+\/[a-z-]+\/\d+|CA\d{4}-[A-Z0-9]+|SO\d{4}-[A-Z0-9]+/i;
+
 // ============================================================
-// EXTRAÇÃO DE CARDS
+// EXTRAÇÃO DE CARDS (COM CAPTURA POR CARD)
 // ============================================================
 
 function extrairCards(htmlBruto, baseUrl, nomeFonte) {
-  const porLink = new Map();
+  const porId = new Map();
   const html = removerScriptsEEstilos(htmlBruto);
 
-  function registrar(href, candidato) {
-    href = href.replace(/\?from=.*$/, '');
+  function capturarCard(html, posicaoLink) {
+    const tagsPai = ['<div', '<article', '<li', '<section'];
+    let inicioCard = -1;
+    let tagFechamento = '';
     
-    const existente = porLink.get(href);
-    if (!existente) {
-      porLink.set(href, candidato);
+    for (const tag of tagsPai) {
+      const idx = html.lastIndexOf(tag, posicaoLink);
+      if (idx > inicioCard) {
+        inicioCard = idx;
+        tagFechamento = tag.replace('<', '</').split(' ')[0] + '>';
+      }
+    }
+    
+    if (inicioCard === -1) {
+      const inicio = Math.max(0, posicaoLink - 300);
+      const fim = Math.min(html.length, posicaoLink + 500);
+      return html.slice(inicio, fim);
+    }
+    
+    let fimCard = html.indexOf(tagFechamento, posicaoLink);
+    if (fimCard === -1) {
+      fimCard = Math.min(html.length, posicaoLink + 2000);
+    } else {
+      fimCard += tagFechamento.length;
+    }
+    
+    return html.slice(inicioCard, fimCard);
+  }
+
+  function registrar(href, candidato) {
+    href = href.replace(/\?from=.*$/, '').replace(/\/$/, '');
+    const id = gerarIdImovel(href);
+    
+    const existente = porId.get(id);
+    if (existente) {
+      if (existente.link !== href) {
+        const novoId = id + '-' + href.split('/').pop();
+        porId.set(novoId, { ...candidato, id: novoId, link: href });
+        return;
+      }
+      porId.set(id, {
+        ...existente,
+        ...candidato,
+        imagens: existente.imagens.length > 0 ? existente.imagens : candidato.imagens,
+        id: id,
+      });
       return;
     }
     
-    const imagensUnidas = [...new Set([...existente.imagens, ...candidato.imagens])].slice(0, 8);
-    const existenteConfiavel = existente._origemConfiavel;
-    const candidatoConfiavel = candidato._origemConfiavel;
-
-    let imagensFinal = imagensUnidas;
-    if (!existenteConfiavel && candidatoConfiavel) {
-      imagensFinal = [...new Set([...candidato.imagens, ...existente.imagens])].slice(0, 8);
-    }
-
-    porLink.set(href, {
-      ...existente,
-      imagens: imagensFinal,
-      _origemConfiavel: existenteConfiavel || candidatoConfiavel,
-      preco: existente.preco || candidato.preco,
-      quartos: existente.quartos || candidato.quartos,
-      suites: existente.suites || candidato.suites,
-      vagas: existente.vagas || candidato.vagas,
-      area: existente.area || candidato.area,
-      bairro: existente.bairro || candidato.bairro,
-      cidade: existente.cidade || candidato.cidade,
-      tipo: existente.tipo || candidato.tipo,
-      finalidade: existente.finalidade || candidato.finalidade,
-      titulo: (existente.titulo && existente.titulo !== "Imóvel") ? existente.titulo : candidato.titulo,
-    });
+    porId.set(id, { ...candidato, id: id });
   }
 
   const regexLink = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
@@ -253,6 +295,7 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
   while ((match = regexLink.exec(html)) !== null) {
     let href = match[1];
     const anchorHtmlBruto = match[2];
+    const posicaoLink = match.index;
     const textoLink = limparTexto(removerTags(anchorHtmlBruto));
 
     if (!PADRAO_LINK_IMOVEL.test(href)) continue;
@@ -262,72 +305,102 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       href = base.origin + href;
     }
 
-    const textoPrincipal = textoLink.length > 25 ? textoLink : 
-      limparTexto(removerTags(html.slice(Math.max(0, match.index - 700), Math.min(html.length, match.index + 700))));
+    const cardHtml = capturarCard(html, posicaoLink);
+    const textoCard = limparTexto(removerTags(cardHtml));
 
-    const { imagens, origemConfiavel } = extrairImagens(anchorHtmlBruto, html, match.index, baseUrl);
-
-    registrar(href, {
-      fonte: nomeFonte,
-      titulo: tituloSeguro(textoLink) || "Imóvel",
-      imagens: imagens.slice(0, 8),
-      imagem: imagens[0] || "",
-      _origemConfiavel: origemConfiavel,
-      preco: extrairPreco(textoPrincipal),
-      quartos: extrairQuartos(textoPrincipal),
-      suites: extrairSuites(textoPrincipal),
-      vagas: extrairVagas(textoPrincipal),
-      area: extrairArea(textoPrincipal),
-      bairro: extrairBairro(textoPrincipal),
-      cidade: extrairCidade(textoPrincipal, href),
-      tipo: extrairTipo(textoPrincipal, href),
-      finalidade: extrairFinalidade(textoPrincipal),
-      link: href
-    });
-  }
-
-  const regexOnclick = /onclick=["']location\.href=['"]([^"']+)['"]/gi;
-  let m2;
-  while ((m2 = regexOnclick.exec(html)) !== null) {
-    let href = m2[1];
-    if (!PADRAO_LINK_IMOVEL.test(href)) continue;
-
-    if (href.startsWith("/")) {
-      const base = new URL(baseUrl);
-      href = base.origin + href;
+    // ========== EXTRAI DATA DE PUBLICAÇÃO ==========
+    let dataPublicacao = extrairDataPublicacao(textoCard) || extrairDataPublicacao(textoLink);
+    if (!dataPublicacao) {
+      dataPublicacao = extrairDataPublicacao(cardHtml);
     }
 
-    const inicioJanela = Math.max(0, m2.index - 700);
-    const fimJanela = Math.min(html.length, m2.index + 700);
-    const janelaHtml = html.slice(inicioJanela, fimJanela);
-    const textoJanela = limparTexto(removerTags(janelaHtml));
+    const imagens = extrairImagensDoCard(cardHtml, baseUrl);
+    const preco = extrairPreco(textoCard) || extrairPreco(textoLink);
+    const quartos = extrairQuartos(textoCard) || extrairQuartos(textoLink);
+    const suites = extrairSuites(textoCard) || extrairSuites(textoLink);
+    const vagas = extrairVagas(textoCard) || extrairVagas(textoLink);
+    const area = extrairArea(textoCard) || extrairArea(textoLink);
+    const bairro = extrairBairro(textoCard) || extrairBairro(textoLink);
+    const cidade = extrairCidade(textoCard, href) || extrairCidade(textoLink, href);
+    const tipo = extrairTipo(textoCard, href) || extrairTipo(textoLink, href);
+    const finalidade = extrairFinalidade(textoCard) || extrairFinalidade(textoLink);
 
-    const { imagens, origemConfiavel } = extrairImagens(janelaHtml, html, m2.index, baseUrl);
+    let titulo = tituloSeguro(textoLink);
+    if (!titulo || titulo === "Imóvel" || titulo.length < 5) {
+      titulo = tituloSeguro(textoCard);
+    }
+    if (!titulo || titulo === "Imóvel" || titulo.length < 5) {
+      titulo = "Imóvel " + (href.split('/').pop() || '');
+    }
 
     registrar(href, {
       fonte: nomeFonte,
-      titulo: "Imóvel",
-      imagens: imagens.slice(0, 8),
+      titulo: titulo,
+      imagens: imagens,
       imagem: imagens[0] || "",
-      _origemConfiavel: origemConfiavel,
-      preco: extrairPreco(textoJanela),
-      quartos: extrairQuartos(textoJanela),
-      suites: extrairSuites(textoJanela),
-      vagas: extrairVagas(textoJanela),
-      area: extrairArea(textoJanela),
-      bairro: extrairBairro(textoJanela),
-      cidade: extrairCidade(textoJanela, href),
-      tipo: extrairTipo(textoJanela, href),
-      finalidade: extrairFinalidade(textoJanela),
+      preco: preco,
+      quartos: quartos,
+      suites: suites,
+      vagas: vagas,
+      area: area,
+      bairro: bairro,
+      cidade: cidade,
+      tipo: tipo,
+      finalidade: finalidade,
+      dataPublicacao: dataPublicacao,
       link: href
     });
   }
 
-  return Array.from(porLink.values()).map(({ _origemConfiavel, ...resto }) => resto);
+  return Array.from(porId.values());
 }
 
 // ============================================================
-// FETCH: DIREto + SCRAPINGBEE + FIRECRAWL + SCRAPERAPI
+// FUNÇÕES DE BAIRRO E CIDADE
+// ============================================================
+
+const CIDADES_REGEX_TEXTO = "Itu|Indaiatuba|Salto|Sorocaba|Cabreúva|Cabreuva";
+
+function pareceControleDePagina(texto) {
+  return /crescente|decrescente|\d+\s*im[oó]ve(l|is)|ordenar\s*por/i.test(texto);
+}
+
+function extrairBairro(texto) {
+  let m = texto.match(
+    new RegExp(
+      `([A-ZÀ-Ú][\\wÀ-ú0-9°º.'\\s]{2,45}?)\\s*[-–]\\s*(?:${CIDADES_REGEX_TEXTO})\\s*[-–]\\s*SP\\b`,
+      "i"
+    )
+  );
+  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
+
+  m = texto.match(
+    /(?:bairro|condom[ií]nio|residencial|jardim|parque|vila)\s*:?\s+([A-ZÀ-Ú][\wÀ-ú0-9°º.'\s]{2,40})/i
+  );
+  if (m && !pareceControleDePagina(m[0])) return limparTexto(m[0]);
+
+  m = texto.match(/(?:em|no|na)\s+([A-ZÀ-Ú][\wÀ-ú\s]{2,40})/);
+  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
+  return "";
+}
+
+const CIDADES_CONHECIDAS = ["itu", "indaiatuba", "salto", "sorocaba", "cabreúva", "cabreuva"];
+
+function extrairCidade(texto, href) {
+  const matchTexto = texto.match(/[-–]\s*([A-ZÀ-Ú][a-zà-ú]+)\s*[\/\-]\s*SP\b/i);
+  if (matchTexto) return limparTexto(matchTexto[1]);
+
+  const alvoHref = href.toLowerCase();
+  for (const cidade of CIDADES_CONHECIDAS) {
+    if (alvoHref.includes("/" + cidade)) {
+      return cidade.charAt(0).toUpperCase() + cidade.slice(1);
+    }
+  }
+  return "";
+}
+
+// ============================================================
+// FETCH: DIRETO + SCRAPINGBEE + FIRECRAWL + SCRAPERAPI
 // ============================================================
 
 async function buscarDireto(url) {
@@ -438,7 +511,6 @@ async function buscarScraperAPI(url, apiKey) {
 async function buscarComJS(url, chaves, opcoes = {}) {
   const { scrapingBeeKeys, firecrawlKey, scraperAPIKey } = chaves;
   
-  // 1. ScrapingBee
   if (scrapingBeeKeys && scrapingBeeKeys.length > 0) {
     for (let i = 0; i < scrapingBeeKeys.length; i++) {
       try {
@@ -453,7 +525,6 @@ async function buscarComJS(url, chaves, opcoes = {}) {
     }
   }
 
-  // 2. Firecrawl
   if (firecrawlKey) {
     try {
       console.log(`  🔥 Tentando Firecrawl...`);
@@ -466,7 +537,6 @@ async function buscarComJS(url, chaves, opcoes = {}) {
     }
   }
 
-  // 3. ScraperAPI
   if (scraperAPIKey) {
     try {
       console.log(`  🧪 Tentando ScraperAPI...`);
@@ -502,7 +572,6 @@ async function buscarGaleriaCompletaSemJS(url) {
 }
 
 async function buscarGaleriaCompletaJS(url, chaves) {
-  // ScrapingBee
   if (chaves.scrapingBeeKeys && chaves.scrapingBeeKeys.length > 0) {
     for (let i = 0; i < chaves.scrapingBeeKeys.length; i++) {
       try {
@@ -520,7 +589,6 @@ async function buscarGaleriaCompletaJS(url, chaves) {
     }
   }
 
-  // Firecrawl
   if (chaves.firecrawlKey) {
     try {
       const html = await buscarFirecrawl(url, chaves.firecrawlKey);
@@ -536,7 +604,6 @@ async function buscarGaleriaCompletaJS(url, chaves) {
     }
   }
 
-  // ScraperAPI
   if (chaves.scraperAPIKey) {
     try {
       const html = await buscarScraperAPI(url, chaves.scraperAPIKey);
@@ -561,24 +628,22 @@ async function buscarGaleriaCompletaJS(url, chaves) {
 
 async function main() {
   console.log("\n" + "=".repeat(60));
-  console.log("🚀 BUSCAR-COMPLETO.MJS - VERSÃO NOVA");
+  console.log("🚀 BUSCAR-COMPLETO.MJS - VERSÃO FINAL");
+  console.log("   ✅ ID único | ✅ Data de publicação | ✅ Kenlo");
   console.log("=".repeat(60));
 
-  let fontesRaw;
-  try {
-    fontesRaw = await readFile(new URL("../fontes.json", import.meta.url), "utf-8");
-  } catch (e) {
-    console.error("Erro ao ler fontes.json:", e.message);
-    process.exit(1);
-  }
-
-  let fontes;
-  try {
-    fontes = JSON.parse(fontesRaw);
-  } catch (e) {
-    console.error("Erro ao fazer parse de fontes.json:", fontesRaw.slice(0, 500));
-    process.exit(1);
-  }
+  // ========== FONTES ==========
+  // PRIORIDADE: Kenlo (portal geral) primeiro
+  const fontes = [
+    {
+      nome: "Kenlo - Portal Geral",
+      url: "https://portal.kenlo.com.br/imoveis/a-venda/itu",
+      jsNecessario: true,
+      prioridade: 1
+    },
+    ...JSON.parse(await readFile(new URL("../fontes.json", import.meta.url), "utf-8"))
+      .filter(f => f.nome !== "Kenlo - Portal Geral")
+  ];
 
   // Cache de galerias
   const cacheGaleria = new Map();
@@ -614,6 +679,7 @@ async function main() {
 
   const todos = [];
   const erros = [];
+  const DIAS_MAXIMO = 180; // 6 meses
 
   for (const fonte of fontes) {
     console.log(`\n📡 Buscando: ${fonte.nome} (${fonte.url})${fonte.jsNecessario ? " [via JS]" : ""}`);
@@ -634,10 +700,30 @@ async function main() {
       }
 
       const itens = extrairCards(html, fonte.url, fonte.nome);
-      itens.forEach(item => { item._semJS = !fonte.jsNecessario; });
-      todos.push(...itens);
-
-      console.log(`  ✅ ${itens.length} imóveis encontrados`);
+      
+      // Filtra por data de publicação
+      let ativos = 0;
+      let removidos = 0;
+      
+      for (const item of itens) {
+        // Se tem data e está ativo, mantém
+        if (item.dataPublicacao) {
+          if (imovelEstaAtivo(item.dataPublicacao, DIAS_MAXIMO)) {
+            item._semJS = !fonte.jsNecessario;
+            todos.push(item);
+            ativos++;
+          } else {
+            removidos++;
+            console.log(`  🗑️ Removido (mais de 6 meses): ${item.titulo}`);
+          }
+        } else {
+          // Se não tem data, remove (não podemos confirmar se está ativo)
+          removidos++;
+          console.log(`  🗑️ Removido (sem data de publicação): ${item.titulo}`);
+        }
+      }
+      
+      console.log(`  ✅ ${itens.length} imóveis encontrados | ${ativos} ativos | ${removidos} removidos`);
 
       if (itens.length === 0) {
         erros.push(`${fonte.nome}: 0 imóveis`);
@@ -705,6 +791,7 @@ async function main() {
     total: todosLimpos.length,
     imoveis: todosLimpos,
     erros,
+    disclaimer: "Imóveis com até 6 meses de publicação. Alguns podem não estar disponíveis caso a imobiliária não tenha atualizado sua página."
   };
 
   await writeFile(
