@@ -81,11 +81,6 @@
         "jsNecessario": false
     },
     {
-        "nome": "VivaReal",
-        "url": "https://www.vivareal.com.br/venda/sp/itu/",
-        "jsNecessario": false
-    },
-    {
         "nome": "Costa Rocha Imóveis",
         "url": "https://www.imobiliariacostarocha.com.br/imoveis/a-venda/casa/itu",
         "jsNecessario": true
