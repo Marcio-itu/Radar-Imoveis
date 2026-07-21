@@ -420,8 +420,6 @@ async function buscarFirecrawl(url, apiKey) {
 }
 
 // ========== SCRAPERAPI ==========
-// ScraperAPI: https://www.scraperapi.com/
-// Endpoint: http://api.scraperapi.com?api_key=KEY&url=URL&render=true
 async function buscarScraperAPI(url, apiKey) {
   const endpoint =
     "http://api.scraperapi.com?api_key=" +
@@ -448,7 +446,6 @@ async function buscarScraperAPI(url, apiKey) {
 }
 
 // ========== BUSCA COM FALLBACK MÚLTIPLO ==========
-// Tenta: ScrapingBee (várias chaves) → Firecrawl → ScraperAPI
 async function buscarComJS(url, chaves, opcoes = {}) {
   const { scrapingBeeKeys, firecrawlKey, scraperAPIKey } = chaves;
   
@@ -610,8 +607,9 @@ async function main() {
     process.env.SCRAPINGBEE_API_KEY_3,
   ].filter(Boolean);
 
-  const firecrawlKey = process.env.FIRECRAWL || process.env.FIRECRAWL_API_KEY || "";
-  const scraperAPIKey = process.env.SCRAPERAPI || "";
+  // Tenta vários nomes para cada serviço
+  const firecrawlKey = process.env.FIRECRAWL_API_KEY || process.env.FIRECRAWL || "";
+  const scraperAPIKey = process.env.SCRAPERAPI_API_KEY || process.env.SCRAPERAPI || "";
 
   const chaves = {
     scrapingBeeKeys,
