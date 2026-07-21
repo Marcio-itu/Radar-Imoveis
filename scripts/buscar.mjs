@@ -351,7 +351,7 @@ async function buscarDireto(url) {
   return await resp.text();
 }
 
-async function buscarComUmaChave(url, apiKey, opcoes = {}) {
+async function buscarComChave(url, apiKey, opcoes = {}) {
   let endpoint =
     "https://app.scrapingbee.com/api/v1/?api_key=" +
     encodeURIComponent(apiKey) +
@@ -379,86 +379,33 @@ async function buscarComUmaChave(url, apiKey, opcoes = {}) {
   return await resp.text();
 }
 
-// ========== FUNÇÃO PARA TESTAR QUAL CHAVE TEM CRÉDITO ==========
-async function encontrarChaveComCredito(chaves) {
-  if (chaves.length === 0) return null;
+// ========== SIMPLES: TENTA CADA CHAVE EM ORDEM ==========
+// Sem testes. Se uma falha por falta de crédito, tenta a próxima.
+// Se falha por outro motivo, interrompe.
+async function buscarComJS(url, chaves, opcoes = {}) {
+  if (chaves.length === 0) {
+    throw new Error("Nenhuma chave ScrapingBee configurada");
+  }
   
-  console.log(`  🔍 Testando ${chaves.length} chaves para encontrar uma com crédito...`);
-  
-  // Testa cada chave fazendo uma requisição simples (sem custo)
+  let ultimoErro = null;
   for (let i = 0; i < chaves.length; i++) {
     try {
-      const resp = await fetch(
-        "https://app.scrapingbee.com/api/v1/account?api_key=" + encodeURIComponent(chaves[i])
-      );
-      if (!resp.ok) {
-        console.log(`  Chave #${i + 1}: HTTP ${resp.status} - ignorando`);
-        continue;
-      }
-      const dados = await resp.json();
-      const restante = dados.credit ?? dados.remaining_credit ?? 
-                      (dados.max_api_credit - dados.used_api_credit);
-      
-      if (restante != null && restante > 10) {
-        console.log(`  ✅ Chave #${i + 1} tem ${restante} créditos - será usada!`);
-        return chaves[i];
-      } else {
-        console.log(`  Chave #${i + 1}: sem crédito suficiente (${restante})`);
-      }
+      const resultado = await buscarComChave(url, chaves[i], opcoes);
+      return resultado;
     } catch (e) {
-      console.log(`  Chave #${i + 1}: erro ao testar (${e.message})`);
+      ultimoErro = e;
+      if (!e.semCredito) throw e;
+      // Se foi sem crédito, tenta a próxima chave
     }
   }
   
-  // Se nenhuma chave passou no teste, usa a primeira como fallback
-  console.log(`  ⚠️ Nenhuma chave confirmada com crédito, usando chave #1 como fallback`);
-  return chaves[0];
+  throw new Error(`Todas as ${chaves.length} chaves falharam (sem crédito).`);
 }
-
-// ========== BUSCA COM CHAVE PRIORITÁRIA ==========
-async function buscarComJS(url, chaves, opcoes = {}) {
-  // Primeiro, encontra a melhor chave
-  const chavePrioritaria = await encontrarChaveComCredito(chaves);
-  if (!chavePrioritaria) {
-    throw new Error("Nenhuma chave ScrapingBee disponível");
-  }
-  
-  console.log(`  🚀 Buscando com chave prioritária...`);
-  
-  // Tenta com a chave prioritária primeiro
-  try {
-    return await buscarComUmaChave(url, chavePrioritaria, opcoes);
-  } catch (e) {
-    if (!e.semCredito) throw e; // erro não relacionado a crédito
-    
-    console.log(`  ⚠️ Chave prioritária falhou (sem crédito), tentando outras...`);
-    
-    // Fallback: tenta as outras chaves
-    for (const chave of chaves) {
-      if (chave === chavePrioritaria) continue;
-      try {
-        return await buscarComUmaChave(url, chave, opcoes);
-      } catch (e2) {
-        if (!e2.semCredito) throw e2;
-        console.log(`  ⚠️ Chave fallback também falhou`);
-      }
-    }
-    throw new Error("Todas as chaves ScrapingBee falharam (sem crédito)");
-  }
-}
-
-// Cenario pra abrir a galeria de fotos
-const CENARIO_ABRIR_GALERIA = {
-  instructions: [
-    { wait: 1200 },
-    { click: "//*[contains(text(),'Fotos') or contains(text(),'fotos')]" },
-    { wait: 2000 },
-  ],
-};
 
 const esperar = (ms) => new Promise(r => setTimeout(r, ms));
 
-async function buscarGaleriaCompleta(url) {
+// ========== GALERIA PARA SITES SEM JS ==========
+async function buscarGaleriaCompletaSemJS(url) {
   try {
     const htmlBruto = await buscarDireto(url);
     const doJsonLd = buscarImagensViaJsonLd(htmlBruto);
@@ -469,6 +416,28 @@ async function buscarGaleriaCompleta(url) {
   } catch (e) {
     return [];
   }
+}
+
+// ========== GALERIA PARA SITES COM JS ==========
+async function buscarGaleriaCompletaJS(url, chaves) {
+  if (chaves.length === 0) return [];
+  
+  let ultimoErro = null;
+  for (let i = 0; i < chaves.length; i++) {
+    try {
+      const html = await buscarComChave(url, chaves[i], {});
+      const doJsonLd = buscarImagensViaJsonLd(html);
+      const htmlLimpo = removerScriptsEEstilos(html);
+      const doHtml = buscarImagensEmTrecho(htmlLimpo);
+      const imagens = [...new Set([...doJsonLd, ...doHtml])];
+      return imagens.map(u => resolverUrlImagem(u, url)).slice(0, 8);
+    } catch (e) {
+      ultimoErro = e;
+      if (!e.semCredito) throw e;
+    }
+  }
+  
+  throw new Error(`Todas as chaves falharam para galeria.`);
 }
 
 // ----------------------
@@ -518,12 +487,6 @@ async function main() {
 
   console.log(`🔑 ${chavesScrapingBee.length} chave(s) ScrapingBee configurada(s)`);
 
-  // Encontra a melhor chave uma vez e reutiliza
-  const chaveParaGaleria = chavesScrapingBee.length > 0 ? await encontrarChaveComCredito(chavesScrapingBee) : null;
-  if (chaveParaGaleria) {
-    console.log(`✅ Chave selecionada para galerias: ${chaveParaGaleria.slice(0, 10)}...`);
-  }
-
   const todos = [];
   const erros = [];
 
@@ -570,7 +533,7 @@ async function main() {
 
   const dataHoje = new Date().toISOString().split("T")[0];
 
-  // Segunda passada: galerias completas - USANDO A CHAVE PRIORITÁRIA
+  // ========== GALERIAS ==========
   let doCache = 0, buscadosGratis = 0, buscadosComCredito = 0, semGaleria = 0;
 
   for (const item of todos) {
@@ -586,7 +549,8 @@ async function main() {
     }
 
     if (item._semJS) {
-      const galeria = await buscarGaleriaCompleta(item.link);
+      // Sites sem JS: busca grátis
+      const galeria = await buscarGaleriaCompletaSemJS(item.link);
       if (galeria.length > 0) {
         item.imagens = [...new Set([...(item.imagens || []), ...galeria])].slice(0, 8);
         item.imagem = item.imagens[0] || item.imagem;
@@ -596,24 +560,27 @@ async function main() {
         semGaleria++;
       }
       await esperar(400);
-    } else if (chaveParaGaleria) {
+    } else if (chavesScrapingBee.length > 0) {
+      // Sites com JS: busca com ScrapingBee
       try {
-        // Usa a chave que já sabemos que tem crédito
-        const htmlBrutoJS = await buscarComUmaChave(item.link, chaveParaGaleria, { jsScenario: CENARIO_ABRIR_GALERIA });
-        const doJsonLd = buscarImagensViaJsonLd(htmlBrutoJS);
-        const html = removerScriptsEEstilos(htmlBrutoJS);
-        const doHtml = buscarImagensEmTrecho(html);
-        const galeria = [...new Set([...doJsonLd, ...doHtml])]
-          .map(u => resolverUrlImagem(u, item.link)).slice(0, 8);
+        const galeria = await buscarGaleriaCompletaJS(item.link, chavesScrapingBee);
         if (galeria.length > 0) {
           item.imagens = [...new Set([...(item.imagens || []), ...galeria])].slice(0, 8);
           item.imagem = item.imagens[0] || item.imagem;
+          item.galeriaCompleta = true;
+          buscadosComCredito++;
+        } else {
+          semGaleria++;
         }
-        item.galeriaCompleta = true;
-        buscadosComCredito++;
+        await esperar(1000);
       } catch (e) {
-        console.warn(`  ⚠️ Falha ao buscar galeria de ${item.link}: ${e.message}`);
+        console.warn(`  ⚠️ Galeria falhou: ${e.message.slice(0, 60)}`);
         semGaleria++;
+        if (e.message.includes("limit reached")) {
+          console.log(`  ⛔ Parando busca de galerias (sem crédito)`);
+          // Não quebra o loop, só para de tentar JS
+          // (continua com os próximos, mas todos vão falhar)
+        }
       }
     }
   }
@@ -622,16 +589,12 @@ async function main() {
 
   const todosLimpos = todos.map(({ _semJS, ...resto }) => resto);
 
-  const infoCreditos = await calcularCreditosRestantes(chavesScrapingBee);
-
   const saida = {
     atualizadoEm: new Date().toISOString(),
     geradoEm: dataHoje,
     total: todosLimpos.length,
     imoveis: todosLimpos,
     erros,
-    creditosScrapingBee: infoCreditos.total,
-    creditosScrapingBeeParcial: infoCreditos.algumaFalhou,
   };
 
   await writeFile(
@@ -650,51 +613,6 @@ async function main() {
   if (erros.length > 0) {
     console.log(`⚠️ ${erros.length} avisos/erros`);
   }
-}
-
-async function calcularCreditosRestantes(chaves) {
-  if (chaves.length === 0) return { total: null, algumaFalhou: false };
-
-  console.log(`\n💰 Verificando créditos ScrapingBee (${chaves.length} chaves)...`);
-  let total = 0;
-  let algumaFalhou = false;
-  let chavesComSaldo = 0;
-
-  for (let i = 0; i < chaves.length; i++) {
-    try {
-      const resp = await fetch(
-        "https://app.scrapingbee.com/api/v1/account?api_key=" + encodeURIComponent(chaves[i])
-      );
-      if (!resp.ok) throw new Error("HTTP " + resp.status);
-      const dados = await resp.json();
-      
-      const restante = dados.credit ?? dados.remaining_credit ?? 
-                      (dados.max_api_credit - dados.used_api_credit);
-      
-      if (restante == null) {
-        console.log(`  Chave #${i + 1}: formato desconhecido, assumindo saldo`);
-        chavesComSaldo++;
-        total += 500;
-        continue;
-      }
-      
-      if (restante > 0) {
-        console.log(`  Chave #${i + 1}: ✅ ${restante} créditos`);
-        total += restante;
-        chavesComSaldo++;
-      } else {
-        console.log(`  Chave #${i + 1}: ⚠️ SEM CRÉDITOS`);
-      }
-    } catch (e) {
-      console.log(`  Chave #${i + 1}: ❌ erro ao verificar (${e.message})`);
-      chavesComSaldo++;
-      total += 500;
-      algumaFalhou = true;
-    }
-  }
-
-  console.log(`  TOTAL: ${total} créditos (${chavesComSaldo}/${chaves.length} chaves ativas)`);
-  return { total, algumaFalhou };
 }
 
 main().catch(e => {
