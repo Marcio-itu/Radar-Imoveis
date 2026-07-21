@@ -601,15 +601,15 @@ async function main() {
   }
 
   // ========== CHAVES ==========
+  // Nomes EXATOS como estão no GitHub
   const scrapingBeeKeys = [
     process.env.SCRAPINGBEE_API_KEY,
     process.env.SCRAPINGBEE_API_KEY_2,
     process.env.SCRAPINGBEE_API_KEY_3,
   ].filter(Boolean);
 
-  // Tenta vários nomes para cada serviço
-  const firecrawlKey = process.env.FIRECRAWL_API_KEY || process.env.FIRECRAWL || "";
-  const scraperAPIKey = process.env.SCRAPERAPI_API_KEY || process.env.SCRAPERAPI || "";
+  const firecrawlKey = process.env.FIRECRAWL_API_KEY || "";
+  const scraperAPIKey = process.env.SCRAPERAPI_API_KEY || "";
 
   const chaves = {
     scrapingBeeKeys,
