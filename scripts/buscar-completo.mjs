@@ -6,6 +6,7 @@
 // ✅ Busca prioritária no portal Kenlo
 // ✅ Fallback para outras fontes
 // ✅ Sem mistura de fotos
+// ✅ Títulos limpos (decodifica entidades HTML e filtra código JS)
 
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -21,12 +22,40 @@ function removerTags(html) {
   return (html || "").replace(/<(?:[^>"']|"[^"]*"|'[^']*')*>/g, " ");
 }
 
+function decodificarEntidadesHTML(texto) {
+  return texto
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'");
+}
+
 function pareceCodigoVazado(texto) {
-  return /class=|onfocus=|onclick=|&quot;|function\s*\(|\$\(this\)|span_maximo|span_minimo|\.val\(|botoes_selected/i.test(texto);
+  const padroes = [
+    /class\s*=|onfocus\s*=|onclick\s*=|onmouseover\s*=|onload\s*=/i,
+    /&quot;|&lt;|&gt;|&amp;/,
+    /function\s*\(/,
+    /\$\(this\)/,
+    /\.val\(/,
+    /botoes_selected/i,
+    /span_maximo|span_minimo/i,
+    /console\.log/i,
+    /=>/,
+    /location\.href/i,
+    /\.html\(/,
+    /\.text\(/,
+    /\.attr\(/
+  ];
+  return padroes.some(p => p.test(texto));
 }
 
 function tituloSeguro(candidato) {
-  if (candidato && !pareceCodigoVazado(candidato)) return candidato;
+  if (!candidato) return "";
+  const limpo = decodificarEntidadesHTML(candidato);
+  if (!pareceCodigoVazado(limpo)) return limpo;
   return "";
 }
 
@@ -86,7 +115,6 @@ function extrairFinalidade(texto) {
 function extrairDataPublicacao(texto) {
   if (!texto) return null;
   
-  // Padrão 1: "Publicado há X dias"
   let match = texto.match(/publicado\s*há\s*(\d+)\s*dias?/i);
   if (match) {
     const dias = parseInt(match[1]);
@@ -95,7 +123,6 @@ function extrairDataPublicacao(texto) {
     return data.toISOString().split('T')[0];
   }
   
-  // Padrão 2: "Publicado há X meses"
   match = texto.match(/publicado\s*há\s*(\d+)\s*meses?/i);
   if (match) {
     const meses = parseInt(match[1]);
@@ -104,13 +131,11 @@ function extrairDataPublicacao(texto) {
     return data.toISOString().split('T')[0];
   }
   
-  // Padrão 3: "Anunciado em DD/MM/AAAA"
   match = texto.match(/anunciado\s*em\s*(\d{2})\/(\d{2})\/(\d{4})/i);
   if (match) {
     return `${match[3]}-${match[2]}-${match[1]}`;
   }
   
-  // Padrão 4: "Há X dias"
   match = texto.match(/há\s*(\d+)\s*dias?/i);
   if (match) {
     const dias = parseInt(match[1]);
@@ -119,7 +144,6 @@ function extrairDataPublicacao(texto) {
     return data.toISOString().split('T')[0];
   }
   
-  // Padrão 5: Data em formato DD/MM/AAAA
   match = texto.match(/(\d{2})\/(\d{2})\/(\d{4})/);
   if (match) {
     return `${match[3]}-${match[2]}-${match[1]}`;
@@ -130,12 +154,10 @@ function extrairDataPublicacao(texto) {
 
 function imovelEstaAtivo(dataPublicacao, diasMaximo = 180) {
   if (!dataPublicacao) return false;
-  
   const hoje = new Date();
   const data = new Date(dataPublicacao);
   const diffTime = hoje - data;
   const diffDias = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  
   return diffDias <= diasMaximo;
 }
 
@@ -706,7 +728,6 @@ async function main() {
       let removidos = 0;
       
       for (const item of itens) {
-        // Se tem data e está ativo, mantém
         if (item.dataPublicacao) {
           if (imovelEstaAtivo(item.dataPublicacao, DIAS_MAXIMO)) {
             item._semJS = !fonte.jsNecessario;
@@ -717,7 +738,6 @@ async function main() {
             console.log(`  🗑️ Removido (mais de 6 meses): ${item.titulo}`);
           }
         } else {
-          // Se não tem data, remove (não podemos confirmar se está ativo)
           removidos++;
           console.log(`  🗑️ Removido (sem data de publicação): ${item.titulo}`);
         }
