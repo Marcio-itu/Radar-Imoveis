@@ -1,0 +1,64 @@
+// scripts/diagnostico.mjs
+// 
+// Diagnóstico extremo: mostra todas as variáveis de ambiente
+// relacionadas a chaves de API
+
+console.log("\n" + "=".repeat(60));
+console.log("🔍 DIAGNÓSTICO EXTREMO DE VARIÁVEIS DE AMBIENTE");
+console.log("=".repeat(60));
+
+// Lista de nomes que vamos verificar
+const nomes = [
+  // ScrapingBee
+  "SCRAPINGBEE_API_KEY",
+  "SCRAPINGBEE_API_KEY_2",
+  "SCRAPINGBEE_API_KEY_3",
+  "SCRAPINGBEE_API_KEY_4",
+  "SCRAPINGBEE_API_KEY_5",
+  // Firecrawl
+  "FIRECRAWL_API_KEY",
+  "FIRECRAWL",
+  // ScraperAPI
+  "SCRAPERAPI_API_KEY",
+  "SCRAPERAPI",
+  // Outros
+  "GITHUB_TOKEN",
+  "INPUT_CHAVE_ADICIONAL",
+  "RUNNER_OS",
+  "GITHUB_REF",
+  "GITHUB_SHA",
+  "GITHUB_ACTOR",
+  "GITHUB_REPOSITORY",
+];
+
+console.log("\n📋 VERIFICANDO VARIÁVEIS DE AMBIENTE:\n");
+
+for (const nome of nomes) {
+  const valor = process.env[nome] || "";
+  if (valor) {
+    const exibir = valor.length > 20 ? valor.slice(0, 12) + "..." : valor;
+    console.log(`  ✅ ${nome}: ${exibir} (${valor.length} caracteres)`);
+  } else {
+    console.log(`  ❌ ${nome}: VAZIO`);
+  }
+}
+
+console.log("\n" + "=".repeat(60));
+console.log("🔍 LISTA COMPLETA DE TODAS AS VARIÁVEIS DE AMBIENTE:");
+console.log("=".repeat(60));
+
+// Lista TODAS as variáveis de ambiente (cuidado com informações sensíveis)
+let contagem = 0;
+for (const [chave, valor] of Object.entries(process.env)) {
+  // Pula variáveis que podem conter dados sensíveis (mostra só o nome)
+  if (chave.includes("TOKEN") || chave.includes("KEY") || chave.includes("SECRET")) {
+    const exibir = valor.length > 20 ? valor.slice(0, 8) + "..." : valor;
+    console.log(`  ${chave}: ${exibir} (${valor.length} caracteres)`);
+  } else if (chave.startsWith("GITHUB_") || chave.startsWith("RUNNER_") || chave.startsWith("INPUT_")) {
+    console.log(`  ${chave}: ${valor}`);
+  }
+  contagem++;
+}
+
+console.log(`\nTotal de variáveis: ${contagem}`);
+console.log("=".repeat(60));
