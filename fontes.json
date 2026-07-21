@@ -101,11 +101,6 @@
         "jsNecessario": false
     },
     {
-        "nome": "Sérgio Duarte Corretor",
-        "url": "https://www.sergioduartecorretor.com.br",
-        "jsNecessario": true
-    },
-    {
         "nome": "Bochini Imóveis",
         "url": "https://www.bochiniimoveis.com.br/imovel/?tipo=casa&finalidade=venda&cidade=itu",
         "jsNecessario": false
