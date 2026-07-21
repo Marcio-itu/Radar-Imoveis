@@ -4,11 +4,6 @@ on:
   schedule:
     - cron: "0 0 */2 * *"
   workflow_dispatch:
-    inputs:
-      chave_adicional:
-        description: 'Chave ScrapingBee extra (opcional)'
-        required: false
-        default: ''
 
 permissions:
   contents: write
@@ -27,13 +22,10 @@ jobs:
 
       - name: Rodar a busca
         env:
-          # ScrapingBee
           SCRAPINGBEE_API_KEY: ${{ secrets.SCRAPINGBEE_API_KEY }}
           SCRAPINGBEE_API_KEY_2: ${{ secrets.SCRAPINGBEE_API_KEY_2 }}
           SCRAPINGBEE_API_KEY_3: ${{ secrets.SCRAPINGBEE_API_KEY_3 }}
-          # Firecrawl
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
-          # ScraperAPI
           SCRAPERAPI_API_KEY: ${{ secrets.SCRAPERAPI_API_KEY }}
         run: node scripts/buscar-completo.mjs
 
