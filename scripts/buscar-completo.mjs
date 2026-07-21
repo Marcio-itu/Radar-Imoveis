@@ -1,15 +1,10 @@
 // scripts/buscar-completo.mjs
 //
-// VERSÃO FINAL - EXPANDIDA + TRANSPARENTE
-// ✅ Tenta extrair data de múltiplas fontes
-// ✅ NUNCA remove imóveis por falta de data
-// ✅ Marca como "Sem data" quando não encontra
+// VERSÃO SIMPLIFICADA - MANTÉM TODOS OS IMÓVEIS
+// ✅ ID único | ✅ Kenlo prioritário | ✅ Títulos limpos
+// ❌ SEM verificação de data (todos os imóveis são mantidos)
 
 import { readFile, writeFile } from "node:fs/promises";
-
-// ============================================================
-// UTILITÁRIOS
-// ============================================================
 
 function limparTexto(txt) {
   return (txt || "").replace(/\s+/g, " ").trim();
@@ -105,10 +100,6 @@ function extrairFinalidade(texto) {
   return "";
 }
 
-// ============================================================
-// ID ÚNICO DO IMÓVEL
-// ============================================================
-
 function gerarIdImovel(link) {
   let linkLimpo = link.replace(/\?from=.*$/, '').replace(/\/$/, '');
   const partes = linkLimpo.split('/');
@@ -118,10 +109,6 @@ function gerarIdImovel(link) {
   }
   return id;
 }
-
-// ============================================================
-// IMAGENS
-// ============================================================
 
 function resolverUrlImagem(url, baseUrl) {
   if (!url) return "";
@@ -194,153 +181,6 @@ function removerScriptsEEstilos(html) {
 
 const PADRAO_LINK_IMOVEL = 
   /\/imovel(\/|\?)|\/imoveis\/[^"']*\/(\d+)|\/detalhes\/(\d+)|\/propriedade\/(\d+)|\/[a-z-]+\/[a-z-]+\/[a-z-]+\/\d+|CA\d{4}-[A-Z0-9]+|SO\d{4}-[A-Z0-9]+/i;
-
-// ============================================================
-// EXTRAÇÃO DE DATA - MÚLTIPLAS FONTES
-// ============================================================
-
-// 1. Data do JSON-LD
-function extrairDataJsonLd(html) {
-  const regexBloco = /<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
-  for (const m of html.matchAll(regexBloco)) {
-    try {
-      const dados = JSON.parse(m[1].trim());
-      const itens = Array.isArray(dados) ? dados : [dados];
-      for (const item of itens) {
-        if (item.datePublished) {
-          const data = item.datePublished.split('T')[0];
-          if (data && /^\d{4}-\d{2}-\d{2}$/.test(data)) return data;
-        }
-      }
-    } catch (e) {}
-  }
-  return null;
-}
-
-// 2. Data do meta tag
-function extrairDataMetaTag(html) {
-  const regex = /<meta[^>]+(?:property|name)=["'](?:article:published_time|date)["'][^>]+content=["']([^"']+)["']/i;
-  const match = html.match(regex);
-  if (match) {
-    const data = match[1].split('T')[0];
-    if (data && /^\d{4}-\d{2}-\d{2}$/.test(data)) return data;
-  }
-  return null;
-}
-
-// 3. Data do texto visível
-function extrairDataTexto(texto) {
-  if (!texto) return null;
-
-  let match = texto.match(/publicado\s*há\s*(\d+)\s*dias?/i);
-  if (match) {
-    const dias = parseInt(match[1]);
-    const data = new Date();
-    data.setDate(data.getDate() - dias);
-    return data.toISOString().split('T')[0];
-  }
-
-  match = texto.match(/publicado\s*há\s*(\d+)\s*meses?/i);
-  if (match) {
-    const meses = parseInt(match[1]);
-    const data = new Date();
-    data.setMonth(data.getMonth() - meses);
-    return data.toISOString().split('T')[0];
-  }
-
-  match = texto.match(/anunciado\s*em\s*(\d{2})\/(\d{2})\/(\d{4})/i);
-  if (match) {
-    return `${match[3]}-${match[2]}-${match[1]}`;
-  }
-
-  match = texto.match(/h[áa]\s*(\d+)\s*dias?/i);
-  if (match) {
-    const dias = parseInt(match[1]);
-    const data = new Date();
-    data.setDate(data.getDate() - dias);
-    return data.toISOString().split('T')[0];
-  }
-
-  match = texto.match(/(\d{2})\/(\d{2})\/(\d{4})/);
-  if (match) {
-    return `${match[3]}-${match[2]}-${match[1]}`;
-  }
-
-  return null;
-}
-
-// 4. Data da imagem (pasta com ano/mês)
-function extrairDataImagem(imagemUrl) {
-  if (!imagemUrl) return null;
-  const matchAnoMes = imagemUrl.match(/\/(\d{4})\/(\d{2})\//);
-  if (matchAnoMes) {
-    return `${matchAnoMes[1]}-${matchAnoMes[2]}-01`;
-  }
-  const matchData = imagemUrl.match(/\/(\d{4})(\d{2})(\d{2})_/);
-  if (matchData) {
-    return `${matchData[1]}-${matchData[2]}-${matchData[3]}`;
-  }
-  return null;
-}
-
-// 5. Data do ID (estimativa)
-function extrairDataPorId(link) {
-  const idMatch = link.match(/\/(\d{5,})$/);
-  if (!idMatch) return null;
-  const id = parseInt(idMatch[1]);
-  if (id < 1000000) return null;
-  const diasDesde2010 = Math.floor(id / 10);
-  const dataBase = new Date(2010, 0, 1);
-  dataBase.setDate(dataBase.getDate() + diasDesde2010);
-  if (dataBase.getFullYear() > 2025) {
-    dataBase.setFullYear(2025);
-  }
-  return dataBase.toISOString().split('T')[0];
-}
-
-// 6. Data da URL (padrão /YYYY/MM/DD/)
-function extrairDataUrl(link) {
-  const match = link.match(/\/(\d{4})\/(\d{2})\/(\d{2})\//);
-  if (match) {
-    return `${match[1]}-${match[2]}-${match[3]}`;
-  }
-  return null;
-}
-
-// 7. Função principal - tenta todas as fontes
-function extrairDataPublicacao(html, texto, link, imagemUrl) {
-  // Prioridade 1: JSON-LD
-  let data = extrairDataJsonLd(html);
-  if (data) return data;
-
-  // Prioridade 2: Meta tag
-  data = extrairDataMetaTag(html);
-  if (data) return data;
-
-  // Prioridade 3: Texto visível
-  data = extrairDataTexto(texto);
-  if (data) return data;
-
-  // Prioridade 4: URL
-  data = extrairDataUrl(link);
-  if (data) return data;
-
-  // Prioridade 5: Imagem
-  if (imagemUrl) {
-    data = extrairDataImagem(imagemUrl);
-    if (data) return data;
-  }
-
-  // Prioridade 6: ID (estimativa)
-  data = extrairDataPorId(link);
-  if (data) return data;
-
-  return null;
-}
-
-// ============================================================
-// EXTRAÇÃO DE CARDS
-// ============================================================
 
 function extrairCards(htmlBruto, baseUrl, nomeFonte) {
   const porId = new Map();
@@ -437,14 +277,6 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       titulo = "Imóvel " + (href.split('/').pop() || '');
     }
 
-    // ========== EXTRAI DATA DE TODAS AS FONTES ==========
-    const dataPublicacao = extrairDataPublicacao(
-      cardHtml + html,
-      textoCard + " " + textoLink,
-      href,
-      imagemUrl
-    );
-
     registrar(href, {
       fonte: nomeFonte,
       titulo: titulo,
@@ -459,17 +291,12 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       cidade: cidade,
       tipo: tipo,
       finalidade: finalidade,
-      dataPublicacao: dataPublicacao, // pode ser null
       link: href
     });
   }
 
   return Array.from(porId.values());
 }
-
-// ============================================================
-// FUNÇÕES DE BAIRRO E CIDADE
-// ============================================================
 
 const CIDADES_REGEX_TEXTO = "Itu|Indaiatuba|Salto|Sorocaba|Cabreúva|Cabreuva";
 
@@ -510,10 +337,6 @@ function extrairCidade(texto, href) {
   }
   return "";
 }
-
-// ============================================================
-// FETCH: DIRETO + SCRAPINGBEE + FIRECRAWL + SCRAPERAPI
-// ============================================================
 
 async function buscarDireto(url) {
   const resp = await fetch(url, {
@@ -616,10 +439,6 @@ async function buscarScraperAPI(url, apiKey) {
   return await resp.text();
 }
 
-// ============================================================
-// BUSCA COM FALLBACK
-// ============================================================
-
 async function buscarComJS(url, chaves, opcoes = {}) {
   const { scrapingBeeKeys, firecrawlKey, scraperAPIKey } = chaves;
   
@@ -665,10 +484,6 @@ async function buscarComJS(url, chaves, opcoes = {}) {
 }
 
 const esperar = (ms) => new Promise(r => setTimeout(r, ms));
-
-// ============================================================
-// GALERIAS
-// ============================================================
 
 async function buscarGaleriaCompletaSemJS(url) {
   try {
@@ -734,15 +549,10 @@ async function buscarGaleriaCompletaJS(url, chaves) {
   return [];
 }
 
-// ============================================================
-// MAIN
-// ============================================================
-
 async function main() {
   console.log("\n" + "=".repeat(60));
-  console.log("🚀 BUSCAR-COMPLETO.MJS - VERSÃO EXPANDIDA");
-  console.log("   ✅ Busca data em JSON-LD, meta, texto, URL, imagem, ID");
-  console.log("   ✅ NUNCA remove imóveis por falta de data");
+  console.log("🚀 BUSCAR-COMPLETO.MJS - VERSÃO SIMPLIFICADA");
+  console.log("   ✅ MANTÉM TODOS OS IMÓVEIS");
   console.log("=".repeat(60));
 
   const fontesRaw = await readFile(new URL("../fontes.json", import.meta.url), "utf-8");
@@ -801,21 +611,13 @@ async function main() {
 
       const itens = extrairCards(html, fonte.url, fonte.nome);
       
-      // 🔴 MANTÉM TODOS OS IMÓVEIS - SEM FILTRO DE DATA
-      let comData = 0;
-      let semData = 0;
-      
+      // 🔴 MANTÉM TODOS OS IMÓVEIS
       for (const item of itens) {
         item._semJS = !fonte.jsNecessario;
-        if (item.dataPublicacao) {
-          comData++;
-        } else {
-          semData++;
-        }
         todos.push(item);
       }
       
-      console.log(`  ✅ ${itens.length} imóveis encontrados (${comData} com data, ${semData} sem data)`);
+      console.log(`  ✅ ${itens.length} imóveis encontrados (todos mantidos)`);
 
       if (itens.length === 0) {
         erros.push(`${fonte.nome}: 0 imóveis`);
@@ -828,7 +630,6 @@ async function main() {
 
   const dataHoje = new Date().toISOString().split("T")[0];
 
-  // ========== GALERIAS ==========
   let doCache = 0, buscadosGratis = 0, buscadosComCredito = 0, semGaleria = 0;
 
   for (const item of todos) {
@@ -882,7 +683,7 @@ async function main() {
     total: todosLimpos.length,
     imoveis: todosLimpos,
     erros,
-    disclaimer: "Imóveis com data de publicação (quando disponível). Imóveis sem data são mantidos."
+    disclaimer: "Todos os imóveis encontrados são mantidos."
   };
 
   await writeFile(
