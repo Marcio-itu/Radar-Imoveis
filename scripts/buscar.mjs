@@ -5,6 +5,7 @@
 // ✅ Com extração de data por fonte (via JSON-LD e HTML)
 // ✅ Suporte a wait e scroll por fonte (ex: Kenlo)
 // ✅ Captura imagens da plataforma ImobWeb (rsSlide, data-src)
+// ✅ Extração específica para ImobWeb (cards com classe "item")
 
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -318,16 +319,16 @@ function removerScriptsEEstilos(html) {
     .replace(/<!--[\s\S]*?-->/g, " ");
 }
 
-// ----------------------
-// Extração de cards
-// ----------------------
+// ============================================================
+// EXTRAÇÃO ESPECÍFICA PARA IMOBWEB
+// ============================================================
 
-function extrairCards(htmlBruto, baseUrl, nomeFonte) {
+function extrairCardsImobWeb(htmlBruto, baseUrl, nomeFonte) {
   const porLink = new Map();
   const html = removerScriptsEEstilos(htmlBruto);
 
   function registrar(href, candidato) {
-    href = href.replace(/\?from=.*$/, '');
+    href = href.replace(/\?from=.*$/, '').replace(/\/$/, '');
     
     const existente = porLink.get(href);
     if (!existente) {
@@ -335,9 +336,10 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       return;
     }
     
+    // Junta imagens (priorizando as que vieram do CDN)
     const imagensUnidas = [...new Set([...existente.imagens, ...candidato.imagens])].slice(0, 8);
-    const existenteConfiavel = existente._origemConfiavel;
-    const candidatoConfiavel = candidato._origemConfiavel;
+    const existenteConfiavel = existente._origemConfiavel || false;
+    const candidatoConfiavel = candidato._origemConfiavel || false;
 
     let imagensFinal = imagensUnidas;
     if (!existenteConfiavel && candidatoConfiavel) {
@@ -351,6 +353,7 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
 
     porLink.set(href, {
       ...existente,
+      ...candidato,
       imagens: imagensFinal,
       _origemConfiavel: existenteConfiavel || candidatoConfiavel,
       preco: existente.preco || candidato.preco,
@@ -364,6 +367,140 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       finalidade: existente.finalidade || candidato.finalidade,
       titulo: (existente.titulo && existente.titulo !== "Imóvel") ? existente.titulo : candidato.titulo,
       dataPublicacao: dataFinal,
+      link: href
+    });
+  }
+
+  // 🔴 PASSO 1: Encontra todos os cards com classe "item" (padrão ImobWeb)
+  const regexCard = /<div[^>]*class=["'][^"']*item[^"']*["'][^>]*>([\s\S]*?)<\/div>/gi;
+  let matchCard;
+
+  while ((matchCard = regexCard.exec(html)) !== null) {
+    const cardHtml = matchCard[1];
+    
+    // 🔴 PASSO 2: Dentro do card, procura o link do imóvel
+    const regexLink = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+    let matchLink = regexLink.exec(cardHtml);
+    
+    if (!matchLink) continue;
+    
+    let href = matchLink[1];
+    const anchorHtml = matchLink[2];
+    const textoLink = limparTexto(removerTags(anchorHtml));
+
+    // 🔴 PASSO 3: Verifica se o link é de imóvel
+    if (!PADRAO_LINK_IMOVEL.test(href)) continue;
+
+    if (href.startsWith("/")) {
+      const base = new URL(baseUrl);
+      href = base.origin + href;
+    }
+
+    // 🔴 PASSO 4: Extrai dados APENAS do card
+    const textoCard = limparTexto(removerTags(cardHtml));
+    
+    // 🔴 Imagens: procura no card e no anchor
+    const { imagens, origemConfiavel } = extrairImagens(cardHtml + anchorHtml, cardHtml, 0, baseUrl);
+
+    // 🔴 Preço: procura no texto do card
+    const preco = extrairPreco(textoCard) || extrairPreco(textoLink);
+    const quartos = extrairQuartos(textoCard) || extrairQuartos(textoLink);
+    const suites = extrairSuites(textoCard) || extrairSuites(textoLink);
+    const vagas = extrairVagas(textoCard) || extrairVagas(textoLink);
+    const area = extrairArea(textoCard) || extrairArea(textoLink);
+    const bairro = extrairBairro(textoCard) || extrairBairro(textoLink);
+    const cidade = extrairCidade(textoCard, href) || extrairCidade(textoLink, href);
+    const tipo = extrairTipo(textoCard, href) || extrairTipo(textoLink, href);
+    const finalidade = extrairFinalidade(textoCard) || extrairFinalidade(textoLink);
+
+    let titulo = tituloSeguro(textoLink);
+    if (!titulo || titulo === "Imóvel" || titulo.length < 5) {
+      titulo = tituloSeguro(textoCard);
+    }
+    if (!titulo || titulo === "Imóvel" || titulo.length < 5) {
+      titulo = "Imóvel " + (href.split('/').pop() || '');
+    }
+
+    // 🔴 Data
+    const dataPublicacao = extrairDataPorFonte(cardHtml, nomeFonte);
+
+    registrar(href, {
+      fonte: nomeFonte,
+      titulo: titulo,
+      imagens: imagens.slice(0, 8),
+      imagem: imagens[0] || "",
+      _origemConfiavel: origemConfiavel,
+      preco: preco,
+      quartos: quartos,
+      suites: suites,
+      vagas: vagas,
+      area: area,
+      bairro: bairro,
+      cidade: cidade,
+      tipo: tipo,
+      finalidade: finalidade,
+      dataPublicacao: dataPublicacao,
+      link: href
+    });
+  }
+
+  // 🔴 Se não encontrou nenhum card com "item", tenta o método padrão
+  if (porLink.size === 0) {
+    console.log(`  ⚠️ Nenhum card com classe "item" encontrado. Usando método padrão.`);
+    return extrairCardsPadrao(htmlBruto, baseUrl, nomeFonte);
+  }
+
+  return Array.from(porLink.values()).map(({ _origemConfiavel, ...resto }) => resto);
+}
+
+// ============================================================
+// EXTRAÇÃO PADRÃO (para outras fontes)
+// ============================================================
+
+function extrairCardsPadrao(htmlBruto, baseUrl, nomeFonte) {
+  const porLink = new Map();
+  const html = removerScriptsEEstilos(htmlBruto);
+
+  function registrar(href, candidato) {
+    href = href.replace(/\?from=.*$/, '').replace(/\/$/, '');
+    
+    const existente = porLink.get(href);
+    if (!existente) {
+      porLink.set(href, candidato);
+      return;
+    }
+    
+    const imagensUnidas = [...new Set([...existente.imagens, ...candidato.imagens])].slice(0, 8);
+    const existenteConfiavel = existente._origemConfiavel || false;
+    const candidatoConfiavel = candidato._origemConfiavel || false;
+
+    let imagensFinal = imagensUnidas;
+    if (!existenteConfiavel && candidatoConfiavel) {
+      imagensFinal = [...new Set([...candidato.imagens, ...existente.imagens])].slice(0, 8);
+    }
+
+    let dataFinal = existente.dataPublicacao;
+    if (!dataFinal && candidato.dataPublicacao) {
+      dataFinal = candidato.dataPublicacao;
+    }
+
+    porLink.set(href, {
+      ...existente,
+      ...candidato,
+      imagens: imagensFinal,
+      _origemConfiavel: existenteConfiavel || candidatoConfiavel,
+      preco: existente.preco || candidato.preco,
+      quartos: existente.quartos || candidato.quartos,
+      suites: existente.suites || candidato.suites,
+      vagas: existente.vagas || candidato.vagas,
+      area: existente.area || candidato.area,
+      bairro: existente.bairro || candidato.bairro,
+      cidade: existente.cidade || candidato.cidade,
+      tipo: existente.tipo || candidato.tipo,
+      finalidade: existente.finalidade || candidato.finalidade,
+      titulo: (existente.titulo && existente.titulo !== "Imóvel") ? existente.titulo : candidato.titulo,
+      dataPublicacao: dataFinal,
+      link: href
     });
   }
 
@@ -407,8 +544,8 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       cidade: extrairCidade(textoPrincipal, href),
       tipo: extrairTipo(textoPrincipal, href),
       finalidade: extrairFinalidade(textoPrincipal),
-      link: href,
       dataPublicacao: dataPublicacao,
+      link: href
     });
   }
 
@@ -446,8 +583,8 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       cidade: extrairCidade(textoJanela, href),
       tipo: extrairTipo(textoJanela, href),
       finalidade: extrairFinalidade(textoJanela),
-      link: href,
       dataPublicacao: dataPublicacao,
+      link: href
     });
   }
 
@@ -741,6 +878,7 @@ async function main() {
   console.log("   ✅ Mantém todos os imóveis");
   console.log("   ✅ Suporte a wait e scroll por fonte");
   console.log("   ✅ Captura imagens ImobWeb (rsSlide)");
+  console.log("   ✅ Extração específica para ImobWeb");
   console.log("=".repeat(60));
 
   let fontesRaw;
@@ -821,7 +959,22 @@ async function main() {
         html = await buscarDireto(fonte.url);
       }
 
-      const itens = extrairCards(html, fonte.url, fonte.nome);
+      let itens;
+
+      // 🔴 Verifica se a fonte é da plataforma ImobWeb
+      const isImobWeb = 
+        fonte.nome.includes("Marcio Marins") || 
+        fonte.nome.includes("Carmo Imóveis") ||
+        fonte.url.includes("marciomarins.com.br") ||
+        fonte.url.includes("carmoimoveis.com.br");
+
+      if (isImobWeb) {
+        console.log(`  🏠 Usando extração específica para ImobWeb`);
+        itens = extrairCardsImobWeb(html, fonte.url, fonte.nome);
+      } else {
+        itens = extrairCardsPadrao(html, fonte.url, fonte.nome);
+      }
+
       itens.forEach(item => { 
         item._semJS = !fonte.jsNecessario; 
         if (item.dataPublicacao) {
