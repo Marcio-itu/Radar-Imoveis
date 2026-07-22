@@ -519,20 +519,15 @@ function extrairCardsPadrao(htmlBruto, baseUrl, nomeFonte) {
       href = base.origin + href;
     }
 
-    // 🔴 CORREÇÃO: Isola o card do imóvel para extrair dados corretos
+    const textoPrincipal = textoLink.length > 25 ? textoLink : 
+      limparTexto(removerTags(html.slice(Math.max(0, match.index - 700), Math.min(html.length, match.index + 700))));
+
+    const { imagens, origemConfiavel } = extrairImagens(anchorHtmlBruto, html, match.index, baseUrl);
+
     const inicioCard = Math.max(0, match.index - 1500);
     const fimCard = Math.min(html.length, match.index + 1500);
     const cardHtml = html.slice(inicioCard, fimCard);
-    const textoCard = limparTexto(removerTags(cardHtml));
-
-    // 🔴 CORREÇÃO: Usa o texto do card para extrair preço e dados
-    const textoPrincipal = textoLink.length > 25 ? textoLink : textoCard;
-
-    const { imagens, origemConfiavel } = extrairImagens(anchorHtmlBruto, html, match.index, baseUrl);
     const dataPublicacao = extrairDataPorFonte(cardHtml, nomeFonte);
-
-    // 🔴 CORREÇÃO: Extrai preço PRIORITARIAMENTE do card, não da página toda
-    const preco = extrairPreco(textoCard) || extrairPreco(textoPrincipal);
 
     registrar(href, {
       fonte: nomeFonte,
@@ -540,15 +535,15 @@ function extrairCardsPadrao(htmlBruto, baseUrl, nomeFonte) {
       imagens: imagens.slice(0, 8),
       imagem: imagens[0] || "",
       _origemConfiavel: origemConfiavel,
-      preco: preco, // 🔴 USANDO O PREÇO CORRETO DO CARD
-      quartos: extrairQuartos(textoCard) || extrairQuartos(textoPrincipal),
-      suites: extrairSuites(textoCard) || extrairSuites(textoPrincipal),
-      vagas: extrairVagas(textoCard) || extrairVagas(textoPrincipal),
-      area: extrairArea(textoCard) || extrairArea(textoPrincipal),
-      bairro: extrairBairro(textoCard) || extrairBairro(textoPrincipal),
-      cidade: extrairCidade(textoCard, href) || extrairCidade(textoPrincipal, href),
-      tipo: extrairTipo(textoCard, href) || extrairTipo(textoPrincipal, href),
-      finalidade: extrairFinalidade(textoCard) || extrairFinalidade(textoPrincipal),
+      preco: extrairPreco(textoPrincipal),
+      quartos: extrairQuartos(textoPrincipal),
+      suites: extrairSuites(textoPrincipal),
+      vagas: extrairVagas(textoPrincipal),
+      area: extrairArea(textoPrincipal),
+      bairro: extrairBairro(textoPrincipal),
+      cidade: extrairCidade(textoPrincipal, href),
+      tipo: extrairTipo(textoPrincipal, href),
+      finalidade: extrairFinalidade(textoPrincipal),
       dataPublicacao: dataPublicacao,
       link: href
     });
