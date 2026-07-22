@@ -257,6 +257,34 @@
   }
   .status.erro{color:var(--erro);}
 
+  /* ========== BOTÃO DE VOZ ========== */
+  .botoes-voz{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:12px;
+  }
+  .botao-voz{
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:13px;
+    font-weight:600;
+    padding:10px 18px;
+    border-radius:7px;
+    border:none;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:transform .12s, box-shadow .12s, background .12s;
+    background:var(--ouro);
+    color:#fff;
+  }
+  .botao-voz:hover{ transform:translateY(-1px); background:var(--ouro-escuro); }
+  .botao-voz-whats{
+    background:var(--verde-whats);
+    color:#fff;
+  }
+  .botao-voz-whats:hover{ background:#1f6e3f; }
+  .botao-voz:disabled{ opacity:.45; cursor:not-allowed; transform:none; }
+
   .barra-selecao{
     position:sticky;
     top:0;
@@ -415,20 +443,6 @@
     padding:5px 10px;
     border-radius:999px;
   }
-  .card-imovel .selo-data{
-    position:absolute;
-    right:12px;
-    bottom:12px;
-    background:rgba(0,0,0,0.7);
-    color:#fff;
-    font-family:'Segoe UI', Arial, sans-serif;
-    font-size:11px;
-    padding:4px 10px;
-    border-radius:999px;
-    backdrop-filter:blur(4px);
-    font-weight:500;
-    letter-spacing:.02em;
-  }
   .card-imovel label.selo-check{
     position:absolute;
     right:12px;
@@ -478,11 +492,14 @@
     border-radius:999px;
     padding:3px 10px;
   }
-  .card-imovel .meta .data-idade{
-    background:var(--ouro-claro);
-    border-color:var(--ouro);
-    color:var(--ouro-escuro);
-    font-weight:600;
+  .card-imovel .data-discreta{
+    font-size:10px;
+    color:var(--tinta-suave);
+    opacity:0.7;
+    margin:2px 0 8px 0;
+    display:flex;
+    align-items:center;
+    gap:4px;
   }
   .card-imovel a.ver{
     font-family:'Segoe UI', Arial, sans-serif;
@@ -595,17 +612,14 @@
     opacity:.65;
     margin:10px 0 0;
   }
-  .linha-imovel .info .data-idade-cliente{
-    font-family:'Segoe UI', Arial, sans-serif;
-    font-size:13px;
-    color:var(--ouro-escuro);
-    background:var(--ouro-claro);
-    border:1px solid var(--ouro);
-    border-radius:999px;
-    padding:4px 14px;
-    display:inline-block;
-    margin-top:6px;
-    font-weight:600;
+  .linha-imovel .info .data-cliente{
+    font-size:11px;
+    color:var(--tinta-suave);
+    opacity:0.6;
+    margin:4px 0 0 0;
+    display:flex;
+    align-items:center;
+    gap:4px;
   }
   .aviso-juridico{
     grid-column:1 / -1;
@@ -680,6 +694,7 @@
     <div class="painel-cabecalho">
       <h2>Filtros</h2>
       <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <button class="botao-voz" id="botao-ouvir-comando" style="font-size:12px; padding:6px 14px;">🎤 Falar comando</button>
         <button class="link-limpo" id="botao-limpar-filtros">Limpar filtros</button>
       </div>
     </div>
@@ -770,6 +785,12 @@
         <legend>Área mínima (m²)</legend>
         <input type="number" id="area-minima" min="0" placeholder="Ex: 100" style="width:100px;">
       </fieldset>
+    </div>
+
+    <!-- ========== BOTÕES DE VOZ ADICIONAIS ========== -->
+    <div class="botoes-voz">
+      <button class="botao-voz" id="botao-ouvir-resultados">🔊 Ouvir resultados</button>
+      <button class="botao-voz botao-voz-whats" id="botao-voz-whats">📱 Enviar por voz + WhatsApp</button>
     </div>
 
     <div class="status" id="status"></div>
@@ -880,43 +901,187 @@ function formatarDataRelativa(isoString){
 }
 
 // ============================================================
-// IDADE DO ANÚNCIO
+// VOZ (Speech Synthesis)
 // ============================================================
 
-function calcularIdade(dataPublicacao) {
-  if (!dataPublicacao) return null;
-  const hoje = new Date();
-  const data = new Date(dataPublicacao);
-  const diffDias = Math.floor((hoje - data) / (1000 * 60 * 60 * 24));
-
-  if (diffDias < 0) return null;
-  if (diffDias === 0) return "Hoje";
-  if (diffDias === 1) return "Há 1 dia";
-  if (diffDias < 30) return `Há ${diffDias} dias`;
-  if (diffDias < 365) {
-    const meses = Math.floor(diffDias / 30);
-    return `Há ${meses} mês${meses > 1 ? 'es' : ''}`;
+function falar(texto, callback) {
+  if (!window.speechSynthesis) {
+    console.log("Voz não suportada neste navegador.");
+    if (callback) callback();
+    return;
   }
-  const anos = Math.floor(diffDias / 365);
-  return `Há ${anos} ano${anos > 1 ? 's' : ''}`;
+  
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(texto);
+  utterance.lang = 'pt-BR';
+  utterance.rate = 0.9;
+  utterance.pitch = 1;
+  utterance.volume = 1;
+  
+  if (callback) {
+    utterance.onend = callback;
+  }
+  
+  window.speechSynthesis.speak(utterance);
 }
 
-function ordenarImoveisPorData(imoveis) {
-  return [...imoveis].sort((a, b) => {
-    // 1. Imóveis com data vêm primeiro
-    if (a.dataPublicacao && !b.dataPublicacao) return -1;
-    if (!a.dataPublicacao && b.dataPublicacao) return 1;
+// ============================================================
+// RECONHECIMENTO DE VOZ (Speech Recognition)
+// ============================================================
 
-    // 2. Ambos têm data: mais novo primeiro
-    if (a.dataPublicacao && b.dataPublicacao) {
-      return new Date(b.dataPublicacao) - new Date(a.dataPublicacao);
+const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+recognition.lang = 'pt-BR';
+recognition.continuous = false;
+recognition.interimResults = false;
+
+recognition.onresult = function(event) {
+  const comando = event.results[0][0].transcript;
+  console.log("Comando ouvido:", comando);
+  
+  let precoMin = null;
+  let precoMax = null;
+  
+  const matchEntre = comando.match(/entre\s*(\d+)\s*e\s*(\d+)\s*mil/i);
+  if (matchEntre) {
+    precoMin = parseInt(matchEntre[1]) * 1000;
+    precoMax = parseInt(matchEntre[2]) * 1000;
+  }
+  
+  const matchAte = comando.match(/at[ée]\s*(\d+)\s*mil/i);
+  if (matchAte && precoMin === null) {
+    precoMin = 100000;
+    precoMax = parseInt(matchAte[1]) * 1000;
+  }
+  
+  const matchApartir = comando.match(/a\s*partir\s*de\s*(\d+)\s*mil/i);
+  if (matchApartir && precoMin === null) {
+    precoMin = parseInt(matchApartir[1]) * 1000;
+    precoMax = 3000000;
+  }
+  
+  let quartos = null;
+  const matchQuartos = comando.match(/(\d+)\s*quartos?/i);
+  if (matchQuartos) {
+    quartos = matchQuartos[1];
+  }
+  
+  let bairro = null;
+  const matchBairro = comando.match(/bairro\s*([A-Za-zÀ-ú\s]+)/i);
+  if (matchBairro) {
+    bairro = limparTexto(matchBairro[1]);
+  }
+  
+  if (precoMin !== null && precoMax !== null) {
+    document.getElementById("valor-de").value = precoMin;
+    document.getElementById("valor-ate").value = precoMax;
+    atualizarRotulosFaixaValor();
+  }
+  
+  if (quartos !== null) {
+    document.querySelectorAll('#opcoes-quartos input').forEach(el => {
+      el.checked = (el.value === quartos || (el.value === "4+" && parseInt(quartos) >= 4));
+    });
+  }
+  
+  if (bairro !== null) {
+    document.getElementById("bairro-filtro").value = bairro;
+  }
+  
+  aplicarFiltrosEExibir();
+  
+  const total = document.querySelectorAll('.card-imovel').length;
+  falar(`Encontrei ${total} imóveis com esses filtros.`);
+};
+
+recognition.onend = function() {
+  const botao = document.getElementById("botao-ouvir-comando");
+  if (botao) botao.textContent = "🎤 Falar comando";
+};
+
+recognition.onerror = function(event) {
+  const botao = document.getElementById("botao-ouvir-comando");
+  if (botao) botao.textContent = "🎤 Falar comando";
+  if (event.error === 'not-allowed') {
+    falar("Permissão de microfone negada. Ative no navegador.");
+  } else if (event.error === 'no-speech') {
+    falar("Não ouvi nada. Tente novamente.");
+  }
+};
+
+// ============================================================
+// FUNÇÃO PARA OUVIR RESULTADOS
+// ============================================================
+
+function ouvirResultados() {
+  const cards = document.querySelectorAll('.card-imovel');
+  if (cards.length === 0) {
+    falar("Não encontrei imóveis com os filtros selecionados.");
+    return;
+  }
+  
+  const selecionados = [];
+  cards.forEach(card => {
+    const checkbox = card.querySelector('input[type="checkbox"]');
+    if (checkbox && checkbox.checked) {
+      const titulo = card.querySelector('.titulo')?.textContent || "Imóvel";
+      const preco = card.querySelector('.selo-preco')?.textContent || "preço sob consulta";
+      selecionados.push({ titulo, preco });
     }
-
-    // 3. Ambos sem data: ordena por preço (menor para maior)
-    const precoA = precoParaNumero(a.preco) || Infinity;
-    const precoB = precoParaNumero(b.preco) || Infinity;
-    return precoA - precoB;
   });
+  
+  if (selecionados.length === 0) {
+    falar("Nenhum imóvel selecionado. Selecione alguns imóveis primeiro.");
+    return;
+  }
+  
+  let mensagem = `Você selecionou ${selecionados.length} imóveis. `;
+  const primeiros = selecionados.slice(0, 5);
+  primeiros.forEach((item, i) => {
+    mensagem += `Imóvel ${i+1}: ${item.titulo}, por ${item.preco}. `;
+  });
+  if (selecionados.length > 5) {
+    mensagem += `E mais ${selecionados.length - 5} imóveis. `;
+  }
+  mensagem += "Quer gerar o link para enviar ao cliente?";
+  
+  falar(mensagem);
+}
+
+// ============================================================
+// FUNÇÃO PARA ENVIAR POR VOZ + WHATSAPP
+// ============================================================
+
+async function enviarPorVozWhatsApp() {
+  const cards = document.querySelectorAll('.card-imovel');
+  const selecionados = [];
+  cards.forEach(card => {
+    const checkbox = card.querySelector('input[type="checkbox"]');
+    if (checkbox && checkbox.checked) {
+      const titulo = card.querySelector('.titulo')?.textContent || "Imóvel";
+      const preco = card.querySelector('.selo-preco')?.textContent || "preço sob consulta";
+      selecionados.push({ titulo, preco });
+    }
+  });
+  
+  if (selecionados.length === 0) {
+    falar("Nenhum imóvel selecionado. Selecione alguns imóveis primeiro.");
+    return;
+  }
+  
+  try {
+    const link = await montarLinkCliente();
+    document.getElementById("campo-link-gerado").value = link;
+    document.getElementById("caixa-link").style.display = "block";
+    
+    const telefone = prompt("Digite o telefone do cliente (com DDD):", "5511");
+    if (telefone) {
+      const mensagem = `Olá! Encontrei ${selecionados.length} imóveis para você: ${link}`;
+      window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`, "_blank");
+      falar(`Link enviado para o WhatsApp. ${selecionados.length} imóveis compartilhados.`);
+    }
+  } catch(e) {
+    falar("Erro ao gerar o link. Verifique se o token do GitHub está configurado.");
+  }
 }
 
 // ============================================================
@@ -1196,20 +1361,40 @@ function renderizarExpirado(){
   adicionarBotaoWhatsCliente("Olá! O link de imóveis que você me enviou expirou — pode me mandar uma seleção atualizada?");
 }
 
-async function renderizarCliente(itens){
+function renderizarCliente(itens){
   prepararTelaModoCliente();
+
+  // ========== ORDENAÇÃO: PREÇO (menor→maior) → DATA (mais novo primeiro) ==========
+  itens.sort((a, b) => {
+    const precoA = precoParaNumero(a.preco);
+    const precoB = precoParaNumero(b.preco);
+    
+    if (precoA !== null && precoB !== null) {
+      if (precoA !== precoB) return precoA - precoB;
+    }
+    if (precoA === null && precoB !== null) return 1;
+    if (precoA !== null && precoB === null) return -1;
+    
+    const dataA = a.dataPublicacao || "";
+    const dataB = b.dataPublicacao || "";
+    
+    if (dataA && dataB) {
+      return dataB.localeCompare(dataA);
+    }
+    if (dataA && !dataB) return -1;
+    if (!dataA && dataB) return 1;
+    
+    return 0;
+  });
 
   const resultadosDiv = document.getElementById("resultados");
   resultadosDiv.innerHTML = "";
   resultadosDiv.className = "lista-cliente";
 
-  // Ordena os imóveis por data (mais novos primeiro)
-  const itensOrdenados = ordenarImoveisPorData(itens);
-
   const contagem = document.createElement("p");
   contagem.className = "contagem";
   contagem.style.gridColumn = "unset";
-  contagem.textContent = `${itensOrdenados.length} imóvel(is) selecionado(s) para você`;
+  contagem.textContent = `${itens.length} imóvel(is) selecionado(s) para você`;
   resultadosDiv.appendChild(contagem);
 
   const disclaimer = document.createElement("div");
@@ -1229,7 +1414,7 @@ async function renderizarCliente(itens){
     }
   } catch(e){}
 
-  itensOrdenados.forEach(item => {
+  itens.forEach(item => {
     const aindaDisponivel = linksAindaDisponiveis === null || linksAindaDisponiveis.has(item.link);
 
     const linha = document.createElement("div");
@@ -1255,8 +1440,16 @@ async function renderizarCliente(itens){
       ? item.imagens
       : (item.imagem ? [item.imagem] : []);
 
-    const idade = calcularIdade(item.dataPublicacao);
-    const dataHtml = idade ? `<span class="data-idade-cliente">📅 ${idade}</span>` : "";
+    let dataHtml = "";
+    if (item.dataPublicacao) {
+      const dataObj = new Date(item.dataPublicacao);
+      const dataFormatada = dataObj.toLocaleDateString("pt-BR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+      });
+      dataHtml = `<p class="data-cliente">📅 Publicado em ${dataFormatada}</p>`;
+    }
 
     linha.innerHTML = `
       <div class="galeria-wrap">
@@ -1379,7 +1572,7 @@ function atualizarRotulosFaixaValor(){
   document.getElementById("valor-ate-num").textContent = formatarValorCurto(ate) + (ate >= 3000000 ? "+" : "");
 }
 
-function aplicarFiltrosEExibir(retornaFiltrados = false){
+function aplicarFiltrosEExibir(retornaFiltrados = false) {
   const resultadosDiv = document.getElementById("resultados");
   resultadosDiv.innerHTML = "";
 
@@ -1394,7 +1587,7 @@ function aplicarFiltrosEExibir(retornaFiltrados = false){
 
   let faixaDe = Number(document.getElementById("valor-de").value);
   let faixaAte = Number(document.getElementById("valor-ate").value);
-  if(faixaDe > faixaAte){ [faixaDe, faixaAte] = [faixaAte, faixaDe]; }
+  if (faixaDe > faixaAte) { [faixaDe, faixaAte] = [faixaAte, faixaDe]; }
   const incluirAcimaDe3Mi = document.getElementById("valor-acima-3mi").checked;
   const faixaMin = faixaDe;
   const faixaMax = incluirAcimaDe3Mi ? Infinity : faixaAte;
@@ -1434,10 +1627,30 @@ function aplicarFiltrosEExibir(retornaFiltrados = false){
     return true;
   });
 
-  // ========== ORDENA POR DATA (MAIS NOVO PRIMEIRO) ==========
-  filtrados = ordenarImoveisPorData(filtrados);
+  // ========== ORDENAÇÃO: PREÇO (menor→maior) → DATA (mais novo primeiro) ==========
+  filtrados.sort((a, b) => {
+    const precoA = precoParaNumero(a.preco);
+    const precoB = precoParaNumero(b.preco);
+    
+    if (precoA !== null && precoB !== null) {
+      if (precoA !== precoB) return precoA - precoB;
+    }
+    if (precoA === null && precoB !== null) return 1;
+    if (precoA !== null && precoB === null) return -1;
+    
+    const dataA = a.dataPublicacao || "";
+    const dataB = b.dataPublicacao || "";
+    
+    if (dataA && dataB) {
+      return dataB.localeCompare(dataA);
+    }
+    if (dataA && !dataB) return -1;
+    if (!dataA && dataB) return 1;
+    
+    return 0;
+  });
 
-  if(retornaFiltrados) return filtrados;
+  if (retornaFiltrados) return filtrados;
 
   const contagem = document.createElement("p");
   contagem.className = "contagem";
@@ -1457,10 +1670,18 @@ function aplicarFiltrosEExibir(retornaFiltrados = false){
   filtrados.forEach(item => {
     const card = document.createElement("div");
     card.className = "card-imovel" + (SELECIONADOS.has(item.link) ? " selecionado" : "");
-
-    const idade = calcularIdade(item.dataPublicacao);
-    const dataHtml = idade ? `<span class="selo-data">📅 ${idade}</span>` : "";
-
+    
+    let dataHtml = "";
+    if (item.dataPublicacao) {
+      const dataObj = new Date(item.dataPublicacao);
+      const dataFormatada = dataObj.toLocaleDateString("pt-BR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+      });
+      dataHtml = `<div class="data-discreta">📅 ${dataFormatada}</div>`;
+    }
+    
     card.innerHTML = `
       <div class="foto-wrap">
         ${item.imagem
@@ -1472,7 +1693,6 @@ function aplicarFiltrosEExibir(retornaFiltrados = false){
           <input type="checkbox" ${SELECIONADOS.has(item.link) ? "checked" : ""} data-link="${item.link}">
         </label>
         ${item.preco ? `<span class="selo-preco">${item.preco}</span>` : ""}
-        ${dataHtml}
       </div>
       <div class="corpo">
         <p class="titulo">${item.titulo || "Imóvel"}</p>
@@ -1483,8 +1703,8 @@ function aplicarFiltrosEExibir(retornaFiltrados = false){
           ${item.vagas ? `<span>${item.vagas} vagas</span>` : ""}
           ${item.area ? `<span>${item.area} m²</span>` : ""}
           ${(item.bairro || item.cidade) ? `<span>${[item.bairro, item.cidade].filter(Boolean).join(", ")}</span>` : ""}
-          ${idade ? `<span class="data-idade">📅 ${idade}</span>` : ""}
         </div>
+        ${dataHtml}
         <a class="ver" href="${item.link}" target="_blank" rel="noopener">Ver imóvel →</a>
       </div>
     `;
@@ -1519,7 +1739,7 @@ function itensSelecionadosParaLink(){
       preco: i.preco, tipo: i.tipo, quartos: i.quartos, fonte: i.fonte,
       suites: i.suites, vagas: i.vagas, area: i.area, bairro: i.bairro,
       cidade: i.cidade, finalidade: i.finalidade, link: i.link,
-      dataPublicacao: i.dataPublicacao
+      dataPublicacao: i.dataPublicacao || null,
     }));
 }
 
@@ -1527,9 +1747,7 @@ let CACHE_LINK_GERADO = { chave: null, url: null };
 
 async function montarLinkCliente(){
   const itens = itensSelecionadosParaLink();
-  // Ordena os itens antes de salvar no link
-  const itensOrdenados = ordenarImoveisPorData(itens);
-  const chave = itensOrdenados.map(i => i.link).sort().join("|");
+  const chave = itens.map(i => i.link).sort().join("|");
 
   if(CACHE_LINK_GERADO.chave === chave && CACHE_LINK_GERADO.url){
     return CACHE_LINK_GERADO.url;
@@ -1543,7 +1761,7 @@ async function montarLinkCliente(){
     if(!dadosAtuais.links) dadosAtuais.links = {};
     while(dadosAtuais.links[codigo]) codigo = gerarCodigoCurto();
     dadosAtuais.links[codigo] = {
-      itens: itensOrdenados,
+      itens,
       criadoEm: new Date().toISOString(),
     };
     return dadosAtuais;
@@ -1614,6 +1832,23 @@ document.getElementById("botao-enviar-whats").addEventListener("click", async (e
     }
   });
 });
+
+// ========== BOTÕES DE VOZ ==========
+document.getElementById("botao-ouvir-comando").addEventListener("click", () => {
+  const botao = document.getElementById("botao-ouvir-comando");
+  try {
+    recognition.start();
+    botao.textContent = "🎤 Ouvindo...";
+    falar("Fale o que você procura. Por exemplo: entre 300 e 350 mil, 3 quartos.");
+  } catch(e) {
+    botao.textContent = "🎤 Falar comando";
+    falar("Não foi possível ativar o microfone. Verifique as permissões do navegador.");
+  }
+});
+
+document.getElementById("botao-ouvir-resultados").addEventListener("click", ouvirResultados);
+
+document.getElementById("botao-voz-whats").addEventListener("click", enviarPorVozWhatsApp);
 
 document.getElementById("botao-salvar-token").addEventListener("click", () => {
   const campo = document.getElementById("campo-token-github");
