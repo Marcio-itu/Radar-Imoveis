@@ -661,7 +661,6 @@
 </div>
 
 <main id="conteudo-principal">
-  <!-- ========== PAINEL DE FILTROS ========== -->
   <div class="painel" id="painel-filtros">
     <div class="painel-cabecalho">
       <h2>Filtros</h2>
@@ -789,7 +788,6 @@
     </div>
   </details>
 
-  <!-- ========== BARRA DE SELEÇÃO ========== -->
   <div class="barra-selecao" id="barra-selecao" style="display:none;">
     <span class="contagem-selecao" id="contagem-selecao">0 imóveis selecionados</span>
     <div class="acoes">
@@ -799,7 +797,6 @@
     </div>
   </div>
 
-  <!-- ========== CAIXA DE LINK ========== -->
   <div class="caixa-link" id="caixa-link" style="display:none;">
     <p class="rotulo">Link pronto — envie para o seu cliente. Ele verá só os imóveis selecionados, sem saber qual imobiliária anunciou cada um. Expira em 10 dias (dá pra reativar depois, no painel de configuração acima).</p>
     <div class="campo-url">
@@ -808,7 +805,6 @@
     </div>
   </div>
 
-  <!-- ========== RESULTADOS ========== -->
   <div class="resultados" id="resultados"></div>
 
   <p class="aviso" id="aviso-rodape">
@@ -824,7 +820,7 @@
 // CONFIGURAÇÕES
 // ============================================================
 
-const WHATSAPP_CORRETOR = "551132806090"; // Seu número
+const WHATSAPP_CORRETOR = "551132806090";
 const DIAS_EXPIRAR = 10;
 
 // ============================================================
@@ -1143,7 +1139,6 @@ function renderizarExpirado(){
 function renderizarCliente(itens){
   prepararTelaModoCliente();
 
-  // ========== ORDENAÇÃO: PREÇO (menor→maior) → DATA (mais novo primeiro) ==========
   itens.sort((a, b) => {
     const precoA = precoParaNumero(a.preco);
     const precoB = precoParaNumero(b.preco);
@@ -1406,7 +1401,6 @@ function aplicarFiltrosEExibir(retornaFiltrados = false) {
     return true;
   });
 
-  // ========== ORDENAÇÃO: PREÇO (menor→maior) → DATA (mais novo primeiro) ==========
   filtrados.sort((a, b) => {
     const precoA = precoParaNumero(a.preco);
     const precoB = precoParaNumero(b.preco);
