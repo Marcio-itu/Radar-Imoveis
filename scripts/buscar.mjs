@@ -521,12 +521,12 @@ async function buscarScrapingBee(url, apiKey, opcoes = {}) {
     "&render_js=true" +
     "&wait=" + wait;
 
-  // Se a fonte pedir scroll, adiciona o cenário
+  // Se a fonte pedir scroll, adiciona o cenário (sintaxe corrigida)
   if (opcoes.scroll) {
     endpoint += "&js_scenario=" + encodeURIComponent(JSON.stringify({
       instructions: [
         { wait: 2000 },
-        { scroll: { direction: "down", delta: 800, repeat: 5, delay: 1500 } },
+        { scroll: { direction: "down", repeat: 5 } },
         { wait: 3000 }
       ]
     }));
