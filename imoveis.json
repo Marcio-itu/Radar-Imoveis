@@ -1,7 +1,7 @@
 {
-  "atualizadoEm": "2026-07-22T19:59:21.004Z",
+  "atualizadoEm": "2026-07-22T21:47:32.944Z",
   "geradoEm": "2026-07-22",
-  "total": 215,
+  "total": 195,
   "imoveis": [
     {
       "fonte": "Residencial Imóveis",
@@ -26,8 +26,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/vila-lucinda/casa/4681325",
       "dataPublicacao": null,
+      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/vila-lucinda/casa/4681325",
       "galeriaCompleta": true
     },
     {
@@ -53,8 +53,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-parque-ytu-xapada/casa/34952548",
       "dataPublicacao": null,
+      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-parque-ytu-xapada/casa/34952548",
       "galeriaCompleta": true
     },
     {
@@ -80,8 +80,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.residencialimoveis.com.br/comprar-ou-alugar/sp/itu/condominio-jardim-plaza-athenee/casa/69353002",
       "dataPublicacao": null,
+      "link": "https://www.residencialimoveis.com.br/comprar-ou-alugar/sp/itu/condominio-jardim-plaza-athenee/casa/69353002",
       "galeriaCompleta": true
     },
     {
@@ -107,8 +107,8 @@
       "cidade": "Salto",
       "tipo": "casa",
       "finalidade": "venda e aluguel",
-      "link": "https://www.residencialimoveis.com.br/comprar/sp/salto/condominio-residencial-costa-das-areias/casa/70115793",
       "dataPublicacao": null,
+      "link": "https://www.residencialimoveis.com.br/comprar/sp/salto/condominio-residencial-costa-das-areias/casa/70115793",
       "galeriaCompleta": true
     },
     {
@@ -134,8 +134,8 @@
       "cidade": "Salto",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.residencialimoveis.com.br/comprar/sp/salto/mirante-dos-ypes/casa/71003765",
       "dataPublicacao": null,
+      "link": "https://www.residencialimoveis.com.br/comprar/sp/salto/mirante-dos-ypes/casa/71003765",
       "galeriaCompleta": true
     },
     {
@@ -161,8 +161,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/portal-da-vila-rica/casa/71710646",
       "dataPublicacao": null,
+      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/portal-da-vila-rica/casa/71710646",
       "galeriaCompleta": true
     },
     {
@@ -188,8 +188,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-residencial-parque-do-varvito/casa/72484919",
       "dataPublicacao": null,
+      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-residencial-parque-do-varvito/casa/72484919",
       "galeriaCompleta": true
     },
     {
@@ -215,8 +215,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-portal-dos-sabias/casa/72535142",
       "dataPublicacao": null,
+      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-portal-dos-sabias/casa/72535142",
       "galeriaCompleta": true
     },
     {
@@ -242,8 +242,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-residencial-parque-do-varvito/casa/72643787",
       "dataPublicacao": null,
+      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-residencial-parque-do-varvito/casa/72643787",
       "galeriaCompleta": true
     },
     {
@@ -269,8 +269,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-saint-paul/casa/72677681",
       "dataPublicacao": null,
+      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-saint-paul/casa/72677681",
       "galeriaCompleta": true
     },
     {
@@ -296,8 +296,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-terras-de-sao-jose-ii/casa/72729484",
       "dataPublicacao": null,
+      "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-terras-de-sao-jose-ii/casa/72729484",
       "galeriaCompleta": true
     },
     {
@@ -323,286 +323,13 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
+      "dataPublicacao": null,
       "link": "https://www.residencialimoveis.com.br/comprar/sp/itu/condominio-campos-de-santo-antonio-ii/casa/72824871",
-      "dataPublicacao": null,
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Venda",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202605211602283489.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202606161451214024.png",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202509041102529738.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231113104149113.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202606161057065494.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-2023110918045956.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231113090523534.JPG"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "Condom",
-      "cidade": "Itu",
-      "tipo": "apartamento",
-      "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/?finalidade=venda",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "Apartamento",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202606161451214024.png",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202509041102529738.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231113104149113.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202606161057065494.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-2023110918045956.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231113090523534.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231113092534390.JPG"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "Condom",
-      "cidade": "",
-      "tipo": "apartamento",
-      "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/?finalidade=venda&tipo=apartamento",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "Casa",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202407180956304246.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202410291124505741.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202505161437105256.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240318100922553.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240302220237771.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202508041708537924.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202607171045144825.png"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "Condom",
-      "cidade": "",
-      "tipo": "apartamento",
-      "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/?finalidade=venda&tipo=casa",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "Casa em Condom�nio",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202603251601281400.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240227092016563.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231106092354880.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240510120625284.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202603310946526645.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202410021654193477.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240504174512139.jpg"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "Condom",
-      "cidade": "",
-      "tipo": "apartamento",
-      "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/?finalidade=venda&tipo=casa-em-condominio",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "Comercial",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202605211602283489.jpg",
-        "https://www.marciomarins.com.br/imagens/diversos/site-para-imobiliarias-imobibrasil.png"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "Condom",
-      "cidade": "",
-      "tipo": "apartamento",
-      "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/?finalidade=venda&tipo=comercial",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "Sobrado",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-2023120714544851.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231111101334525.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202607151547331552.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202311241141265858.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231121153614512.jpg",
-        "https://www.marciomarins.com.br/imagens/diversos/site-para-imobiliarias-imobibrasil.png"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "Condom",
-      "cidade": "",
-      "tipo": "apartamento",
-      "finalidade": "",
-      "link": "https://www.marciomarins.com.br/imovel/?finalidade=venda&tipo=sobrado",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "Terreno",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202407171250553850.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202601161509334804.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202410240854097949.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231027151711989.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202512151104592343.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202511121722596075.jpg",
-        "https://www.marciomarins.com.br/imagens/diversos/site-para-imobiliarias-imobibrasil.png"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "Condom",
-      "cidade": "",
-      "tipo": "apartamento",
-      "finalidade": "",
-      "link": "https://www.marciomarins.com.br/imovel/?finalidade=venda&tipo=terreno",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "Loca��o",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240524155439638.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202605071350538134.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231124113611246.JPG",
-        "https://www.marciomarins.com.br/imagens/diversos/site-para-imobiliarias-imobibrasil.png"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "Condom",
-      "cidade": "",
-      "tipo": "apartamento",
-      "finalidade": "",
-      "link": "https://www.marciomarins.com.br/imovel/?finalidade=locacao",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "Apartamento",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240524155439638.jpg",
-        "https://www.marciomarins.com.br/imagens/diversos/site-para-imobiliarias-imobibrasil.png"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "Loca",
-      "cidade": "",
-      "tipo": "apartamento",
-      "finalidade": "aluguel",
-      "link": "https://www.marciomarins.com.br/imovel/?finalidade=locacao&tipo=apartamento",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "Casa",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202605071350538134.jpeg",
-        "https://www.marciomarins.com.br/imagens/diversos/site-para-imobiliarias-imobibrasil.png"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "Loca",
-      "cidade": "",
-      "tipo": "apartamento",
-      "finalidade": "aluguel",
-      "link": "https://www.marciomarins.com.br/imovel/?finalidade=locacao&tipo=casa",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "Comercial",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231124113611246.JPG",
-        "https://www.marciomarins.com.br/imagens/diversos/site-para-imobiliarias-imobibrasil.png"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "Loca",
-      "cidade": "",
-      "tipo": "apartamento",
-      "finalidade": "aluguel",
-      "link": "https://www.marciomarins.com.br/imovel/?finalidade=locacao&tipo=comercial",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "Centro, Itu / SP Ref: SALACOML-1 &nbsp;&nbsp;&nbsp;Comercial para Venda 43,00 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202605211602283489.jpg",
         "https://www.marciomarins.com.br/imagens/imoveis/202605211602283489.jpg",
@@ -621,15 +348,15 @@
       "area": "",
       "bairro": "Edif",
       "cidade": "",
-      "tipo": "comercial",
+      "tipo": "sala comercial",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/4243769/comercial-venda-itu-sp-centro-edificio-da-palma",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/4243769/comercial-venda-itu-sp-centro-edificio-da-palma",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Progresso, Itu / SP Ref: AP-ILHAFLORES_1 &nbsp;&nbsp;&nbsp;Apartamento para Venda 44,00 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202606161451214024.png",
         "https://www.marciomarins.com.br/imagens/imoveis/202606161451214024.png",
@@ -650,13 +377,13 @@
       "cidade": "",
       "tipo": "apartamento",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/4283869/apartamento-venda-itu-sp-progresso-condominio-ilha-das-flores",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/4283869/apartamento-venda-itu-sp-progresso-condominio-ilha-das-flores",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Parque Nossa Senhora da Candel�ria, Itu / SP Ref: AP.ILH.MURANO-2 &nbsp;&nbsp;&nbsp;Apartamento para Venda 47,00 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202509041102529738.jpeg",
         "https://www.marciomarins.com.br/imagens/imoveis/202509041102529738.jpeg",
@@ -677,13 +404,13 @@
       "cidade": "",
       "tipo": "apartamento",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/3778221/apartamento-venda-itu-sp-parque-nossa-senhora-da-candelaria-condominio-ilha-de-murano",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/3778221/apartamento-venda-itu-sp-parque-nossa-senhora-da-candelaria-condominio-ilha-de-murano",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Vila Cleto, Itu / SP Ref: AP-VLSOL-4 &nbsp;&nbsp;&nbsp;Apartamento para Venda 90,00 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231113104149113.JPG",
         "https://www.marciomarins.com.br/imagens/imoveis/20231113104044237.JPG",
@@ -704,13 +431,13 @@
       "cidade": "",
       "tipo": "apartamento",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/2638801/apartamento-venda-itu-sp-vila-cleto-condominio-vale-do-sol",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/2638801/apartamento-venda-itu-sp-vila-cleto-condominio-vale-do-sol",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Vila S�o Jos�, Itu / SP Ref: AP-P.INCA_1 &nbsp;&nbsp;&nbsp;Apartamento para Venda 2",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202606161057065494.jpeg",
         "https://www.marciomarins.com.br/imagens/imoveis/202606161057065494.jpeg",
@@ -731,13 +458,13 @@
       "cidade": "",
       "tipo": "apartamento",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/4283399/apartamento-venda-itu-sp-vila-sao-jose-condominio-parque-inca",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/4283399/apartamento-venda-itu-sp-vila-sao-jose-condominio-parque-inca",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Parque das Ind�strias, Itu / SP Ref: AP-ILHSOL-1 &nbsp;&nbsp;&nbsp;Apartamento para Venda 47,00 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-2023110918045956.jpg",
         "https://www.marciomarins.com.br/imagens/imoveis/20231109180458663.jpg",
@@ -758,13 +485,13 @@
       "cidade": "",
       "tipo": "apartamento",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/2635217/apartamento-venda-itu-sp-parque-das-industrias-condominio-ilha-do-sol",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/2635217/apartamento-venda-itu-sp-parque-das-industrias-condominio-ilha-do-sol",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Vila Cleto, Itu / SP Ref: AP-VLSOL-2 &nbsp;&nbsp;&nbsp;Apartamento para Venda 90,00 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231113090523534.JPG",
         "https://www.marciomarins.com.br/imagens/imoveis/20231113090518716.JPG",
@@ -785,13 +512,13 @@
       "cidade": "",
       "tipo": "apartamento",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/2638403/apartamento-venda-itu-sp-vila-cleto-condominio-vale-do-sol",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/2638403/apartamento-venda-itu-sp-vila-cleto-condominio-vale-do-sol",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Vila Cleto, Itu / SP Ref: AP-VLSOL-3 &nbsp;&nbsp;&nbsp;Apartamento para Venda 90,00 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231113092534390.JPG",
         "https://www.marciomarins.com.br/imagens/imoveis/20231113092334381.JPG",
@@ -812,13 +539,13 @@
       "cidade": "",
       "tipo": "apartamento",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/2638435/apartamento-venda-itu-sp-vila-cleto-condominio-vale-do-sol",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/2638435/apartamento-venda-itu-sp-vila-cleto-condominio-vale-do-sol",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Salto Ville, Salto / SP Ref: AP.SOLAR SABIAS-01 &nbsp;&nbsp;&nbsp;Apartamento para Venda 47,00 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202502241551235246.jpeg",
         "https://www.marciomarins.com.br/imagens/imoveis/202502241551235246.jpeg",
@@ -839,13 +566,13 @@
       "cidade": "",
       "tipo": "apartamento",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/3445615/apartamento-venda-salto-sp-salto-ville-condominio-solar-dos-sabias",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/3445615/apartamento-venda-salto-sp-salto-ville-condominio-solar-dos-sabias",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Parque das Ind�strias, Itu / SP Ref: AP-ILHSOL-2 &nbsp;&nbsp;&nbsp;Apartamento para Venda 47,00 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231128083804414.jpg",
         "https://www.marciomarins.com.br/imagens/imoveis/20231128083804414.jpg",
@@ -866,13 +593,13 @@
       "cidade": "",
       "tipo": "apartamento",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/2660733/apartamento-venda-itu-sp-parque-das-industrias-condominio-ilha-do-sol",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/2660733/apartamento-venda-itu-sp-parque-das-industrias-condominio-ilha-do-sol",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Jardim Maria Eug�nia, Sorocaba / SP Ref: CS-SOROC.ZN &nbsp;&nbsp;&nbsp;Casa para Venda 212,00 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202407180956304246.jpeg",
         "https://www.marciomarins.com.br/imagens/imoveis/202407180956304246.jpeg",
@@ -893,13 +620,13 @@
       "cidade": "",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/3069636/casa-venda-sorocaba-sp-jardim-maria-eugenia",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/3069636/casa-venda-sorocaba-sp-jardim-maria-eugenia",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Residencial Reserva Central Parque, Salto / SP Ref: TERRENO-RES.CENT.PARK &nbsp;&nbsp;&nbsp;Terreno para Venda 331,50 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202407171250553850.JPG",
         "https://www.marciomarins.com.br/imagens/imoveis/202407171250553850.JPG",
@@ -918,15 +645,15 @@
       "area": "",
       "bairro": "Residencial Reserva Central Parque",
       "cidade": "",
-      "tipo": "terreno",
+      "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/3068013/terreno-venda-salto-sp-residencial-reserva-central-parque-condominio-reserva-central-parque",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/3068013/terreno-venda-salto-sp-residencial-reserva-central-parque-condominio-reserva-central-parque",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Jardim das Rosas, Itu / SP Ref: AP.VILAVERDE-1 &nbsp;&nbsp;&nbsp;Apartamento para Venda 75,00 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202511031147025819.jpeg",
         "https://www.marciomarins.com.br/imagens/imoveis/202511031147028750.jpeg",
@@ -947,13 +674,13 @@
       "cidade": "",
       "tipo": "apartamento",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/3883414/apartamento-venda-itu-sp-jardim-das-rosas",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/3883414/apartamento-venda-itu-sp-jardim-das-rosas",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Parque Residencial Presidente M�dici, Itu / SP Ref: AP-ILHAFIORI-1 &nbsp;&nbsp;&nbsp;Apartamento para Venda 148,00 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231111095715622.jpg",
         "https://www.marciomarins.com.br/imagens/imoveis/20231111095715622.jpg",
@@ -974,13 +701,13 @@
       "cidade": "",
       "tipo": "apartamento",
       "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/2637617/apartamento-venda-itu-sp-parque-residencial-presidente-medici-condominio-spazio-ilha-de-fiori",
       "dataPublicacao": null,
+      "link": "https://www.marciomarins.com.br/imovel/2637617/apartamento-venda-itu-sp-parque-residencial-presidente-medici-condominio-spazio-ilha-de-fiori",
       "galeriaCompleta": true
     },
     {
       "fonte": "Marcio Marins",
-      "titulo": "Jardim Paulista, Itu / SP Ref: TERRENO-JD.PAULISTA1 &nbsp;&nbsp;&nbsp;Terreno para Venda 269,08 m&sup2;",
+      "titulo": "Ver Detalhes",
       "imagens": [
         "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202601161509334804.jpeg",
         "https://www.marciomarins.com.br/imagens/imoveis/202601161509334804.jpeg",
@@ -1001,244 +728,8 @@
       "cidade": "",
       "tipo": "terreno",
       "finalidade": "venda",
+      "dataPublicacao": null,
       "link": "https://www.marciomarins.com.br/imovel/3971251/terreno-venda-itu-sp-jardim-paulista",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "1",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202605211602283489.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202606161451214024.png",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202509041102529738.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231113104149113.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202606161057065494.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-2023110918045956.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231113090523534.JPG"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "R$ 270.000,00",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "Jardim Paulista 1",
-      "cidade": "",
-      "tipo": "terreno",
-      "finalidade": "",
-      "link": "https://www.marciomarins.com.br/imovel/venda/?pag=1",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "2",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202410291124505741.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240516170252609.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202410240854097949.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202507251600476881.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231027151711989.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202410110944543801.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20250129154440458.jpg"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "R$ 270.000,00",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "Jardim Paulista 1",
-      "cidade": "",
-      "tipo": "",
-      "finalidade": "",
-      "link": "https://www.marciomarins.com.br/imovel/venda/?pag=2",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "3",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202512151104592343.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240302220237771.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202508041708537924.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202606161131195377.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202603191117067214.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202504081143283223.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202607171045144825.png"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "R$ 270.000,00",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "",
-      "cidade": "",
-      "tipo": "",
-      "finalidade": "",
-      "link": "https://www.marciomarins.com.br/imovel/venda/?pag=3",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "...",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202606121129544111.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-2023120714544851.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202502171702044236.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202602271503289616.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202602121510015564.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202507181706027517.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231111101334525.jpg"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "R$ 270.000,00",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "",
-      "cidade": "",
-      "tipo": "",
-      "finalidade": "",
-      "link": "https://www.marciomarins.com.br/imovel/venda/?pag=4",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "At&eacute; R$ 100.000",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240524155439638.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202605071350538134.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231124113611246.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202605211602283489.jpg",
-        "https://www.marciomarins.com.br/imagens/diversos/site-para-imobiliarias-imobibrasil.png"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "R$ 100.000",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "",
-      "cidade": "",
-      "tipo": "",
-      "finalidade": "venda",
-      "link": "https://www.marciomarins.com.br/imovel/?vma=100000",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "De R$ 100.000 a R$ 200.000",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202606161451214024.png",
-        "https://www.marciomarins.com.br/imagens/diversos/site-para-imobiliarias-imobibrasil.png"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "R$ 100.000",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "",
-      "cidade": "",
-      "tipo": "",
-      "finalidade": "",
-      "link": "https://www.marciomarins.com.br/imovel/?vmi=100000&vma=200000",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "De R$ 200.000 a R$ 400.000",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202509041102529738.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231113104149113.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202606161057065494.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-2023110918045956.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231113090523534.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231113092534390.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202502241551235246.jpeg"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "R$ 200.000",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "",
-      "cidade": "",
-      "tipo": "",
-      "finalidade": "",
-      "link": "https://www.marciomarins.com.br/imovel/?vmi=200000&vma=400000",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "De R$ 400.000 a R$ 999.000",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202607171045144825.png",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202507250852201202.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202508151655503283.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-2023120710481433.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20260331113658479.png",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202605181101458261.png",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202607011549022631.jpeg"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "R$ 400.000",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "",
-      "cidade": "",
-      "tipo": "",
-      "finalidade": "",
-      "link": "https://www.marciomarins.com.br/imovel/?vmi=400000&vma=999000",
-      "dataPublicacao": null,
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Marcio Marins",
-      "titulo": "Acima de 1 milh&atilde;o",
-      "imagens": [
-        "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240504174512139.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240517143802452.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231026095402926.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231220224328678.JPG",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202603260852599369.jpeg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-2024030611510017.jpg",
-        "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202506061154298155.jpg"
-      ],
-      "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
-      "preco": "R$ 100.000",
-      "quartos": "",
-      "suites": "",
-      "vagas": "",
-      "area": "",
-      "bairro": "",
-      "cidade": "",
-      "tipo": "",
-      "finalidade": "",
-      "link": "https://www.marciomarins.com.br/imovel/?vmi=1000000&vma=0",
-      "dataPublicacao": null,
       "galeriaCompleta": true
     },
     {
@@ -1264,8 +755,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.grupokaion.com.br/imovel/casa-itu-5-quartos-443-m/CA0459-GK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.grupokaion.com.br/imovel/casa-itu-5-quartos-443-m/CA0459-GK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1291,8 +782,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-127-m/CA1456-GK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-127-m/CA1456-GK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1318,8 +809,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.grupokaion.com.br/imovel/casa-itu-2-quartos-80-m/CA2170-GK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.grupokaion.com.br/imovel/casa-itu-2-quartos-80-m/CA2170-GK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1345,8 +836,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-105-m/CA2593-GK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-105-m/CA2593-GK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1372,8 +863,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda e aluguel",
-      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-113-m/CA1640-GK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-113-m/CA1640-GK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1399,8 +890,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.grupokaion.com.br/imovel/casa-itu-4-quartos-198-m/CA2158-GK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.grupokaion.com.br/imovel/casa-itu-4-quartos-198-m/CA2158-GK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1426,8 +917,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.grupokaion.com.br/imovel/casa-itu-2-quartos-300-m/CA0614-GK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.grupokaion.com.br/imovel/casa-itu-2-quartos-300-m/CA0614-GK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1453,8 +944,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.grupokaion.com.br/imovel/casa-itu-2-quartos-83-m/CA0986-GK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.grupokaion.com.br/imovel/casa-itu-2-quartos-83-m/CA0986-GK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1480,8 +971,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-110-m/CA2122-GK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-110-m/CA2122-GK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1507,8 +998,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-200-m/CA0340-GK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-200-m/CA0340-GK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1534,8 +1025,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-200-m/CA2675-GK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-200-m/CA2675-GK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1561,8 +1052,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-96-m/CA2246-GK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-96-m/CA2246-GK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1588,8 +1079,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-215-m/CA9243-UTG",
       "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-215-m/CA9243-UTG",
       "galeriaCompleta": true
     },
     {
@@ -1615,8 +1106,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-980-m/CA4098-UTG",
       "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-980-m/CA4098-UTG",
       "galeriaCompleta": true
     },
     {
@@ -1642,8 +1133,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-700-m/CA8415-UTG",
       "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-700-m/CA8415-UTG",
       "galeriaCompleta": true
     },
     {
@@ -1669,8 +1160,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-354-m/CA8916-UTG",
       "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-354-m/CA8916-UTG",
       "galeriaCompleta": true
     },
     {
@@ -1696,8 +1187,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-284-m/CA9086-UTG",
       "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-284-m/CA9086-UTG",
       "galeriaCompleta": true
     },
     {
@@ -1723,8 +1214,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-285-m/CA9232-UTG",
       "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-285-m/CA9232-UTG",
       "galeriaCompleta": true
     },
     {
@@ -1750,8 +1241,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-513-m/CA8157-UTG",
       "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-513-m/CA8157-UTG",
       "galeriaCompleta": true
     },
     {
@@ -1777,8 +1268,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-590-m/CA7810-UTG",
       "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-590-m/CA7810-UTG",
       "galeriaCompleta": true
     },
     {
@@ -1804,8 +1295,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos/CA7686-UTG",
       "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos/CA7686-UTG",
       "galeriaCompleta": true
     },
     {
@@ -1831,8 +1322,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-290-m/CA8418-UTG",
       "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-290-m/CA8418-UTG",
       "galeriaCompleta": true
     },
     {
@@ -1858,8 +1349,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-270-m/CA7658-UTG",
       "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-270-m/CA7658-UTG",
       "galeriaCompleta": true
     },
     {
@@ -1885,8 +1376,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-295-m/CA8096-UTG",
       "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-295-m/CA8096-UTG",
       "galeriaCompleta": true
     },
     {
@@ -1912,8 +1403,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-176-m/CA1665-NIMC?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-176-m/CA1665-NIMC?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1939,8 +1430,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-50-m/CA2914-NIMC?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-50-m/CA2914-NIMC?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1966,8 +1457,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-70-m/CA1892-NIMC?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-70-m/CA1892-NIMC?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -1993,8 +1484,8 @@
       "cidade": "Itu",
       "tipo": "",
       "finalidade": "venda",
-      "link": "https://www.daniloferreiraimoveis.com.br/imovel/edicula-itu-1-quarto-48-m/ED0015-NIMC?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/edicula-itu-1-quarto-48-m/ED0015-NIMC?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2020,8 +1511,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-1-quarto-40-m/CA1340-NIMC?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-1-quarto-40-m/CA1340-NIMC?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2047,8 +1538,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-106-m/CA0674-NIMC?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-106-m/CA0674-NIMC?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2074,8 +1565,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-3-quartos-130-m/CA1998-NIMC?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-3-quartos-130-m/CA1998-NIMC?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2101,8 +1592,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-104-m/CA1503-NIMC?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-104-m/CA1503-NIMC?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2128,8 +1619,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-100-m/CA1390-NIMC?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-100-m/CA1390-NIMC?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2155,8 +1646,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-4-quartos-163-m/CA0464-NIMC?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-4-quartos-163-m/CA0464-NIMC?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2182,8 +1673,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-70-m/CA1795-NIMC?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-70-m/CA1795-NIMC?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2209,8 +1700,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-3-quartos-105-m/CA0825-NIMC?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-3-quartos-105-m/CA0825-NIMC?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2236,8 +1727,8 @@
       "cidade": "",
       "tipo": "casa",
       "finalidade": "venda e aluguel",
-      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-4-quartos-800-m/CA1694-OPCA?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-4-quartos-800-m/CA1694-OPCA",
       "galeriaCompleta": true
     },
     {
@@ -2257,8 +1748,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "",
-      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-1-quarto-60-m/CA2061-OPCA?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-1-quarto-60-m/CA2061-OPCA",
       "galeriaCompleta": true
     },
     {
@@ -2279,8 +1770,8 @@
       "cidade": "",
       "tipo": "casa",
       "finalidade": "",
-      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-87-m/CA0860-OPCA?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-87-m/CA0860-OPCA",
       "galeriaCompleta": true
     },
     {
@@ -2306,8 +1797,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "",
-      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-103-m/CA2204-OPCA?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-103-m/CA2204-OPCA",
       "galeriaCompleta": true
     },
     {
@@ -2333,8 +1824,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "",
-      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-90-m/CA2446-OPCA?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-90-m/CA2446-OPCA",
       "galeriaCompleta": true
     },
     {
@@ -2360,8 +1851,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "",
-      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-70-m/CA2246-OPCA?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-70-m/CA2246-OPCA",
       "galeriaCompleta": true
     },
     {
@@ -2387,8 +1878,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "",
-      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-113-m/CA1827-OPCA?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-113-m/CA1827-OPCA",
       "galeriaCompleta": true
     },
     {
@@ -2411,8 +1902,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "",
-      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-1-quarto-100-m/CA1896-OPCA?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-1-quarto-100-m/CA1896-OPCA",
       "galeriaCompleta": true
     },
     {
@@ -2438,8 +1929,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "",
-      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-3-quartos-86-m/CA2531-OPCA?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-3-quartos-86-m/CA2531-OPCA",
       "galeriaCompleta": true
     },
     {
@@ -2465,8 +1956,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "",
-      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-3-quartos-117-m/CA2136-OPCA?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-3-quartos-117-m/CA2136-OPCA",
       "galeriaCompleta": true
     },
     {
@@ -2492,8 +1983,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "",
-      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-3-quartos-109-m/CA2335-OPCA?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-3-quartos-109-m/CA2335-OPCA",
       "galeriaCompleta": true
     },
     {
@@ -2519,8 +2010,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "",
-      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-90-m/CA2541-OPCA?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-90-m/CA2541-OPCA",
       "galeriaCompleta": true
     },
     {
@@ -2546,8 +2037,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-4-quartos-265-m/CA0357-JTBR?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-4-quartos-265-m/CA0357-JTBR?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2573,8 +2064,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-1-quarto-44-m/CA0301-JTBR?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-1-quarto-44-m/CA0301-JTBR?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2600,8 +2091,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-1-quarto-83-m/CA0271-JTBR?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-1-quarto-83-m/CA0271-JTBR?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2627,8 +2118,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-3-quartos-122-m/CA0316-JTBR?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-3-quartos-122-m/CA0316-JTBR?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2654,8 +2145,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-87-m/CA0270-JTBR?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-87-m/CA0270-JTBR?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2681,8 +2172,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-4-quartos-200-m/CA0312-JTBR?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-4-quartos-200-m/CA0312-JTBR?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2708,8 +2199,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-80-m/CA0186-JTBR?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-80-m/CA0186-JTBR?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2735,8 +2226,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-50-m/CA0124-JTBR?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-50-m/CA0124-JTBR?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2762,8 +2253,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-112-m/CA0333-JTBR?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-112-m/CA0333-JTBR?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2789,8 +2280,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-1-quarto-40-m/CA0229-JTBR?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-1-quarto-40-m/CA0229-JTBR?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2816,8 +2307,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-108-m/CA0332-JTBR?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-108-m/CA0332-JTBR?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2843,8 +2334,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-3-quartos-80-m/CA0232-JTBR?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-3-quartos-80-m/CA0232-JTBR?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2870,8 +2361,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-237-m/CA4150-GSQW?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-237-m/CA4150-GSQW?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2897,8 +2388,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-240-m/CA4171-GSQW?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-240-m/CA4171-GSQW?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2924,8 +2415,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-1-053-m/CA3592-GSQW?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-1-053-m/CA3592-GSQW?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2951,8 +2442,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-234-m/CA4195-GSQW?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-234-m/CA4195-GSQW?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -2978,8 +2469,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-564-m/CA4069-GSQW?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-564-m/CA4069-GSQW?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3005,8 +2496,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-249-m/CA3543-GSQW?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-249-m/CA3543-GSQW?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3032,8 +2523,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-285-m/CA4196-GSQW?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-285-m/CA4196-GSQW?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3059,8 +2550,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-4-quartos-342-m/CA4147-GSQW?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-4-quartos-342-m/CA4147-GSQW?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3086,8 +2577,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda e aluguel",
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-163-m/CA4141-GSQW?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-163-m/CA4141-GSQW?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3113,8 +2604,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-4-quartos-455-m/CA4143-GSQW?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-4-quartos-455-m/CA4143-GSQW?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3140,8 +2631,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-110-m/CA4149-GSQW?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-110-m/CA4149-GSQW?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3167,8 +2658,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-7-quartos-1-178-m/CA3752-GSQW?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-7-quartos-1-178-m/CA3752-GSQW?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3194,8 +2685,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda e aluguel",
-      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-7-quartos-1-280-m/CA0350-CUR1?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-7-quartos-1-280-m/CA0350-CUR1?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3221,8 +2712,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda e aluguel",
-      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-6-quartos-1-350-m/CA0545-CUR1?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-6-quartos-1-350-m/CA0545-CUR1?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3248,8 +2739,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda e aluguel",
-      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-6-quartos-1-321-m/CA0916-CUR1?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-6-quartos-1-321-m/CA0916-CUR1?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3275,8 +2766,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda e aluguel",
-      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-9-quartos-1-250-m/CA0845-CUR1?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-9-quartos-1-250-m/CA0845-CUR1?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3302,8 +2793,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-5-quartos-1-051-m/CA0323-CUR1?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-5-quartos-1-051-m/CA0323-CUR1?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3329,8 +2820,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-5-quartos-890-m/CA0514-CUR1?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-5-quartos-890-m/CA0514-CUR1?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3356,8 +2847,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-8-quartos-1-100-m/CA0499-CUR1?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-8-quartos-1-100-m/CA0499-CUR1?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3383,8 +2874,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda e aluguel",
-      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-6-quartos-870-m/CA0915-CUR1?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-6-quartos-870-m/CA0915-CUR1?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3410,8 +2901,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-1-525-m/CA1331-CUR1?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-1-525-m/CA1331-CUR1?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3437,8 +2928,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-7-quartos-825-m/CA2006-CUR1?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-7-quartos-825-m/CA2006-CUR1?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3464,8 +2955,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-7-quartos-1-100-m/CA1837-CUR1?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-7-quartos-1-100-m/CA1837-CUR1?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3491,8 +2982,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-6-quartos-974-m/CA1834-CUR1?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.curymassocabrokers.com.br/imovel/casa-itu-6-quartos-974-m/CA1834-CUR1?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3517,8 +3008,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-4-quartos-405-m/CA4523-APIT?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-4-quartos-405-m/CA4523-APIT?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3544,8 +3035,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-4-quartos-405-m/CA4522-APIT?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-4-quartos-405-m/CA4522-APIT?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3571,8 +3062,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-4-quartos-249-m/CA2302-APIT?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-4-quartos-249-m/CA2302-APIT?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3598,8 +3089,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-150-m/CA4415-APIT?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-150-m/CA4415-APIT?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3625,8 +3116,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-4-quartos-330-m/CA2298-APIT?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-4-quartos-330-m/CA2298-APIT?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3652,8 +3143,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-150-m/CA3921-APIT?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-150-m/CA3921-APIT?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3679,8 +3170,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-4-quartos-337-m/CA4050-APIT?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-4-quartos-337-m/CA4050-APIT?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3706,8 +3197,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-142-m/CA3295-APIT?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-142-m/CA3295-APIT?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3733,8 +3224,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-2-quartos-58-m/CA4525-APIT?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-2-quartos-58-m/CA4525-APIT?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3760,8 +3251,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-293-m/CA4394-APIT?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-293-m/CA4394-APIT?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3787,8 +3278,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda e aluguel",
-      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-305-m/CA4517-APIT?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-305-m/CA4517-APIT?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3814,8 +3305,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-2-quartos-105-m/CA4518-APIT?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-2-quartos-105-m/CA4518-APIT?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3841,8 +3332,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-5-quartos-780-m/CA1093-LILX?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-5-quartos-780-m/CA1093-LILX?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3868,8 +3359,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-5-quartos-600-m/CA2835-LILX?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-5-quartos-600-m/CA2835-LILX?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3895,8 +3386,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-5-quartos-800-m/CA0411-LILX?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-5-quartos-800-m/CA0411-LILX?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3922,8 +3413,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-130-m/CA2518-LILX?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-130-m/CA2518-LILX?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3949,8 +3440,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-103-m/CA1532-LILX?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-103-m/CA1532-LILX?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -3976,8 +3467,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-70-m/CA2128-LILX?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-70-m/CA2128-LILX?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4003,8 +3494,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-3-quartos-156-m/CA2400-LILX?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-3-quartos-156-m/CA2400-LILX?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4030,8 +3521,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-3-quartos-120-m/CA0521-LILX?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-3-quartos-120-m/CA0521-LILX?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4057,8 +3548,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-104-m/CA2956-LILX?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-104-m/CA2956-LILX?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4084,8 +3575,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-100-m/CA2689-LILX?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-100-m/CA2689-LILX?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4111,8 +3602,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-100-m/CA2670-LILX?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-100-m/CA2670-LILX?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4138,8 +3629,8 @@
       "cidade": "Itu",
       "tipo": "",
       "finalidade": "venda",
-      "link": "https://www.bemaquiimoveis.com.br/imovel/edicula-itu-2-quartos-49-m/ED0006-LILX?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/edicula-itu-2-quartos-49-m/ED0006-LILX?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4165,8 +3656,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-4-quartos-287-m/CA3835-RFD?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-4-quartos-287-m/CA3835-RFD?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4192,8 +3683,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-4-quartos-500-m/CA2616-RFD?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-4-quartos-500-m/CA2616-RFD?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4219,8 +3710,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-4-quartos-170-m/CA2810-RFD?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-4-quartos-170-m/CA2810-RFD?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4246,8 +3737,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-5-quartos-652-m/CA3250-RFD?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-5-quartos-652-m/CA3250-RFD?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4273,8 +3764,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-5-quartos-1-000-m/CA3199-RFD?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-5-quartos-1-000-m/CA3199-RFD?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4300,8 +3791,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-4-quartos-601-m/CA3662-RFD?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-4-quartos-601-m/CA3662-RFD?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4327,8 +3818,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-3-quartos-206-m/CA3773-RFD?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-3-quartos-206-m/CA3773-RFD?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4354,8 +3845,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-3-quartos-200-m/CA3350-RFD?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-3-quartos-200-m/CA3350-RFD?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4381,8 +3872,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-2-quartos-48-m/CA3728-RFD?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-2-quartos-48-m/CA3728-RFD?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4408,8 +3899,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-5-quartos-690-m/CA2696-RFD?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-5-quartos-690-m/CA2696-RFD?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4435,8 +3926,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-2-quartos-70-m/CA2213-RFD?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-2-quartos-70-m/CA2213-RFD?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4462,8 +3953,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-2-quartos-100-m/CA3074-RFD?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.reginamarchi.com.br/imovel/casa-itu-2-quartos-100-m/CA3074-RFD?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4489,8 +3980,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-56-m/CA0957-MBK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-56-m/CA0957-MBK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4516,8 +4007,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-90-m/CA0654-MBK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-90-m/CA0654-MBK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4543,8 +4034,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-1-quarto-98-m/CA0960-MBK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-1-quarto-98-m/CA0960-MBK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4570,8 +4061,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-141-m/CA0981-MBK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-141-m/CA0981-MBK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4597,8 +4088,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-1-quarto-120-m/CA0965-MBK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-1-quarto-120-m/CA0965-MBK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4624,8 +4115,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-123-m/CA0873-MBK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-123-m/CA0873-MBK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4651,8 +4142,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-86-m/CA0953-MBK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-86-m/CA0953-MBK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4678,8 +4169,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-5-quartos-180-m/CA0925-MBK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-5-quartos-180-m/CA0925-MBK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4705,8 +4196,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-97-m/CA0975-MBK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-97-m/CA0975-MBK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4732,8 +4223,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-130-m/CA0964-MBK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-130-m/CA0964-MBK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4759,8 +4250,8 @@
       "cidade": "Itu",
       "tipo": "",
       "finalidade": "venda",
-      "link": "https://www.slaimobiliariaitu.com.br/imovel/sobrado-itu-3-quartos-200-m/SO0076-MBK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/sobrado-itu-3-quartos-200-m/SO0076-MBK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4786,8 +4277,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-130-m/CA0759-MBK?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-130-m/CA0759-MBK?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4813,8 +4304,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-150-m/CA0395-PR3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-150-m/CA0395-PR3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4840,8 +4331,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-109-m/CA1494-PR3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-109-m/CA1494-PR3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4867,8 +4358,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-95-m/CA1577-PR3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-95-m/CA1577-PR3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4892,8 +4383,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-80-m/CA1546-PR3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-80-m/CA1546-PR3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4919,8 +4410,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-1-quarto-200-m/CA0036-PR3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-1-quarto-200-m/CA0036-PR3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4946,8 +4437,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-85-m/CA1427-PR3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-85-m/CA1427-PR3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -4973,8 +4464,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-150-m/CA1605-PR3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-150-m/CA1605-PR3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5000,8 +4491,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-130-m/CA1544-PR3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-130-m/CA1544-PR3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5027,8 +4518,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-53-m/CA1607-PR3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-53-m/CA1607-PR3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5054,8 +4545,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-128-m/CA1172-PR3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-128-m/CA1172-PR3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5081,8 +4572,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-99-m/CA1596-PR3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-99-m/CA1596-PR3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5108,8 +4599,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-116-m/CA0982-PR3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-116-m/CA0982-PR3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5135,8 +4626,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-154-m/CA6156-COX3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-154-m/CA6156-COX3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5162,8 +4653,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-202-m/CA6387-COX3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-202-m/CA6387-COX3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5189,8 +4680,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-4-quartos-175-m/CA6496-COX3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-4-quartos-175-m/CA6496-COX3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5216,8 +4707,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-5-quartos-700-m/CA6528-COX3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-5-quartos-700-m/CA6528-COX3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5243,8 +4734,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-167-m/CA6446-COX3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-167-m/CA6446-COX3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5270,8 +4761,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-4-quartos-900-m/CA5766-COX3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-4-quartos-900-m/CA5766-COX3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5297,8 +4788,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-2-quartos-164-m/CA6489-COX3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-2-quartos-164-m/CA6489-COX3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5324,8 +4815,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-2-quartos-143-m/CA6517-COX3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-2-quartos-143-m/CA6517-COX3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5351,8 +4842,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-105-m/CA6511-COX3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-105-m/CA6511-COX3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5376,8 +4867,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-5-quartos-790-m/CA6495-COX3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-5-quartos-790-m/CA6495-COX3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5403,8 +4894,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-396-m/CA5810-COX3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-396-m/CA5810-COX3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5430,8 +4921,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-305-m/CA3650-COX3?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-305-m/CA3650-COX3?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5457,8 +4948,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-5-quartos-577-m/CA5069-BET?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-5-quartos-577-m/CA5069-BET?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5484,8 +4975,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-90-m/CA1205-BET?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-90-m/CA1205-BET?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5511,8 +5002,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-130-m/CA2913-BET?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-130-m/CA2913-BET?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5534,8 +5025,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-71-m/CA5130-BET?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-71-m/CA5130-BET?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5561,8 +5052,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-91-m/CA5607-BET?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-91-m/CA5607-BET?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5588,8 +5079,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-120-m/CA5423-BET?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-120-m/CA5423-BET?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5615,8 +5106,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-130-m/CA5172-BET?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-130-m/CA5172-BET?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5642,8 +5133,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-4-quartos-147-m/CA5516-BET?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-4-quartos-147-m/CA5516-BET?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5669,8 +5160,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-3-quartos-85-m/CA5416-BET?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-3-quartos-85-m/CA5416-BET?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5696,8 +5187,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-136-m/CA5544-BET?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-136-m/CA5544-BET?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5723,8 +5214,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-3-quartos-113-m/CA2470-BET?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-3-quartos-113-m/CA2470-BET?from=sale",
       "galeriaCompleta": true
     },
     {
@@ -5750,8 +5241,8 @@
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
-      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-3-quartos-154-m/CA5049-BET?from=sale",
       "dataPublicacao": null,
+      "link": "https://www.betoimoveis.com.br/imovel/casa-itu-3-quartos-154-m/CA5049-BET?from=sale",
       "galeriaCompleta": true
     }
   ],
@@ -5761,7 +5252,7 @@
   ],
   "resumoData": {
     "comData": 0,
-    "semData": 215,
-    "total": 215
+    "semData": 195,
+    "total": 195
   }
 }
