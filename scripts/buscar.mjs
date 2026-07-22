@@ -4,6 +4,7 @@
 // Suporta: ScrapingBee, Firecrawl e ScraperAPI com fallback automático.
 // ✅ Com extração de data por fonte (via JSON-LD e HTML)
 // ✅ Suporte a wait e scroll por fonte (ex: Kenlo)
+// ✅ Captura imagens da plataforma ImobWeb (rsSlide, data-src)
 
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -193,7 +194,7 @@ const PADRAO_LINK_IMOVEL =
   /\/imovel(\/|\?)|\/imoveis\/[^"']*\/(\d+)|\/detalhes\/(\d+)|\/propriedade\/(\d+)|\/[a-z-]+\/[a-z-]+\/[a-z-]+\/\d+|CA\d{4}-[A-Z0-9]+|SO\d{4}-[A-Z0-9]+/i;
 
 // ----------------------
-// Imagens
+// Imagens - CORRIGIDO PARA IMOBWEB
 // ----------------------
 
 function resolverUrlImagem(url, baseUrl) {
@@ -210,9 +211,16 @@ const PADRAO_IMAGEM_INVALIDA = /logo|icone|icon|avatar|placeholder|spinner|loadi
 
 function buscarImagensEmTrecho(trechoHtml) {
   const padroes = [
+    // Padrões padrão
     /<img[^>]+src=["']([^"']+)["']/gi,
     /<img[^>]+data-src=["']([^"']+)["']/gi,
-    /<img[^>]+srcset=["']([^"',\s]+)/gi
+    /<img[^>]+srcset=["']([^"',\s]+)/gi,
+    // 🔴 IMOBWEB: Captura imagens com classe rsImg (slider)
+    /<img[^>]+class=["'][^"']*rsImg[^"']*["'][^>]*src=["']([^"']+)["']/gi,
+    // 🔴 IMOBWEB: Captura imagens com data-src (lazy loading)
+    /<img[^>]+data-src=["']([^"']+)["']/gi,
+    // 🔴 IMOBWEB: Captura imagens em containers rsSlide
+    /<div[^>]*class=["'][^"']*rsSlide[^"']*["'][^>]*>[\s\S]*?<img[^>]+src=["']([^"']+)["']/gi
   ];
 
   const encontradas = [];
@@ -705,6 +713,7 @@ async function main() {
   console.log("🚀 BUSCAR.MJS - COM EXTRAÇÃO DE DATA");
   console.log("   ✅ Mantém todos os imóveis");
   console.log("   ✅ Suporte a wait e scroll por fonte");
+  console.log("   ✅ Captura imagens ImobWeb (rsSlide)");
   console.log("=".repeat(60));
 
   let fontesRaw;
@@ -787,124 +796,4 @@ async function main() {
 
       const itens = extrairCards(html, fonte.url, fonte.nome);
       itens.forEach(item => { 
-        item._semJS = !fonte.jsNecessario; 
-        if (item.dataPublicacao) {
-          comData++;
-        } else {
-          semData++;
-        }
-      });
-      todos.push(...itens);
-
-      const comDataCount = itens.filter(i => i.dataPublicacao).length;
-      const semDataCount = itens.filter(i => !i.dataPublicacao).length;
-      console.log(`  ✅ ${itens.length} imóveis encontrados (${comDataCount} com data, ${semDataCount} sem data)`);
-
-      if (itens.length === 0) {
-        const contemImovel = (html.match(/\/imovel\//gi) || []).length;
-        const contemComprar = (html.match(/\/(comprar|alugar)\//gi) || []).length;
-        const pareceBloqueio = /captcha|access denied|cloudflare|habilite o javascript/i.test(html);
-
-        erros.push(
-          `${fonte.nome}: 0 imóveis encontrados. HTML: ${html.length} chars. ` +
-          `"/imovel/": ${contemImovel}. "/comprar/|/alugar/": ${contemComprar}. ` +
-          `Bloqueio: ${pareceBloqueio ? "SIM" : "não"}.`
-        );
-      }
-    } catch (e) {
-      console.error(`  ❌ ERRO: ${e.message}`);
-      erros.push(`${fonte.nome}: ${e.message}`);
-    }
-  }
-
-  const dataHoje = new Date().toISOString().split("T")[0];
-
-  let doCache = 0, buscadosGratis = 0, buscadosComCredito = 0, semGaleria = 0;
-
-  for (const item of todos) {
-    if (!item.link) continue;
-
-    const cacheada = cacheGaleria.get(item.link);
-    if (cacheada) {
-      item.imagens = cacheada.slice(0, 8);
-      item.imagem = item.imagens[0] || item.imagem;
-      item.galeriaCompleta = true;
-      doCache++;
-      continue;
-    }
-
-    if (item._semJS) {
-      const galeria = await buscarGaleriaCompletaSemJS(item.link);
-      if (galeria.length > 0) {
-        item.imagens = [...new Set([...(item.imagens || []), ...galeria])].slice(0, 8);
-        item.imagem = item.imagens[0] || item.imagem;
-        item.galeriaCompleta = true;
-        buscadosGratis++;
-      } else {
-        semGaleria++;
-      }
-      await esperar(400);
-    } else {
-      const temAlgumaChave = scrapingBeeKeys.length > 0 || firecrawlKey || scraperAPIKey;
-      if (temAlgumaChave) {
-        try {
-          const galeria = await buscarGaleriaCompletaJS(item.link, chaves);
-          if (galeria.length > 0) {
-            item.imagens = [...new Set([...(item.imagens || []), ...galeria])].slice(0, 8);
-            item.imagem = item.imagens[0] || item.imagem;
-            item.galeriaCompleta = true;
-            buscadosComCredito++;
-          } else {
-            semGaleria++;
-          }
-          await esperar(1000);
-        } catch (e) {
-          console.warn(`  ⚠️ Galeria falhou: ${e.message.slice(0, 60)}`);
-          semGaleria++;
-        }
-      } else {
-        semGaleria++;
-      }
-    }
-  }
-
-  console.log(`\n📸 Galerias: ${doCache} cache | ${buscadosGratis} grátis | ${buscadosComCredito} via JS | ${semGaleria} sem galeria`);
-  console.log(`\n📅 Data: ${comData} imóveis com data | ${semData} imóveis sem data`);
-
-  const todosLimpos = todos.map(({ _semJS, ...resto }) => resto);
-
-  const saida = {
-    atualizadoEm: new Date().toISOString(),
-    geradoEm: dataHoje,
-    total: todosLimpos.length,
-    imoveis: todosLimpos,
-    erros,
-    resumoData: {
-      comData: comData,
-      semData: semData,
-      total: todosLimpos.length
-    }
-  };
-
-  await writeFile(
-    new URL("../imoveis.json", import.meta.url),
-    JSON.stringify(saida, null, 2),
-    "utf-8"
-  );
-
-  await writeFile(
-    new URL(`../historico/imoveis-${dataHoje}.json`, import.meta.url),
-    JSON.stringify(saida, null, 2),
-    "utf-8"
-  );
-
-  console.log(`\n✅ Total: ${todosLimpos.length} imóveis salvos em imoveis.json`);
-  if (erros.length > 0) {
-    console.log(`⚠️ ${erros.length} avisos/erros`);
-  }
-}
-
-main().catch(e => {
-  console.error("❌ Falha geral:", e);
-  process.exit(1);
-});
+       
