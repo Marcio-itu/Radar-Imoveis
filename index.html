@@ -415,6 +415,20 @@
     padding:5px 10px;
     border-radius:999px;
   }
+  .card-imovel .selo-data{
+    position:absolute;
+    right:12px;
+    bottom:12px;
+    background:rgba(0,0,0,0.7);
+    color:#fff;
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:11px;
+    padding:4px 10px;
+    border-radius:999px;
+    backdrop-filter:blur(4px);
+    font-weight:500;
+    letter-spacing:.02em;
+  }
   .card-imovel label.selo-check{
     position:absolute;
     right:12px;
@@ -464,14 +478,11 @@
     border-radius:999px;
     padding:3px 10px;
   }
-  .card-imovel .data-discreta{
-    font-size:10px;
-    color:var(--tinta-suave);
-    opacity:0.7;
-    margin:2px 0 8px 0;
-    display:flex;
-    align-items:center;
-    gap:4px;
+  .card-imovel .meta .data-idade{
+    background:var(--ouro-claro);
+    border-color:var(--ouro);
+    color:var(--ouro-escuro);
+    font-weight:600;
   }
   .card-imovel a.ver{
     font-family:'Segoe UI', Arial, sans-serif;
@@ -584,14 +595,17 @@
     opacity:.65;
     margin:10px 0 0;
   }
-  .linha-imovel .info .data-cliente{
-    font-size:11px;
-    color:var(--tinta-suave);
-    opacity:0.6;
-    margin:4px 0 0 0;
-    display:flex;
-    align-items:center;
-    gap:4px;
+  .linha-imovel .info .data-idade-cliente{
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:13px;
+    color:var(--ouro-escuro);
+    background:var(--ouro-claro);
+    border:1px solid var(--ouro);
+    border-radius:999px;
+    padding:4px 14px;
+    display:inline-block;
+    margin-top:6px;
+    font-weight:600;
   }
   .aviso-juridico{
     grid-column:1 / -1;
@@ -661,10 +675,13 @@
 </div>
 
 <main id="conteudo-principal">
+  <!-- ========== PAINEL DE FILTROS ========== -->
   <div class="painel" id="painel-filtros">
     <div class="painel-cabecalho">
       <h2>Filtros</h2>
-      <button class="link-limpo" id="botao-limpar-filtros">Limpar filtros</button>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <button class="link-limpo" id="botao-limpar-filtros">Limpar filtros</button>
+      </div>
     </div>
     <div class="linha-filtros">
       <fieldset>
@@ -788,6 +805,7 @@
     </div>
   </details>
 
+  <!-- ========== BARRA DE SELEÇÃO ========== -->
   <div class="barra-selecao" id="barra-selecao" style="display:none;">
     <span class="contagem-selecao" id="contagem-selecao">0 imóveis selecionados</span>
     <div class="acoes">
@@ -797,6 +815,7 @@
     </div>
   </div>
 
+  <!-- ========== CAIXA DE LINK ========== -->
   <div class="caixa-link" id="caixa-link" style="display:none;">
     <p class="rotulo">Link pronto — envie para o seu cliente. Ele verá só os imóveis selecionados, sem saber qual imobiliária anunciou cada um. Expira em 10 dias (dá pra reativar depois, no painel de configuração acima).</p>
     <div class="campo-url">
@@ -805,6 +824,7 @@
     </div>
   </div>
 
+  <!-- ========== RESULTADOS ========== -->
   <div class="resultados" id="resultados"></div>
 
   <p class="aviso" id="aviso-rodape">
@@ -820,7 +840,7 @@
 // CONFIGURAÇÕES
 // ============================================================
 
-const WHATSAPP_CORRETOR = "551132806090";
+const WHATSAPP_CORRETOR = "551132806090"; // Seu número
 const DIAS_EXPIRAR = 10;
 
 // ============================================================
@@ -857,6 +877,46 @@ function formatarDataRelativa(isoString){
   if(diffMin < 60) return `Atualizado há ${diffMin} minuto(s) — ${dataFormatada}`;
   if(diffH < 48) return `Atualizado há ${diffH} hora(s) — ${dataFormatada}`;
   return `Atualizado em ${dataFormatada}`;
+}
+
+// ============================================================
+// IDADE DO ANÚNCIO
+// ============================================================
+
+function calcularIdade(dataPublicacao) {
+  if (!dataPublicacao) return null;
+  const hoje = new Date();
+  const data = new Date(dataPublicacao);
+  const diffDias = Math.floor((hoje - data) / (1000 * 60 * 60 * 24));
+
+  if (diffDias < 0) return null;
+  if (diffDias === 0) return "Hoje";
+  if (diffDias === 1) return "Há 1 dia";
+  if (diffDias < 30) return `Há ${diffDias} dias`;
+  if (diffDias < 365) {
+    const meses = Math.floor(diffDias / 30);
+    return `Há ${meses} mês${meses > 1 ? 'es' : ''}`;
+  }
+  const anos = Math.floor(diffDias / 365);
+  return `Há ${anos} ano${anos > 1 ? 's' : ''}`;
+}
+
+function ordenarImoveisPorData(imoveis) {
+  return [...imoveis].sort((a, b) => {
+    // 1. Imóveis com data vêm primeiro
+    if (a.dataPublicacao && !b.dataPublicacao) return -1;
+    if (!a.dataPublicacao && b.dataPublicacao) return 1;
+
+    // 2. Ambos têm data: mais novo primeiro
+    if (a.dataPublicacao && b.dataPublicacao) {
+      return new Date(b.dataPublicacao) - new Date(a.dataPublicacao);
+    }
+
+    // 3. Ambos sem data: ordena por preço (menor para maior)
+    const precoA = precoParaNumero(a.preco) || Infinity;
+    const precoB = precoParaNumero(b.preco) || Infinity;
+    return precoA - precoB;
+  });
 }
 
 // ============================================================
@@ -1136,39 +1196,20 @@ function renderizarExpirado(){
   adicionarBotaoWhatsCliente("Olá! O link de imóveis que você me enviou expirou — pode me mandar uma seleção atualizada?");
 }
 
-function renderizarCliente(itens){
+async function renderizarCliente(itens){
   prepararTelaModoCliente();
-
-  itens.sort((a, b) => {
-    const precoA = precoParaNumero(a.preco);
-    const precoB = precoParaNumero(b.preco);
-    
-    if (precoA !== null && precoB !== null) {
-      if (precoA !== precoB) return precoA - precoB;
-    }
-    if (precoA === null && precoB !== null) return 1;
-    if (precoA !== null && precoB === null) return -1;
-    
-    const dataA = a.dataPublicacao || "";
-    const dataB = b.dataPublicacao || "";
-    
-    if (dataA && dataB) {
-      return dataB.localeCompare(dataA);
-    }
-    if (dataA && !dataB) return -1;
-    if (!dataA && dataB) return 1;
-    
-    return 0;
-  });
 
   const resultadosDiv = document.getElementById("resultados");
   resultadosDiv.innerHTML = "";
   resultadosDiv.className = "lista-cliente";
 
+  // Ordena os imóveis por data (mais novos primeiro)
+  const itensOrdenados = ordenarImoveisPorData(itens);
+
   const contagem = document.createElement("p");
   contagem.className = "contagem";
   contagem.style.gridColumn = "unset";
-  contagem.textContent = `${itens.length} imóvel(is) selecionado(s) para você`;
+  contagem.textContent = `${itensOrdenados.length} imóvel(is) selecionado(s) para você`;
   resultadosDiv.appendChild(contagem);
 
   const disclaimer = document.createElement("div");
@@ -1188,7 +1229,7 @@ function renderizarCliente(itens){
     }
   } catch(e){}
 
-  itens.forEach(item => {
+  itensOrdenados.forEach(item => {
     const aindaDisponivel = linksAindaDisponiveis === null || linksAindaDisponiveis.has(item.link);
 
     const linha = document.createElement("div");
@@ -1214,16 +1255,8 @@ function renderizarCliente(itens){
       ? item.imagens
       : (item.imagem ? [item.imagem] : []);
 
-    let dataHtml = "";
-    if (item.dataPublicacao) {
-      const dataObj = new Date(item.dataPublicacao);
-      const dataFormatada = dataObj.toLocaleDateString("pt-BR", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric"
-      });
-      dataHtml = `<p class="data-cliente">📅 Publicado em ${dataFormatada}</p>`;
-    }
+    const idade = calcularIdade(item.dataPublicacao);
+    const dataHtml = idade ? `<span class="data-idade-cliente">📅 ${idade}</span>` : "";
 
     linha.innerHTML = `
       <div class="galeria-wrap">
@@ -1346,7 +1379,7 @@ function atualizarRotulosFaixaValor(){
   document.getElementById("valor-ate-num").textContent = formatarValorCurto(ate) + (ate >= 3000000 ? "+" : "");
 }
 
-function aplicarFiltrosEExibir(retornaFiltrados = false) {
+function aplicarFiltrosEExibir(retornaFiltrados = false){
   const resultadosDiv = document.getElementById("resultados");
   resultadosDiv.innerHTML = "";
 
@@ -1361,7 +1394,7 @@ function aplicarFiltrosEExibir(retornaFiltrados = false) {
 
   let faixaDe = Number(document.getElementById("valor-de").value);
   let faixaAte = Number(document.getElementById("valor-ate").value);
-  if (faixaDe > faixaAte) { [faixaDe, faixaAte] = [faixaAte, faixaDe]; }
+  if(faixaDe > faixaAte){ [faixaDe, faixaAte] = [faixaAte, faixaDe]; }
   const incluirAcimaDe3Mi = document.getElementById("valor-acima-3mi").checked;
   const faixaMin = faixaDe;
   const faixaMax = incluirAcimaDe3Mi ? Infinity : faixaAte;
@@ -1401,29 +1434,10 @@ function aplicarFiltrosEExibir(retornaFiltrados = false) {
     return true;
   });
 
-  filtrados.sort((a, b) => {
-    const precoA = precoParaNumero(a.preco);
-    const precoB = precoParaNumero(b.preco);
-    
-    if (precoA !== null && precoB !== null) {
-      if (precoA !== precoB) return precoA - precoB;
-    }
-    if (precoA === null && precoB !== null) return 1;
-    if (precoA !== null && precoB === null) return -1;
-    
-    const dataA = a.dataPublicacao || "";
-    const dataB = b.dataPublicacao || "";
-    
-    if (dataA && dataB) {
-      return dataB.localeCompare(dataA);
-    }
-    if (dataA && !dataB) return -1;
-    if (!dataA && dataB) return 1;
-    
-    return 0;
-  });
+  // ========== ORDENA POR DATA (MAIS NOVO PRIMEIRO) ==========
+  filtrados = ordenarImoveisPorData(filtrados);
 
-  if (retornaFiltrados) return filtrados;
+  if(retornaFiltrados) return filtrados;
 
   const contagem = document.createElement("p");
   contagem.className = "contagem";
@@ -1443,18 +1457,10 @@ function aplicarFiltrosEExibir(retornaFiltrados = false) {
   filtrados.forEach(item => {
     const card = document.createElement("div");
     card.className = "card-imovel" + (SELECIONADOS.has(item.link) ? " selecionado" : "");
-    
-    let dataHtml = "";
-    if (item.dataPublicacao) {
-      const dataObj = new Date(item.dataPublicacao);
-      const dataFormatada = dataObj.toLocaleDateString("pt-BR", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric"
-      });
-      dataHtml = `<div class="data-discreta">📅 ${dataFormatada}</div>`;
-    }
-    
+
+    const idade = calcularIdade(item.dataPublicacao);
+    const dataHtml = idade ? `<span class="selo-data">📅 ${idade}</span>` : "";
+
     card.innerHTML = `
       <div class="foto-wrap">
         ${item.imagem
@@ -1466,6 +1472,7 @@ function aplicarFiltrosEExibir(retornaFiltrados = false) {
           <input type="checkbox" ${SELECIONADOS.has(item.link) ? "checked" : ""} data-link="${item.link}">
         </label>
         ${item.preco ? `<span class="selo-preco">${item.preco}</span>` : ""}
+        ${dataHtml}
       </div>
       <div class="corpo">
         <p class="titulo">${item.titulo || "Imóvel"}</p>
@@ -1476,8 +1483,8 @@ function aplicarFiltrosEExibir(retornaFiltrados = false) {
           ${item.vagas ? `<span>${item.vagas} vagas</span>` : ""}
           ${item.area ? `<span>${item.area} m²</span>` : ""}
           ${(item.bairro || item.cidade) ? `<span>${[item.bairro, item.cidade].filter(Boolean).join(", ")}</span>` : ""}
+          ${idade ? `<span class="data-idade">📅 ${idade}</span>` : ""}
         </div>
-        ${dataHtml}
         <a class="ver" href="${item.link}" target="_blank" rel="noopener">Ver imóvel →</a>
       </div>
     `;
@@ -1512,7 +1519,7 @@ function itensSelecionadosParaLink(){
       preco: i.preco, tipo: i.tipo, quartos: i.quartos, fonte: i.fonte,
       suites: i.suites, vagas: i.vagas, area: i.area, bairro: i.bairro,
       cidade: i.cidade, finalidade: i.finalidade, link: i.link,
-      dataPublicacao: i.dataPublicacao || null,
+      dataPublicacao: i.dataPublicacao
     }));
 }
 
@@ -1520,7 +1527,9 @@ let CACHE_LINK_GERADO = { chave: null, url: null };
 
 async function montarLinkCliente(){
   const itens = itensSelecionadosParaLink();
-  const chave = itens.map(i => i.link).sort().join("|");
+  // Ordena os itens antes de salvar no link
+  const itensOrdenados = ordenarImoveisPorData(itens);
+  const chave = itensOrdenados.map(i => i.link).sort().join("|");
 
   if(CACHE_LINK_GERADO.chave === chave && CACHE_LINK_GERADO.url){
     return CACHE_LINK_GERADO.url;
@@ -1534,7 +1543,7 @@ async function montarLinkCliente(){
     if(!dadosAtuais.links) dadosAtuais.links = {};
     while(dadosAtuais.links[codigo]) codigo = gerarCodigoCurto();
     dadosAtuais.links[codigo] = {
-      itens,
+      itens: itensOrdenados,
       criadoEm: new Date().toISOString(),
     };
     return dadosAtuais;
