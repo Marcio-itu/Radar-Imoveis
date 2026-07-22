@@ -2,6 +2,7 @@
 //
 // Roda no GitHub Actions.
 // Suporta: ScrapingBee, Firecrawl e ScraperAPI com fallback automático.
+// ✅ Com extração de data por fonte (via JSON-LD e HTML)
 
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -45,46 +46,6 @@ function extrairArea(texto) {
   return m ? m[1] : "";
 }
 
-const CIDADES_REGEX_TEXTO = "Itu|Indaiatuba|Salto|Sorocaba|Cabreúva|Cabreuva";
-
-function pareceControleDePagina(texto) {
-  return /crescente|decrescente|\d+\s*im[oó]ve(l|is)|ordenar\s*por/i.test(texto);
-}
-
-function extrairBairro(texto) {
-  let m = texto.match(
-    new RegExp(
-      `([A-ZÀ-Ú][\\wÀ-ú0-9°º.'\\s]{2,45}?)\\s*[-–]\\s*(?:${CIDADES_REGEX_TEXTO})\\s*[-–]\\s*SP\\b`,
-      "i"
-    )
-  );
-  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
-
-  m = texto.match(
-    /(?:bairro|condom[ií]nio|residencial|jardim|parque|vila)\s*:?\s+([A-ZÀ-Ú][\wÀ-ú0-9°º.'\s]{2,40})/i
-  );
-  if (m && !pareceControleDePagina(m[0])) return limparTexto(m[0]);
-
-  m = texto.match(/(?:em|no|na)\s+([A-ZÀ-Ú][\wÀ-ú\s]{2,40})/);
-  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
-  return "";
-}
-
-const CIDADES_CONHECIDAS = ["itu", "indaiatuba", "salto", "sorocaba", "cabreúva", "cabreuva"];
-
-function extrairCidade(texto, href) {
-  const matchTexto = texto.match(/[-–]\s*([A-ZÀ-Ú][a-zà-ú]+)\s*[\/\-]\s*SP\b/i);
-  if (matchTexto) return limparTexto(matchTexto[1]);
-
-  const alvoHref = href.toLowerCase();
-  for (const cidade of CIDADES_CONHECIDAS) {
-    if (alvoHref.includes("/" + cidade)) {
-      return cidade.charAt(0).toUpperCase() + cidade.slice(1);
-    }
-  }
-  return "";
-}
-
 function extrairVagas(texto) {
   const m = texto.match(/(\d+)\s*vagas?/i);
   return m ? m[1] : "";
@@ -113,6 +74,134 @@ function extrairFinalidade(texto) {
   if (temVenda) return "venda";
   if (temAluguel) return "aluguel";
   return "";
+}
+
+// ----------------------
+// EXTRAÇÃO DE DATA POR FONTE
+// ----------------------
+
+function extrairDataDoJsonLd(html) {
+  const regexBloco = /<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+  let match;
+  
+  while ((match = regexBloco.exec(html)) !== null) {
+    try {
+      const dados = JSON.parse(match[1].trim());
+      const itens = Array.isArray(dados) ? dados : [dados];
+      
+      for (const item of itens) {
+        // Tenta diferentes campos onde a data pode estar
+        let data = item.datePublished || 
+                   item.publishedAt || 
+                   item.dateCreated || 
+                   item.uploadDate;
+        
+        if (data) {
+          // Tenta normalizar a data
+          const dataNormalizada = normalizarData(data);
+          if (dataNormalizada) return dataNormalizada;
+        }
+      }
+    } catch (e) {
+      // Ignora blocos que não são JSON válido
+    }
+  }
+  return null;
+}
+
+function normalizarData(valor) {
+  if (!valor) return null;
+  
+  // Se já estiver no formato ISO (YYYY-MM-DD)
+  const matchISO = valor.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (matchISO) return `${matchISO[1]}-${matchISO[2]}-${matchISO[3]}`;
+  
+  // Se estiver no formato DD/MM/YYYY
+  const matchBR = valor.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+  if (matchBR) return `${matchBR[3]}-${matchBR[2]}-${matchBR[1]}`;
+  
+  // Se for um timestamp (número)
+  if (/^\d+$/.test(valor)) {
+    try {
+      const data = new Date(parseInt(valor));
+      return data.toISOString().split('T')[0];
+    } catch (e) {}
+  }
+  
+  return null;
+}
+
+function extrairDataPorFonte(html, nomeFonte) {
+  // Primeiro, tenta JSON-LD (funciona para todas as fontes)
+  const dataJsonLd = extrairDataDoJsonLd(html);
+  if (dataJsonLd) return dataJsonLd;
+  
+  // Se não achou no JSON-LD, tenta extratores específicos por fonte
+  
+  const texto = limparTexto(removerTags(html));
+  
+  // ========== EXTRATORES POR FONTE ==========
+  
+  // 1. Kenlo - Portal Geral
+  if (nomeFonte.includes("Kenlo")) {
+    // Kenlo geralmente tem no JSON-LD, mas se não tiver, tenta no texto
+    const match = texto.match(/publicado\s*(?:em|há)?\s*(\d{2}\/\d{2}\/\d{4})/i);
+    if (match) return normalizarData(match[1]);
+  }
+  
+  // 2. Grupo Kaion
+  if (nomeFonte.includes("Grupo Kaion")) {
+    const match = texto.match(/publicado\s*(?:em|há)?\s*(\d{2}\/\d{2}\/\d{4})/i);
+    if (match) return normalizarData(match[1]);
+  }
+  
+  // 3. VivaReal
+  if (nomeFonte.includes("VivaReal")) {
+    const match = texto.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+    if (match) return normalizarData(match[0]);
+  }
+  
+  // 4. Residencial Imóveis (não tem data visível)
+  if (nomeFonte.includes("Residencial")) {
+    // Não tem data - retorna null
+    return null;
+  }
+  
+  // 5. Outras fontes - tenta padrões genéricos
+  const padroes = [
+    /publicado\s*em\s*(\d{2}\/\d{2}\/\d{4})/i,
+    /publicado\s*há\s*(\d+)\s*dias?/i,
+    /publicado\s*há\s*(\d+)\s*meses?/i,
+    /anunciado\s*em\s*(\d{2}\/\d{2}\/\d{4})/i,
+    /cadastrado\s*em\s*(\d{2}\/\d{2}\/\d{4})/i,
+    /data\s*[:\-]\s*(\d{2}\/\d{2}\/\d{4})/i,
+    /(\d{2})\/(\d{2})\/(\d{4})/
+  ];
+  
+  for (const padrao of padroes) {
+    const match = texto.match(padrao);
+    if (match) {
+      // Se for "há X dias", calcula a data
+      if (match[1] && padrao.toString().includes('dias')) {
+        const dias = parseInt(match[1]);
+        const data = new Date();
+        data.setDate(data.getDate() - dias);
+        return data.toISOString().split('T')[0];
+      }
+      // Se for "há X meses"
+      if (match[1] && padrao.toString().includes('meses')) {
+        const meses = parseInt(match[1]);
+        const data = new Date();
+        data.setMonth(data.getMonth() - meses);
+        return data.toISOString().split('T')[0];
+      }
+      // Se for uma data em formato DD/MM/AAAA
+      const dataNormalizada = normalizarData(match[0]);
+      if (dataNormalizada) return dataNormalizada;
+    }
+  }
+  
+  return null;
 }
 
 // ----------------------
@@ -241,6 +330,12 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       imagensFinal = [...new Set([...candidato.imagens, ...existente.imagens])].slice(0, 8);
     }
 
+    // Só atualiza a data se a nova for mais recente ou se a existente for null
+    let dataFinal = existente.dataPublicacao;
+    if (!dataFinal && candidato.dataPublicacao) {
+      dataFinal = candidato.dataPublicacao;
+    }
+
     porLink.set(href, {
       ...existente,
       imagens: imagensFinal,
@@ -255,6 +350,7 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       tipo: existente.tipo || candidato.tipo,
       finalidade: existente.finalidade || candidato.finalidade,
       titulo: (existente.titulo && existente.titulo !== "Imóvel") ? existente.titulo : candidato.titulo,
+      dataPublicacao: dataFinal,
     });
   }
 
@@ -278,6 +374,13 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
 
     const { imagens, origemConfiavel } = extrairImagens(anchorHtmlBruto, html, match.index, baseUrl);
 
+    // ========== EXTRAI DATA DE PUBLICAÇÃO ==========
+    // Usa o HTML completo para extrair a data (incluindo o card todo)
+    const inicioCard = Math.max(0, match.index - 1500);
+    const fimCard = Math.min(html.length, match.index + 1500);
+    const cardHtml = html.slice(inicioCard, fimCard);
+    const dataPublicacao = extrairDataPorFonte(cardHtml, nomeFonte);
+
     registrar(href, {
       fonte: nomeFonte,
       titulo: tituloSeguro(textoLink) || "Imóvel",
@@ -293,7 +396,8 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       cidade: extrairCidade(textoPrincipal, href),
       tipo: extrairTipo(textoPrincipal, href),
       finalidade: extrairFinalidade(textoPrincipal),
-      link: href
+      link: href,
+      dataPublicacao: dataPublicacao,
     });
   }
 
@@ -314,6 +418,8 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
     const textoJanela = limparTexto(removerTags(janelaHtml));
 
     const { imagens, origemConfiavel } = extrairImagens(janelaHtml, html, m2.index, baseUrl);
+    
+    const dataPublicacao = extrairDataPorFonte(janelaHtml, nomeFonte);
 
     registrar(href, {
       fonte: nomeFonte,
@@ -330,11 +436,56 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       cidade: extrairCidade(textoJanela, href),
       tipo: extrairTipo(textoJanela, href),
       finalidade: extrairFinalidade(textoJanela),
-      link: href
+      link: href,
+      dataPublicacao: dataPublicacao,
     });
   }
 
   return Array.from(porLink.values()).map(({ _origemConfiavel, ...resto }) => resto);
+}
+
+// ----------------------
+// Funções de Bairro e Cidade
+// ----------------------
+
+const CIDADES_REGEX_TEXTO = "Itu|Indaiatuba|Salto|Sorocaba|Cabreúva|Cabreuva";
+
+function pareceControleDePagina(texto) {
+  return /crescente|decrescente|\d+\s*im[oó]ve(l|is)|ordenar\s*por/i.test(texto);
+}
+
+function extrairBairro(texto) {
+  let m = texto.match(
+    new RegExp(
+      `([A-ZÀ-Ú][\\wÀ-ú0-9°º.'\\s]{2,45}?)\\s*[-–]\\s*(?:${CIDADES_REGEX_TEXTO})\\s*[-–]\\s*SP\\b`,
+      "i"
+    )
+  );
+  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
+
+  m = texto.match(
+    /(?:bairro|condom[ií]nio|residencial|jardim|parque|vila)\s*:?\s+([A-ZÀ-Ú][\wÀ-ú0-9°º.'\s]{2,40})/i
+  );
+  if (m && !pareceControleDePagina(m[0])) return limparTexto(m[0]);
+
+  m = texto.match(/(?:em|no|na)\s+([A-ZÀ-Ú][\wÀ-ú\s]{2,40})/);
+  if (m && !pareceControleDePagina(m[1])) return limparTexto(m[1]);
+  return "";
+}
+
+const CIDADES_CONHECIDAS = ["itu", "indaiatuba", "salto", "sorocaba", "cabreúva", "cabreuva"];
+
+function extrairCidade(texto, href) {
+  const matchTexto = texto.match(/[-–]\s*([A-ZÀ-Ú][a-zà-ú]+)\s*[\/\-]\s*SP\b/i);
+  if (matchTexto) return limparTexto(matchTexto[1]);
+
+  const alvoHref = href.toLowerCase();
+  for (const cidade of CIDADES_CONHECIDAS) {
+    if (alvoHref.includes("/" + cidade)) {
+      return cidade.charAt(0).toUpperCase() + cidade.slice(1);
+    }
+  }
+  return "";
 }
 
 // ----------------------
@@ -569,6 +720,12 @@ async function buscarGaleriaCompletaJS(url, chaves) {
 // ----------------------
 
 async function main() {
+  console.log("\n" + "=".repeat(60));
+  console.log("🚀 BUSCAR.MJS - COM EXTRAÇÃO DE DATA");
+  console.log("   ✅ Mantém todos os imóveis");
+  console.log("   ✅ Extrai data via JSON-LD e extratores por fonte");
+  console.log("=".repeat(60));
+
   let fontesRaw;
   try {
     fontesRaw = await readFile(new URL("../fontes.json", import.meta.url), "utf-8");
@@ -622,6 +779,8 @@ async function main() {
 
   const todos = [];
   const erros = [];
+  let comData = 0;
+  let semData = 0;
 
   for (const fonte of fontes) {
     console.log(`\n📡 Buscando: ${fonte.nome} (${fonte.url})${fonte.jsNecessario ? " [via JS]" : ""}`);
@@ -643,10 +802,19 @@ async function main() {
       }
 
       const itens = extrairCards(html, fonte.url, fonte.nome);
-      itens.forEach(item => { item._semJS = !fonte.jsNecessario; });
+      itens.forEach(item => { 
+        item._semJS = !fonte.jsNecessario; 
+        if (item.dataPublicacao) {
+          comData++;
+        } else {
+          semData++;
+        }
+      });
       todos.push(...itens);
 
-      console.log(`  ✅ ${itens.length} imóveis encontrados`);
+      const comDataCount = itens.filter(i => i.dataPublicacao).length;
+      const semDataCount = itens.filter(i => !i.dataPublicacao).length;
+      console.log(`  ✅ ${itens.length} imóveis encontrados (${comDataCount} com data, ${semDataCount} sem data)`);
 
       if (itens.length === 0) {
         const contemImovel = (html.match(/\/imovel\//gi) || []).length;
@@ -718,6 +886,7 @@ async function main() {
   }
 
   console.log(`\n📸 Galerias: ${doCache} cache | ${buscadosGratis} grátis | ${buscadosComCredito} via JS | ${semGaleria} sem galeria`);
+  console.log(`\n📅 Data: ${comData} imóveis com data | ${semData} imóveis sem data`);
 
   const todosLimpos = todos.map(({ _semJS, ...resto }) => resto);
 
@@ -727,6 +896,11 @@ async function main() {
     total: todosLimpos.length,
     imoveis: todosLimpos,
     erros,
+    resumoData: {
+      comData: comData,
+      semData: semData,
+      total: todosLimpos.length
+    }
   };
 
   await writeFile(
