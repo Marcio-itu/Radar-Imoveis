@@ -452,7 +452,9 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
   }
 
   return Array.from(porLink.values()).map(({ _origemConfiavel, ...resto }) => resto);
-}// ----------------------
+}
+
+// ----------------------
 // Funções de Bairro e Cidade
 // ----------------------
 
