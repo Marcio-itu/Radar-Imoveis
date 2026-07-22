@@ -3957,6 +3957,63 @@
         }
       ],
       "criadoEm": "2026-07-22T01:37:23.165Z"
+    },
+    "r02695": {
+      "itens": [
+        {
+          "titulo": "2",
+          "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
+          "imagens": [
+            "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202410291124505741.jpeg",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240516170252609.JPG",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202410240854097949.jpeg",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202507251600476881.jpg",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20231027151711989.jpg",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202410110944543801.JPG",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20250129154440458.jpg"
+          ],
+          "preco": "R$ 270.000,00",
+          "tipo": "",
+          "quartos": "",
+          "fonte": "Marcio Marins",
+          "suites": "",
+          "vagas": "",
+          "area": "",
+          "bairro": "Jardim Paulista 1",
+          "cidade": "",
+          "finalidade": "",
+          "link": "https://www.marciomarins.com.br/imovel/venda/?pag=2",
+          "dataPublicacao": null
+        },
+        {
+          "titulo": "3",
+          "imagem": "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
+          "imagens": [
+            "https://www.marciomarins.com.br/t23/imgs/flat.jpg",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202512151104592343.jpg",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20240302220237771.JPG",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202508041708537924.jpg",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202606161131195377.jpeg",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202603191117067214.jpeg",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202504081143283223.jpg",
+            "https://imgs2.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202607171045144825.png"
+          ],
+          "preco": "R$ 270.000,00",
+          "tipo": "",
+          "quartos": "",
+          "fonte": "Marcio Marins",
+          "suites": "",
+          "vagas": "",
+          "area": "",
+          "bairro": "",
+          "cidade": "",
+          "finalidade": "",
+          "link": "https://www.marciomarins.com.br/imovel/venda/?pag=3",
+          "dataPublicacao": null
+        }
+      ],
+      "criadoEm": "2026-07-22T19:32:41.845Z"
     }
   }
 }
