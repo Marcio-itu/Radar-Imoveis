@@ -3,6 +3,7 @@
 // Roda no GitHub Actions.
 // Suporta: ScrapingBee, Firecrawl e ScraperAPI com fallback automático.
 // ✅ Com extração de data por fonte (via JSON-LD e HTML)
+// ✅ Suporte a wait e scroll por fonte (ex: Kenlo)
 
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -90,14 +91,12 @@ function extrairDataDoJsonLd(html) {
       const itens = Array.isArray(dados) ? dados : [dados];
       
       for (const item of itens) {
-        // Tenta diferentes campos onde a data pode estar
         let data = item.datePublished || 
                    item.publishedAt || 
                    item.dateCreated || 
                    item.uploadDate;
         
         if (data) {
-          // Tenta normalizar a data
           const dataNormalizada = normalizarData(data);
           if (dataNormalizada) return dataNormalizada;
         }
@@ -112,15 +111,12 @@ function extrairDataDoJsonLd(html) {
 function normalizarData(valor) {
   if (!valor) return null;
   
-  // Se já estiver no formato ISO (YYYY-MM-DD)
   const matchISO = valor.match(/^(\d{4})-(\d{2})-(\d{2})/);
   if (matchISO) return `${matchISO[1]}-${matchISO[2]}-${matchISO[3]}`;
   
-  // Se estiver no formato DD/MM/YYYY
   const matchBR = valor.match(/(\d{2})\/(\d{2})\/(\d{4})/);
   if (matchBR) return `${matchBR[3]}-${matchBR[2]}-${matchBR[1]}`;
   
-  // Se for um timestamp (número)
   if (/^\d+$/.test(valor)) {
     try {
       const data = new Date(parseInt(valor));
@@ -132,42 +128,30 @@ function normalizarData(valor) {
 }
 
 function extrairDataPorFonte(html, nomeFonte) {
-  // Primeiro, tenta JSON-LD (funciona para todas as fontes)
   const dataJsonLd = extrairDataDoJsonLd(html);
   if (dataJsonLd) return dataJsonLd;
   
-  // Se não achou no JSON-LD, tenta extratores específicos por fonte
-  
   const texto = limparTexto(removerTags(html));
   
-  // ========== EXTRATORES POR FONTE ==========
-  
-  // 1. Kenlo - Portal Geral
   if (nomeFonte.includes("Kenlo")) {
-    // Kenlo geralmente tem no JSON-LD, mas se não tiver, tenta no texto
     const match = texto.match(/publicado\s*(?:em|há)?\s*(\d{2}\/\d{2}\/\d{4})/i);
     if (match) return normalizarData(match[1]);
   }
   
-  // 2. Grupo Kaion
   if (nomeFonte.includes("Grupo Kaion")) {
     const match = texto.match(/publicado\s*(?:em|há)?\s*(\d{2}\/\d{2}\/\d{4})/i);
     if (match) return normalizarData(match[1]);
   }
   
-  // 3. VivaReal
   if (nomeFonte.includes("VivaReal")) {
     const match = texto.match(/(\d{2})\/(\d{2})\/(\d{4})/);
     if (match) return normalizarData(match[0]);
   }
   
-  // 4. Residencial Imóveis (não tem data visível)
   if (nomeFonte.includes("Residencial")) {
-    // Não tem data - retorna null
     return null;
   }
   
-  // 5. Outras fontes - tenta padrões genéricos
   const padroes = [
     /publicado\s*em\s*(\d{2}\/\d{2}\/\d{4})/i,
     /publicado\s*há\s*(\d+)\s*dias?/i,
@@ -181,21 +165,18 @@ function extrairDataPorFonte(html, nomeFonte) {
   for (const padrao of padroes) {
     const match = texto.match(padrao);
     if (match) {
-      // Se for "há X dias", calcula a data
       if (match[1] && padrao.toString().includes('dias')) {
         const dias = parseInt(match[1]);
         const data = new Date();
         data.setDate(data.getDate() - dias);
         return data.toISOString().split('T')[0];
       }
-      // Se for "há X meses"
       if (match[1] && padrao.toString().includes('meses')) {
         const meses = parseInt(match[1]);
         const data = new Date();
         data.setMonth(data.getMonth() - meses);
         return data.toISOString().split('T')[0];
       }
-      // Se for uma data em formato DD/MM/AAAA
       const dataNormalizada = normalizarData(match[0]);
       if (dataNormalizada) return dataNormalizada;
     }
@@ -265,9 +246,7 @@ function buscarImagensViaJsonLd(html) {
           }
         }
       }
-    } catch (e) {
-      // bloco nao era JSON valido - ignora
-    }
+    } catch (e) {}
   }
   return encontradas;
 }
@@ -330,7 +309,6 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
       imagensFinal = [...new Set([...candidato.imagens, ...existente.imagens])].slice(0, 8);
     }
 
-    // Só atualiza a data se a nova for mais recente ou se a existente for null
     let dataFinal = existente.dataPublicacao;
     if (!dataFinal && candidato.dataPublicacao) {
       dataFinal = candidato.dataPublicacao;
@@ -374,8 +352,6 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
 
     const { imagens, origemConfiavel } = extrairImagens(anchorHtmlBruto, html, match.index, baseUrl);
 
-    // ========== EXTRAI DATA DE PUBLICAÇÃO ==========
-    // Usa o HTML completo para extrair a data (incluindo o card todo)
     const inicioCard = Math.max(0, match.index - 1500);
     const fimCard = Math.min(html.length, match.index + 1500);
     const cardHtml = html.slice(inicioCard, fimCard);
@@ -418,7 +394,6 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
     const textoJanela = limparTexto(removerTags(janelaHtml));
 
     const { imagens, origemConfiavel } = extrairImagens(janelaHtml, html, m2.index, baseUrl);
-    
     const dataPublicacao = extrairDataPorFonte(janelaHtml, nomeFonte);
 
     registrar(href, {
@@ -502,15 +477,27 @@ async function buscarDireto(url) {
   return await resp.text();
 }
 
-// ========== SCRAPINGBEE ==========
+// ========== SCRAPINGBEE COM SUPORTE A WAIT E SCROLL ==========
 async function buscarScrapingBee(url, apiKey, opcoes = {}) {
+  const wait = opcoes.wait || 2500;
   let endpoint =
     "https://app.scrapingbee.com/api/v1/?api_key=" +
     encodeURIComponent(apiKey) +
     "&url=" +
     encodeURIComponent(url) +
     "&render_js=true" +
-    "&wait=2500";
+    "&wait=" + wait;
+
+  // Se a fonte pedir scroll, adiciona o cenário
+  if (opcoes.scroll) {
+    endpoint += "&js_scenario=" + encodeURIComponent(JSON.stringify({
+      instructions: [
+        { wait: 2000 },
+        { scroll: { direction: "down", delta: 800, repeat: 5, delay: 1500 } },
+        { wait: 3000 }
+      ]
+    }));
+  }
 
   if (opcoes.jsScenario) {
     endpoint += "&js_scenario=" + encodeURIComponent(JSON.stringify(opcoes.jsScenario));
@@ -600,7 +587,6 @@ async function buscarScraperAPI(url, apiKey) {
 async function buscarComJS(url, chaves, opcoes = {}) {
   const { scrapingBeeKeys, firecrawlKey, scraperAPIKey } = chaves;
   
-  // 1. Tenta ScrapingBee (todas as chaves)
   if (scrapingBeeKeys && scrapingBeeKeys.length > 0) {
     for (let i = 0; i < scrapingBeeKeys.length; i++) {
       try {
@@ -615,7 +601,6 @@ async function buscarComJS(url, chaves, opcoes = {}) {
     }
   }
 
-  // 2. Tenta Firecrawl
   if (firecrawlKey) {
     try {
       console.log(`  🔥 Tentando Firecrawl...`);
@@ -628,7 +613,6 @@ async function buscarComJS(url, chaves, opcoes = {}) {
     }
   }
 
-  // 3. Tenta ScraperAPI
   if (scraperAPIKey) {
     try {
       console.log(`  🧪 Tentando ScraperAPI...`);
@@ -662,7 +646,6 @@ async function buscarGaleriaCompletaSemJS(url) {
 
 // ========== GALERIA PARA SITES COM JS ==========
 async function buscarGaleriaCompletaJS(url, chaves) {
-  // Tenta ScrapingBee primeiro
   if (chaves.scrapingBeeKeys && chaves.scrapingBeeKeys.length > 0) {
     for (let i = 0; i < chaves.scrapingBeeKeys.length; i++) {
       try {
@@ -680,7 +663,6 @@ async function buscarGaleriaCompletaJS(url, chaves) {
     }
   }
 
-  // Tenta Firecrawl
   if (chaves.firecrawlKey) {
     try {
       const html = await buscarFirecrawl(url, chaves.firecrawlKey);
@@ -696,7 +678,6 @@ async function buscarGaleriaCompletaJS(url, chaves) {
     }
   }
 
-  // Tenta ScraperAPI
   if (chaves.scraperAPIKey) {
     try {
       const html = await buscarScraperAPI(url, chaves.scraperAPIKey);
@@ -723,7 +704,7 @@ async function main() {
   console.log("\n" + "=".repeat(60));
   console.log("🚀 BUSCAR.MJS - COM EXTRAÇÃO DE DATA");
   console.log("   ✅ Mantém todos os imóveis");
-  console.log("   ✅ Extrai data via JSON-LD e extratores por fonte");
+  console.log("   ✅ Suporte a wait e scroll por fonte");
   console.log("=".repeat(60));
 
   let fontesRaw;
@@ -742,7 +723,6 @@ async function main() {
     process.exit(1);
   }
 
-  // Cache de galerias
   const cacheGaleria = new Map();
   try {
     const anteriorRaw = await readFile(new URL("../imoveis.json", import.meta.url), "utf-8");
@@ -752,12 +732,11 @@ async function main() {
         cacheGaleria.set(item.link, item.imagens.slice(0, 8));
       }
     }
-    console.log(`Cache de galerias: ${cacheGaleria.size} imóveis já processados`);
+    console.log(`📦 Cache de galerias: ${cacheGaleria.size} imóveis`);
   } catch (e) {
-    console.log("Sem imoveis.json anterior - primeira execução.");
+    console.log("📦 Sem cache - primeira execução.");
   }
 
-  // ========== CHAVES ==========
   const scrapingBeeKeys = [
     process.env.SCRAPINGBEE_API_KEY,
     process.env.SCRAPINGBEE_API_KEY_2,
@@ -784,6 +763,8 @@ async function main() {
 
   for (const fonte of fontes) {
     console.log(`\n📡 Buscando: ${fonte.nome} (${fonte.url})${fonte.jsNecessario ? " [via JS]" : ""}`);
+    if (fonte.wait) console.log(`   ⏱️  Wait: ${fonte.wait}ms`);
+    if (fonte.scroll) console.log(`   📜 Scroll: ativado`);
 
     try {
       let html;
@@ -791,12 +772,15 @@ async function main() {
       if (fonte.jsNecessario) {
         const temAlgumaChave = scrapingBeeKeys.length > 0 || firecrawlKey || scraperAPIKey;
         if (!temAlgumaChave) {
-          const msg = `${fonte.nome}: precisa de JavaScript, mas nenhuma chave está configurada.`;
-          console.warn(msg);
-          erros.push(msg);
+          console.warn(`  ⚠️ Nenhuma chave configurada`);
+          erros.push(`${fonte.nome}: sem chave`);
           continue;
         }
-        html = await buscarComJS(fonte.url, chaves);
+        // Passa as opções da fonte (wait, scroll) para o ScrapingBee
+        const opcoes = {};
+        if (fonte.wait) opcoes.wait = fonte.wait;
+        if (fonte.scroll) opcoes.scroll = fonte.scroll;
+        html = await buscarComJS(fonte.url, chaves, opcoes);
       } else {
         html = await buscarDireto(fonte.url);
       }
@@ -835,7 +819,6 @@ async function main() {
 
   const dataHoje = new Date().toISOString().split("T")[0];
 
-  // ========== GALERIAS ==========
   let doCache = 0, buscadosGratis = 0, buscadosComCredito = 0, semGaleria = 0;
 
   for (const item of todos) {
