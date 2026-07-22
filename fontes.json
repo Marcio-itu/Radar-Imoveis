@@ -1,17 +1,11 @@
 [
     {
-        "nome": "Kenlo - Venda (TESTE LENTO)",
-        "url": "https://portal.kenlo.com.br/imoveis/a-venda/itu",
-        "jsNecessario": true,
-        "prioridade": 0,
-        "wait": 8000,
-        "scroll": true
-    },
-    {
         "nome": "Kenlo - Portal Geral",
         "url": "https://portal.kenlo.com.br/imoveis/a-venda/itu",
         "jsNecessario": true,
-        "prioridade": 1
+        "prioridade": 1,
+        "wait": 8000,
+        "scroll": true
     },
     {
         "nome": "Residencial Imóveis",
