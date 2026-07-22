@@ -210,6 +210,15 @@ function resolverUrlImagem(url, baseUrl) {
 const PADRAO_IMAGEM_INVALIDA = /logo|icone|icon|avatar|placeholder|spinner|loading|lazy|blank|pixel|\.svg|1x1/i;
 
 function buscarImagensEmTrecho(trechoHtml) {
+  // 🔴 Lista de palavras que indicam que a imagem NÃO é do imóvel
+  const PALAVRAS_IGNORAR = [
+    'flat.jpg', 'placeholder', 'logo', 'icone', 'icon', 
+    'avatar', 'spinner', 'loading', 'lazy', 'blank', 
+    'pixel', '1x1', 'transparent', 'selo', 'bandeira',
+    'flag', 'whatsapp', 'facebook', 'instagram', 'twitter',
+    'email', 'imobibrasil.com.br/t'
+  ];
+
   const padroes = [
     // Padrões padrão
     /<img[^>]+src=["']([^"']+)["']/gi,
@@ -227,12 +236,30 @@ function buscarImagensEmTrecho(trechoHtml) {
   for (const padrao of padroes) {
     for (const m of trechoHtml.matchAll(padrao)) {
       const url = m[1];
-      if (url && !PADRAO_IMAGEM_INVALIDA.test(url) && !encontradas.includes(url)) {
-        encontradas.push(url);
+      if (!url) continue;
+      
+      // 🔴 Verifica se a URL contém alguma palavra que devemos ignorar
+      const deveIgnorar = PALAVRAS_IGNORAR.some(palavra => 
+        url.toLowerCase().includes(palavra.toLowerCase())
+      );
+      
+      if (deveIgnorar) continue;
+      
+      // 🔴 PRIORIDADE: Se a imagem vem do CDN imobibrasil, é a correta
+      const isImobCdn = url.includes('cdn-imobibrasil.com.br');
+      
+      // 🔴 Verifica se já não foi adicionada
+      if (!encontradas.some(e => e.url === url)) {
+        encontradas.push({ url, isImobCdn });
       }
     }
   }
-  return encontradas;
+  
+  // 🔴 Ordena: primeiro as do CDN, depois as outras
+  encontradas.sort((a, b) => (b.isImobCdn ? 1 : 0) - (a.isImobCdn ? 1 : 0));
+  
+  // 🔴 Retorna apenas as URLs
+  return encontradas.map(item => item.url);
 }
 
 function buscarImagensViaJsonLd(html) {
