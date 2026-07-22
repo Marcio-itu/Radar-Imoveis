@@ -7,12 +7,6 @@
     "wait": 8000
   },
   {
-    "nome": "Residencial Imóveis",
-    "url": "https://www.residencialimoveis.com.br/imoveis/casa",
-    "jsNecessario": false,
-    "prioridade": 2
-  },
-  {
     "nome": "Marcio Marins",
     "url": "https://www.marciomarins.com.br/imovel/venda",
     "jsNecessario": false,
