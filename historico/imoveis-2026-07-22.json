@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "2026-07-22T19:29:47.833Z",
+  "atualizadoEm": "2026-07-22T19:59:21.004Z",
   "geradoEm": "2026-07-22",
   "total": 215,
   "imoveis": [
@@ -5756,7 +5756,7 @@
     }
   ],
   "erros": [
-    "Kenlo - Portal Geral: ScrapingBee HTTP 400 {\"errors\":{\"query\":{\"js_scenario\":[\"{'scroll': {'direction': 'down', 'delta': 800, 'repeat': 5, 'delay': 1500}} is not valid under any of the given schemas\"]}}}\n",
+    "Kenlo - Portal Geral: ScrapingBee HTTP 400 {\"errors\":{\"query\":{\"js_scenario\":[\"{'scroll': {'direction': 'down', 'repeat': 5}} is not valid under any of the given schemas\"]}}}\n",
     "VivaReal: HTTP 403"
   ],
   "resumoData": {
