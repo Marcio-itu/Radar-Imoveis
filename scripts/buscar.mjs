@@ -215,11 +215,11 @@ function buscarImagensEmTrecho(trechoHtml) {
     /<img[^>]+src=["']([^"']+)["']/gi,
     /<img[^>]+data-src=["']([^"']+)["']/gi,
     /<img[^>]+srcset=["']([^"',\s]+)/gi,
-    // 🔴 IMOBWEB: Captura imagens com classe rsImg (slider)
+    // IMOBWEB: Captura imagens com classe rsImg (slider)
     /<img[^>]+class=["'][^"']*rsImg[^"']*["'][^>]*src=["']([^"']+)["']/gi,
-    // 🔴 IMOBWEB: Captura imagens com data-src (lazy loading)
+    // IMOBWEB: Captura imagens com data-src (lazy loading)
     /<img[^>]+data-src=["']([^"']+)["']/gi,
-    // 🔴 IMOBWEB: Captura imagens em containers rsSlide
+    // IMOBWEB: Captura imagens em containers rsSlide
     /<div[^>]*class=["'][^"']*rsSlide[^"']*["'][^>]*>[\s\S]*?<img[^>]+src=["']([^"']+)["']/gi
   ];
 
@@ -425,9 +425,7 @@ function extrairCards(htmlBruto, baseUrl, nomeFonte) {
   }
 
   return Array.from(porLink.values()).map(({ _origemConfiavel, ...resto }) => resto);
-}
-
-// ----------------------
+}// ----------------------
 // Funções de Bairro e Cidade
 // ----------------------
 
