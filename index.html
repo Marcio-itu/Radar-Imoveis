@@ -1212,12 +1212,7 @@ async function renderizarCliente(itens){
   contagem.textContent = `${itensOrdenados.length} imóvel(is) selecionado(s) para você`;
   resultadosDiv.appendChild(contagem);
 
-  const disclaimer = document.createElement("div");
-  disclaimer.className = "aviso-disclaimer-cliente";
-  disclaimer.innerHTML = `
-    <strong>📢 Atenção:</strong>Alguns imóveis podem não estar disponíveis caso a imobiliária (fonte primária deste imóvel) não tenha atualizado sua página.
-  `;
-  resultadosDiv.appendChild(disclaimer);
+  // 🔴 DISCLAIMER REMOVIDO DAQUI - será adicionado no final
 
   let linksAindaDisponiveis = null;
   try{
@@ -1296,13 +1291,27 @@ async function renderizarCliente(itens){
     "<strong>Conte comigo!</strong>";
   resultadosDiv.appendChild(aviso);
 
+  // 🔴 DISCLAIMER NO FINAL (após o aviso jurídico)
+  const disclaimerFinal = document.createElement("div");
+  disclaimerFinal.className = "aviso-disclaimer-cliente";
+  disclaimerFinal.style.marginTop = "2rem";
+  disclaimerFinal.style.paddingTop = "1rem";
+  disclaimerFinal.style.borderTop = "1px solid #eee";
+  disclaimerFinal.style.fontSize = "0.85rem";
+  disclaimerFinal.style.color = "#666";
+  disclaimerFinal.style.textAlign = "center";
+  disclaimerFinal.innerHTML = `
+    Os imóveis desta seleção podem ter sido negociados e requerem consulta mediante seu interesse.
+  `;
+  resultadosDiv.appendChild(disclaimerFinal);
+
   adicionarBotaoWhatsCliente("Olá! Vi a seleção de imóveis que você separou pra mim e quero saber mais.");
 }
 
 // ============================================================
 // MODO NORMAL (CORRETOR)
 // ============================================================
-
+  
 async function carregarDados(){
   const status = document.getElementById("status");
   status.textContent = "Carregando imóveis…";
