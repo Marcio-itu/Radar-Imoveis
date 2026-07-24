@@ -6,6 +6,7 @@
 // ✅ Suporte a wait e scroll por fonte (ex: Kenlo)
 // ✅ Captura imagens da plataforma ImobWeb (rsSlide, data-src)
 // ✅ Extração específica para ImobWeb (cards com classe "item")
+// ✅ Paginação automática (ex: Kenlo com "paginas": 10)
 
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -879,6 +880,7 @@ async function main() {
   console.log("   ✅ Suporte a wait e scroll por fonte");
   console.log("   ✅ Captura imagens ImobWeb (rsSlide)");
   console.log("   ✅ Extração específica para ImobWeb");
+  console.log("   ✅ Paginação automática (ex: Kenlo com 'paginas')");
   console.log("=".repeat(60));
 
   let fontesRaw;
@@ -939,43 +941,90 @@ async function main() {
     console.log(`\n📡 Buscando: ${fonte.nome} (${fonte.url})${fonte.jsNecessario ? " [via JS]" : ""}`);
     if (fonte.wait) console.log(`   ⏱️  Wait: ${fonte.wait}ms`);
     if (fonte.scroll) console.log(`   📜 Scroll: ativado`);
+    if (fonte.paginas) console.log(`   📄 Páginas: ${fonte.paginas}`);
 
     try {
-      let html;
+      let todosOsItens = [];
+      const totalPaginas = fonte.paginas || 1;
 
-      if (fonte.jsNecessario) {
-        const temAlgumaChave = scrapingBeeKeys.length > 0 || firecrawlKey || scraperAPIKey;
-        if (!temAlgumaChave) {
-          console.warn(`  ⚠️ Nenhuma chave configurada`);
-          erros.push(`${fonte.nome}: sem chave`);
-          continue;
+      // 🔴 LOOP DE PAGINAÇÃO
+      for (let pagina = 1; pagina <= totalPaginas; pagina++) {
+        let urlPagina = fonte.url;
+        
+        // Adiciona o parâmetro de página se for maior que 1
+        if (pagina > 1) {
+          // Verifica se a URL já tem parâmetros
+          const separador = urlPagina.includes('?') ? '&' : '?';
+          urlPagina = urlPagina + separador + 'pagina=' + pagina;
         }
-        // Passa as opções da fonte (wait, scroll) para o ScrapingBee
-        const opcoes = {};
-        if (fonte.wait) opcoes.wait = fonte.wait;
-        if (fonte.scroll) opcoes.scroll = fonte.scroll;
-        html = await buscarComJS(fonte.url, chaves, opcoes);
-      } else {
-        html = await buscarDireto(fonte.url);
+
+        console.log(`   📄 Buscando página ${pagina}/${totalPaginas}: ${urlPagina}`);
+
+        let html;
+
+        if (fonte.jsNecessario) {
+          const temAlgumaChave = scrapingBeeKeys.length > 0 || firecrawlKey || scraperAPIKey;
+          if (!temAlgumaChave) {
+            console.warn(`  ⚠️ Nenhuma chave configurada`);
+            erros.push(`${fonte.nome}: sem chave`);
+            continue;
+          }
+          const opcoes = {};
+          if (fonte.wait) opcoes.wait = fonte.wait;
+          if (fonte.scroll) opcoes.scroll = fonte.scroll;
+          html = await buscarComJS(urlPagina, chaves, opcoes);
+        } else {
+          html = await buscarDireto(urlPagina);
+        }
+
+        let itens;
+
+        const isImobWeb = 
+          fonte.nome.includes("Marcio Marins") || 
+          fonte.nome.includes("Carmo Imóveis") ||
+          fonte.url.includes("marciomarins.com.br") ||
+          fonte.url.includes("carmoimoveis.com.br");
+
+        if (isImobWeb) {
+          console.log(`  🏠 Usando extração específica para ImobWeb`);
+          itens = extrairCardsImobWeb(html, urlPagina, fonte.nome);
+        } else {
+          itens = extrairCardsPadrao(html, urlPagina, fonte.nome);
+        }
+
+        // Remove duplicatas dentro da mesma página (pelo link)
+        const linksVistos = new Set();
+        const itensUnicos = itens.filter(item => {
+          if (linksVistos.has(item.link)) return false;
+          linksVistos.add(item.link);
+          return true;
+        });
+
+        console.log(`   ✅ Página ${pagina}: ${itensUnicos.length} imóveis encontrados`);
+        todosOsItens.push(...itensUnicos);
+
+        // Se encontrou menos de 10 imóveis, provavelmente é a última página
+        if (itensUnicos.length < 10) {
+          console.log(`   ⏹️  Última página detectada (${itensUnicos.length} imóveis)`);
+          break;
+        }
+
+        // Pequena pausa entre páginas para não sobrecarregar
+        if (pagina < totalPaginas) {
+          await esperar(500);
+        }
       }
 
-      let itens;
+      // Remove duplicatas globais (mesmo link em páginas diferentes)
+      const linksGlobais = new Set();
+      const itensFinais = todosOsItens.filter(item => {
+        if (linksGlobais.has(item.link)) return false;
+        linksGlobais.add(item.link);
+        return true;
+      });
 
-      // 🔴 Verifica se a fonte é da plataforma ImobWeb
-      const isImobWeb = 
-        fonte.nome.includes("Marcio Marins") || 
-        fonte.nome.includes("Carmo Imóveis") ||
-        fonte.url.includes("marciomarins.com.br") ||
-        fonte.url.includes("carmoimoveis.com.br");
-
-      if (isImobWeb) {
-        console.log(`  🏠 Usando extração específica para ImobWeb`);
-        itens = extrairCardsImobWeb(html, fonte.url, fonte.nome);
-      } else {
-        itens = extrairCardsPadrao(html, fonte.url, fonte.nome);
-      }
-
-      itens.forEach(item => { 
+      // Marca os itens
+      itensFinais.forEach(item => { 
         item._semJS = !fonte.jsNecessario; 
         if (item.dataPublicacao) {
           comData++;
@@ -983,19 +1032,21 @@ async function main() {
           semData++;
         }
       });
-      todos.push(...itens);
+      todos.push(...itensFinais);
 
-      const comDataCount = itens.filter(i => i.dataPublicacao).length;
-      const semDataCount = itens.filter(i => !i.dataPublicacao).length;
-      console.log(`  ✅ ${itens.length} imóveis encontrados (${comDataCount} com data, ${semDataCount} sem data)`);
+      const comDataCount = itensFinais.filter(i => i.dataPublicacao).length;
+      const semDataCount = itensFinais.filter(i => !i.dataPublicacao).length;
+      console.log(`  ✅ TOTAL: ${itensFinais.length} imóveis encontrados (${comDataCount} com data, ${semDataCount} sem data)`);
 
-      if (itens.length === 0) {
-        const contemImovel = (html.match(/\/imovel\//gi) || []).length;
-        const contemComprar = (html.match(/\/(comprar|alugar)\//gi) || []).length;
-        const pareceBloqueio = /captcha|access denied|cloudflare|habilite o javascript/i.test(html);
+      if (itensFinais.length === 0) {
+        // Usa o HTML da última página para diagnóstico
+        const htmlDiagnostico = await buscarDireto(fonte.url);
+        const contemImovel = (htmlDiagnostico.match(/\/imovel\//gi) || []).length;
+        const contemComprar = (htmlDiagnostico.match(/\/(comprar|alugar)\//gi) || []).length;
+        const pareceBloqueio = /captcha|access denied|cloudflare|habilite o javascript/i.test(htmlDiagnostico);
 
         erros.push(
-          `${fonte.nome}: 0 imóveis encontrados. HTML: ${html.length} chars. ` +
+          `${fonte.nome}: 0 imóveis encontrados. HTML: ${htmlDiagnostico.length} chars. ` +
           `"/imovel/": ${contemImovel}. "/comprar/|/alugar/": ${contemComprar}. ` +
           `Bloqueio: ${pareceBloqueio ? "SIM" : "não"}.`
         );
