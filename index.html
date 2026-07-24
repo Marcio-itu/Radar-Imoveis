@@ -659,6 +659,71 @@
     .card-imovel .corpo{ padding:11px 13px 13px; }
     .topo{ padding:36px 20px 26px; }
   }
+  
+    /* ============================================================
+     BOTÃO WHATSAPP FIXO (igual ao simulador)
+     ============================================================ */
+
+  .whatsapp-fixo {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #fff;
+    font-size: 32px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: pulse-whats 2.5s infinite;
+  }
+
+  .whatsapp-fixo:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+  }
+
+  .whatsapp-fixo svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+  }
+
+  /* Animação de "tremida" / pulsação */
+  @keyframes pulse-whats {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+      transform: scale(1.06);
+      box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .whatsapp-fixo {
+      width: 52px;
+      height: 52px;
+      font-size: 26px;
+      bottom: 16px;
+      right: 16px;
+    }
+    .whatsapp-fixo svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
 </style>
 </head>
 <body>
