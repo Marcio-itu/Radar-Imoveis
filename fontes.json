@@ -3,7 +3,7 @@
     "nome": "Kenlo - Portal Geral",
     "url": "https://portal.kenlo.com.br/imoveis/a-venda/itu",
     "jsNecessario": true,
-    "prioridade": 1,
+    "prioridade": 10,
     "wait": 8000
   },
   {
