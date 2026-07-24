@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buscador de Imóveis · Itu/SP</title>
+<title>Radar de Imóveis · Itu/SP</title>
 <link rel="icon" type="image/png" href="favicon-marcio-32.png">
 <link rel="apple-touch-icon" href="favicon-marcio.png">
 <style>
@@ -715,9 +715,42 @@
       height: 28px;
     }
   }
+
+  /* ============================================================
+     PORTÃO DE ACESSO (tela do corretor)
+     ============================================================ */
+  .portao-corretor{
+    position:fixed; inset:0; z-index:2000;
+    background:var(--tinta); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    padding:24px;
+  }
+  .portao-corretor .caixa{
+    max-width:360px; width:100%; text-align:center;
+  }
+  .portao-corretor h2{ font-size:19px; margin:0 0 6px; }
+  .portao-corretor p{ font-size:13px; color:rgba(255,255,255,0.65); margin:0 0 20px; }
+  .portao-corretor input{
+    width:100%; padding:12px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.25);
+    background:rgba(255,255,255,0.06); color:#fff; font-size:15px; margin-bottom:10px;
+  }
+  .portao-corretor input::placeholder{ color:rgba(255,255,255,0.4); }
+  .portao-corretor .erro-portao{ color:#ff8a8a; font-size:13px; min-height:18px; margin-bottom:8px; }
 </style>
+<meta name="robots" content="noindex, nofollow">
 </head>
 <body>
+
+<!-- ========== PORTÃO DE ACESSO (só aparece na tela do corretor) ========== -->
+<div class="portao-corretor" id="portao-corretor" style="display:none;">
+  <div class="caixa">
+    <h2>🔒 Acesso restrito</h2>
+    <p>Esta é a área do corretor. Digite a senha de acesso para continuar.</p>
+    <input type="password" id="campo-senha-portao" placeholder="Senha">
+    <p class="erro-portao" id="erro-portao"></p>
+    <button class="botao botao-ouro" id="botao-entrar-portao" style="width:100%;">Entrar</button>
+  </div>
+</div>
 
 <div class="topo">
   <img src="favicon-marcio.png" alt="Márcio Santos" style="border-radius:50%; object-fit:cover;">
@@ -726,7 +759,6 @@
     <h1 id="titulo-pagina">Buscador de imóveis</h1>
     <p class="subtitulo" id="subtitulo-pagina">Resultados atualizados automaticamente a cada 48 horas pelo GitHub Actions.</p>
     <p class="atualizacao" id="ultima-atualizacao"></p>
-    <p class="atualizacao" id="creditos-scrapingbee"></p>
   </div>
 </div>
 
@@ -884,7 +916,7 @@
 
   <p class="aviso" id="aviso-rodape">
     Os resultados vêm do arquivo <code>imoveis.json</code>, gerado automaticamente pelo GitHub Actions
-    a cada 6 horas. Para adicionar ou remover sites da busca, edite o arquivo <code>fontes.json</code>
+    a cada 48 horas. Para adicionar ou remover sites da busca, edite o arquivo <code>fontes.json</code>
     no repositório. Para forçar uma atualização imediata, vá na aba <strong>Actions</strong> do
     repositório → <strong>Buscar imóveis</strong> → <strong>Run workflow</strong>.
   </p>
@@ -899,11 +931,30 @@ const WHATSAPP_CORRETOR = "551132806090"; // Seu número
 const DIAS_EXPIRAR = 10;
 
 // ============================================================
+// PORTÃO DE ACESSO (protege a tela do corretor)
+// ============================================================
+// Isto NÃO é uma senha guardada em texto puro — é o "hash" (SHA-256) dela.
+// Ninguém consegue ler a senha original a partir daqui, só conferir se bateu.
+//
+// ⚠️ TROQUE ISTO antes de publicar! O valor abaixo é só um placeholder e
+// corresponde à senha "mude-esta-senha". Veja no chat com o Claude como gerar
+// o hash da sua senha de verdade (é uma linha de código só).
+const SENHA_HASH_CORRETOR = "2f9d479d33f74698a7ecdd1ef3f24e0ff867f3121b7bad8644b1f10fbd5cc25e"; // senha definida pelo corretor
+
+// ============================================================
 // UTILITÁRIOS
 // ============================================================
 
 function limparTexto(txt){
   return (txt || "").replace(/\s+/g, " ").trim();
+}
+
+// Escapa qualquer texto vindo dos sites scrapeados antes de jogar no HTML da página.
+// Sem isso, um site com HTML/JS malformado poderia injetar código na tela do corretor ou do cliente.
+function escaparHtml(texto){
+  return String(texto ?? "").replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
 }
 
 function precoParaNumero(precoStr){
@@ -1306,25 +1357,25 @@ async function renderizarCliente(itens){
       <div class="galeria-wrap">
         <div class="galeria-scroll">
           ${listaImagens.length > 0
-            ? listaImagens.map(url => `<img src="${url}" alt="" loading="lazy" onerror="this.remove()">`).join("")
+            ? listaImagens.map(url => `<img src="${escaparHtml(url)}" alt="" loading="lazy" onerror="this.remove()">`).join("")
             : `<div class="foto-placeholder"><img src="favicon.svg" alt=""></div>`
           }
         </div>
         ${listaImagens.length > 1 ? `<span class="galeria-contagem">1/${listaImagens.length} · arraste →</span>` : ""}
       </div>
       <div class="info">
-        ${item.preco ? `<p class="preco">${item.preco}</p>` : ""}
-        <p class="titulo">${item.titulo || "Imóvel"}</p>
+        ${item.preco ? `<p class="preco">${escaparHtml(item.preco)}</p>` : ""}
+        <p class="titulo">${escaparHtml(item.titulo) || "Imóvel"}</p>
         <div class="meta">
-          ${item.tipo ? `<span>${item.tipo}</span>` : ""}
-          ${item.quartos ? `<span>${item.quartos} qts</span>` : ""}
-          ${item.suites ? `<span>${item.suites} suítes</span>` : ""}
-          ${item.vagas ? `<span>${item.vagas} vagas</span>` : ""}
-          ${item.area ? `<span>${item.area} m²</span>` : ""}
-          ${(item.bairro || item.cidade) ? `<span>${[item.bairro, item.cidade].filter(Boolean).join(", ")}</span>` : ""}
+          ${item.tipo ? `<span>${escaparHtml(item.tipo)}</span>` : ""}
+          ${item.quartos ? `<span>${escaparHtml(item.quartos)} qts</span>` : ""}
+          ${item.suites ? `<span>${escaparHtml(item.suites)} suítes</span>` : ""}
+          ${item.vagas ? `<span>${escaparHtml(item.vagas)} vagas</span>` : ""}
+          ${item.area ? `<span>${escaparHtml(item.area)} m²</span>` : ""}
+          ${(item.bairro || item.cidade) ? `<span>${escaparHtml([item.bairro, item.cidade].filter(Boolean).join(", "))}</span>` : ""}
         </div>
         ${dataHtml}
-        ${item.fonte ? `<p class="fonte-discreta">Fonte: ${item.fonte}</p>` : ""}
+        ${item.fonte ? `<p class="fonte-discreta">Fonte: ${escaparHtml(item.fonte)}</p>` : ""}
       </div>
     `;
     resultadosDiv.appendChild(linha);
@@ -1359,6 +1410,64 @@ async function renderizarCliente(itens){
 }
 
 // ============================================================
+// PORTÃO DE ACESSO
+// ============================================================
+
+async function calcularHashSha256(texto){
+  const bytes = new TextEncoder().encode(texto);
+  const buffer = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(buffer)).map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+function acessoJaLiberado(){
+  return localStorage.getItem("radar_acesso_liberado") === "1";
+}
+
+async function tentarLiberarAcesso(senhaDigitada){
+  const hash = await calcularHashSha256(senhaDigitada);
+  if(hash === SENHA_HASH_CORRETOR){
+    localStorage.setItem("radar_acesso_liberado", "1");
+    return true;
+  }
+  return false;
+}
+
+function mostrarPortao(){
+  document.getElementById("portao-corretor").style.display = "flex";
+}
+
+function esconderPortao(){
+  document.getElementById("portao-corretor").style.display = "none";
+}
+
+async function iniciarPortaoDeAcesso(aoLiberar){
+  if(acessoJaLiberado()){
+    aoLiberar();
+    return;
+  }
+  mostrarPortao();
+  document.getElementById("campo-senha-portao").focus();
+
+  const tentar = async () => {
+    const senha = document.getElementById("campo-senha-portao").value;
+    const erro = document.getElementById("erro-portao");
+    const ok = await tentarLiberarAcesso(senha);
+    if(ok){
+      erro.textContent = "";
+      esconderPortao();
+      aoLiberar();
+    } else {
+      erro.textContent = "Senha incorreta. Tente de novo.";
+    }
+  };
+
+  document.getElementById("botao-entrar-portao").addEventListener("click", tentar);
+  document.getElementById("campo-senha-portao").addEventListener("keydown", (ev) => {
+    if(ev.key === "Enter") tentar();
+  });
+}
+
+// ============================================================
 // MODO NORMAL (CORRETOR)
 // ============================================================
   
@@ -1373,14 +1482,6 @@ async function carregarDados(){
     TODOS_IMOVEIS = dados.imoveis || [];
     document.getElementById("ultima-atualizacao").textContent = formatarDataRelativa(dados.atualizadoEm);
     preencherFiltroCidade();
-
-    const elCreditos = document.getElementById("creditos-scrapingbee");
-    if(dados.creditosScrapingBee != null){
-      elCreditos.textContent = `Créditos disponíveis: ${dados.creditosScrapingBee.toLocaleString("pt-BR")}` +
-        (dados.creditosScrapingBeeParcial ? " (parcial)" : "");
-    } else {
-      elCreditos.textContent = "";
-    }
 
     if(dados.erros && dados.erros.length > 0){
       status.className = "status erro";
@@ -1522,28 +1623,28 @@ function aplicarFiltrosEExibir(retornaFiltrados = false){
     card.innerHTML = `
       <div class="foto-wrap">
         ${item.imagem
-          ? `<img src="${item.imagem}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;foto-placeholder&quot;><img src=&quot;favicon.svg&quot; alt=&quot;&quot;></div>'">`
+          ? `<img src="${escaparHtml(item.imagem)}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;foto-placeholder&quot;><img src=&quot;favicon.svg&quot; alt=&quot;&quot;></div>'">`
           : `<div class="foto-placeholder"><img src="favicon.svg" alt=""></div>`
         }
-        <span class="selo-fonte">${item.fonte}</span>
+        <span class="selo-fonte">${escaparHtml(item.fonte)}</span>
         <label class="selo-check">
-          <input type="checkbox" ${SELECIONADOS.has(item.link) ? "checked" : ""} data-link="${item.link}">
+          <input type="checkbox" ${SELECIONADOS.has(item.link) ? "checked" : ""} data-link="${escaparHtml(item.link)}">
         </label>
-        ${item.preco ? `<span class="selo-preco">${item.preco}</span>` : ""}
+        ${item.preco ? `<span class="selo-preco">${escaparHtml(item.preco)}</span>` : ""}
         ${dataHtml}
       </div>
       <div class="corpo">
-        <p class="titulo">${item.titulo || "Imóvel"}</p>
+        <p class="titulo">${escaparHtml(item.titulo) || "Imóvel"}</p>
         <div class="meta">
-          ${item.tipo ? `<span>${item.tipo}</span>` : ""}
-          ${item.quartos ? `<span>${item.quartos} qts</span>` : ""}
-          ${item.suites ? `<span>${item.suites} suítes</span>` : ""}
-          ${item.vagas ? `<span>${item.vagas} vagas</span>` : ""}
-          ${item.area ? `<span>${item.area} m²</span>` : ""}
-          ${(item.bairro || item.cidade) ? `<span>${[item.bairro, item.cidade].filter(Boolean).join(", ")}</span>` : ""}
-          ${idade ? `<span class="data-idade">📅 ${idade}</span>` : ""}
+          ${item.tipo ? `<span>${escaparHtml(item.tipo)}</span>` : ""}
+          ${item.quartos ? `<span>${escaparHtml(item.quartos)} qts</span>` : ""}
+          ${item.suites ? `<span>${escaparHtml(item.suites)} suítes</span>` : ""}
+          ${item.vagas ? `<span>${escaparHtml(item.vagas)} vagas</span>` : ""}
+          ${item.area ? `<span>${escaparHtml(item.area)} m²</span>` : ""}
+          ${(item.bairro || item.cidade) ? `<span>${escaparHtml([item.bairro, item.cidade].filter(Boolean).join(", "))}</span>` : ""}
+          ${idade ? `<span class="data-idade">📅 ${escaparHtml(idade)}</span>` : ""}
         </div>
-        <a class="ver" href="${item.link}" target="_blank" rel="noopener">Ver imóvel →</a>
+        <a class="ver" href="${escaparHtml(item.link)}" target="_blank" rel="noopener">Ver imóvel →</a>
       </div>
     `;
     resultadosDiv.appendChild(card);
@@ -1714,10 +1815,12 @@ document.getElementById("bairro-filtro").addEventListener("input", aplicarFiltro
 
 window.addEventListener("DOMContentLoaded", () => {
   if(!tentarRenderizarModoCliente()){
-    carregarDados();
-    if(obterToken()){
-      document.getElementById("status-token").textContent = "Token salvo neste navegador ✓";
-    }
+    iniciarPortaoDeAcesso(() => {
+      carregarDados();
+      if(obterToken()){
+        document.getElementById("status-token").textContent = "Token salvo neste navegador ✓";
+      }
+    });
   }
 });
 </script>
