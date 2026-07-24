@@ -1670,23 +1670,6 @@ document.getElementById("botao-copiar-link").addEventListener("click", () => {
   });
 });
 
-document.getElementById("botao-enviar-whats").addEventListener("click", async (ev) => {
-  const status = document.getElementById("status-token");
-  await comEstadoDeCarregamento(ev.currentTarget, "Gerando…", async () => {
-    try{
-      const link = await montarLinkCliente();
-      const mensagem = `Olá! Separei estes imóveis pra você conferir:\n${link}`;
-      window.open("https://wa.me/?text=" + encodeURIComponent(mensagem), "_blank");
-      status.className = "status";
-      status.textContent = "";
-    } catch(e){
-      status.className = "status erro";
-      status.textContent = e.message;
-      document.getElementById("painel-config").open = true;
-    }
-  });
-});
-
 document.getElementById("botao-salvar-token").addEventListener("click", () => {
   const campo = document.getElementById("campo-token-github");
   const status = document.getElementById("status-token");
