@@ -1,10 +1,11 @@
 [
   {
-    "nome": "Kenlo - Portal Geral",
-    "url": "https://portal.kenlo.com.br/imoveis/a-venda/itu",
-    "jsNecessario": true,
-    "prioridade": 10,
-    "wait": 8000
+  "nome": "Kenlo - Portal Geral",
+  "url": "https://portal.kenlo.com.br/imoveis/a-venda/itu",
+  "jsNecessario": true,
+  "prioridade": 1,
+  "wait": 8000,
+  "paginas": 10
   },
   {
     "nome": "Marcio Marins",
