@@ -640,19 +640,6 @@
     .linha-imovel .galeria-scroll{ aspect-ratio:16 / 10; }
   }
 
-  .rodape-cliente{
-    grid-column:1 / -1;
-    max-width:1080px;
-    margin:20px auto 0;
-    padding:28px;
-    text-align:center;
-  }
-  .rodape-cliente .botao{
-    font-size:15px;
-    padding:15px 30px;
-    border-radius:9px;
-  }
-
   @media (max-width: 480px){
     .resultados{ grid-template-columns:1fr 1fr; gap:12px; }
     .card-imovel .titulo{ font-size:14px; }
@@ -665,11 +652,11 @@
      ============================================================ */
 
   .whatsapp-fixo {
+    display: none; /* só aparece na tela do cliente (.modo-cliente) */
     position: fixed;
     bottom: 24px;
     right: 24px;
     z-index: 999;
-    display: flex;
     align-items: center;
     justify-content: center;
     width: 60px;
@@ -682,6 +669,10 @@
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     animation: pulse-whats 2.5s infinite;
+  }
+
+  .modo-cliente .whatsapp-fixo {
+    display: flex;
   }
 
   .whatsapp-fixo:hover {
@@ -875,7 +866,7 @@
     <span class="contagem-selecao" id="contagem-selecao">0 imóveis selecionados</span>
     <div class="acoes">
       <button class="botao botao-fantasma" id="botao-limpar-selecao">Limpar seleção</button>
-      <button class="botao botao-ouro" id="botao-gerar-link">Gerar link para cliente</button>
+      <button class="botao botao-whats" id="botao-gerar-link">Enviar seleção por WhatsApp</button>
        </div>
   </div>
 
@@ -1236,15 +1227,10 @@ function prepararTelaModoCliente(){
   document.getElementById("aviso-rodape").style.display = "none";
 }
 
-function adicionarBotaoWhatsCliente(mensagem){
-  if(!WHATSAPP_CORRETOR) return;
-  const rodape = document.createElement("div");
-  rodape.className = "rodape-cliente";
-  rodape.innerHTML = `<a class="botao botao-whats" style="text-decoration:none; display:inline-block;" target="_blank" rel="noopener"
-    href="https://wa.me/${WHATSAPP_CORRETOR}?text=${encodeURIComponent(mensagem)}">
-    Falar com o corretor →
-  </a>`;
-  document.getElementById("conteudo-principal").appendChild(rodape);
+function atualizarBotaoWhatsFixo(mensagem){
+  const botaoFixo = document.getElementById("whatsapp-fixo");
+  if(!botaoFixo || !WHATSAPP_CORRETOR) return;
+  botaoFixo.href = `https://wa.me/${WHATSAPP_CORRETOR}?text=${encodeURIComponent(mensagem)}`;
 }
 
 function renderizarExpirado(){
@@ -1257,7 +1243,7 @@ function renderizarExpirado(){
       para receber uma seleção atualizada.
     </p>
   `;
-  adicionarBotaoWhatsCliente("Olá! O link de imóveis que você me enviou expirou — pode me mandar uma seleção atualizada?");
+  atualizarBotaoWhatsFixo("Olá! O link de imóveis que você me enviou expirou — pode me mandar uma seleção atualizada?");
 }
 
 async function renderizarCliente(itens){
@@ -1369,7 +1355,7 @@ async function renderizarCliente(itens){
   `;
   resultadosDiv.appendChild(disclaimerFinal);
 
-  adicionarBotaoWhatsCliente("Olá! Vi a seleção de imóveis que você separou pra mim e quero saber mais.");
+  atualizarBotaoWhatsFixo("Olá! Vi a seleção de imóveis que você separou pra mim e quero saber mais.");
 }
 
 // ============================================================
@@ -1651,6 +1637,11 @@ document.getElementById("botao-gerar-link").addEventListener("click", async (ev)
       document.getElementById("caixa-link").style.display = "block";
       status.className = "status";
       status.textContent = "";
+
+      // Abre o WhatsApp na hora, com a mensagem pronta e o link.
+      // Sem número fixo: você escolhe o contato/cliente na hora de enviar.
+      const mensagem = `Veja a seleção de imóveis que preparei para você:\n\n${link}`;
+      window.open(`https://wa.me/?text=${encodeURIComponent(mensagem)}`, "_blank");
     } catch(e){
       status.className = "status erro";
       status.textContent = e.message;
@@ -1734,6 +1725,7 @@ window.addEventListener("DOMContentLoaded", () => {
   <!-- ========== BOTÃO WHATSAPP FIXO (igual ao simulador) ========== -->
   <a href="https://wa.me/551132806090" 
      class="whatsapp-fixo" 
+     id="whatsapp-fixo"
      target="_blank" 
      rel="noopener noreferrer" 
      aria-label="Falar com o corretor no WhatsApp">
