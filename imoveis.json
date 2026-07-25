@@ -1,6 +1,6 @@
 {
-  "atualizadoEm": "2026-07-24T18:26:19.228Z",
-  "geradoEm": "2026-07-24",
+  "atualizadoEm": "2026-07-25T12:53:12.203Z",
+  "geradoEm": "2026-07-25",
   "total": 295,
   "imoveis": [
     {
@@ -2485,7 +2485,14 @@
       "fonte": "Kenlo - Portal Geral",
       "titulo": "TE1852-SET Terreno Condomínio Villas Santo Antônio - Itu - SP 300 m² Venda R$ 360.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hn7dhk9gs9u8MSY5Humxar266rvfOcgEuX34rt75760eDWQP7l5bsPj6vaV1qVo7JuevgLbEA8ZuJkZya3bpuAPyR1jwfJp1XSFYt5c0R79V4vuSZC-gLpDKaV0wA+gXGEE83GtTXdRZDRCFp5LLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-CyV+byud9d5uuVoxIz6oKwVnAHLtJ6B3owYTEh6apbRuEMgI+6OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hn7dhk9gs9u8MSY5Humxar266rvfOcgEuX34rt75760eDWQP7l5bsPj6vaV1qVo7JuevgLbEA8ZuJkZya3bpuAPyR1jwfJp1XSFYt5c0R79V4vuSZC-gLpDKaV0wA+gXGEE83GtTXdRZDRCFp5LLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-CyV+byud9d5uuVoxIz6oKwVnAHLtJ6B3owYTEh6apbRuEMgI+6OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg",
+        "https://static-sites.kenlo.io/2.4.1/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hn7dhk9gs9u8MSY5Humxar266rvfOcgEuX34rt75760eDWQP7l5bsPj6vaV1qVo7JuevgLbEA8ZuJkZya3bpuAPyR1jwfJp1XSFYt5c0R79V4vuSZC-gLpDKaV0wA+gXGEE83GtTXdRZDRCFp5LLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cwFWQ3K0gKs+uX9YanPAKnlmVGLVH7Ry4lYPHh6avak-QMVJs9qXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxtk+99K3jZgipcCa7WYsXa15qOju-y1-V-Pp6jHlbeDj8P8fMrhmZo-6fPvAEay7PY8f+14AW5VP8hBZA7uf9jfFUlBqQWR+GrgfqdlEjQKgQo5uiAJ5ne6BMOGyQQz4xqHE9CdtXSRR6nsCFgHLLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cwFWQ3K0gKs+uX9YanPAKnlmVGLVH7Ry4lYPHh6avak-QMVJs9qXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0VYzog2vAUug9FAZ72xjTGr4r+Puo2ItB+z28Lo5ajG09zhQPaCyZIx75ncMVW0rK1mf8N9Axx5TM0hGEa6Aqm3Yldw+Ruz-mDLY6VDZFtz-SIejw9550W8AZeB7UMwyh6PK9TzigGNb+WjInxsTbMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cwFWQ3K0gKs+uX9YanPAKnlmVGLVH7Ry4lYPHh6avak-QMVJs9qXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxpiwuhw4jpvgtAUZISAthih44uPutnBjR6Q0638spXc9OrveZrkz90n+4TXGE+bj5VKXYUNOVBaQcxoVDb0cJumOSFgmzKVpmrLU+UDGnJYhjgvjghI7wvhDbi88WEZ5QWMLPnekwWnSZ6+E1lrKLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cwFWQ3K0gKs+uX9YanPAKnlmVGLVH7Ry4lYPHh6avak-QMVJs9qXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3U8zYpS6TMwiu0IWKSGpHDWg56x+8m1px+-pMv-4ISH-vzfX8XM9rczz6nTN2S3qIp5V+YsFGx3fM9-QUL6W67bJUZMmx2Uh2zsF4xLBnRewDY5ryxNn37hBK-y8GdqwjyoCaPjhg6QUJfoOwF3NLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cwFWQ3K0gKs+uX9YanPAKnlmVGLVH7Ry4lYPHh6avak-QMVJs9qXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Fa-e5x6DsMmMc2ZpSUpAis0YjP5eq09GGx-pqJjYvb--PQeP7ikow4gbyjNVuyi5Z9V8YZPgV1YfVjSxq1VIajPCFPoRWh43X1XZVhWnZO5So3th5V6XG3A6iQ0kxthxmqB8r-rT+2Yqq6DkN1QPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-CyV+byud9d5uuVoxIz6oKwVnAHLtJ6B3owYTEh6apbRuEMgI+6OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg"
       ],
       "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hn7dhk9gs9u8MSY5Humxar266rvfOcgEuX34rt75760eDWQP7l5bsPj6vaV1qVo7JuevgLbEA8ZuJkZya3bpuAPyR1jwfJp1XSFYt5c0R79V4vuSZC-gLpDKaV0wA+gXGEE83GtTXdRZDRCFp5LLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-CyV+byud9d5uuVoxIz6oKwVnAHLtJ6B3owYTEh6apbRuEMgI+6OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg",
       "preco": "R$ 360.000",
@@ -2498,7 +2505,8 @@
       "tipo": "terreno",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://portal.kenlo.com.br/imovel/terreno-itu-300-m/TE1852-SET?from=sale"
+      "link": "https://portal.kenlo.com.br/imovel/terreno-itu-300-m/TE1852-SET?from=sale",
+      "galeriaCompleta": true
     },
     {
       "fonte": "Kenlo - Portal Geral",
