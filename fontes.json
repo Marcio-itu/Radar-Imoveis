@@ -100,5 +100,14 @@
     "paginas": 40,
     "parametroPagina": "pag",
     "plataforma": "imobibrasil"
+  },
+  {
+    "nome": "Grupo Kaion",
+    "url": "https://www.grupokaion.com.br/imoveis/a-venda/casa/itu",
+    "jsNecessario": true,
+    "prioridade": 17,
+    "wait": 8000,
+    "paginas": 10,
+    "parametroPagina": "pagina=2"
   }
 ]
