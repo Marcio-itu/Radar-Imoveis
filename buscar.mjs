@@ -130,34 +130,6 @@ function normalizarData(valor) {
   return null;
 }
 
-function extrairDataDePrimeiraImagemImobiBrasil(imagens) {
-  // Sites da plataforma ImobiBrasil nomeiam as fotos com um carimbo de data/hora
-  // no próprio arquivo, tipo "thumb15-202605211602283489.jpg" (2026-05-21 16:02:28...).
-  // Isso não é uma "data de publicação" declarada em lugar nenhum, mas é o melhor
-  // sinal disponível: a foto mais antiga entre as do imóvel é uma boa aproximação
-  // de quando ele entrou no site.
-  if (!imagens || imagens.length === 0) return null;
-
-  let menorData = null;
-  for (const url of imagens) {
-    const match = url.match(/(\d{17,18})/);
-    if (!match) continue;
-
-    const digitos = match[1];
-    const ano = parseInt(digitos.slice(0, 4), 10);
-    const mes = parseInt(digitos.slice(4, 6), 10);
-    const dia = parseInt(digitos.slice(6, 8), 10);
-
-    if (ano < 2015 || ano > 2035) continue;
-    if (mes < 1 || mes > 12) continue;
-    if (dia < 1 || dia > 31) continue;
-
-    const dataStr = `${digitos.slice(0, 4)}-${digitos.slice(4, 6)}-${digitos.slice(6, 8)}`;
-    if (!menorData || dataStr < menorData) menorData = dataStr;
-  }
-  return menorData;
-}
-
 function extrairDataPorFonte(html, nomeFonte) {
   const dataJsonLd = extrairDataDoJsonLd(html);
   if (dataJsonLd) return dataJsonLd;
@@ -441,11 +413,8 @@ function extrairCardsImobWeb(htmlBruto, baseUrl, nomeFonte) {
       titulo = "Imóvel " + (href.split('/').pop() || '');
     }
 
-    // Data
-    let dataPublicacao = extrairDataPorFonte(cardHtml, nomeFonte);
-    if (!dataPublicacao) {
-      dataPublicacao = extrairDataDePrimeiraImagemImobiBrasil(imagens);
-    }
+    // 🔴 Data
+    const dataPublicacao = extrairDataPorFonte(cardHtml, nomeFonte);
 
     registrar(href, {
       fonte: nomeFonte,
@@ -977,8 +946,7 @@ async function main() {
         if (pagina > 1) {
           // Verifica se a URL já tem parâmetros
           const separador = urlPagina.includes('?') ? '&' : '?';
-          const parametroPagina = fonte.parametroPagina || 'pagina';
-          urlPagina = urlPagina + separador + parametroPagina + '=' + pagina;
+          urlPagina = urlPagina + separador + 'pagina=' + pagina;
         }
 
         console.log(`   📄 Buscando página ${pagina}/${totalPaginas}: ${urlPagina}`);
@@ -1003,7 +971,6 @@ async function main() {
         let itens;
 
         const isImobWeb = 
-          fonte.plataforma === "imobibrasil" ||
           fonte.nome.includes("Marcio Marins") || 
           fonte.url.includes("marciomarins.com.br");
 
