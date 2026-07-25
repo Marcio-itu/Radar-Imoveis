@@ -429,6 +429,44 @@
     font-weight:500;
     letter-spacing:.02em;
   }
+
+  /* ============================================================
+     BOLINHA DE IDADE DA PUBLICAÇÃO (discreta, ao lado do título)
+     ============================================================ */
+  .bolinha-idade{
+    display:inline-block;
+    width:9px;
+    height:9px;
+    min-width:9px;
+    border-radius:50%;
+    margin-right:7px;
+    vertical-align:middle;
+    position:relative;
+    top:-1px;
+  }
+  .bolinha-verde{ background:#2ecc71; }
+  .bolinha-amarela{ background:#f1c40f; }
+  .bolinha-vermelha{ background:#e74c3c; }
+  .bolinha-preta{ background:#3a3a3a; }
+
+  .legenda-idade{
+    grid-column:1 / -1;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+    padding:14px 16px 4px;
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:11.5px;
+    color:#94a3b8;
+  }
+  .legenda-idade span{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    white-space:nowrap;
+  }
+
   .card-imovel label.selo-check{
     position:absolute;
     right:12px;
@@ -893,6 +931,58 @@
     </div>
   </details>
 
+  <!-- ========== GERENCIAR FONTES (admin) ========== -->
+  <details class="painel" id="painel-fontes" style="padding:16px 24px;">
+    <summary style="cursor:pointer; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:600; color:var(--tinta-suave);">🌐 Gerenciar fontes (sites pesquisados)</summary>
+    <div style="margin-top:14px; font-family:Arial, Helvetica, sans-serif; font-size:13px;">
+      <p style="color:var(--tinta-suave); margin:0 0 10px;">
+        Adicione um site novo pra pesquisar automaticamente, ou remova um que não usa mais.
+        A mudança entra em vigor na próxima busca automática (até 48h), ou você pode disparar
+        uma busca agora mesmo lá embaixo.
+      </p>
+
+      <div id="lista-fontes" style="display:flex; flex-direction:column; gap:8px; margin-bottom:16px;"></div>
+
+      <hr style="border:none; border-top:1px solid var(--linha); margin:16px 0;">
+
+      <p style="color:var(--tinta-suave); margin:0 0 10px;"><strong>Adicionar novo site</strong></p>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <input type="text" id="campo-fonte-nome" placeholder="Nome da imobiliária (ex: Imóveis Silva)">
+        <input type="text" id="campo-fonte-url" placeholder="Link da página de imóveis à venda (https://...)">
+        <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center;">
+          <label style="display:flex; align-items:center; gap:6px;">
+            Páginas: <input type="number" id="campo-fonte-paginas" min="1" max="60" value="1" style="width:64px;">
+          </label>
+          <label style="display:flex; align-items:center; gap:6px;">
+            Parâmetro de página na URL: <input type="text" id="campo-fonte-param-pagina" value="pagina" style="width:80px;">
+          </label>
+          <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+            <input type="checkbox" id="campo-fonte-js" checked> Site carrega com JavaScript (marque se não tiver certeza)
+          </label>
+        </div>
+        <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+          <input type="checkbox" id="campo-fonte-imobibrasil"> É da plataforma <strong>ImobiBrasil</strong> (mesma do Marcio Marins — costuma ter "Site para Imobiliárias" no rodapé)
+        </label>
+        <p style="color:var(--tinta-suave); font-size:12px; margin:0;">
+          Não sabe o parâmetro de página? Deixe "pagina" — se não funcionar, é só olhar o link da página 2 dos
+          resultados no site (ex: "...?pag=2" → o parâmetro é <code>pag</code>).
+        </p>
+        <button class="botao botao-ouro" id="botao-adicionar-fonte" style="align-self:flex-start;">Adicionar fonte</button>
+      </div>
+      <p class="status" id="status-fontes"></p>
+
+      <hr style="border:none; border-top:1px solid var(--linha); margin:16px 0;">
+
+      <p style="color:var(--tinta-suave); margin:0 0 10px;">
+        <strong>Rodar a busca agora</strong> (opcional) — em vez de esperar até 48h. Precisa que seu token
+        do GitHub também tenha a permissão <strong>Actions: Read and write</strong> (além de Contents).
+        Se der erro de permissão, rode pela aba <strong>Actions</strong> do repositório no GitHub mesmo.
+      </p>
+      <button class="botao botao-fantasma" id="botao-rodar-agora">Rodar busca agora</button>
+      <p class="status" id="status-rodar-agora"></p>
+    </div>
+  </details>
+
   <!-- ========== BARRA DE SELEÇÃO ========== -->
   <div class="barra-selecao" id="barra-selecao" style="display:none;">
     <span class="contagem-selecao" id="contagem-selecao">0 imóveis selecionados</span>
@@ -988,6 +1078,29 @@ function formatarDataRelativa(isoString){
 // ============================================================
 // IDADE DO ANÚNCIO
 // ============================================================
+
+// Classifica o imóvel por tempo de publicação na fonte original, usando meses
+// de calendário (não dias fixos) pra ser preciso mesmo com meses de tamanhos
+// diferentes.
+function classificarIdadePublicacao(dataPublicacao){
+  if(!dataPublicacao){
+    return { cor: "preta", rotulo: "Data de publicação desconhecida" };
+  }
+  const dataPub = new Date(dataPublicacao + "T00:00:00");
+  if(isNaN(dataPub.getTime())){
+    return { cor: "preta", rotulo: "Data de publicação desconhecida" };
+  }
+
+  const hoje = new Date();
+  const limite6m = new Date(dataPub);  limite6m.setMonth(limite6m.getMonth() + 6);
+  const limite12m = new Date(dataPub); limite12m.setMonth(limite12m.getMonth() + 12);
+  const limite18m = new Date(dataPub); limite18m.setMonth(limite18m.getMonth() + 18);
+
+  if(hoje <= limite6m)  return { cor: "verde",    rotulo: "Publicado há até 6 meses" };
+  if(hoje <= limite12m) return { cor: "amarela",  rotulo: "Publicado entre 6 meses e 1 ano" };
+  if(hoje <= limite18m) return { cor: "vermelha", rotulo: "Publicado entre 1 ano e 1 ano e meio" };
+  return { cor: "preta", rotulo: "Publicado há mais de 1 ano e meio" };
+}
 
 function calcularIdade(dataPublicacao) {
   if (!dataPublicacao) return null;
@@ -1085,9 +1198,9 @@ function salvarTokenLocal(token){
   localStorage.setItem("radar_github_token", token);
 }
 
-async function lerLinksJsonViaApi(){
+async function lerJsonDoRepoViaApi(caminho){
   const token = obterToken();
-  const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${LINKS_PATH}?ref=${GITHUB_BRANCH}&_=${Date.now()}`;
+  const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${caminho}?ref=${GITHUB_BRANCH}&_=${Date.now()}`;
   const headers = { "Accept": "application/vnd.github.raw+json" };
   if(token) headers["Authorization"] = "Bearer " + token;
 
@@ -1097,37 +1210,38 @@ async function lerLinksJsonViaApi(){
   const bruto = await resp.text();
   const parseado = JSON.parse(bruto);
 
-  if(parseado && typeof parseado.content === "string" && !("links" in parseado)){
+  // Se a API não respeitou o header "raw" e devolveu o objeto com content em base64:
+  if(parseado && typeof parseado.content === "string" && typeof parseado.encoding === "string"){
     const conteudo = decodeURIComponent(escape(atob(parseado.content.replace(/\n/g, ""))));
     return JSON.parse(conteudo);
   }
   return parseado;
 }
 
-async function lerLinksJsonViaRaw(){
-  const url = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${LINKS_PATH}?_=${Date.now()}`;
+async function lerJsonDoRepoViaRaw(caminho){
+  const url = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${caminho}?_=${Date.now()}`;
   const resp = await fetch(url);
   if(!resp.ok) throw new Error("HTTP " + resp.status);
   return await resp.json();
 }
 
-async function lerLinksJson(){
+async function lerJsonDoRepo(caminho){
   try{
-    return await lerLinksJsonViaApi();
+    return await lerJsonDoRepoViaApi(caminho);
   } catch(erroApi){
     try{
-      return await lerLinksJsonViaRaw();
+      return await lerJsonDoRepoViaRaw(caminho);
     } catch(erroRaw){
-      throw new Error("Não consegui ler links.json.");
+      throw new Error(`Não consegui ler ${caminho}.`);
     }
   }
 }
 
-async function escreverLinksJson(aplicarMudanca, mensagemCommit, tentativas = 3){
+async function escreverJsonNoRepo(caminho, aplicarMudanca, mensagemCommit, tentativas = 3){
   const token = obterToken();
   if(!token) throw new Error("Token do GitHub não configurado.");
 
-  const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${LINKS_PATH}`;
+  const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${caminho}`;
 
   for(let tentativa = 1; tentativa <= tentativas; tentativa++){
     const respAtual = await fetch(apiUrl + `?ref=${GITHUB_BRANCH}&_=${Date.now()}`, {
@@ -1166,6 +1280,185 @@ async function escreverLinksJson(aplicarMudanca, mensagemCommit, tentativas = 3)
 
     const erro = await respPut.json().catch(() => ({}));
     throw new Error("Falha ao salvar no GitHub.");
+  }
+}
+
+// Wrappers específicos (mantêm o resto do código funcionando sem mudanças)
+async function lerLinksJson(){
+  return lerJsonDoRepo(LINKS_PATH);
+}
+async function escreverLinksJson(aplicarMudanca, mensagemCommit, tentativas = 3){
+  return escreverJsonNoRepo(LINKS_PATH, aplicarMudanca, mensagemCommit, tentativas);
+}
+
+const FONTES_PATH = "fontes.json";
+async function lerFontesJson(){
+  return lerJsonDoRepo(FONTES_PATH);
+}
+async function escreverFontesJson(aplicarMudanca, mensagemCommit, tentativas = 3){
+  return escreverJsonNoRepo(FONTES_PATH, aplicarMudanca, mensagemCommit, tentativas);
+}
+
+// ============================================================
+// GERENCIAR FONTES (admin)
+// ============================================================
+
+async function carregarFontesParaExibir(){
+  const container = document.getElementById("lista-fontes");
+  try{
+    const resp = await fetch("./fontes.json?_=" + Date.now());
+    if(!resp.ok) throw new Error("HTTP " + resp.status);
+    const fontes = await resp.json();
+    renderizarListaFontes(fontes);
+  } catch(e){
+    container.innerHTML = `<p class="status erro">Não consegui carregar a lista de fontes.</p>`;
+  }
+}
+
+function renderizarListaFontes(fontes){
+  const container = document.getElementById("lista-fontes");
+  if(!Array.isArray(fontes) || fontes.length === 0){
+    container.innerHTML = `<p style="color:var(--tinta-suave); margin:0;">Nenhuma fonte cadastrada ainda.</p>`;
+    return;
+  }
+
+  container.innerHTML = fontes.map((fonte) => {
+    const paginas = fonte.paginas || 1;
+    return `
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 12px; background:rgba(0,0,0,0.03); border-radius:8px;">
+      <div style="min-width:0;">
+        <p style="margin:0; font-weight:600; color:var(--tinta);">${escaparHtml(fonte.nome)}</p>
+        <p style="margin:2px 0 0; font-size:12px; color:var(--tinta-suave); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+          ${escaparHtml(fonte.url)} · ${paginas} página${paginas > 1 ? "s" : ""}
+        </p>
+      </div>
+      <button class="link-limpo botao-remover-fonte" data-url="${escaparHtml(fonte.url)}" data-nome="${escaparHtml(fonte.nome)}" style="color:#c0392b; white-space:nowrap; flex-shrink:0;">Remover</button>
+    </div>
+  `;
+  }).join("");
+
+  container.querySelectorAll(".botao-remover-fonte").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const url = btn.getAttribute("data-url");
+      const nome = btn.getAttribute("data-nome");
+      if(confirm(`Remover "${nome}" da lista de fontes? Isso não apaga os imóveis já encontrados dela, só para de pesquisar lá.`)){
+        removerFonte(url);
+      }
+    });
+  });
+}
+
+async function adicionarFonte(){
+  const status = document.getElementById("status-fontes");
+  const nome = limparTexto(document.getElementById("campo-fonte-nome").value);
+  let url = limparTexto(document.getElementById("campo-fonte-url").value);
+  const paginas = parseInt(document.getElementById("campo-fonte-paginas").value, 10) || 1;
+  const parametroPagina = limparTexto(document.getElementById("campo-fonte-param-pagina").value) || "pagina";
+  const jsNecessario = document.getElementById("campo-fonte-js").checked;
+  const imobibrasil = document.getElementById("campo-fonte-imobibrasil").checked;
+
+  if(!nome || !url){
+    status.className = "status erro";
+    status.textContent = "Preencha o nome e o link do site.";
+    return;
+  }
+  if(!/^https?:\/\//i.test(url)) url = "https://" + url;
+  try{ new URL(url); } catch {
+    status.className = "status erro";
+    status.textContent = "Esse link não parece válido.";
+    return;
+  }
+
+  status.className = "status";
+  status.textContent = "Salvando…";
+
+  try{
+    await escreverFontesJson((fontesAtuais) => {
+      const lista = Array.isArray(fontesAtuais) ? fontesAtuais : [];
+      if(lista.some(f => f.url === url)){
+        throw new Error("Esse site já está cadastrado.");
+      }
+      const novaFonte = {
+        nome,
+        url,
+        jsNecessario,
+        prioridade: lista.length + 1,
+      };
+      if(jsNecessario) novaFonte.wait = 8000;
+      if(paginas > 1){
+        novaFonte.paginas = paginas;
+        novaFonte.parametroPagina = parametroPagina;
+      }
+      if(imobibrasil) novaFonte.plataforma = "imobibrasil";
+      return [...lista, novaFonte];
+    }, `Adiciona fonte via painel: ${nome}`);
+
+    status.className = "status";
+    status.textContent = "Fonte adicionada ✓ — vai valer na próxima busca automática.";
+    document.getElementById("campo-fonte-nome").value = "";
+    document.getElementById("campo-fonte-url").value = "";
+    document.getElementById("campo-fonte-paginas").value = "1";
+    document.getElementById("campo-fonte-param-pagina").value = "pagina";
+    document.getElementById("campo-fonte-js").checked = true;
+    document.getElementById("campo-fonte-imobibrasil").checked = false;
+    carregarFontesParaExibir();
+  } catch(e){
+    status.className = "status erro";
+    status.textContent = e.message || "Falha ao salvar.";
+  }
+}
+
+async function removerFonte(url){
+  const status = document.getElementById("status-fontes");
+  status.className = "status";
+  status.textContent = "Removendo…";
+  try{
+    await escreverFontesJson((fontesAtuais) => {
+      const lista = Array.isArray(fontesAtuais) ? fontesAtuais : [];
+      return lista.filter(f => f.url !== url);
+    }, "Remove fonte via painel");
+    status.className = "status";
+    status.textContent = "Fonte removida ✓";
+    carregarFontesParaExibir();
+  } catch(e){
+    status.className = "status erro";
+    status.textContent = e.message || "Falha ao remover.";
+  }
+}
+
+async function dispararBuscaAgora(){
+  const status = document.getElementById("status-rodar-agora");
+  const token = obterToken();
+  if(!token){
+    status.className = "status erro";
+    status.textContent = "Configure o token do GitHub primeiro, no painel de Configuração acima.";
+    return;
+  }
+  status.className = "status";
+  status.textContent = "Disparando…";
+  try{
+    const resp = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/actions/workflows/buscar.yml/dispatches`, {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + token,
+        "Accept": "application/vnd.github+json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ ref: GITHUB_BRANCH })
+    });
+    if(resp.status === 204){
+      status.className = "status";
+      status.textContent = "Busca disparada ✓ — leva alguns minutos, acompanhe pela aba Actions do GitHub.";
+    } else if(resp.status === 403 || resp.status === 404){
+      status.className = "status erro";
+      status.textContent = "Seu token não tem permissão pra isso (precisa de 'Actions: Read and write'). Rode pela aba Actions do GitHub.";
+    } else {
+      status.className = "status erro";
+      status.textContent = "Não consegui disparar (HTTP " + resp.status + "). Rode pela aba Actions do GitHub.";
+    }
+  } catch(e){
+    status.className = "status erro";
+    status.textContent = "Erro de conexão. Rode pela aba Actions do GitHub.";
   }
 }
 
@@ -1352,6 +1645,7 @@ async function renderizarCliente(itens){
 
     const idade = calcularIdade(item.dataPublicacao);
     const dataHtml = idade ? `<span class="data-idade-cliente">📅 ${idade}</span>` : "";
+    const classificacao = classificarIdadePublicacao(item.dataPublicacao);
 
     linha.innerHTML = `
       <div class="galeria-wrap">
@@ -1365,7 +1659,7 @@ async function renderizarCliente(itens){
       </div>
       <div class="info">
         ${item.preco ? `<p class="preco">${escaparHtml(item.preco)}</p>` : ""}
-        <p class="titulo">${escaparHtml(item.titulo) || "Imóvel"}</p>
+        <p class="titulo"><span class="bolinha-idade bolinha-${classificacao.cor}" title="${escaparHtml(classificacao.rotulo)}"></span>${escaparHtml(item.titulo) || "Imóvel"}</p>
         <div class="meta">
           ${item.tipo ? `<span>${escaparHtml(item.tipo)}</span>` : ""}
           ${item.quartos ? `<span>${escaparHtml(item.quartos)} qts</span>` : ""}
@@ -1405,6 +1699,16 @@ async function renderizarCliente(itens){
     Os imóveis desta seleção podem ter sido negociados e requerem consulta mediante seu interesse.
   `;
   resultadosDiv.appendChild(disclaimerFinal);
+
+  const legenda = document.createElement("div");
+  legenda.className = "legenda-idade";
+  legenda.innerHTML = `
+    <span><span class="bolinha-idade bolinha-verde"></span>Publicado há até 6 meses</span>
+    <span><span class="bolinha-idade bolinha-amarela"></span>Entre 6 meses e 1 ano</span>
+    <span><span class="bolinha-idade bolinha-vermelha"></span>Entre 1 ano e 1 ano e meio</span>
+    <span><span class="bolinha-idade bolinha-preta"></span>Mais de 1 ano e meio ou data desconhecida</span>
+  `;
+  resultadosDiv.appendChild(legenda);
 
   atualizarBotaoWhatsFixo("Olá! Vi a seleção de imóveis que você separou pra mim e quero saber mais.");
 }
@@ -1619,6 +1923,7 @@ function aplicarFiltrosEExibir(retornaFiltrados = false){
 
     const idade = calcularIdade(item.dataPublicacao);
     const dataHtml = idade ? `<span class="selo-data">📅 ${idade}</span>` : "";
+    const classificacao = classificarIdadePublicacao(item.dataPublicacao);
 
     card.innerHTML = `
       <div class="foto-wrap">
@@ -1634,7 +1939,7 @@ function aplicarFiltrosEExibir(retornaFiltrados = false){
         ${dataHtml}
       </div>
       <div class="corpo">
-        <p class="titulo">${escaparHtml(item.titulo) || "Imóvel"}</p>
+        <p class="titulo"><span class="bolinha-idade bolinha-${classificacao.cor}" title="${escaparHtml(classificacao.rotulo)}"></span>${escaparHtml(item.titulo) || "Imóvel"}</p>
         <div class="meta">
           ${item.tipo ? `<span>${escaparHtml(item.tipo)}</span>` : ""}
           ${item.quartos ? `<span>${escaparHtml(item.quartos)} qts</span>` : ""}
@@ -1649,6 +1954,18 @@ function aplicarFiltrosEExibir(retornaFiltrados = false){
     `;
     resultadosDiv.appendChild(card);
   });
+
+  if(filtrados.length > 0){
+    const legenda = document.createElement("div");
+    legenda.className = "legenda-idade";
+    legenda.innerHTML = `
+      <span><span class="bolinha-idade bolinha-verde"></span>Até 6 meses</span>
+      <span><span class="bolinha-idade bolinha-amarela"></span>6 meses a 1 ano</span>
+      <span><span class="bolinha-idade bolinha-vermelha"></span>1 a 1 ano e meio</span>
+      <span><span class="bolinha-idade bolinha-preta"></span>+1 ano e meio ou sem data</span>
+    `;
+    resultadosDiv.appendChild(legenda);
+  }
 
   document.querySelectorAll('.card-imovel input[type=checkbox]').forEach(chk => {
     chk.addEventListener("change", () => {
@@ -1813,10 +2130,28 @@ atualizarRotulosFaixaValor();
 document.getElementById("area-minima").addEventListener("input", aplicarFiltrosEExibir);
 document.getElementById("bairro-filtro").addEventListener("input", aplicarFiltrosEExibir);
 
+document.getElementById("botao-adicionar-fonte").addEventListener("click", async (ev) => {
+  await comEstadoDeCarregamento(ev.currentTarget, "Salvando…", adicionarFonte);
+});
+
+document.getElementById("campo-fonte-imobibrasil").addEventListener("change", (ev) => {
+  if(ev.target.checked){
+    // Sites da ImobiBrasil (mesma plataforma do Marcio Marins) costumam ser
+    // renderizados no servidor (sem precisar de JS) e usar "pag" na paginação.
+    document.getElementById("campo-fonte-js").checked = false;
+    document.getElementById("campo-fonte-param-pagina").value = "pag";
+  }
+});
+
+document.getElementById("botao-rodar-agora").addEventListener("click", async (ev) => {
+  await comEstadoDeCarregamento(ev.currentTarget, "Disparando…", dispararBuscaAgora);
+});
+
 window.addEventListener("DOMContentLoaded", () => {
   if(!tentarRenderizarModoCliente()){
     iniciarPortaoDeAcesso(() => {
       carregarDados();
+      carregarFontesParaExibir();
       if(obterToken()){
         document.getElementById("status-token").textContent = "Token salvo neste navegador ✓";
       }

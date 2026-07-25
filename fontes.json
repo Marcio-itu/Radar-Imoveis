@@ -1,17 +1,18 @@
 [
   {
-  "nome": "Kenlo - Portal Geral",
-  "url": "https://portal.kenlo.com.br/imoveis/a-venda/itu",
-  "jsNecessario": true,
-  "prioridade": 1,
-  "wait": 8000,
-  "paginas": 10
+    "nome": "Kenlo - Portal Geral",
+    "url": "https://portal.kenlo.com.br/imoveis/a-venda/itu",
+    "jsNecessario": true,
+    "prioridade": 1,
+    "wait": 8000,
+    "paginas": 10
   },
   {
     "nome": "Marcio Marins",
     "url": "https://www.marciomarins.com.br/imovel/venda",
     "jsNecessario": false,
-    "prioridade": 3
+    "prioridade": 3,
+    "plataforma": "imobibrasil"
   },
   {
     "nome": "Grupo Kaion",
@@ -96,5 +97,14 @@
     "url": "https://www.betoimoveis.com.br/imoveis/a-venda/casa/itu",
     "jsNecessario": true,
     "prioridade": 17
+  },
+  {
+    "nome": "Ferraz & Luiz Imóveis",
+    "url": "https://www.ferrazeluizimoveis.com.br/imovel/venda",
+    "jsNecessario": false,
+    "prioridade": 17,
+    "paginas": 40,
+    "parametroPagina": "pag",
+    "plataforma": "imobibrasil"
   }
 ]
