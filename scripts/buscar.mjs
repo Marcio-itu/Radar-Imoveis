@@ -806,28 +806,54 @@ async function buscarFirecrawl(url, apiKey) {
 
 // ========== SCRAPERAPI ==========
 async function buscarScraperAPI(url, apiKey) {
-  const endpoint =
+  const montarEndpoint = (extra) =>
     "http://api.scraperapi.com?api_key=" +
     encodeURIComponent(apiKey) +
     "&url=" +
     encodeURIComponent(url) +
     "&render=true" +
     "&wait=3000" +
-    "&country_code=br";
+    "&country_code=br" +
+    (extra ? "&" + extra + "=true" : "");
 
-  const resp = await fetch(endpoint);
-  if (!resp.ok) {
-    const corpo = await resp.text().catch(() => "");
-    const semCredito =
-      resp.status === 402 ||
-      resp.status === 401 ||
-      resp.status === 429 ||
-      /credit|quota|insufficient|limit reached|too many requests|exceeded/i.test(corpo);
-    const erro = new Error("ScraperAPI HTTP " + resp.status + " " + corpo.slice(0, 200));
-    erro.semCredito = semCredito;
-    throw erro;
+  async function tentar(extra) {
+    const resp = await fetch(montarEndpoint(extra));
+    if (!resp.ok) {
+      const corpo = await resp.text().catch(() => "");
+      const erro = new Error("ScraperAPI HTTP " + resp.status + " " + corpo.slice(0, 200));
+      erro.status = resp.status;
+      erro.corpo = corpo;
+      throw erro;
+    }
+    return await resp.text();
   }
-  return await resp.text();
+
+  try {
+    return await tentar(null);
+  } catch (e) {
+    const corpo = e.corpo || "";
+    const semCredito =
+      e.status === 402 ||
+      e.status === 401 ||
+      e.status === 429 ||
+      /credit|quota|insufficient|limit reached|too many requests|exceeded/i.test(corpo);
+
+    // Alguns domínios (proteção anti-robô mais forte) só respondem com
+    // "premium=true". Isso consome mais créditos por página, então só
+    // tentamos de novo dessa forma quando o próprio ScraperAPI pede isso.
+    const precisaPremium = /premium(_)?=true/i.test(corpo);
+    if (precisaPremium) {
+      try {
+        return await tentar("premium");
+      } catch (e2) {
+        e2.semCredito = semCredito;
+        throw e2;
+      }
+    }
+
+    e.semCredito = semCredito;
+    throw e;
+  }
 }
 
 // ========== BUSCA COM FALLBACK MÚLTIPLO ==========
