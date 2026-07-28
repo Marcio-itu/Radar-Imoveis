@@ -515,12 +515,6 @@
     border-radius:999px;
     padding:3px 10px;
   }
-  .card-imovel .meta .data-idade{
-    background:var(--ouro-claro);
-    border-color:var(--ouro);
-    color:var(--ouro-escuro);
-    font-weight:600;
-  }
   .card-imovel a.ver{
     font-family:'Segoe UI', Arial, sans-serif;
     font-size:13px;
@@ -1714,7 +1708,6 @@ function aplicarFiltrosEExibir(retornaFiltrados = false){
           ${item.vagas ? `<span>${escaparHtml(item.vagas)} vagas</span>` : ""}
           ${item.area ? `<span>${escaparHtml(item.area)} m²</span>` : ""}
           ${(item.bairro || item.cidade) ? `<span>${escaparHtml([item.bairro, item.cidade].filter(Boolean).join(", "))}</span>` : ""}
-          ${idade ? `<span class="data-idade">📅 ${escaparHtml(idade)}</span>` : ""}
         </div>
         <a class="ver" href="${escaparHtml(item.link)}" target="_blank" rel="noopener">Ver imóvel →</a>
       </div>
