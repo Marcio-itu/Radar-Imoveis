@@ -83,6 +83,57 @@ function tituloSeguro(candidato) {
   return "";
 }
 
+// ----------------------
+// APOSENTADORIA DE IMÓVEIS ANTIGOS (lista negra)
+// ----------------------
+// Dois sinais, porque nem todo site conta a mesma história:
+//
+// 1) Data REAL conhecida (ex: Marcio Marins/Ferraz & Luiz, via foto) e já
+//    passou de 1 ano -> sai do radar na hora, não precisa "lembrar" nada,
+//    porque a data real não muda.
+//
+// 2) SEM data conhecida (Kenlo, Kaion e a maioria dos outros) -> não dá pra
+//    saber a idade de verdade, então usamos a memória do próprio radar: desde
+//    quando NÓS vemos esse link nas buscas. Se completar 6 meses sendo visto
+//    sem nunca ganhar uma data real, também sai.
+//
+// As duas regras usam o MESMO limite (6 meses), por decisão do corretor.
+//
+// Uma vez que um imóvel entra na lista negra, ele nunca mais volta — mesmo
+// que a próxima busca encontre o mesmo link de novo. E, pra não gastar
+// crédito à toa, a lista negra é checada ANTES de baixar a galeria de fotos
+// de qualquer imóvel (ver mais abaixo, logo depois de "const todos = []").
+
+const LIMITE_MESES = 6;
+const MEMORIA_PATH = "../radar-memoria.json";
+const LISTA_NEGRA_PATH = "../lista-negra.json";
+
+async function carregarJsonAuxiliar(caminhoRelativo) {
+  try {
+    const conteudo = await readFile(new URL(caminhoRelativo, import.meta.url), "utf-8");
+    return JSON.parse(conteudo);
+  } catch {
+    return {};
+  }
+}
+
+function passouDoLimiteDeIdade(dataPublicacao) {
+  if (!dataPublicacao) return false;
+  const dataPub = new Date(dataPublicacao + "T00:00:00");
+  if (isNaN(dataPub.getTime())) return false;
+  const limite = new Date(dataPub);
+  limite.setMonth(limite.getMonth() + LIMITE_MESES);
+  return new Date() > limite;
+}
+
+function passouDoLimiteNoSistema(primeiraVez, hoje) {
+  const dataInicio = new Date(primeiraVez + "T00:00:00");
+  if (isNaN(dataInicio.getTime())) return false;
+  const limite = new Date(dataInicio);
+  limite.setMonth(limite.getMonth() + LIMITE_MESES);
+  return new Date(hoje + "T00:00:00") >= limite;
+}
+
 function extrairPreco(texto) {
   let m = texto.match(/R\$\s?[\d.,]+/);
   if (m) return m[0];
@@ -1159,9 +1210,22 @@ async function main() {
 
   const dataHoje = new Date().toISOString().split("T")[0];
 
+  // Carrega a memória e a lista negra JÁ AQUI — antes de gastar crédito
+  // baixando a galeria de fotos de imóveis que a gente já sabe que são
+  // velhos demais. Uma vez na lista negra, nem revisita mais.
+  const memoria = await carregarJsonAuxiliar(MEMORIA_PATH);
+  const listaNegra = await carregarJsonAuxiliar(LISTA_NEGRA_PATH);
+
+  const antesDaListaNegra = todos.length;
+  const todosParaProcessar = todos.filter(item => !item.link || !listaNegra[item.link]);
+  const puladosPorListaNegra = antesDaListaNegra - todosParaProcessar.length;
+  if (puladosPorListaNegra > 0) {
+    console.log(`\n⛔ ${puladosPorListaNegra} imóveis já estavam na lista negra — pulados sem gastar crédito com galeria.`);
+  }
+
   let doCache = 0, buscadosGratis = 0, buscadosComCredito = 0, semGaleria = 0;
 
-  for (const item of todos) {
+  for (const item of todosParaProcessar) {
     if (!item.link) continue;
 
     const cacheada = cacheGaleria.get(item.link);
@@ -1215,12 +1279,76 @@ async function main() {
   console.log(`\n📸 Galerias: ${doCache} cache | ${buscadosGratis} grátis | ${buscadosComCredito} via JS | ${semGaleria} sem galeria`);
   console.log(`\n📅 Data: ${comData} imóveis com data | ${semData} imóveis sem data`);
 
-  const antesDoFiltro = todos.length;
-  const todosValidos = todos.filter(item => !pareceFiltroOuNavegacao(item.titulo));
-  const removidosPorFiltro = antesDoFiltro - todosValidos.length;
+  const antesDoFiltro = todosParaProcessar.length;
+  const semLixo = todosParaProcessar.filter(item => !pareceFiltroOuNavegacao(item.titulo));
+  const removidosPorFiltro = antesDoFiltro - semLixo.length;
   if (removidosPorFiltro > 0) {
     console.log(`\n🧹 Removidos ${removidosPorFiltro} itens que eram filtro/navegação do site, não imóveis de verdade.`);
   }
+
+  // ---- Lista negra + memória de idade (imóveis antigos saem e não voltam) ----
+  let excluidosPorIdade = 0;
+  const todosValidos = [];
+
+  for (const item of semLixo) {
+    if (!item.link) continue;
+
+    if (listaNegra[item.link]) {
+      excluidosPorIdade++;
+      continue; // já está na lista negra — nunca mais volta, mesmo se reencontrado
+    }
+
+    if (passouDoLimiteDeIdade(item.dataPublicacao)) {
+      listaNegra[item.link] = {
+        titulo: item.titulo,
+        fonte: item.fonte,
+        motivo: `data real de publicação com mais de ${LIMITE_MESES} meses`,
+        dataPublicacao: item.dataPublicacao,
+        dataExclusao: dataHoje,
+      };
+      delete memoria[item.link];
+      excluidosPorIdade++;
+      continue;
+    }
+
+    if (!item.dataPublicacao) {
+      const registro = memoria[item.link];
+      if (!registro) {
+        memoria[item.link] = { primeiraVez: dataHoje, ultimaVez: dataHoje };
+      } else if (passouDoLimiteNoSistema(registro.primeiraVez, dataHoje)) {
+        listaNegra[item.link] = {
+          titulo: item.titulo,
+          fonte: item.fonte,
+          motivo: `${LIMITE_MESES} meses no radar sem data de publicação conhecida`,
+          primeiraVezVisto: registro.primeiraVez,
+          dataExclusao: dataHoje,
+        };
+        delete memoria[item.link];
+        excluidosPorIdade++;
+        continue;
+      } else {
+        registro.ultimaVez = dataHoje;
+      }
+    }
+
+    todosValidos.push(item);
+  }
+
+  if (excluidosPorIdade > 0) {
+    console.log(`\n🚫 ${excluidosPorIdade} imóveis saíram do radar por serem antigos (lista negra).`);
+  }
+
+  // Esquece imóveis que a memória guardava, mas que já não aparecem faz
+  // tempo (provavelmente vendidos/removidos do site de origem) — evita que
+  // o arquivo de memória cresça pra sempre com lixo.
+  const LIMITE_ESQUECER_DIAS = 30;
+  for (const link of Object.keys(memoria)) {
+    const dias = (new Date(dataHoje) - new Date(memoria[link].ultimaVez)) / (1000 * 60 * 60 * 24);
+    if (dias > LIMITE_ESQUECER_DIAS) delete memoria[link];
+  }
+
+  await writeFile(new URL(MEMORIA_PATH, import.meta.url), JSON.stringify(memoria, null, 2), "utf-8");
+  await writeFile(new URL(LISTA_NEGRA_PATH, import.meta.url), JSON.stringify(listaNegra, null, 2), "utf-8");
 
   const todosLimpos = todosValidos.map(({ _semJS, ...resto }) => resto);
 
