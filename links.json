@@ -4740,6 +4740,89 @@
         }
       ],
       "criadoEm": "2026-07-24T21:50:31.215Z"
+    },
+    "dsu2mq": {
+      "itens": [
+        {
+          "titulo": "Imóvel",
+          "imagem": "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20260423152052316.jpeg",
+          "imagens": [
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-20260423152052316.jpeg",
+            "http://www.ferrazeluizimoveis.com.br/imagens/imoveis/202604231520313078.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202604231520313078.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202604231520367868.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202604231520454355.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202604231520469281.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202604231520482657.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202604231520496660.jpeg"
+          ],
+          "preco": "R$ 350.000,00",
+          "tipo": "terreno",
+          "quartos": "",
+          "fonte": "Ferraz & Luiz Imóveis",
+          "suites": "",
+          "vagas": "",
+          "area": "",
+          "bairro": "",
+          "cidade": "",
+          "finalidade": "venda",
+          "link": "https://www.ferrazeluizimoveis.com.br/imovel/4214935/terreno-venda-mairinque-sp-mato-dentro",
+          "dataPublicacao": "2026-04-23"
+        },
+        {
+          "titulo": "Imóvel",
+          "imagem": "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202604151629233576.jpeg",
+          "imagens": [
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202604151629233576.jpeg",
+            "http://www.ferrazeluizimoveis.com.br/imagens/imoveis/202604151629209052.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202604151629209052.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202604151629209273.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202604151629214041.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/20260415162921973.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202604151629219875.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202604151629214704.jpeg"
+          ],
+          "preco": "R$ 266.500,00",
+          "tipo": "apartamento",
+          "quartos": "",
+          "fonte": "Ferraz & Luiz Imóveis",
+          "suites": "",
+          "vagas": "",
+          "area": "",
+          "bairro": "",
+          "cidade": "",
+          "finalidade": "venda",
+          "link": "https://www.ferrazeluizimoveis.com.br/imovel/4207852/apartamento-venda-salto-sp-olaria",
+          "dataPublicacao": "2026-04-15"
+        },
+        {
+          "titulo": "Imóvel",
+          "imagem": "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202603041003311492.jpeg",
+          "imagens": [
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202603041003311492.jpeg",
+            "http://www.ferrazeluizimoveis.com.br/imagens/imoveis/202602271536518879.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202602271536518879.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/20260227153651576.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202602271536518690.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202602271536514112.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202602271536514973.jpeg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202603041003091570.jpeg"
+          ],
+          "preco": "R$ 300.000,00",
+          "tipo": "casa",
+          "quartos": "",
+          "fonte": "Ferraz & Luiz Imóveis",
+          "suites": "",
+          "vagas": "",
+          "area": "",
+          "bairro": "",
+          "cidade": "",
+          "finalidade": "",
+          "link": "https://www.ferrazeluizimoveis.com.br/imovel/4158690/casa-venda-itu-sp-jardim-aeroporto",
+          "dataPublicacao": "2026-02-27"
+        }
+      ],
+      "criadoEm": "2026-07-28T02:45:00.923Z"
     }
   }
 }
