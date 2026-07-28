@@ -445,8 +445,6 @@
     top:-1px;
   }
   .bolinha-verde{ background:#2ecc71; }
-  .bolinha-amarela{ background:#f1c40f; }
-  .bolinha-vermelha{ background:#e74c3c; }
   .bolinha-preta{ background:#3a3a3a; }
 
   .legenda-idade{
@@ -598,6 +596,25 @@
     border-radius:999px;
     pointer-events:none;
   }
+  .linha-imovel .botao-lupa{
+    position:absolute;
+    right:10px;
+    top:10px;
+    width:34px;
+    height:34px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,0.55);
+    color:#fff;
+    font-size:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    backdrop-filter:blur(2px);
+  }
+  .linha-imovel .botao-lupa:hover{ background:rgba(0,0,0,0.75); }
+  .linha-imovel .galeria-scroll img{ cursor:zoom-in; }
   .linha-imovel .galeria-wrap{ position:relative; }
   .linha-imovel .info{
     padding:20px 22px;
@@ -748,6 +765,75 @@
   }
 
   /* ============================================================
+     LIGHTBOX (ampliar foto — tela do cliente)
+     ============================================================ */
+  .lightbox-overlay{
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    background:rgba(10,10,15,0.94);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .lightbox-img{
+    max-width:92vw;
+    max-height:88vh;
+    object-fit:contain;
+    border-radius:6px;
+    cursor:default;
+  }
+  .lightbox-fechar{
+    position:absolute;
+    top:18px;
+    right:18px;
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,0.12);
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+  }
+  .lightbox-fechar:hover{ background:rgba(255,255,255,0.22); }
+  .lightbox-seta{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,0.12);
+    color:#fff;
+    font-size:30px;
+    line-height:1;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .lightbox-seta:hover{ background:rgba(255,255,255,0.22); }
+  .lightbox-seta-esq{ left:14px; }
+  .lightbox-seta-dir{ right:14px; }
+  .lightbox-contagem{
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    background:rgba(255,255,255,0.12);
+    color:#fff;
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:12px;
+    padding:5px 14px;
+    border-radius:999px;
+  }
+  @media (max-width:600px){
+    .lightbox-seta{ width:40px; height:40px; font-size:24px; }
+  }
+
+  /* ============================================================
      PORTÃO DE ACESSO (tela do corretor)
      ============================================================ */
   .portao-corretor{
@@ -781,6 +867,15 @@
     <p class="erro-portao" id="erro-portao"></p>
     <button class="botao botao-ouro" id="botao-entrar-portao" style="width:100%;">Entrar</button>
   </div>
+</div>
+
+<!-- ========== LIGHTBOX (ampliar foto — tela do cliente) ========== -->
+<div class="lightbox-overlay" id="lightbox-overlay" style="display:none;" onclick="fecharLightbox()">
+  <button type="button" class="lightbox-fechar" onclick="fecharLightbox()" aria-label="Fechar">✕</button>
+  <button type="button" class="lightbox-seta lightbox-seta-esq" id="lightbox-anterior" onclick="lightboxAnterior(event)" aria-label="Foto anterior">‹</button>
+  <img src="" alt="" class="lightbox-img" id="lightbox-img" onclick="event.stopPropagation()">
+  <button type="button" class="lightbox-seta lightbox-seta-dir" id="lightbox-proxima" onclick="lightboxProxima(event)" aria-label="Próxima foto">›</button>
+  <span class="lightbox-contagem" id="lightbox-contagem"></span>
 </div>
 
 <div class="topo">
@@ -988,6 +1083,48 @@ function escaparHtml(texto){
   }[c]));
 }
 
+// ============================================================
+// LIGHTBOX (ampliar foto na tela do cliente)
+// ============================================================
+let LIGHTBOX_ATUAL = { imagens: [], indice: 0 };
+
+function abrirLightbox(idGaleria, indice){
+  const imagens = GALERIAS_CLIENTE[idGaleria] || [];
+  if(imagens.length === 0) return;
+  LIGHTBOX_ATUAL = { imagens, indice };
+  atualizarLightbox();
+  document.getElementById("lightbox-overlay").style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+function fecharLightbox(){
+  document.getElementById("lightbox-overlay").style.display = "none";
+  document.body.style.overflow = "";
+}
+
+function lightboxAnterior(ev){
+  if(ev) ev.stopPropagation();
+  const { imagens, indice } = LIGHTBOX_ATUAL;
+  LIGHTBOX_ATUAL.indice = (indice - 1 + imagens.length) % imagens.length;
+  atualizarLightbox();
+}
+
+function lightboxProxima(ev){
+  if(ev) ev.stopPropagation();
+  const { imagens, indice } = LIGHTBOX_ATUAL;
+  LIGHTBOX_ATUAL.indice = (indice + 1) % imagens.length;
+  atualizarLightbox();
+}
+
+function atualizarLightbox(){
+  const { imagens, indice } = LIGHTBOX_ATUAL;
+  document.getElementById("lightbox-img").src = imagens[indice];
+  document.getElementById("lightbox-contagem").textContent = `${indice + 1}/${imagens.length}`;
+  const setasVisiveis = imagens.length > 1 ? "flex" : "none";
+  document.getElementById("lightbox-anterior").style.display = setasVisiveis;
+  document.getElementById("lightbox-proxima").style.display = setasVisiveis;
+}
+
 function precoParaNumero(precoStr){
   if(!precoStr) return null;
   let n = precoStr.replace(/[^\d,.]/g, "");
@@ -1024,6 +1161,9 @@ function formatarDataRelativa(isoString){
 // de calendário (não dias fixos) pra ser preciso mesmo com meses de tamanhos
 // diferentes.
 function classificarIdadePublicacao(dataPublicacao){
+  // O robô já exclui do radar tudo que passa de 6 meses (com data real
+  // conhecida) ou 6 meses no sistema (sem data conhecida) — então, na
+  // prática, só sobra "recente" (verde) ou "não sei a data" (preta).
   if(!dataPublicacao){
     return { cor: "preta", rotulo: "Data de publicação desconhecida" };
   }
@@ -1033,14 +1173,11 @@ function classificarIdadePublicacao(dataPublicacao){
   }
 
   const hoje = new Date();
-  const limite6m = new Date(dataPub);  limite6m.setMonth(limite6m.getMonth() + 6);
-  const limite12m = new Date(dataPub); limite12m.setMonth(limite12m.getMonth() + 12);
-  const limite18m = new Date(dataPub); limite18m.setMonth(limite18m.getMonth() + 18);
+  const limite6m = new Date(dataPub);
+  limite6m.setMonth(limite6m.getMonth() + 6);
 
-  if(hoje <= limite6m)  return { cor: "verde",    rotulo: "Publicado há até 6 meses" };
-  if(hoje <= limite12m) return { cor: "amarela",  rotulo: "Publicado entre 6 meses e 1 ano" };
-  if(hoje <= limite18m) return { cor: "vermelha", rotulo: "Publicado entre 1 ano e 1 ano e meio" };
-  return { cor: "preta", rotulo: "Publicado há mais de 1 ano e meio" };
+  if(hoje <= limite6m) return { cor: "verde", rotulo: "Publicado há até 6 meses" };
+  return { cor: "preta", rotulo: "Publicado há mais de 6 meses" };
 }
 
 function calcularIdade(dataPublicacao) {
@@ -1261,6 +1398,7 @@ async function reativarLinkExistente(codigoOuLink){
 
 let TODOS_IMOVEIS = [];
 const SELECIONADOS = new Set();
+const GALERIAS_CLIENTE = {}; // idGaleria -> array de urls de imagem (usado pelo lightbox)
 
 const esperar = (ms) => new Promise(r => setTimeout(r, ms));
 
@@ -1408,14 +1546,18 @@ async function renderizarCliente(itens){
     const dataHtml = idade ? `<span class="data-idade-cliente">📅 ${idade}</span>` : "";
     const classificacao = classificarIdadePublicacao(item.dataPublicacao);
 
+    const idGaleria = "galeria-" + Math.random().toString(36).slice(2);
+    GALERIAS_CLIENTE[idGaleria] = listaImagens;
+
     linha.innerHTML = `
       <div class="galeria-wrap">
         <div class="galeria-scroll">
           ${listaImagens.length > 0
-            ? listaImagens.map(url => `<img src="${escaparHtml(url)}" alt="" loading="lazy" onerror="this.remove()">`).join("")
+            ? listaImagens.map((url, i) => `<img src="${escaparHtml(url)}" alt="" loading="lazy" onerror="this.remove()" onclick="abrirLightbox('${idGaleria}', ${i})">`).join("")
             : `<div class="foto-placeholder"><img src="favicon.svg" alt=""></div>`
           }
         </div>
+        ${listaImagens.length > 0 ? `<button type="button" class="botao-lupa" onclick="abrirLightbox('${idGaleria}', 0)" aria-label="Ampliar foto">🔍</button>` : ""}
         ${listaImagens.length > 1 ? `<span class="galeria-contagem">1/${listaImagens.length} · arraste →</span>` : ""}
       </div>
       <div class="info">
@@ -1465,9 +1607,7 @@ async function renderizarCliente(itens){
   legenda.className = "legenda-idade";
   legenda.innerHTML = `
     <span><span class="bolinha-idade bolinha-verde"></span>Publicado há até 6 meses</span>
-    <span><span class="bolinha-idade bolinha-amarela"></span>Entre 6 meses e 1 ano</span>
-    <span><span class="bolinha-idade bolinha-vermelha"></span>Entre 1 ano e 1 ano e meio</span>
-    <span><span class="bolinha-idade bolinha-preta"></span>Mais de 1 ano e meio ou data desconhecida</span>
+    <span><span class="bolinha-idade bolinha-preta"></span>Data de publicação desconhecida</span>
   `;
   resultadosDiv.appendChild(legenda);
 
@@ -1720,9 +1860,7 @@ function aplicarFiltrosEExibir(retornaFiltrados = false){
     legenda.className = "legenda-idade";
     legenda.innerHTML = `
       <span><span class="bolinha-idade bolinha-verde"></span>Até 6 meses</span>
-      <span><span class="bolinha-idade bolinha-amarela"></span>6 meses a 1 ano</span>
-      <span><span class="bolinha-idade bolinha-vermelha"></span>1 a 1 ano e meio</span>
-      <span><span class="bolinha-idade bolinha-preta"></span>+1 ano e meio ou sem data</span>
+      <span><span class="bolinha-idade bolinha-preta"></span>Data desconhecida</span>
     `;
     resultadosDiv.appendChild(legenda);
   }
@@ -1889,6 +2027,14 @@ atualizarRotulosFaixaValor();
 
 document.getElementById("area-minima").addEventListener("input", aplicarFiltrosEExibir);
 document.getElementById("bairro-filtro").addEventListener("input", aplicarFiltrosEExibir);
+
+document.addEventListener("keydown", (ev) => {
+  const overlay = document.getElementById("lightbox-overlay");
+  if(!overlay || overlay.style.display === "none") return;
+  if(ev.key === "Escape") fecharLightbox();
+  if(ev.key === "ArrowLeft") lightboxAnterior();
+  if(ev.key === "ArrowRight") lightboxProxima();
+});
 
 window.addEventListener("DOMContentLoaded", () => {
   if(!tentarRenderizarModoCliente()){
