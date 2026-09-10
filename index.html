@@ -257,6 +257,41 @@
   }
   .status.erro{color:var(--erro);}
 
+  /* ============================================================
+     AVISOS DA BUSCA (discreto, recolhido por padrão)
+     ============================================================ */
+  .avisos-busca{
+    margin-top:10px;
+    border:1px solid #f0d9a8;
+    background:#fffaf0;
+    border-radius:8px;
+    overflow:hidden;
+  }
+  .avisos-busca summary{
+    cursor:pointer;
+    padding:10px 14px;
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:12.5px;
+    color:#92700c;
+    font-weight:600;
+    list-style:none;
+  }
+  .avisos-busca summary::-webkit-details-marker{ display:none; }
+  .avisos-busca summary::before{ content:"⚠️ "; }
+  .avisos-busca summary .avisos-dica{ font-weight:400; color:#a68a55; }
+  .avisos-busca .avisos-lista{
+    padding:4px 14px 12px;
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:12px;
+    color:#7a5c1e;
+    line-height:1.6;
+  }
+  .avisos-busca .avisos-lista div{
+    padding:5px 0;
+    border-top:1px solid #f0e0bb;
+  }
+  .avisos-busca .avisos-lista div:first-child{ border-top:none; }
+
   .barra-selecao{
     position:sticky;
     top:0;
@@ -987,6 +1022,10 @@
     </div>
 
     <div class="status" id="status"></div>
+    <details class="avisos-busca" id="avisos-busca" style="display:none;">
+      <summary id="avisos-resumo"></summary>
+      <div class="avisos-lista" id="avisos-lista"></div>
+    </details>
   </div>
 
   <details class="painel" id="painel-config" style="padding:16px 24px;">
@@ -1689,11 +1728,16 @@ async function carregarDados(){
     preencherFiltroCidade();
 
     if(dados.erros && dados.erros.length > 0){
-      status.className = "status erro";
-      status.textContent = "Avisos da última busca: " + dados.erros.join(" | ");
+      document.getElementById("avisos-busca").style.display = "block";
+      document.getElementById("avisos-resumo").innerHTML =
+        `${dados.erros.length} fonte${dados.erros.length > 1 ? "s" : ""} com aviso nesta busca ` +
+        `<span class="avisos-dica">(clique pra ver detalhes)</span>`;
+      document.getElementById("avisos-lista").innerHTML =
+        dados.erros.map(e => `<div>${escaparHtml(e)}</div>`).join("");
     } else {
-      status.textContent = "";
+      document.getElementById("avisos-busca").style.display = "none";
     }
+    status.textContent = "";
   } catch(e){
     status.className = "status erro";
     status.textContent = "Não foi possível carregar imoveis.json.";
