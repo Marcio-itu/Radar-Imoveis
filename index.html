@@ -1929,8 +1929,10 @@ function atualizarBarraSelecao(){
   if(n === 0) document.getElementById("caixa-link").style.display = "none";
 }
 
+const FOTOS_MINIMAS_PARA_ENVIAR = 5;
+
 function itensSelecionadosParaLink(){
-  return TODOS_IMOVEIS
+  const todosSelecionados = TODOS_IMOVEIS
     .filter(i => SELECIONADOS.has(i.link))
     .map(i => ({
       titulo: i.titulo, imagem: i.imagem, imagens: i.imagens || (i.imagem ? [i.imagem] : []),
@@ -1939,18 +1941,37 @@ function itensSelecionadosParaLink(){
       cidade: i.cidade, finalidade: i.finalidade, link: i.link,
       dataPublicacao: i.dataPublicacao
     }));
+
+  // Um imóvel com poucas fotos no link passa a impressão de anúncio pobre
+  // ou suspeito pro cliente — mesmo que a fonte original tenha mais fotos
+  // (às vezes o robô só conseguiu capturar 1). Por segurança, não entra.
+  const validos = todosSelecionados.filter(i => (i.imagens || []).length >= FOTOS_MINIMAS_PARA_ENVIAR);
+  const excluidosPorFoto = todosSelecionados.filter(i => (i.imagens || []).length < FOTOS_MINIMAS_PARA_ENVIAR);
+
+  return { validos, excluidosPorFoto };
 }
 
 let CACHE_LINK_GERADO = { chave: null, url: null };
 
 async function montarLinkCliente(){
-  const itens = itensSelecionadosParaLink();
+  const { validos, excluidosPorFoto } = itensSelecionadosParaLink();
+
+  if(validos.length === 0){
+    const e = new Error(
+      excluidosPorFoto.length > 0
+        ? `Nenhum dos ${excluidosPorFoto.length} imóvel(is) selecionado(s) tem pelo menos ${FOTOS_MINIMAS_PARA_ENVIAR} fotos. Selecione outros imóveis.`
+        : "Selecione pelo menos um imóvel."
+    );
+    e.semFotos = true;
+    throw e;
+  }
+
   // Ordena os itens antes de salvar no link
-  const itensOrdenados = ordenarImoveisPorData(itens);
+  const itensOrdenados = ordenarImoveisPorData(validos);
   const chave = itensOrdenados.map(i => i.link).sort().join("|");
 
   if(CACHE_LINK_GERADO.chave === chave && CACHE_LINK_GERADO.url){
-    return CACHE_LINK_GERADO.url;
+    return { url: CACHE_LINK_GERADO.url, excluidosPorFoto };
   }
 
   const dadosParaEscolherCodigo = await lerLinksJson().catch(() => ({ links: {} }));
@@ -1969,7 +1990,7 @@ async function montarLinkCliente(){
 
   const urlFinal = location.origin + location.pathname + "#l=" + codigo;
   CACHE_LINK_GERADO = { chave, url: urlFinal };
-  return urlFinal;
+  return { url: urlFinal, excluidosPorFoto };
 }
 
 async function comEstadoDeCarregamento(botao, textoCarregando, fn){
@@ -1992,11 +2013,19 @@ document.getElementById("botao-gerar-link").addEventListener("click", async (ev)
   const status = document.getElementById("status-token");
   await comEstadoDeCarregamento(ev.currentTarget, "Gerando…", async () => {
     try{
-      const link = await montarLinkCliente();
+      const { url: link, excluidosPorFoto } = await montarLinkCliente();
       document.getElementById("campo-link-gerado").value = link;
       document.getElementById("caixa-link").style.display = "block";
-      status.className = "status";
-      status.textContent = "";
+
+      if(excluidosPorFoto.length > 0){
+        status.className = "status";
+        status.textContent =
+          `Link gerado — mas ${excluidosPorFoto.length} imóvel(is) ficou(ram) de fora por ter(em) menos de ${FOTOS_MINIMAS_PARA_ENVIAR} fotos: ` +
+          excluidosPorFoto.map(i => i.titulo || "(sem título)").join(", ");
+      } else {
+        status.className = "status";
+        status.textContent = "";
+      }
 
       // Abre o WhatsApp na hora, com a mensagem pronta e o link.
       // Sem número fixo: você escolhe o contato/cliente na hora de enviar.
@@ -2005,7 +2034,7 @@ document.getElementById("botao-gerar-link").addEventListener("click", async (ev)
     } catch(e){
       status.className = "status erro";
       status.textContent = e.message;
-      document.getElementById("painel-config").open = true;
+      if(!e.semFotos) document.getElementById("painel-config").open = true;
     }
   });
 });
