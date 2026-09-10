@@ -1,1 +1,530 @@
-{}
+{
+  "https://portal.kenlo.com.br/imovel/casa-itu-3-quartos-257-m/CA8530-AUU9?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-3-quartos-202-m/CA5309-VERA?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-3-quartos-173-m/CA8600-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://portal.kenlo.com.br/imovel/terreno-itu-192-m/TE0714-NIMC?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://portal.kenlo.com.br/imovel/apartamento-itu-2-quartos-57-m/AP3440-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://portal.kenlo.com.br/imovel/chacara-itu-3-quartos-2-000-m/CH0066-BA4?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-5-quartos-600-m/CA4954-IMRL?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://portal.kenlo.com.br/imovel/terreno-itu-600-m/TE2663-IMRL?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://portal.kenlo.com.br/imovel/apartamento-itu-2-quartos-49-m/AP0649-IMON?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-4-quartos-944-m/CA5041-IMRL?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-4-quartos-630-m/CA5072-IMRL?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-5-quartos-900-m/CA4968-IMRL?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.grupokaion.com.br/imovel/casa-itu-5-quartos-443-m/CA0459-GK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-127-m/CA1456-GK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-105-m/CA2593-GK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.grupokaion.com.br/imovel/casa-itu-4-quartos-198-m/CA2158-GK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.grupokaion.com.br/imovel/casa-itu-2-quartos-300-m/CA0614-GK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.grupokaion.com.br/imovel/casa-itu-2-quartos-83-m/CA0986-GK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-110-m/CA2122-GK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-180-m/CA2755-GK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-200-m/CA0340-GK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-200-m/CA2675-GK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-96-m/CA2246-GK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-227-m/CA2810-GK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-173-m/CA8600-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-150-m/CA6899-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-120-m/CA9293-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-260-m/CA9294-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-343-m/CA9218-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.utuguacu.com.br/imovel/casa-itu-1-quarto-180-m/CA9105-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.utuguacu.com.br/imovel/casa-itu-7-quartos-450-m/CA8576-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-140-m/CA9046-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-340-m/CA6331-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-321-m/CA8471-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-300-m/CA9135-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-415-m/CA4631-UTG?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-176-m/CA1665-NIMC?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-6-quartos-974-m/CA2972-NIMC?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-50-m/CA2914-NIMC?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.daniloferreiraimoveis.com.br/imovel/edicula-itu-1-quarto-48-m/ED0015-NIMC?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-106-m/CA0674-NIMC?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-104-m/CA1503-NIMC?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-106-m/CA2995-NIMC?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-70-m/CA1795-NIMC?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-4-quartos-135-m/CA1696-NIMC?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-3-quartos-105-m/CA0825-NIMC?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-100-m/CA1390-NIMC?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-3-quartos-103-m/CA1082-NIMC?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-4-quartos-800-m/CA1694-OPCA": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-1-quarto-60-m/CA2061-OPCA?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-87-m/CA0860-OPCA": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-103-m/CA2204-OPCA": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-106-m/CA2705-OPCA": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-90-m/CA2446-OPCA": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-70-m/CA2246-OPCA": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-1-quarto-100-m/CA1896-OPCA": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-3-quartos-86-m/CA2531-OPCA": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-3-quartos-109-m/CA2335-OPCA": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-2-quartos-90-m/CA2541-OPCA": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.opcaoimoveisitu.com.br/imovel/casa-itu-3-quartos-79-m/CA2584-OPCA": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-1-quarto-83-m/CA0271-JTBR": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-3-quartos-122-m/CA0316-JTBR": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-87-m/CA0270-JTBR": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-80-m/CA0186-JTBR": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-50-m/CA0124-JTBR": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-89-m/CA0179-JTBR": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-112-m/CA0333-JTBR": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-3-quartos-133-m/CA0379-JTBR": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-1-quarto-40-m/CA0229-JTBR": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-108-m/CA0332-JTBR": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-3-quartos-80-m/CA0232-JTBR": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.teixeiraimoveisitu.com.br/imovel/casa-itu-2-quartos-104-m/CA0207-JTBR": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-185-m/CA4222-GSQW?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-151-m/CA2941-GSQW?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-564-m/CA4069-GSQW?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.gsimoveisitu.com.br/imovel/casa-itu-2-quartos-112-m/CA4166-GSQW?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-272-m/CA4224-GSQW?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.gsimoveisitu.com.br/imovel/casa-itu-2-quartos-198-m/CA4223-GSQW?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.gsimoveisitu.com.br/imovel/casa-itu-2-quartos-130-m/CA4198-GSQW?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-170-m/CA3588-GSQW?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-346-m/CA3075-GSQW?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.gsimoveisitu.com.br/imovel/casa-itu-6-quartos-785-m/CA4010-GSQW?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-290-m/CA4217-GSQW?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.gsimoveisitu.com.br/imovel/casa-itu-2-quartos-114-m/CA3809-GSQW?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.reginamarchi.com.br/imovel/casa-itu-4-quartos-170-m/CA2810-RFD?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.reginamarchi.com.br/imovel/casa-itu-2-quartos-48-m/CA3728-RFD?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.reginamarchi.com.br/imovel/casa-itu-3-quartos-200-m/CA3350-RFD?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.reginamarchi.com.br/imovel/casa-itu-2-quartos-70-m/CA2213-RFD?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.reginamarchi.com.br/imovel/casa-itu-2-quartos-100-m/CA3074-RFD?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.reginamarchi.com.br/imovel/casa-itu-3-quartos-118-m/CA3231-RFD?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.reginamarchi.com.br/imovel/casa-itu-2-quartos-118-m/CA3615-RFD?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.reginamarchi.com.br/imovel/casa-itu-115-m/CA3627-RFD?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.reginamarchi.com.br/imovel/casa-itu-2-quartos-51-m/CA3990-RFD?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.reginamarchi.com.br/imovel/casa-itu-2-quartos-82-m/CA3935-RFD?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.reginamarchi.com.br/imovel/casa-itu-3-quartos-97-m/CA3899-RFD?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.reginamarchi.com.br/imovel/casa-itu-2-quartos-84-m/CA3825-RFD?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-56-m/CA0957-MBK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-90-m/CA0654-MBK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-1-quarto-98-m/CA0960-MBK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-141-m/CA0981-MBK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-123-m/CA0873-MBK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-5-quartos-180-m/CA0925-MBK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-86-m/CA0953-MBK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-97-m/CA0975-MBK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-122-m/CA0982-MBK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-130-m/CA0964-MBK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.slaimobiliariaitu.com.br/imovel/sobrado-itu-3-quartos-200-m/SO0076-MBK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-130-m/CA0759-MBK?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-300-m/CA5653-COX3?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-2-quartos-125-m/CA6488-COX3?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-4-quartos-285-m/CA6438-COX3?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-5-quartos-710-m/CA6343-COX3?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-280-m/CA6619-COX3?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-5-quartos-499-m/CA6189-COX3?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-5-quartos-790-m/CA6495-COX3?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-7-quartos-938-m/CA6588-COX3?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-4-quartos-590-m/CA5872-COX3?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-4-quartos-249-m/CA6614-COX3?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-188-m/CA6608-COX3?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-11-quartos-1-103-m/CA6602-COX3?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.betoimoveis.com.br/imovel/casa-itu-5-quartos-577-m/CA5069-BET?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-90-m/CA1205-BET?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.betoimoveis.com.br/imovel/casa-itu-4-quartos-148-m/CA5583-BET?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-71-m/CA5130-BET?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-91-m/CA5607-BET?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.betoimoveis.com.br/imovel/casa-itu-3-quartos-177-m/CA5616-BET?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-120-m/CA5423-BET?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-130-m/CA5172-BET?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.betoimoveis.com.br/imovel/casa-itu-3-quartos-85-m/CA5416-BET?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.betoimoveis.com.br/imovel/casa-itu-2-quartos-136-m/CA5544-BET?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.betoimoveis.com.br/imovel/casa-itu-3-quartos-113-m/CA2470-BET?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  },
+  "https://www.betoimoveis.com.br/imovel/casa-itu-3-quartos-154-m/CA5049-BET?from=sale": {
+    "primeiraVez": "2026-09-10",
+    "ultimaVez": "2026-09-10"
+  }
+}
