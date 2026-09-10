@@ -1,12 +1,11 @@
 // scripts/buscar.mjs
 //
 // Roda no GitHub Actions.
-// Suporta: ScrapingBee, Firecrawl e ScraperAPI com fallback automático.
+// Suporta: Bright Data (Web Unlocker API).
 // ✅ Com extração de data por fonte (via JSON-LD e HTML)
-// ✅ Suporte a wait e scroll por fonte (ex: Kenlo)
 // ✅ Captura imagens da plataforma ImobWeb (rsSlide, data-src)
 // ✅ Extração específica para ImobWeb (cards com classe "item")
-// ✅ Paginação automática (ex: Kenlo com "paginas": 10)
+// ✅ Paginação automática por fonte
 
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -762,7 +761,7 @@ function extrairCidade(texto, href) {
 }
 
 // ----------------------
-// Fetch: Direto + ScrapingBee + Firecrawl + ScraperAPI
+// Fetch: Direto + Bright Data (Web Unlocker)
 // ----------------------
 
 async function buscarDireto(url) {
@@ -775,181 +774,60 @@ async function buscarDireto(url) {
   return await resp.text();
 }
 
-// ========== SCRAPINGBEE COM SUPORTE A WAIT E SCROLL ==========
-async function buscarScrapingBee(url, apiKey, opcoes = {}) {
-  const wait = opcoes.wait || 2500;
-  let endpoint =
-    "https://app.scrapingbee.com/api/v1/?api_key=" +
-    encodeURIComponent(apiKey) +
-    "&url=" +
-    encodeURIComponent(url) +
-    "&render_js=true" +
-    "&wait=" + wait;
+// ========== BRIGHT DATA (WEB UNLOCKER API) ==========
+async function buscarBrightData(url, apiKey, zone, opcoes = {}) {
+  const corpo = {
+    zone,
+    url,
+    format: "raw",
+  };
+  // O Web Unlocker só liga o navegador (mais lento, mas necessário) quando
+  // pedimos — é o equivalente ao "render_js"/"render" dos serviços antigos.
+  if (opcoes.renderJs) corpo.render = true;
 
-  // Se a fonte pedir scroll, adiciona o cenário (sintaxe corrigida)
-  if (opcoes.scroll) {
-    endpoint += "&js_scenario=" + encodeURIComponent(JSON.stringify({
-      instructions: [
-        { wait: 2000 },
-        { scroll: { direction: "down", repeat: 5 } },
-        { wait: 3000 }
-      ]
-    }));
-  }
+  const resp = await fetch("https://api.brightdata.com/request", {
+    method: "POST",
+    headers: {
+      "Authorization": "Bearer " + apiKey,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(corpo),
+  });
 
-  if (opcoes.jsScenario) {
-    endpoint += "&js_scenario=" + encodeURIComponent(JSON.stringify(opcoes.jsScenario));
-  }
-
-  const resp = await fetch(endpoint);
   if (!resp.ok) {
-    const corpo = await resp.text().catch(() => "");
+    const texto = await resp.text().catch(() => "");
     const semCredito =
       resp.status === 402 ||
       resp.status === 401 ||
       resp.status === 429 ||
-      /credit|quota|insufficient|limit reached|too many requests|exceeded/i.test(corpo);
-    const erro = new Error("ScrapingBee HTTP " + resp.status + " " + corpo.slice(0, 200));
+      /credit|quota|insufficient|limit reached|too many requests|exceeded|balance/i.test(texto);
+    const erro = new Error("Bright Data HTTP " + resp.status + " " + texto.slice(0, 200));
     erro.semCredito = semCredito;
     throw erro;
   }
-  return await resp.text();
-}
 
-// ========== FIRECRAWL ==========
-async function buscarFirecrawl(url, apiKey) {
-  const response = await fetch("https://api.firecrawl.dev/v1/scrape", {
-    method: "POST",
-    headers: {
-      "Authorization": "Bearer " + apiKey,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      url: url,
-      formats: ["html"],
-      waitFor: 3000,
-      onlyMainContent: false
-    })
-  });
-
-  if (!response.ok) {
-    const erro = await response.text().catch(() => "");
-    if (response.status === 402 || response.status === 401 || /limit|quota|credit/i.test(erro)) {
-      const e = new Error("Firecrawl: sem créditos ou limite atingido");
-      e.semCredito = true;
-      throw e;
-    }
-    throw new Error("Firecrawl HTTP " + response.status + " " + erro.slice(0, 200));
-  }
-
-  const dados = await response.json();
-  if (!dados.success || !dados.data) {
-    throw new Error("Firecrawl: resposta inesperada");
-  }
-
-  const html = dados.data.html || dados.data.content || "";
-  if (!html || html.length < 100) {
-    throw new Error("Firecrawl: HTML vazio ou muito curto");
-  }
-
-  return html;
-}
-
-// ========== SCRAPERAPI ==========
-async function buscarScraperAPI(url, apiKey) {
-  const montarEndpoint = (extra) =>
-    "http://api.scraperapi.com?api_key=" +
-    encodeURIComponent(apiKey) +
-    "&url=" +
-    encodeURIComponent(url) +
-    "&render=true" +
-    "&wait=3000" +
-    "&country_code=br" +
-    (extra ? "&" + extra + "=true" : "");
-
-  async function tentar(extra) {
-    const resp = await fetch(montarEndpoint(extra));
-    if (!resp.ok) {
-      const corpo = await resp.text().catch(() => "");
-      const erro = new Error("ScraperAPI HTTP " + resp.status + " " + corpo.slice(0, 200));
-      erro.status = resp.status;
-      erro.corpo = corpo;
-      throw erro;
-    }
-    return await resp.text();
-  }
-
+  const textoResp = await resp.text();
+  // Dependendo da configuração da zona, a Bright Data às vezes devolve o
+  // HTML puro e às vezes um envelope JSON com o HTML dentro de "body".
+  // Trata os dois formatos pra não depender de um único comportamento.
   try {
-    return await tentar(null);
-  } catch (e) {
-    const corpo = e.corpo || "";
-    const semCredito =
-      e.status === 402 ||
-      e.status === 401 ||
-      e.status === 429 ||
-      /credit|quota|insufficient|limit reached|too many requests|exceeded/i.test(corpo);
+    const json = JSON.parse(textoResp);
+    if (json && typeof json.body === "string") return json.body;
+  } catch {
+    // Não era JSON — é o HTML puro mesmo, segue o jogo.
+  }
+  return textoResp;
+}
 
-    // Alguns domínios (proteção anti-robô mais forte) só respondem com
-    // "premium=true". Isso consome mais créditos por página, então só
-    // tentamos de novo dessa forma quando o próprio ScraperAPI pede isso.
-    const precisaPremium = /premium(_)?=true/i.test(corpo);
-    if (precisaPremium) {
-      try {
-        return await tentar("premium");
-      } catch (e2) {
-        e2.semCredito = semCredito;
-        throw e2;
-      }
-    }
-
-    e.semCredito = semCredito;
+// ========== BUSCA COM JS (Bright Data) ==========
+async function buscarComJS(url, chaves, opcoes = {}) {
+  const { brightDataKey, brightDataZone } = chaves;
+  if (!brightDataKey || !brightDataZone) {
+    const e = new Error("Bright Data não configurada (falta BRIGHTDATA_API_KEY ou BRIGHTDATA_ZONE).");
+    e.semCredito = false;
     throw e;
   }
-}
-
-// ========== BUSCA COM FALLBACK MÚLTIPLO ==========
-async function buscarComJS(url, chaves, opcoes = {}) {
-  const { scrapingBeeKeys, firecrawlKey, scraperAPIKey } = chaves;
-  
-  if (scrapingBeeKeys && scrapingBeeKeys.length > 0) {
-    for (let i = 0; i < scrapingBeeKeys.length; i++) {
-      try {
-        console.log(`  🐝 Tentando ScrapingBee #${i + 1}...`);
-        const result = await buscarScrapingBee(url, scrapingBeeKeys[i], opcoes);
-        console.log(`  ✅ ScrapingBee #${i + 1} funcionou!`);
-        return result;
-      } catch (e) {
-        if (!e.semCredito) throw e;
-        console.log(`  ⚠️ ScrapingBee #${i + 1} sem crédito`);
-      }
-    }
-  }
-
-  if (firecrawlKey) {
-    try {
-      console.log(`  🔥 Tentando Firecrawl...`);
-      const result = await buscarFirecrawl(url, firecrawlKey);
-      console.log(`  ✅ Firecrawl funcionou!`);
-      return result;
-    } catch (e) {
-      if (!e.semCredito) throw e;
-      console.log(`  ⚠️ Firecrawl sem crédito`);
-    }
-  }
-
-  if (scraperAPIKey) {
-    try {
-      console.log(`  🧪 Tentando ScraperAPI...`);
-      const result = await buscarScraperAPI(url, scraperAPIKey);
-      console.log(`  ✅ ScraperAPI funcionou!`);
-      return result;
-    } catch (e) {
-      if (!e.semCredito) throw e;
-      console.log(`  ⚠️ ScraperAPI sem crédito`);
-    }
-  }
-
-  throw new Error(`Todos os serviços falharam (sem crédito).`);
+  return await buscarBrightData(url, brightDataKey, brightDataZone, { renderJs: true });
 }
 
 const esperar = (ms) => new Promise(r => setTimeout(r, ms));
@@ -970,54 +848,17 @@ async function buscarGaleriaCompletaSemJS(url) {
 
 // ========== GALERIA PARA SITES COM JS ==========
 async function buscarGaleriaCompletaJS(url, chaves) {
-  if (chaves.scrapingBeeKeys && chaves.scrapingBeeKeys.length > 0) {
-    for (let i = 0; i < chaves.scrapingBeeKeys.length; i++) {
-      try {
-        const html = await buscarScrapingBee(url, chaves.scrapingBeeKeys[i], {});
-        const doJsonLd = buscarImagensViaJsonLd(html);
-        const htmlLimpo = removerScriptsEEstilos(html);
-        const doHtml = buscarImagensEmTrecho(htmlLimpo);
-        const imagens = [...new Set([...doJsonLd, ...doHtml])];
-        if (imagens.length > 0) {
-          return imagens.map(u => resolverUrlImagem(u, url)).slice(0, 8);
-        }
-      } catch (e) {
-        if (!e.semCredito) throw e;
-      }
-    }
+  try {
+    const html = await buscarComJS(url, chaves);
+    const doJsonLd = buscarImagensViaJsonLd(html);
+    const htmlLimpo = removerScriptsEEstilos(html);
+    const doHtml = buscarImagensEmTrecho(htmlLimpo);
+    const imagens = [...new Set([...doJsonLd, ...doHtml])];
+    return imagens.map(u => resolverUrlImagem(u, url)).slice(0, 8);
+  } catch (e) {
+    if (!e.semCredito) throw e;
+    return [];
   }
-
-  if (chaves.firecrawlKey) {
-    try {
-      const html = await buscarFirecrawl(url, chaves.firecrawlKey);
-      const doJsonLd = buscarImagensViaJsonLd(html);
-      const htmlLimpo = removerScriptsEEstilos(html);
-      const doHtml = buscarImagensEmTrecho(htmlLimpo);
-      const imagens = [...new Set([...doJsonLd, ...doHtml])];
-      if (imagens.length > 0) {
-        return imagens.map(u => resolverUrlImagem(u, url)).slice(0, 8);
-      }
-    } catch (e) {
-      if (!e.semCredito) throw e;
-    }
-  }
-
-  if (chaves.scraperAPIKey) {
-    try {
-      const html = await buscarScraperAPI(url, chaves.scraperAPIKey);
-      const doJsonLd = buscarImagensViaJsonLd(html);
-      const htmlLimpo = removerScriptsEEstilos(html);
-      const doHtml = buscarImagensEmTrecho(htmlLimpo);
-      const imagens = [...new Set([...doJsonLd, ...doHtml])];
-      if (imagens.length > 0) {
-        return imagens.map(u => resolverUrlImagem(u, url)).slice(0, 8);
-      }
-    } catch (e) {
-      if (!e.semCredito) throw e;
-    }
-  }
-
-  return [];
 }
 
 // ----------------------
@@ -1064,24 +905,15 @@ async function main() {
     console.log("📦 Sem cache - primeira execução.");
   }
 
-  const scrapingBeeKeys = [
-    process.env.SCRAPINGBEE_API_KEY,
-    process.env.SCRAPINGBEE_API_KEY_2,
-    process.env.SCRAPINGBEE_API_KEY_3,
-  ].filter(Boolean);
-
-  const firecrawlKey = process.env.FIRECRAWL_API_KEY || "";
-  const scraperAPIKey = process.env.SCRAPERAPI_API_KEY || "";
+  const brightDataKey = process.env.BRIGHTDATA_API_KEY || "";
+  const brightDataZone = process.env.BRIGHTDATA_ZONE || "";
 
   const chaves = {
-    scrapingBeeKeys,
-    firecrawlKey,
-    scraperAPIKey,
+    brightDataKey,
+    brightDataZone,
   };
 
-  console.log(`\n🐝 ScrapingBee: ${scrapingBeeKeys.length} chave(s)`);
-  console.log(`🔥 Firecrawl: ${firecrawlKey ? "✅ Configurado" : "❌ Não configurado"}`);
-  console.log(`🧪 ScraperAPI: ${scraperAPIKey ? "✅ Configurado" : "❌ Não configurado"}`);
+  console.log(`\n☀️ Bright Data: ${(brightDataKey && brightDataZone) ? `✅ Configurado (zona: ${brightDataZone})` : "❌ Não configurado"}`);
 
   const todos = [];
   const erros = [];
@@ -1115,16 +947,13 @@ async function main() {
         let html;
 
         if (fonte.jsNecessario) {
-          const temAlgumaChave = scrapingBeeKeys.length > 0 || firecrawlKey || scraperAPIKey;
+          const temAlgumaChave = brightDataKey && brightDataZone;
           if (!temAlgumaChave) {
             console.warn(`  ⚠️ Nenhuma chave configurada`);
             erros.push(`${fonte.nome}: sem chave`);
             continue;
           }
-          const opcoes = {};
-          if (fonte.wait) opcoes.wait = fonte.wait;
-          if (fonte.scroll) opcoes.scroll = fonte.scroll;
-          html = await buscarComJS(urlPagina, chaves, opcoes);
+          html = await buscarComJS(urlPagina, chaves);
         } else {
           html = await buscarDireto(urlPagina);
         }
@@ -1246,7 +1075,7 @@ async function main() {
       }
       await esperar(400);
     } else {
-      const temAlgumaChave = scrapingBeeKeys.length > 0 || firecrawlKey || scraperAPIKey;
+      const temAlgumaChave = brightDataKey && brightDataZone;
       if (temAlgumaChave) {
         try {
           const galeria = await buscarGaleriaCompletaJS(item.link, chaves);
