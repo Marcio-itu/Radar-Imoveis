@@ -1,4 +1,4 @@
-// scripts/buscar.mjs
+scripts/buscar.mjs
 //
 // Roda no GitHub Actions.
 // Suporta: Bright Data (Web Unlocker API).
@@ -1019,17 +1019,27 @@ async function main() {
       console.log(`  ✅ TOTAL: ${itensFinais.length} imóveis encontrados (${comDataCount} com data, ${semDataCount} sem data)`);
 
       if (itensFinais.length === 0) {
-        // Usa o HTML da última página para diagnóstico
-        const htmlDiagnostico = await buscarDireto(fonte.url);
-        const contemImovel = (htmlDiagnostico.match(/\/imovel\//gi) || []).length;
-        const contemComprar = (htmlDiagnostico.match(/\/(comprar|alugar)\//gi) || []).length;
-        const pareceBloqueio = /captcha|access denied|cloudflare|habilite o javascript/i.test(htmlDiagnostico);
+        // Usa o MESMO método que a fonte realmente usa (Bright Data se
+        // precisar de JS), senão o diagnóstico mostra um resultado que não
+        // tem nada a ver com o que realmente foi tentado.
+        try {
+          const htmlDiagnostico = fonte.jsNecessario
+            ? await buscarComJS(fonte.url, chaves)
+            : await buscarDireto(fonte.url);
+          const contemImovel = (htmlDiagnostico.match(/\/imovel\//gi) || []).length;
+          const contemComprar = (htmlDiagnostico.match(/\/(comprar|alugar)\//gi) || []).length;
+          const pareceBloqueio = /captcha|access denied|cloudflare|habilite o javascript/i.test(htmlDiagnostico);
+          const trechoInicial = limparTexto(removerTags(htmlDiagnostico)).slice(0, 200);
 
-        erros.push(
-          `${fonte.nome}: 0 imóveis encontrados. HTML: ${htmlDiagnostico.length} chars. ` +
-          `"/imovel/": ${contemImovel}. "/comprar/|/alugar/": ${contemComprar}. ` +
-          `Bloqueio: ${pareceBloqueio ? "SIM" : "não"}.`
-        );
+          erros.push(
+            `${fonte.nome}: 0 imóveis (via ${fonte.jsNecessario ? "Bright Data" : "busca direta"}). ` +
+            `HTML: ${htmlDiagnostico.length} chars. ` +
+            `"/imovel/": ${contemImovel}. "/comprar/|/alugar/": ${contemComprar}. ` +
+            `Bloqueio: ${pareceBloqueio ? "SIM" : "não"}. Início: "${trechoInicial}"`
+          );
+        } catch (eDiag) {
+          erros.push(`${fonte.nome}: 0 imóveis encontrados. Diagnóstico também falhou: ${eDiag.message}`);
+        }
       }
     } catch (e) {
       console.error(`  ❌ ERRO: ${e.message}`);
