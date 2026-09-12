@@ -1,7 +1,7 @@
 {
-  "atualizadoEm": "2026-09-12T21:10:33.886Z",
+  "atualizadoEm": "2026-09-12T21:13:46.583Z",
   "geradoEm": "2026-09-12",
-  "total": 22,
+  "total": 10,
   "imoveis": [
     {
       "fonte": "Marcio Marins",
@@ -110,234 +110,6 @@
       "dataPublicacao": "2026-09-02",
       "link": "https://www.marciomarins.com.br/imovel/4411829/apartamento-venda-itu-sp-vila-santa-terezinha-condominio-reseda",
       "galeriaCompleta": true
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1494-PR3 Casa Condomínio Villagio D Itália - Itu - SP 109.21 m² 3 Quartos 1 Suíte 2 Banheiros 1 Vaga Venda Sob consulta",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1p77ehn-zEDw9EYYOSz4jufwazP3POmknq-xbXMm4nw5-vxW9WFkrImwKz2MGnysaJMYN15IkUlWtZKSyTwc4iLDUFVnhTRhmfwT4FWZkNY0xMNsw9a-FmiVsCD6wAb9AarBtyFlSG9RZ2+W0VTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1p77ehn-zEDw9EYYOSz4jufwazP3POmknq-xbXMm4nw5-vxW9WFkrImwKz2MGnysaJMYN15IkUlWtZKSyTwc4iLDUFVnhTRhmfwT4FWZkNY0xMNsw9a-FmiVsCD6wAb9AarBtyFlSG9RZ2+W0VTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg",
-      "preco": "Sob consulta",
-      "quartos": "3",
-      "suites": "1",
-      "vagas": "1",
-      "area": "109.21",
-      "bairro": "PR3 Casa Condomínio Villagio D Itália",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-109-m/CA1494-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1577-PR3 Casa Jardim Novo Itu - Itu - SP 94.99 m² 2 Quartos 1 Banheiro 1 Vaga Venda R$ 215.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0F1gclLxjIHvdYpBeeAuSfc5pmY0OvFsh6yxaTy46qD6Pr2WJ7u4bk047-uIAOCoqR7fuN9NXxhWtkjQh-WeY6lJ2hmpwOXt2fMROd8SDF16Cc7lw5S53CbDbKC2Hk3hCb0Bt-GgHGWTaTvPnNXCrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0F1gclLxjIHvdYpBeeAuSfc5pmY0OvFsh6yxaTy46qD6Pr2WJ7u4bk047-uIAOCoqR7fuN9NXxhWtkjQh-WeY6lJ2hmpwOXt2fMROd8SDF16Cc7lw5S53CbDbKC2Hk3hCb0Bt-GgHGWTaTvPnNXCrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg",
-      "preco": "R$ 215.000",
-      "quartos": "2",
-      "suites": "",
-      "vagas": "1",
-      "area": "94.99",
-      "bairro": "PR3 Casa Jardim Novo Itu",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-95-m/CA1577-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1546-PR3 Casa Vila Ianni - Itu - SP 80 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 230.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2hn-vdvwQ0xkuQbTaOR4AuX9aSz2Y20iWmu2IvmoujU1t6iTe7Q7d4OzKDoLV6tgpVkTet3KGdIdsBAaSXRVsLRGElSgTSMpErcdItEbi8NhBAKyBIK6QPgbZ+x8H4o-R3gVf-VqgG0U-vJC0xDQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2hn-vdvwQ0xkuQbTaOR4AuX9aSz2Y20iWmu2IvmoujU1t6iTe7Q7d4OzKDoLV6tgpVkTet3KGdIdsBAaSXRVsLRGElSgTSMpErcdItEbi8NhBAKyBIK6QPgbZ+x8H4o-R3gVf-VqgG0U-vJC0xDQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg",
-      "preco": "R$ 230.000",
-      "quartos": "2",
-      "suites": "",
-      "vagas": "2",
-      "area": "80",
-      "bairro": "PR3 Casa Vila Ianni",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-80-m/CA1546-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1621-PR3 Casa Vila Cleto - Itu - SP 64 m² 2 Quartos 1 Banheiro Venda R$ 240.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1c24Y1DxxAznOEcQ+GfrAKw5L7ItojBvXu8vbrGn5XU-pvzAOzC9pkQ1-TdPUyijqx3H8AQDmJ6ZrlHayDjbry+bWZs-3yVoh-TQIBec3ta9lwjvRBR-GeXV6qg6Hsp9AGqFvbkiRKDTJ69H35MEMZHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9LnaUcwwiWTrBI6RjvktXF1-esZxyOOwE79r6aq-TlP-ymTa3sWEeLr9xRprD5Hel6YNj2KSMXAldQFRNd+x7z+LeLsE36IGDY+kVHVhOSnI5y4WQ6.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1c24Y1DxxAznOEcQ+GfrAKw5L7ItojBvXu8vbrGn5XU-pvzAOzC9pkQ1-TdPUyijqx3H8AQDmJ6ZrlHayDjbry+bWZs-3yVoh-TQIBec3ta9lwjvRBR-GeXV6qg6Hsp9AGqFvbkiRKDTJ69H35MEMZHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9LnaUcwwiWTrBI6RjvktXF1-esZxyOOwE79r6aq-TlP-ymTa3sWEeLr9xRprD5Hel6YNj2KSMXAldQFRNd+x7z+LeLsE36IGDY+kVHVhOSnI5y4WQ6.jpg",
-      "preco": "R$ 240.000",
-      "quartos": "2",
-      "suites": "",
-      "vagas": "",
-      "area": "64",
-      "bairro": "PR3 Casa Vila Cleto",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-64-m/CA1621-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "Exclusivo CA0036-PR3 Casa Rancho Grande - Itu - SP 200 m² 1 Quarto 1 Banheiro Venda R$ 280.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgiY81u1BnzJVIG+bu4XLeh9jPuvy08hTKob-8lOL2jOimAZuA5d4VivetQnWFnvJObfcMahsmNrFQbEGsXZ+PdjwbvHPe+xiVC-FfCTgKh0V4jxIalhG5QYS07Ax3nCqpDaqetCeIUa3pCF1VU+0VXcVjrkAGoUnkGAkk4BJQt9-i42+QOP2qLZy802FeAkEjrMT5DLzkmcXCKssxGfN8OC1dtAcTDqdChv2CGaBdzycl7ryQLzGhsiyH17IBN5ivL6kt7b1DyVjRB6AOtV2pzJaZw7ewfRLGIVk69fU=.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgiY81u1BnzJVIG+bu4XLeh9jPuvy08hTKob-8lOL2jOimAZuA5d4VivetQnWFnvJObfcMahsmNrFQbEGsXZ+PdjwbvHPe+xiVC-FfCTgKh0V4jxIalhG5QYS07Ax3nCqpDaqetCeIUa3pCF1VU+0VXcVjrkAGoUnkGAkk4BJQt9-i42+QOP2qLZy802FeAkEjrMT5DLzkmcXCKssxGfN8OC1dtAcTDqdChv2CGaBdzycl7ryQLzGhsiyH17IBN5ivL6kt7b1DyVjRB6AOtV2pzJaZw7ewfRLGIVk69fU=.jpg",
-      "preco": "R$ 280.000",
-      "quartos": "1",
-      "suites": "",
-      "vagas": "",
-      "area": "200",
-      "bairro": "PR3 Casa Rancho Grande",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-1-quarto-200-m/CA0036-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1631-PR3 Casa Jardim Novo Mundo - Itu - SP 106 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 285.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1YiytdNuyYTiv1cTb3hsSat0N67yvSA8UicqKH4gq2E7cTkY8iFyJ4x1bXUNHGnmLI4VuImHGtXRMx4bivBBNaBA1dYjWaUiBzVeLADRDsN9DttvEhCzmWlZqSirwMJ9yy5G8nKpi+GXozaGXhTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1YiytdNuyYTiv1cTb3hsSat0N67yvSA8UicqKH4gq2E7cTkY8iFyJ4x1bXUNHGnmLI4VuImHGtXRMx4bivBBNaBA1dYjWaUiBzVeLADRDsN9DttvEhCzmWlZqSirwMJ9yy5G8nKpi+GXozaGXhTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg",
-      "preco": "R$ 285.000",
-      "quartos": "2",
-      "suites": "",
-      "vagas": "2",
-      "area": "106",
-      "bairro": "PR3 Casa Jardim Novo Mundo",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-106-m/CA1631-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1427-PR3 Casa Alto - Itu - SP 85 m² 2 Quartos 1 Banheiro Venda R$ 290.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Np29V3+h0mv8dGR+Cdl3WO4r2o1dS1pXqm-szRg+3d3sH7VpmD7YIV1ITNLlmdtIRjRfktOGxcN+ZxHxjPW5ydOUMJriudq3iUZeMdTERnxgEIugcLw32ET7Oi+0MwhiyjFqvEoxS7c5zGUANTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Np29V3+h0mv8dGR+Cdl3WO4r2o1dS1pXqm-szRg+3d3sH7VpmD7YIV1ITNLlmdtIRjRfktOGxcN+ZxHxjPW5ydOUMJriudq3iUZeMdTERnxgEIugcLw32ET7Oi+0MwhiyjFqvEoxS7c5zGUANTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg",
-      "preco": "R$ 290.000",
-      "quartos": "2",
-      "suites": "",
-      "vagas": "",
-      "area": "85",
-      "bairro": "PR3 Casa Alto",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-85-m/CA1427-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA0706-PR3 Casa Jardim Aeroporto I - Itu - SP 120 m² 1 Quarto 1 Banheiro 1 Vaga Venda R$ 290.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux9Y8c1z6U0JosMYTJGwpiO7gKbK9YvArmuf8o+PraiBjZzGW9700a8fj7DZNwayvqU0Htx6PkIjXuh1Gi3TTYGtHCNw+2iIvU-Gf+t8TmNb4TtroQxM716zQLa8p3Ib9SK9U-aBgGuIUYTjW0B1FrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux9Y8c1z6U0JosMYTJGwpiO7gKbK9YvArmuf8o+PraiBjZzGW9700a8fj7DZNwayvqU0Htx6PkIjXuh1Gi3TTYGtHCNw+2iIvU-Gf+t8TmNb4TtroQxM716zQLa8p3Ib9SK9U-aBgGuIUYTjW0B1FrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg",
-      "preco": "R$ 290.000",
-      "quartos": "1",
-      "suites": "",
-      "vagas": "1",
-      "area": "120",
-      "bairro": "PR3 Casa Jardim Aeroporto I",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-1-quarto-120-m/CA0706-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1605-PR3 Casa Jardim Santa Laura - Itu - SP 150 m² 3 Quartos 2 Suítes 3 Banheiros 1 Vaga Venda R$ 295.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu25Bjo1p6kwTyesAQ4a0gGy6g9uO7NWwqx6705GTv5ni-970f9qF2qsE6YrBDVyqlZxDYfYLOmtcXNNhFVm0DoqvGGALqGG1vm6UH4pYH1pJ6BEsnxZM1UqFTbGQzXEaxA2cKNTfhDajdqLeM2VTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu25Bjo1p6kwTyesAQ4a0gGy6g9uO7NWwqx6705GTv5ni-970f9qF2qsE6YrBDVyqlZxDYfYLOmtcXNNhFVm0DoqvGGALqGG1vm6UH4pYH1pJ6BEsnxZM1UqFTbGQzXEaxA2cKNTfhDajdqLeM2VTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg",
-      "preco": "R$ 295.000",
-      "quartos": "3",
-      "suites": "2",
-      "vagas": "1",
-      "area": "150",
-      "bairro": "PR3 Casa Jardim Santa Laura",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-150-m/CA1605-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1544-PR3 Casa Jardim Aeroporto I - Itu - SP 130 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 300.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu19-+eJ0-zVggJcFR6fl7BS6+6GI2u6rnVWL5LrNopiAje75XpuOk4Q+yf6qLkCumL5fHoMEDBtFZ-VQYEDpbrinGCYAoGejumeSU7gaU1IM-hAKyQt6wnmnX8Lz2Fcf5QWFNc70shKlFfHvXVt+CrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu19-+eJ0-zVggJcFR6fl7BS6+6GI2u6rnVWL5LrNopiAje75XpuOk4Q+yf6qLkCumL5fHoMEDBtFZ-VQYEDpbrinGCYAoGejumeSU7gaU1IM-hAKyQt6wnmnX8Lz2Fcf5QWFNc70shKlFfHvXVt+CrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg",
-      "preco": "R$ 300.000",
-      "quartos": "2",
-      "suites": "",
-      "vagas": "2",
-      "area": "130",
-      "bairro": "PR3 Casa Jardim Aeroporto I",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-130-m/CA1544-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1622-PR3 Casa Cidade Nova I - Itu - SP 120 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 310.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1x4joNvyBkhyfoDWOeCtg2D2dSfy+nGomOw0suPj+3r0Ib4Z5r10ZIE9KT9Iw6Gofd5TeM9Gh1aSPBEFQ3beqfeDk9ToQnJlETzU5pmQEd+1iQ9ljh-3HSDfL2j3AMdxXu4MOKE7xC1XqG+HndlQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1x4joNvyBkhyfoDWOeCtg2D2dSfy+nGomOw0suPj+3r0Ib4Z5r10ZIE9KT9Iw6Gofd5TeM9Gh1aSPBEFQ3beqfeDk9ToQnJlETzU5pmQEd+1iQ9ljh-3HSDfL2j3AMdxXu4MOKE7xC1XqG+HndlQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg",
-      "preco": "R$ 310.000",
-      "quartos": "2",
-      "suites": "",
-      "vagas": "2",
-      "area": "120",
-      "bairro": "PR3 Casa Cidade Nova I",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-120-m/CA1622-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1172-PR3 Casa Cidade Nova I - Itu - SP 128.45 m² 3 Quartos 1 Suíte 1 Banheiro 2 Vagas Venda R$ 345.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv1VhFicpHygkZypEdQo-nmBTc0auT3uCTiFqx6bHJmo33j+7tXPrExdoZjYzDN1OroYBjX4R9K2dzbdB3fx3JQI66PUFyvGiQnErNa+ZWE29e0wYfqT5J1HmrVMKx8V834Rj7Ls-fgQ+8Ef7fREMJCr9KAt8stFhX+AKpSRdyvwgS5oel4CDLfaapPtjgx3QYXVAy7oHwFffjnJmQZo1oFL4hPXoH4xwTV65f1uvISux44RMDv+uPFRGHlB-PhPAuPZusX9hXyKRWwg3FGLQavk+5ldbHjPSkZx+AMFU4pr7L+-DlafrvZNaGWy3+0LQixL75apgLAc-0XUdiZ1c5MDwUqVy2qvTa4hirbC3YuBAKChPH25w1.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv1VhFicpHygkZypEdQo-nmBTc0auT3uCTiFqx6bHJmo33j+7tXPrExdoZjYzDN1OroYBjX4R9K2dzbdB3fx3JQI66PUFyvGiQnErNa+ZWE29e0wYfqT5J1HmrVMKx8V834Rj7Ls-fgQ+8Ef7fREMJCr9KAt8stFhX+AKpSRdyvwgS5oel4CDLfaapPtjgx3QYXVAy7oHwFffjnJmQZo1oFL4hPXoH4xwTV65f1uvISux44RMDv+uPFRGHlB-PhPAuPZusX9hXyKRWwg3FGLQavk+5ldbHjPSkZx+AMFU4pr7L+-DlafrvZNaGWy3+0LQixL75apgLAc-0XUdiZ1c5MDwUqVy2qvTa4hirbC3YuBAKChPH25w1.jpg",
-      "preco": "R$ 345.000",
-      "quartos": "3",
-      "suites": "1",
-      "vagas": "2",
-      "area": "128.45",
-      "bairro": "PR3 Casa Cidade Nova I",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-128-m/CA1172-PR3?from=sale"
     },
     {
       "fonte": "Ferraz & Luiz Imóveis",
@@ -515,12 +287,13 @@
     "Bem Aqui Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Regina Marchi Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "SLA Imobiliária Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
+    "Proimóvel Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Costa Rocha Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Beto Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\""
   ],
   "resumoData": {
     "comData": 0,
-    "semData": 71,
-    "total": 22
+    "semData": 59,
+    "total": 10
   }
 }
