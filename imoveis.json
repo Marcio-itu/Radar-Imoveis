@@ -1,7 +1,7 @@
 {
-  "atualizadoEm": "2026-09-13T01:54:13.042Z",
+  "atualizadoEm": "2026-09-13T03:20:12.901Z",
   "geradoEm": "2026-09-13",
-  "total": 10,
+  "total": 22,
   "imoveis": [
     {
       "fonte": "Marcio Marins",
@@ -110,6 +110,234 @@
       "dataPublicacao": "2026-09-02",
       "link": "https://www.marciomarins.com.br/imovel/4411829/apartamento-venda-itu-sp-vila-santa-terezinha-condominio-reseda",
       "galeriaCompleta": true
+    },
+    {
+      "fonte": "SLA Imobiliária Itu",
+      "titulo": "CA0957-MBK Casa Jardim Aeroporto I - Itu - SP 56 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 230.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2RX3NNCxhIHgvBAAeSZkgOn2IHPzoensEufyr-fnb-8x+3uB+rA2rcBiuvTHHi2sql0ZIQXM1l6PutRWD3JTr-cNlJq-QXVlEjnQrQWU0xZ-gBsqydb73ugRqaM0UNu2xyELvSdtDyMQ+W+WGZFErMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNZBm7xWwwvBSrpO7RnpxdaU1vOoa06GNVM7prmerPTiPvf6TbSiIjv00M1bodDcK55YaN6lWDYICiV1dX8QskWs4vmc+UDrM2zU-kICWB3fnMM79G5lMU0D8cMDpz2gjsrx.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2RX3NNCxhIHgvBAAeSZkgOn2IHPzoensEufyr-fnb-8x+3uB+rA2rcBiuvTHHi2sql0ZIQXM1l6PutRWD3JTr-cNlJq-QXVlEjnQrQWU0xZ-gBsqydb73ugRqaM0UNu2xyELvSdtDyMQ+W+WGZFErMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNZBm7xWwwvBSrpO7RnpxdaU1vOoa06GNVM7prmerPTiPvf6TbSiIjv00M1bodDcK55YaN6lWDYICiV1dX8QskWs4vmc+UDrM2zU-kICWB3fnMM79G5lMU0D8cMDpz2gjsrx.jpg",
+      "preco": "R$ 230.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "2",
+      "area": "56",
+      "bairro": "MBK Casa Jardim Aeroporto I",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-56-m/CA0957-MBK?from=sale"
+    },
+    {
+      "fonte": "SLA Imobiliária Itu",
+      "titulo": "CA0654-MBK Casa Cidade Nova I - Itu - SP 90 m² 3 Quartos 1 Banheiro 3 Vagas Venda R$ 280.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgi4IzvFBiy5ZEG+Dj43bbhdXJvYuzhm7K08j-4Jryi5PVdeqAkK1iifeoSXTwnfdMa4V2bBomPblQaUGsXZ+PdjwbvHPe+xiVC-FfCTgKh0V4jxIalhG5QYS07Ax3nCqpDaqetCeIUa3pCF1VU+0VXcVjrkAGoUnkGAkk4BJQt9-i42+QOP2qLpe00mFfURB0-8r6De-iy5XCKp09TPh0bCtY4QNBXPUShqDfSKBytlNS+7qYVV2XlVnByLYmJ5qyVt0amb5QngrLE+BL40zpx4LZ3uX7fVGUcwx+57KNu6ejIOytWLv7ITix.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgi4IzvFBiy5ZEG+Dj43bbhdXJvYuzhm7K08j-4Jryi5PVdeqAkK1iifeoSXTwnfdMa4V2bBomPblQaUGsXZ+PdjwbvHPe+xiVC-FfCTgKh0V4jxIalhG5QYS07Ax3nCqpDaqetCeIUa3pCF1VU+0VXcVjrkAGoUnkGAkk4BJQt9-i42+QOP2qLpe00mFfURB0-8r6De-iy5XCKp09TPh0bCtY4QNBXPUShqDfSKBytlNS+7qYVV2XlVnByLYmJ5qyVt0amb5QngrLE+BL40zpx4LZ3uX7fVGUcwx+57KNu6ejIOytWLv7ITix.jpg",
+      "preco": "R$ 280.000",
+      "quartos": "3",
+      "suites": "",
+      "vagas": "3",
+      "area": "90",
+      "bairro": "MBK Casa Cidade Nova I",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-90-m/CA0654-MBK?from=sale"
+    },
+    {
+      "fonte": "SLA Imobiliária Itu",
+      "titulo": "CA0960-MBK Casa Jardim São José - Itu - SP 98 m² 1 Quarto 1 Banheiro 2 Vagas Venda R$ 290.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Jk0f11xSYsmNQhVrGDpHCf9L+5u9yA-UCO1brptqnZ7dzOTPv1l4s1zInoClX2gvdYQ+Iua1Ega9RcXSDOTaOmImEMgWPd+G7cEowZXk5q8CUQljRL60qpf5zy-gYZ1QCnD-D+iH6GHfvfXH5cDrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNZBm7xWwwvBSrpO7RnpxdaU1vOoa06GNVM7prmerPTiPvf6TbSiIjv00M1bodDcK55YaN6lWDYICiV1dX8QskWs4vmc+UDrM2zU-kICWB3fnMM79G5lMU0D8cMDpz2gjsrx.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Jk0f11xSYsmNQhVrGDpHCf9L+5u9yA-UCO1brptqnZ7dzOTPv1l4s1zInoClX2gvdYQ+Iua1Ega9RcXSDOTaOmImEMgWPd+G7cEowZXk5q8CUQljRL60qpf5zy-gYZ1QCnD-D+iH6GHfvfXH5cDrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNZBm7xWwwvBSrpO7RnpxdaU1vOoa06GNVM7prmerPTiPvf6TbSiIjv00M1bodDcK55YaN6lWDYICiV1dX8QskWs4vmc+UDrM2zU-kICWB3fnMM79G5lMU0D8cMDpz2gjsrx.jpg",
+      "preco": "R$ 290.000",
+      "quartos": "1",
+      "suites": "",
+      "vagas": "2",
+      "area": "98",
+      "bairro": "MBK Casa Jardim São José",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-1-quarto-98-m/CA0960-MBK?from=sale"
+    },
+    {
+      "fonte": "SLA Imobiliária Itu",
+      "titulo": "CA0981-MBK Casa Cidade Nova I - Itu - SP 140.8 m² 3 Quartos 2 Banheiros 2 Vagas Venda R$ 300.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2J2+ux13RkivukZYK66lzmnwo+X4P6G81qT+LHwmLjJhfr2Y+XsxbIVjLesKA6Ss440QsUsb1JOfPtxQSXTeofcJFcNhRmTlEDvcOJiRWVl1gAZlhto41CnTZKH+XUN3wP-Gtb5gQ6gb7-BIF1nGOFHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxAlaQcwlvHGeNG6hm8lIeV1-f6a0mFM1U98+ue+aa3b-z7EPzsdz7-2MlXrsqVK84PJsfyDjMVHy4kImde6Emh4qPL9RvrYGvMulgVHRPRztwnpXZ9YFtE-81OuG+4gc+8Nw==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2J2+ux13RkivukZYK66lzmnwo+X4P6G81qT+LHwmLjJhfr2Y+XsxbIVjLesKA6Ss440QsUsb1JOfPtxQSXTeofcJFcNhRmTlEDvcOJiRWVl1gAZlhto41CnTZKH+XUN3wP-Gtb5gQ6gb7-BIF1nGOFHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxAlaQcwlvHGeNG6hm8lIeV1-f6a0mFM1U98+ue+aa3b-z7EPzsdz7-2MlXrsqVK84PJsfyDjMVHy4kImde6Emh4qPL9RvrYGvMulgVHRPRztwnpXZ9YFtE-81OuG+4gc+8Nw==.jpg",
+      "preco": "R$ 300.000",
+      "quartos": "3",
+      "suites": "",
+      "vagas": "2",
+      "area": "140.8",
+      "bairro": "MBK Casa Cidade Nova I",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-141-m/CA0981-MBK?from=sale"
+    },
+    {
+      "fonte": "SLA Imobiliária Itu",
+      "titulo": "CA0873-MBK Casa Jardim das Rosas - Itu - SP 122.51 m² 3 Quartos 2 Banheiros 2 Vagas Venda R$ 320.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv8mo86-Jq5jMMs9E2UK2mugLW3J2rxNmJlXa1xpn1hqPdjJ6ndZmB54Qb4bzLS3KXuoFDF90OCHpTa94hWz-uUIuxeSAMowuuu0bgEKNLZzYFxz4SyDt942O-TMmtxW8Ijj78U6mE7y7TEvCsRRZDX7RPBdst-h5D+he1R0In6B8d9MPz5XKCcLmqf8vj1GBMVEgz+5WrU7mum5jMZpl7V6wlM3od60YVF7QQwPyVQOxj609Y87eXTRWXxV-D3bJyJcisDI0ayqcHlA-FG7Qd6x-vwNfFja35ch6AMFs98bCY5ablOK3vHPr0JCX005tWu56BepIDJ9--D2QUBDh9MDVRp1LkteiL+gD6Z3jWtl0VWAvI3NE=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv8mo86-Jq5jMMs9E2UK2mugLW3J2rxNmJlXa1xpn1hqPdjJ6ndZmB54Qb4bzLS3KXuoFDF90OCHpTa94hWz-uUIuxeSAMowuuu0bgEKNLZzYFxz4SyDt942O-TMmtxW8Ijj78U6mE7y7TEvCsRRZDX7RPBdst-h5D+he1R0In6B8d9MPz5XKCcLmqf8vj1GBMVEgz+5WrU7mum5jMZpl7V6wlM3od60YVF7QQwPyVQOxj609Y87eXTRWXxV-D3bJyJcisDI0ayqcHlA-FG7Qd6x-vwNfFja35ch6AMFs98bCY5ablOK3vHPr0JCX005tWu56BepIDJ9--D2QUBDh9MDVRp1LkteiL+gD6Z3jWtl0VWAvI3NE=.jpg",
+      "preco": "R$ 320.000",
+      "quartos": "3",
+      "suites": "",
+      "vagas": "2",
+      "area": "122.51",
+      "bairro": "MBK Casa Jardim das Rosas",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-123-m/CA0873-MBK?from=sale"
+    },
+    {
+      "fonte": "SLA Imobiliária Itu",
+      "titulo": "CA0925-MBK Casa São Luiz - Itu - SP 180 m² 5 Quartos 1 Suíte 3 Banheiros 1 Vaga Venda R$ 330.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNvplpHgdZu5RFngO0yTof7kwCFgYTOyOuGlGmN54HfgIv25cClTvv1kIQbz5yiJVessZM+SIUnC3tEN8t3WD7RdoLbGFNDvBPSgHfmb6AeTF1n2ARvlhBWyn-kYrKOwFIZigjwFKqA8HLJTP+4URYYX-lYCt407ENDsQK-XFB8p0pK9JGl+XaFOuW-M4DugSALG1In8oevXbnpmdnCJ5YnGrlrPXoH40EZTKZew-iTSP984RIB5LyYW0fclAmW1+N9Ip2oDN0az-FVkwvAG7RO7E26x9DB16elZxibYFU+-bib8PWsaKr2S7T1dz38zcFQ9MiVLJMOfdKkWD9HUCchbjgD7FK4+OvGswCzICmfth5HFUHf1pl4qw==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNvplpHgdZu5RFngO0yTof7kwCFgYTOyOuGlGmN54HfgIv25cClTvv1kIQbz5yiJVessZM+SIUnC3tEN8t3WD7RdoLbGFNDvBPSgHfmb6AeTF1n2ARvlhBWyn-kYrKOwFIZigjwFKqA8HLJTP+4URYYX-lYCt407ENDsQK-XFB8p0pK9JGl+XaFOuW-M4DugSALG1In8oevXbnpmdnCJ5YnGrlrPXoH40EZTKZew-iTSP984RIB5LyYW0fclAmW1+N9Ip2oDN0az-FVkwvAG7RO7E26x9DB16elZxibYFU+-bib8PWsaKr2S7T1dz38zcFQ9MiVLJMOfdKkWD9HUCchbjgD7FK4+OvGswCzICmfth5HFUHf1pl4qw==.jpg",
+      "preco": "R$ 330.000",
+      "quartos": "5",
+      "suites": "1",
+      "vagas": "1",
+      "area": "180",
+      "bairro": "MBK Casa São Luiz",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-5-quartos-180-m/CA0925-MBK?from=sale"
+    },
+    {
+      "fonte": "SLA Imobiliária Itu",
+      "titulo": "CA0953-MBK Casa Jardim Estância Bom Viver - Itu - SP 86 m² 2 Quartos 1 Banheiro 1 Vaga Venda R$ 330.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0FozP9v608egOkFdZacsC2OxdXR5srChl6-p6P6h6qF9uH2DJzu84oa2KLTT1W+4vN5GsR8MEd+ePVzTkTBVIe4YFRY+CaO+h-9T7p6fVBu50QdkyUKxAGZRKippmAVxHC-O6zplhWnUJ-9GlB8CrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNZBm7xWwwvBSrpO7RnpxdaU1vOoa06GNVM7prmerPTiPvf6TbSiIjv00M1bodDcK55YaN6lWDYICiV1dX8QskWs4vmc+UDrM2zU-kICWB3fnMM79G5lMU0D8cMDpz2gjsrx.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0FozP9v608egOkFdZacsC2OxdXR5srChl6-p6P6h6qF9uH2DJzu84oa2KLTT1W+4vN5GsR8MEd+ePVzTkTBVIe4YFRY+CaO+h-9T7p6fVBu50QdkyUKxAGZRKippmAVxHC-O6zplhWnUJ-9GlB8CrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNZBm7xWwwvBSrpO7RnpxdaU1vOoa06GNVM7prmerPTiPvf6TbSiIjv00M1bodDcK55YaN6lWDYICiV1dX8QskWs4vmc+UDrM2zU-kICWB3fnMM79G5lMU0D8cMDpz2gjsrx.jpg",
+      "preco": "R$ 330.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "1",
+      "area": "86",
+      "bairro": "MBK Casa Jardim Estância Bom Viver",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-86-m/CA0953-MBK?from=sale"
+    },
+    {
+      "fonte": "SLA Imobiliária Itu",
+      "titulo": "CA0975-MBK Casa Jardim Alberto Gomes - Itu - SP 97 m² 2 Quartos 1 Suíte 1 Banheiro 2 Vagas Venda R$ 370.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu11diNh2+U0RtdIbZ62koXfb+oGm9tu3gXmIpo2Jh67U5cjSW9v+kdAD7onME1eQmKQ5ZcABFGlAZNN6QzXSVJ+-HVtaiAWPqV-gfbtnYm1y-jZtyU1a2Qu7VLK+1WYThX6dVcrZuHCKF47hHHkZLtZHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxAlaQcwlvHGeNG6hm8lIeV1-f6a0mFM1U98+ue+aa3b-z7EPzsdz7-2MlXrsqVK84PJsfyDjMVHy4kImde6Emh4qPL9RvrYGvMulgVHRPRztwnpXZ9YFtE-81OuG+4gc+8Nw==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu11diNh2+U0RtdIbZ62koXfb+oGm9tu3gXmIpo2Jh67U5cjSW9v+kdAD7onME1eQmKQ5ZcABFGlAZNN6QzXSVJ+-HVtaiAWPqV-gfbtnYm1y-jZtyU1a2Qu7VLK+1WYThX6dVcrZuHCKF47hHHkZLtZHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxAlaQcwlvHGeNG6hm8lIeV1-f6a0mFM1U98+ue+aa3b-z7EPzsdz7-2MlXrsqVK84PJsfyDjMVHy4kImde6Emh4qPL9RvrYGvMulgVHRPRztwnpXZ9YFtE-81OuG+4gc+8Nw==.jpg",
+      "preco": "R$ 370.000",
+      "quartos": "2",
+      "suites": "1",
+      "vagas": "2",
+      "area": "97",
+      "bairro": "MBK Casa Jardim Alberto Gomes",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-97-m/CA0975-MBK?from=sale"
+    },
+    {
+      "fonte": "SLA Imobiliária Itu",
+      "titulo": "CA0982-MBK Casa Parque América - Itu - SP 122.16 m² 2 Quartos 1 Suíte 2 Banheiros 2 Vagas Venda R$ 371.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Y-7PJS9CYCg8ooBK2s7Qmtm6um6-Lch17T3azIpr3D--LPXtruw5ge34DKOUGzlbR0WeYiOVJ2a-t7bzz6b42REEhwgGWnohv2croDGUZ+8joqjREP6QuOeMen-W8dxCK8B8rDgQW8FoXiIQFMT8dHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxAlaQcwlvHGeNG6hm8lIeV1-f6a0mFM1U98+ue+aa3b-z7EPzsdz7-2MlXrsqVK84PJsfyDjMVHy4kImde6Emh4qPL9RvrYGvMulgVHRPRztwnpXZ9YFtE-81OuG+4gc+8Nw==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Y-7PJS9CYCg8ooBK2s7Qmtm6um6-Lch17T3azIpr3D--LPXtruw5ge34DKOUGzlbR0WeYiOVJ2a-t7bzz6b42REEhwgGWnohv2croDGUZ+8joqjREP6QuOeMen-W8dxCK8B8rDgQW8FoXiIQFMT8dHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxAlaQcwlvHGeNG6hm8lIeV1-f6a0mFM1U98+ue+aa3b-z7EPzsdz7-2MlXrsqVK84PJsfyDjMVHy4kImde6Emh4qPL9RvrYGvMulgVHRPRztwnpXZ9YFtE-81OuG+4gc+8Nw==.jpg",
+      "preco": "R$ 371.000",
+      "quartos": "2",
+      "suites": "1",
+      "vagas": "2",
+      "area": "122.16",
+      "bairro": "MBK Casa Parque América",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-2-quartos-122-m/CA0982-MBK?from=sale"
+    },
+    {
+      "fonte": "SLA Imobiliária Itu",
+      "titulo": "CA0964-MBK Casa Jardim Residencial Itaim - Itu - SP 130 m² 3 Quartos 1 Suíte 1 Banheiro 2 Vagas Venda R$ 380.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu35q+f1C2zIdsuFEco++jQCt+JnMzee4hl642pXckYr5kNnWZuSC2aR6+q7TF3mqlqdjYf53FHhwPbJ0SUTvBruGZD11iQ7Xm2XGT7BWf1oF4CYfnw0Pnh6-ZL+NyXQtwhv-J93-9SmzYIrnDAFDQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWtVtdPg-ZXkw2SE7JJ7Uy4lNeV0qGobE2AM1Vu9LnL-qGzNfanBfr3JzD81MFUu5nce8kWcYnzXSsdAXQibTFKvkisuK6QokC4NHSQ5FVHVhONg99q7HY0JwoN-44c9SWvi4c=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu35q+f1C2zIdsuFEco++jQCt+JnMzee4hl642pXckYr5kNnWZuSC2aR6+q7TF3mqlqdjYf53FHhwPbJ0SUTvBruGZD11iQ7Xm2XGT7BWf1oF4CYfnw0Pnh6-ZL+NyXQtwhv-J93-9SmzYIrnDAFDQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWtVtdPg-ZXkw2SE7JJ7Uy4lNeV0qGobE2AM1Vu9LnL-qGzNfanBfr3JzD81MFUu5nce8kWcYnzXSsdAXQibTFKvkisuK6QokC4NHSQ5FVHVhONg99q7HY0JwoN-44c9SWvi4c=.jpg",
+      "preco": "R$ 380.000",
+      "quartos": "3",
+      "suites": "1",
+      "vagas": "2",
+      "area": "130",
+      "bairro": "MBK Casa Jardim Residencial Itaim",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-130-m/CA0964-MBK?from=sale"
+    },
+    {
+      "fonte": "SLA Imobiliária Itu",
+      "titulo": "SO0076-MBK Sobrado Vila Fragnani - Itu - SP 200 m² 3 Quartos 1 Suíte 1 Banheiro 2 Vagas Venda R$ 390.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNvpWdOi85N2BoJq-QHQo+fpzCZxNqruvqCiEqo9Jr7jqLU+MygZcjO9pk+843KH1mKqfdGHN8iF0ogUOdebx3XbauuLWlSmBSXj2HWXpFaQkZ5xxxougtU9gW5QqSD6Uxrwy7wFKqA8HLJTP+4URYYX-lYCt407ENDsQK-XFB8p0pK9JGl+XaFOuW-M4DugSALG1In8oevXbnpmdnCJ5YnGrlrPXoH40EZTKZew-iTSP984RIB5LyYW0fclAmW1+N9Ip2oDN0az-FVkwvAG7RO7E26x9DB16elZxibYFU+-bib8PWsaKr2S7T1dz38zcFQ9MiVLJMOfdKkWD9HUCchbjgD7FK4+OvGswCzICmfth5HFUHf1pl4qw==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNvpWdOi85N2BoJq-QHQo+fpzCZxNqruvqCiEqo9Jr7jqLU+MygZcjO9pk+843KH1mKqfdGHN8iF0ogUOdebx3XbauuLWlSmBSXj2HWXpFaQkZ5xxxougtU9gW5QqSD6Uxrwy7wFKqA8HLJTP+4URYYX-lYCt407ENDsQK-XFB8p0pK9JGl+XaFOuW-M4DugSALG1In8oevXbnpmdnCJ5YnGrlrPXoH40EZTKZew-iTSP984RIB5LyYW0fclAmW1+N9Ip2oDN0az-FVkwvAG7RO7E26x9DB16elZxibYFU+-bib8PWsaKr2S7T1dz38zcFQ9MiVLJMOfdKkWD9HUCchbjgD7FK4+OvGswCzICmfth5HFUHf1pl4qw==.jpg",
+      "preco": "R$ 390.000",
+      "quartos": "3",
+      "suites": "1",
+      "vagas": "2",
+      "area": "200",
+      "bairro": "MBK Sobrado Vila Fragnani",
+      "cidade": "Itu",
+      "tipo": "",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/sobrado-itu-3-quartos-200-m/SO0076-MBK?from=sale"
+    },
+    {
+      "fonte": "SLA Imobiliária Itu",
+      "titulo": "CA0759-MBK Casa Liberdade - Itu - SP 130 m² 3 Quartos 1 Suíte 1 Banheiro 4 Vagas Venda R$ 400.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgi4IzvFBiy5ZEG+Tu4XOthtS4y4vA9BzJob395e+K+JylDev0mNEWj4KtTgGF6vRIF417Gm0nOLQlGkCsXZ+PdjwbvHPe+xiVC-FfCTgKh0V4jxIalhG5QYS07Ax3nCqpDaqetCeIUa3pCF1VU+0VXcVjrkAGoUnkGAkk4BJQt9-i42+QOP2qLpe00mFfURB0-8r6De-iy5XCKp09TPh0bCtY4QNBXPUShqDfSKBytlNS+7qYVV2XlVnByLYmJ5qyVt0amb5QngrLE+BL40zpx4LZ3uX7fVGUcwx+57KNu6ejIOytWLv7ITix.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgi4IzvFBiy5ZEG+Tu4XOthtS4y4vA9BzJob395e+K+JylDev0mNEWj4KtTgGF6vRIF417Gm0nOLQlGkCsXZ+PdjwbvHPe+xiVC-FfCTgKh0V4jxIalhG5QYS07Ax3nCqpDaqetCeIUa3pCF1VU+0VXcVjrkAGoUnkGAkk4BJQt9-i42+QOP2qLpe00mFfURB0-8r6De-iy5XCKp09TPh0bCtY4QNBXPUShqDfSKBytlNS+7qYVV2XlVnByLYmJ5qyVt0amb5QngrLE+BL40zpx4LZ3uX7fVGUcwx+57KNu6ejIOytWLv7ITix.jpg",
+      "preco": "R$ 400.000",
+      "quartos": "3",
+      "suites": "1",
+      "vagas": "4",
+      "area": "130",
+      "bairro": "MBK Casa Liberdade",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-130-m/CA0759-MBK?from=sale"
     },
     {
       "fonte": "Ferraz & Luiz Imóveis",
@@ -286,14 +514,13 @@
     "AP Imóveis Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Bem Aqui Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Regina Marchi Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
-    "SLA Imobiliária Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Proimóvel Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Costa Rocha Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Beto Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\""
   ],
   "resumoData": {
     "comData": 0,
-    "semData": 59,
-    "total": 10
+    "semData": 71,
+    "total": 22
   }
 }
