@@ -810,8 +810,13 @@ async function buscarHasData(url, apiKey, opcoes = {}) {
   try {
     dados = JSON.parse(textoResp);
   } catch {
-    // A resposta não veio em JSON (ex: página de erro em HTML). Mostra um
-    // pedaço do que realmente chegou, pra dar pra investigar de verdade.
+    // Não veio em JSON — mas se o texto parece HTML de verdade (a própria
+    // página do site, não uma tela de erro), a HasData provavelmente só
+    // devolveu o HTML puro em vez de embrulhar em JSON. Usa direto.
+    const pareceHtmlDeVerdade = /<html[\s>]|<!doctype html/i.test(textoResp) && textoResp.length > 500;
+    if (pareceHtmlDeVerdade) {
+      return textoResp;
+    }
     throw new Error(
       `HasData: resposta não veio em JSON (HTTP ${resp.status}). Início: "${textoResp.slice(0, 200)}"`
     );
