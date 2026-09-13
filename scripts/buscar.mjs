@@ -775,6 +775,51 @@ async function buscarDireto(url) {
 }
 
 // ========== BRIGHT DATA (WEB UNLOCKER API) ==========
+// ========== HASDATA (tentado primeiro; cai pra Bright Data se falhar) ==========
+async function buscarHasData(url, apiKey, opcoes = {}) {
+  const corpo = {
+    url,
+    outputFormat: ["html"],
+  };
+  if (opcoes.renderJs) corpo.jsRendering = true;
+
+  const resp = await fetch("https://api.hasdata.com/scrape/web", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": apiKey,
+    },
+    body: JSON.stringify(corpo),
+  });
+
+  if (!resp.ok) {
+    const texto = await resp.text().catch(() => "");
+    const semCredito =
+      resp.status === 402 ||
+      resp.status === 401 ||
+      resp.status === 429 ||
+      /credit|quota|insufficient|limit reached|too many requests|exceeded|balance/i.test(texto);
+    const erro = new Error("HasData HTTP " + resp.status + " " + texto.slice(0, 200));
+    erro.semCredito = semCredito;
+    throw erro;
+  }
+
+  const dados = await resp.json();
+  // A doc não deixa 100% explícito o nome do campo em todo endpoint — cobre
+  // os formatos mais prováveis de resposta.
+  const html =
+    (typeof dados.content === "string" && dados.content) ||
+    (dados.content && typeof dados.content.html === "string" && dados.content.html) ||
+    (typeof dados.html === "string" && dados.html) ||
+    (dados.data && typeof dados.data.html === "string" && dados.data.html) ||
+    "";
+
+  if (!html) {
+    throw new Error("HasData: resposta sem HTML reconhecível");
+  }
+  return html;
+}
+
 async function buscarBrightData(url, apiKey, zone, opcoes = {}) {
   const corpo = {
     zone,
@@ -821,13 +866,24 @@ async function buscarBrightData(url, apiKey, zone, opcoes = {}) {
 
 // ========== BUSCA COM JS (Bright Data) ==========
 async function buscarComJS(url, chaves, opcoes = {}) {
-  const { brightDataKey, brightDataZone } = chaves;
-  if (!brightDataKey || !brightDataZone) {
-    const e = new Error("Bright Data não configurada (falta BRIGHTDATA_API_KEY ou BRIGHTDATA_ZONE).");
-    e.semCredito = false;
-    throw e;
+  const { hasDataKey, brightDataKey, brightDataZone } = chaves;
+
+  if (hasDataKey) {
+    try {
+      const resultado = await buscarHasData(url, hasDataKey, { renderJs: true });
+      return resultado;
+    } catch (e) {
+      console.log(`  ⚠️ HasData falhou (${e.message.slice(0, 100)}) — tentando Bright Data...`);
+    }
   }
-  return await buscarBrightData(url, brightDataKey, brightDataZone, { renderJs: true });
+
+  if (brightDataKey && brightDataZone) {
+    return await buscarBrightData(url, brightDataKey, brightDataZone, { renderJs: true });
+  }
+
+  const e = new Error("Nenhum serviço de scraping configurado (HasData ou Bright Data).");
+  e.semCredito = false;
+  throw e;
 }
 
 const esperar = (ms) => new Promise(r => setTimeout(r, ms));
@@ -905,15 +961,18 @@ async function main() {
     console.log("📦 Sem cache - primeira execução.");
   }
 
+  const hasDataKey = process.env.HASDATA_API_KEY || "";
   const brightDataKey = process.env.BRIGHTDATA_API_KEY || "";
   const brightDataZone = process.env.BRIGHTDATA_ZONE || "";
 
   const chaves = {
+    hasDataKey,
     brightDataKey,
     brightDataZone,
   };
 
-  console.log(`\n☀️ Bright Data: ${(brightDataKey && brightDataZone) ? `✅ Configurado (zona: ${brightDataZone})` : "❌ Não configurado"}`);
+  console.log(`\n🟣 HasData: ${hasDataKey ? "✅ Configurado" : "❌ Não configurado"}`);
+  console.log(`☀️ Bright Data: ${(brightDataKey && brightDataZone) ? `✅ Configurado (zona: ${brightDataZone})` : "❌ Não configurado"}`);
 
   const todos = [];
   const erros = [];
@@ -948,7 +1007,7 @@ async function main() {
         let html;
 
         if (fonte.jsNecessario) {
-          const temAlgumaChave = brightDataKey && brightDataZone;
+          const temAlgumaChave = hasDataKey || (brightDataKey && brightDataZone);
           if (!temAlgumaChave) {
             console.warn(`  ⚠️ Nenhuma chave configurada`);
             erros.push(`${fonte.nome}: sem chave`);
@@ -1087,7 +1146,7 @@ async function main() {
       }
       await esperar(400);
     } else {
-      const temAlgumaChave = brightDataKey && brightDataZone;
+      const temAlgumaChave = hasDataKey || (brightDataKey && brightDataZone);
       if (temAlgumaChave) {
         try {
           const galeria = await buscarGaleriaCompletaJS(item.link, chaves);
