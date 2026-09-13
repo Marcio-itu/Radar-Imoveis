@@ -26,6 +26,7 @@ jobs:
 
       - name: Rodar a busca
         env:
+          HASDATA_API_KEY: ${{ secrets.HASDATA_API_KEY }}
           BRIGHTDATA_API_KEY: ${{ secrets.BRIGHTDATA_API_KEY }}
           BRIGHTDATA_ZONE: web_unlocker1
         run: node scripts/buscar.mjs
