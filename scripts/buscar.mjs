@@ -787,24 +787,36 @@ async function buscarHasData(url, apiKey, opcoes = {}) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Accept": "application/json",
       "x-api-key": apiKey,
     },
     body: JSON.stringify(corpo),
   });
 
+  const textoResp = await resp.text();
+
   if (!resp.ok) {
-    const texto = await resp.text().catch(() => "");
     const semCredito =
       resp.status === 402 ||
       resp.status === 401 ||
       resp.status === 429 ||
-      /credit|quota|insufficient|limit reached|too many requests|exceeded|balance/i.test(texto);
-    const erro = new Error("HasData HTTP " + resp.status + " " + texto.slice(0, 200));
+      /credit|quota|insufficient|limit reached|too many requests|exceeded|balance/i.test(textoResp);
+    const erro = new Error("HasData HTTP " + resp.status + " " + textoResp.slice(0, 200));
     erro.semCredito = semCredito;
     throw erro;
   }
 
-  const dados = await resp.json();
+  let dados;
+  try {
+    dados = JSON.parse(textoResp);
+  } catch {
+    // A resposta não veio em JSON (ex: página de erro em HTML). Mostra um
+    // pedaço do que realmente chegou, pra dar pra investigar de verdade.
+    throw new Error(
+      `HasData: resposta não veio em JSON (HTTP ${resp.status}). Início: "${textoResp.slice(0, 200)}"`
+    );
+  }
+
   // A doc não deixa 100% explícito o nome do campo em todo endpoint — cobre
   // os formatos mais prováveis de resposta.
   const html =
@@ -873,7 +885,7 @@ async function buscarComJS(url, chaves, opcoes = {}) {
       const resultado = await buscarHasData(url, hasDataKey, { renderJs: true });
       return resultado;
     } catch (e) {
-      console.log(`  ⚠️ HasData falhou (${e.message.slice(0, 100)}) — tentando Bright Data...`);
+      console.log(`  ⚠️ HasData falhou (${e.message.slice(0, 250)}) — tentando Bright Data...`);
     }
   }
 
