@@ -1,8 +1,268 @@
 {
-  "atualizadoEm": "2026-09-15T03:30:47.453Z",
+  "atualizadoEm": "2026-09-15T13:44:21.789Z",
   "geradoEm": "2026-09-15",
-  "total": 34,
+  "total": 82,
   "imoveis": [
+    {
+      "fonte": "Kenlo - Portal Geral",
+      "titulo": "CA7810-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP 590 m² 5 Quartos 5 Suítes 7 Banheiros 4 Vagas Venda R$ 4.500.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3lsyPF3-joFpeUDV4bnhiuEwJStyNSEkHa7o6HntrLi-PHTX9z455k-7qfaG1OsqIVpdNNiMEZ5O8t5fyDhQqybO2pfrTeP-lT-ZOprbkNpjjgUnhxC-0qQfoLzx3kU9ya3N+zKlTTdZuXRUQxnKLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-LxlqNg7t3c5j6DdxKyaBWn1qXH7UY40vtwNLOgaT4PkTVN1Ygp+TAquCtLr6tW7v7NmapwtVB+Y2adZ4LOA==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3lsyPF3-joFpeUDV4bnhiuEwJStyNSEkHa7o6HntrLi-PHTX9z455k-7qfaG1OsqIVpdNNiMEZ5O8t5fyDhQqybO2pfrTeP-lT-ZOprbkNpjjgUnhxC-0qQfoLzx3kU9ya3N+zKlTTdZuXRUQxnKLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-LxlqNg7t3c5j6DdxKyaBWn1qXH7UY40vtwNLOgaT4PkTVN1Ygp+TAquCtLr6tW7v7NmapwtVB+Y2adZ4LOA==.jpg",
+      "preco": "R$ 4.500.000",
+      "quartos": "5",
+      "suites": "5",
+      "vagas": "4",
+      "area": "590",
+      "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://portal.kenlo.com.br/imovel/casa-itu-5-quartos-590-m/CA7810-UTG?from=sale"
+    },
+    {
+      "fonte": "Kenlo - Portal Geral",
+      "titulo": "AP0712-ABEW Apartamento Edificio Residencial Montis - Itu - SP 59 m² 2 Quartos 1 Banheiro 1 Vaga Venda R$ 406.174,16 Aluguel R$ 1.800/mês",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0VW9elN+jhhksBGRYaUpgzW3KKZ7tCagX6VqLPqsuqFxJ-HGeSO14wn96XMDHSVgrA8SdB3bH15PcgnY0DaDpyHP3luviivtn73ZqdqBjBxwgockU1hwH+CBbGqxVw71n2+DNiC+wGzY5rADVF1OLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cxFuX1rNqc52tD9sczqEAkgbHE+cfu0q-xNXAgKauPEzSYQBr9LqCqq7ubuzuCumuZyr2wpcGtNGaINoZf972EA==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0VW9elN+jhhksBGRYaUpgzW3KKZ7tCagX6VqLPqsuqFxJ-HGeSO14wn96XMDHSVgrA8SdB3bH15PcgnY0DaDpyHP3luviivtn73ZqdqBjBxwgockU1hwH+CBbGqxVw71n2+DNiC+wGzY5rADVF1OLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3liU0LF0PcuoXI9NyPEBlArKH7obu0-vwoaWg6GvbR6HZwFuo7md5aDtY6zgBLuxe3vu2tsN89+UbcVLZ9DyXXs=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxZJ9OVQ+koQopEFf425mhK3+oy97tOhsEWG-63mp5+A0sjeZufn2LEc+4HvAADpvoAgbfwrN2AhbLVAW1nzfN+rHFlsmWGIuGPNT5xIQUZc4QgUuxpanlbjX6Gj0lEA9jCqNaPAjCHTb63qAVV7TbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3liU0LF0PcuoXI9NyPEBlArKH7obu0-vwoaWg6GvbR6HZwFuo7md5aDtY6zgBLuxe3vu2tsN89+UbcVLZ9DyXXs=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu389iPNk7S0bvvguB72vshu1m9-KvPC2rEWZz6rHh5WB+ObkWsWElIsI66KrTXKusIJXQY0dA39IPOJIeSfYcbuRDmV0rCbciBjwYLVlT3V40A1tuSB-+QHmX4aG-F828T79G-31unK3XZD8On1TQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cxFuX1rNqc52tD9sczqEAkgbHE+cfu0q-xNXAgKauPEzSYQBr9LqCqq7ubuzuCumuZyr2wpcGtNGaINoZf972EA==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu11u6vh-xExnwpA-ReW7vzW-34bE54mwomC8qajR+pTR9Pjxd-6GwYIF0JLrNnL8uqBJV90-NRxgO9NBdUDneL+lBiIL8yWovFjAf4ZgHUZ4+wc5jjxi2nyLAKW12nQX0QKIPPbAjjaDQPvoOEVEPLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3liU0LF0PcuoXI9NyPEBlArKH7obu0-vwoaWg6GvbR6HZwFuo7md5aDtY6zgBLuxe3vu2tsN89+UbcVLZ9DyXXs=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux863NVK7CkEq8o7TrSsnxKD36m3xe6AgxWJ5Z-PpKHpx8rnc+bpjYAS-L7fLEyb6YlpW-MgAhtwdfRAZRzDRYvFMEZJqQa7vXvGTYoaZ3No2gU+qyZp4QWnW8Wm+mw28RuDL8LSjjKXYL3EKn9DQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cxFuX1rNqc52tD9sczqEAkgbHE+cfu0q-xNXAgKauPEzSYQBr9LqCqq7ubuzuCumuZyr2wpcGtNGaINoZf972EA==.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1dky9lgvxkurOE-YZimkS64-LXE2IzJ8Gq55c-2uuqFiZLtAtru551lwbbQP1eogvNkQ9YoAmAmffVoHTz4fb+aDkJugRKDp0rPF7JlHWdv+gMQsglQ+GC8ApeoymwQ+QX9Fd+Cuy7UTKvlXAABBL5HR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8GpOnPFhmDnkKX07d2I4X+WdwZmfdRlQzGErZGv0-qkoDF1aKobE-VMgdvpu6e+u-jYKGgCrXjZGe-wsNB+JiaY4hUNcj8WTZY.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0VW9elN+jhhksBGRYaUpgzW3KKZ7tCagX6VqLPqsuqFxJ-HGeSO14wn96XMDHSVgrA8SdB3bH15PcgnY0DaDpyHP3luviivtn73ZqdqBjBxwgockU1hwH+CBbGqxVw71n2+DNiC+wGzY5rADVF1OLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cxFuX1rNqc52tD9sczqEAkgbHE+cfu0q-xNXAgKauPEzSYQBr9LqCqq7ubuzuCumuZyr2wpcGtNGaINoZf972EA==.jpg",
+      "preco": "R$ 406.174,16",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "1",
+      "area": "59",
+      "bairro": "ABEW Apartamento Edificio Residencial Montis",
+      "cidade": "Itu",
+      "tipo": "apartamento",
+      "finalidade": "venda e aluguel",
+      "dataPublicacao": null,
+      "link": "https://portal.kenlo.com.br/imovel/apartamento-itu-2-quartos-59-m/AP0712-ABEW?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "Kenlo - Portal Geral",
+      "titulo": "AP0711-ABEW Apartamento Edificio Residencial Montis - Itu - SP 76 m² 3 Quartos 1 Suíte 2 Banheiros 2 Vagas Venda R$ 444.280,41 Aluguel R$ 2.000/mês",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2JOge9z2ChlvOwhQaK1lQPC0qqZ-cq3tnik5JzoroTn683AYoLy5rACwLbSNA6ojvBiXc47LH1+QfhebCbKZ42jZWoA+wKmg2yXUJcaRXsO0RArySZfnEPoXZyb+3I8x3i3G6zkijKiYf-ROwRZMLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cxFuX1rNqc52tD9sczqEAkgbHE+cfu0q-xNXAgKauPEzSYQBr9LqCqq7ubuzuCumuZyr2wpcGtNGaINoZf972EA==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2JOge9z2ChlvOwhQaK1lQPC0qqZ-cq3tnik5JzoroTn683AYoLy5rACwLbSNA6ojvBiXc47LH1+QfhebCbKZ42jZWoA+wKmg2yXUJcaRXsO0RArySZfnEPoXZyb+3I8x3i3G6zkijKiYf-ROwRZMLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3liU0LF0PcuoXI9NyPEBlArKH7obu0-vwoaWg6GvbR6HZwFuo7md5aDtY6zgBLuxe3vu2tsN89+UbcVLZ9DyXXs=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Y6z4hv5hoVmPEiWaOasDHe+Z2O2I+IhXub9bjvvI3J6ePQRPqF7J8lyPHOEUWGroBIR4Q1Ml1wYMNUchvFdbfFMGF1gxrRok-WZIVDUXBX8RtssQxqyV6YRoG82EYH9Az4Bav98muefoTWIkEGFrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3liU0LF0PcuoXI9NyPEBlArKH7obu0-vwoaWg6GvbR6HZwFuo7md5aDtY6zgBLuxe3vu2tsN89+UbcVLZ9DyXXs=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu19B6PZu-0oRoNgAZ4GYmRbf8qmuwO62tByXw4v3mI3gxMikefnE6L468K7COHOlsK9jRtIFGGBzbbVGfwfQWr6kOWN0gTyLgmLcReYDf11w+TFpsSxQ23yOGJP8119u+D65MqnSlDegd7vRC1BDQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cxFuX1rNqc52tD9sczqEAkgbHE+cfu0q-xNXAgKauPEzSYQBr9LqCqq7ubuzuCumuZyr2wpcGtNGaINoZf972EA==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu01W0-dtvk9ivdA3boiFoBve5tmTv8if-UTL2LnOm73V9ZLBR+X-6bIxz6v0KE+mraB+H4w-BBsnYMVnYTrpXLWhG1MIkgCAhGTQbYMYZWpehwISjTpO7wKgXb2D80FpgXCnCvTFpTeecJLjJFNROeJHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8GpOnPFhmDnkKX07d2I4X+WdwZmfdRlQzGErZGv0-qkoDF1aKobE-VMgdvpu6e+u-jYKGgCrXjZGe-wsNB+JiaY4hUNcj8WTZY.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3lO4Yp8vk8ivO4zbpKSnwq399nL3-KhjVm65cnHvZjEz53uctXvkKo06q33QnmvurVcWeZ6MUtXfbZ5XyT1A4SwEEBckh6KrWf-UaFZfkwM81AXtQZ8yQelYpis0F9ogBa1BMPnjne9SoLMAkBTQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cxFuX1rNqc52tD9sczqEAkgbHE+cfu0q-xNXAgKauPEzSYQBr9LqCqq7ubuzuCumuZyr2wpcGtNGaINoZf972EA==.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0ZN2-xBuUssovAgYqLghWyt+tiL9vKytEDJ6LnZuuPe9eHud5-Yl4USi-7tGWSctPNYVsMJChsjZcRBd0HldYClE2ZhuGG7+U7vZaVNaG57ziQdrDYJxESBVoa21Wk3hn+KE9-lgSe1dPG8WExAFrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3liU0LF0PcuoXI9NyPEBlArKH7obu0-vwoaWg6GvbR6HZwFuo7md5aDtY6zgBLuxe3vu2tsN89+UbcVLZ9DyXXs=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2JOge9z2ChlvOwhQaK1lQPC0qqZ-cq3tnik5JzoroTn683AYoLy5rACwLbSNA6ojvBiXc47LH1+QfhebCbKZ42jZWoA+wKmg2yXUJcaRXsO0RArySZfnEPoXZyb+3I8x3i3G6zkijKiYf-ROwRZMLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cxFuX1rNqc52tD9sczqEAkgbHE+cfu0q-xNXAgKauPEzSYQBr9LqCqq7ubuzuCumuZyr2wpcGtNGaINoZf972EA==.jpg",
+      "preco": "R$ 444.280,41",
+      "quartos": "3",
+      "suites": "1",
+      "vagas": "2",
+      "area": "76",
+      "bairro": "ABEW Apartamento Edificio Residencial Montis",
+      "cidade": "Itu",
+      "tipo": "apartamento",
+      "finalidade": "venda e aluguel",
+      "dataPublicacao": null,
+      "link": "https://portal.kenlo.com.br/imovel/apartamento-itu-3-quartos-76-m/AP0711-ABEW?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "Kenlo - Portal Geral",
+      "titulo": "CA5022-BET Casa Jardim do Estádio - Itu - SP 129.49 m² 4 Quartos 1 Banheiro 6 Vagas Venda R$ 900.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxk4wvFQ5RsCm5ZGBZ+9vi2MxK6bxem29GCxxsrRmbfL8dzfeO3n7Kcy0KT0AkKtsPI8R9wEAktTNu1cWAfXQ4KBYkMKij+xj2-iUedrbjRxgloAqy0N6XmBBbWUz38t4yG6MqrIsBzXVqC6OXxDQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-LxlWNg7t8J5L5W4tBm6EHkQfAHeZO70vowoDEhvOsakmFZVMgp+TAquCtLr6tW7v7NmapwtVB+Y2adZ4LOA==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxk4wvFQ5RsCm5ZGBZ+9vi2MxK6bxem29GCxxsrRmbfL8dzfeO3n7Kcy0KT0AkKtsPI8R9wEAktTNu1cWAfXQ4KBYkMKij+xj2-iUedrbjRxgloAqy0N6XmBBbWUz38t4yG6MqrIsBzXVqC6OXxDQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-LxlWNg7t8J5L5W4tBm6EHkQfAHeZO70vowoDEhvOsakmFZVMgp+TAquCtLr6tW7v7NmapwtVB+Y2adZ4LOA==.jpg",
+      "preco": "R$ 900.000",
+      "quartos": "4",
+      "suites": "",
+      "vagas": "6",
+      "area": "129.49",
+      "bairro": "BET Casa Jardim do Estádio",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://portal.kenlo.com.br/imovel/casa-itu-4-quartos-129-m/CA5022-BET?from=sale"
+    },
+    {
+      "fonte": "Kenlo - Portal Geral",
+      "titulo": "TE2084-BET Terreno Condomínio Jardim Plaza Athénée - Itu - SP 1220.69 m² Venda R$ 1.900.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3xDlclWvwdkguY9UOSUui6LwJSaw-KrrEC5yauK5qzq28rkAeT9zIIS1-XRC1Svkoc-Z8YQEVhpf8pCdA3TeYiLIXx7+D+KiV3CbKlrQjQL4iMbzkt-5Ge+W6qN2g8+3DvgMcuFsRK7aeXbGm1lQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-LxlWNg7t8J5L5W4tBm6EHkQfAHeZO70vowoDEhvOsakmFZVMgp+TAquCtLr6tW7v7NmapwtVB+Y2adZ4LOA==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3xDlclWvwdkguY9UOSUui6LwJSaw-KrrEC5yauK5qzq28rkAeT9zIIS1-XRC1Svkoc-Z8YQEVhpf8pCdA3TeYiLIXx7+D+KiV3CbKlrQjQL4iMbzkt-5Ge+W6qN2g8+3DvgMcuFsRK7aeXbGm1lQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-LxlWNg7t8J5L5W4tBm6EHkQfAHeZO70vowoDEhvOsakmFZVMgp+TAquCtLr6tW7v7NmapwtVB+Y2adZ4LOA==.jpg",
+      "preco": "R$ 1.900.000",
+      "quartos": "",
+      "suites": "",
+      "vagas": "",
+      "area": "1220.69",
+      "bairro": "BET Terreno Condomínio Jardim Plaza Athénée",
+      "cidade": "Itu",
+      "tipo": "terreno",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://portal.kenlo.com.br/imovel/terreno-itu-1-221-m/TE2084-BET?from=sale"
+    },
+    {
+      "fonte": "Kenlo - Portal Geral",
+      "titulo": "CA2709-OPCA Casa Condomínio Portal de Itu - Itu - SP 339 m² 4 Quartos 2 Suítes 1 Banheiro 2 Vagas Venda R$ 1.450.000",
+      "imagens": [
+        "https://imgs.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2ZByu826AUGvvo3ZvqHsnKj0d67w++zoBih35yJgpXf9e-IWMeEkKc13ZDhG1Si7IdiaMAWBB1hdrVVGjCwYa6SZUl6qmWev3fNdodJakpa6AM8ywoA2AKEaqan50c0+wuMVu3Box6PfpfmA3JlCrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-Cwl+W0q13K5+vCtlAmfZWkguSHuFM70zpwNHGhqWtbUWGNVc+9qXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg"
+      ],
+      "imagem": "https://imgs.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2ZByu826AUGvvo3ZvqHsnKj0d67w++zoBih35yJgpXf9e-IWMeEkKc13ZDhG1Si7IdiaMAWBB1hdrVVGjCwYa6SZUl6qmWev3fNdodJakpa6AM8ywoA2AKEaqan50c0+wuMVu3Box6PfpfmA3JlCrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-Cwl+W0q13K5+vCtlAmfZWkguSHuFM70zpwNHGhqWtbUWGNVc+9qXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg",
+      "preco": "R$ 1.450.000",
+      "quartos": "4",
+      "suites": "2",
+      "vagas": "2",
+      "area": "339",
+      "bairro": "OPCA Casa Condomínio Portal de Itu",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://portal.kenlo.com.br/imovel/casa-itu-4-quartos-339-m/CA2709-OPCA?from=sale"
+    },
+    {
+      "fonte": "Kenlo - Portal Geral",
+      "titulo": "CA5378-BET Casa Vila Santa Terezinha - Itu - SP 161 m² 2 Quartos 2 Banheiros Venda R$ 550.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2lAzcl1vQwUrckZXICBng6f4bWFzNe3tGeExLjJ45mE7dn2Zpz02t8S0JHjI1udo7xPWM0ZK2JIdcgjFQTzYpjQMChO+Snc91STUqJYckh4ziMQwE97lAKIZcaJ5g8zxwODLujKtAW2d-7pC0FmO9ZHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3lWV3a0jK5OqVohNyaoElQvFE7FIvh6+k9fDgKauOU2DN1Br9aXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2lAzcl1vQwUrckZXICBng6f4bWFzNe3tGeExLjJ45mE7dn2Zpz02t8S0JHjI1udo7xPWM0ZK2JIdcgjFQTzYpjQMChO+Snc91STUqJYckh4ziMQwE97lAKIZcaJ5g8zxwODLujKtAW2d-7pC0FmO9ZHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8GpOnPFhmDnkKa0rpqdJOmW9YemfYKkA3HHbpN7Eq7w9GUgKGvbRuGNlc+o7iCqq7ubuzuCumuZyr2wpcGtNGaINoZf972EA==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1hn4uUx1Dwmq5Q1ceSOsROK0rmP3vu8gnPNop+Kr7P+js-jBuLMl5xj2pDjTFKFkqg0Fu0fCGBcVsxkABbLe7mEAGQJiR7UoXrNRblJTWAExyY7qS1MxmCyWL3903BvgjGIK9fjjReBS5y7XFdFLLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3lWV3a0jK5OqVohNyaoElQvFE7FIvh6+k9fDgKauOU2DN1Br9aXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxdAzdUwwBgZrsQwW7nigBW5-IrM7N6bqECIqZz1nbDH++z1eMSBw58n0an2KlObsPdJffYMIWlSRPYmeQPuY9iBAiVBnAGz9lyRZbV4XWtS5iE7rC4BmGOJAsmx6n0M3wOjJ-PqmgmzSbvRHFtTQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cyVqayuR8K5+nCNsdlaQBkwnLGLQa6hvulYDDh6f6b0iCMAU96OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Bd6fRr-zIPqepIBIKC5TaO-pXJus+HhmqW38n8tbKeiZjUQcnX56dh1rPuOHuxuqlEd90sHXt3OfEnThnzU6CnH0BTozWIjFn-UeBlH2QLjyUKtTRxx138QoWd8WAOgR6uIOHC+zGwff-XJG1TQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cyVqayuR8K5+nCNsdlaQBkwnLGLQa6hvulYDDh6f6b0iCMAU96OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu15t8oswwSYSlMY9eKaSsnOo1L6J0NOE9EaH-sna5JHC7Z7xBNePmasPi7LiCHmnlaNnbeU1an1lWdVnbyLQdKmwLFdegmG7+xnDfuZiGmxE418UnApe6gK3A5a19ns5gQubIcKCtyzVT6T7I0ZgL8NHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8GpOnPFhmDnkKa0rpqdJOmW9YemfYKkA3HHbpN7Eq7w9GUgKGvbRuGNlc+o7iCqq7ubuzuCumuZyr2wpcGtNGaINoZf972EA==.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://imgs.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2pozv10vTIso-0pY+SbhhuC8orR+uertGuXqLPEp4rl+sXcXdqP7Jg6jZH1DG+rkKJuSesWbX5-TbhHV0C2U7ydP0kLniKSmFnrfqIdcVJN8iQFoA0K4laOBpezz14AxR+AV8H6hDaJcv7lLAVYB8lHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8GpOnPFhmDnkKa0rpqdJOmW9YemfYKkA3HHbpN7Eq7w9GUgKGvbRuGNlc+o7iCqq7ubuzuCumuZyr2wpcGtNGaINoZf972EA==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2lAzcl1vQwUrckZXICBng6f4bWFzNe3tGeExLjJ45mE7dn2Zpz02t8S0JHjI1udo7xPWM0ZK2JIdcgjFQTzYpjQMChO+Snc91STUqJYckh4ziMQwE97lAKIZcaJ5g8zxwODLujKtAW2d-7pC0FmO9ZHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3lWV3a0jK5OqVohNyaoElQvFE7FIvh6+k9fDgKauOU2DN1Br9aXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg",
+      "preco": "R$ 550.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "",
+      "area": "161",
+      "bairro": "BET Casa Vila Santa Terezinha",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://portal.kenlo.com.br/imovel/casa-itu-2-quartos-161-m/CA5378-BET?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "Kenlo - Portal Geral",
+      "titulo": "CA5409-BET Casa São Luiz - Itu - SP 85 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 375.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxZfwehV6E03q5RBYpi3jCPf-6uItsykhx+N3ZX1pIL6yuT5TP7nl5016IDwAnCPiJI9H-87GQV9XddnWhzMGpmRIVlMkiOdgE7Oc+BLHXBP9T4Uqy53-wrnQJ28qX4Q+giGMPD87zPdSr35OQMMErMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cyVqayuR8K5+nCNsdlaQBkwnLGLQa6hvulYDDh6f6b0iCMAU96OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxZfwehV6E03q5RBYpi3jCPf-6uItsykhx+N3ZX1pIL6yuT5TP7nl5016IDwAnCPiJI9H-87GQV9XddnWhzMGpmRIVlMkiOdgE7Oc+BLHXBP9T4Uqy53-wrnQJ28qX4Q+giGMPD87zPdSr35OQMMErMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cyVqayuR8K5+nCNsdlaQBkwnLGLQa6hvulYDDh6f6b0iCMAU96OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg",
+      "preco": "R$ 375.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "2",
+      "area": "85",
+      "bairro": "BET Casa São Luiz",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://portal.kenlo.com.br/imovel/casa-itu-2-quartos-85-m/CA5409-BET?from=sale"
+    },
+    {
+      "fonte": "Kenlo - Portal Geral",
+      "titulo": "CA5279-BET Casa Jardim Paulista III - Itu - SP 180 m² 2 Quartos 3 Banheiros 2 Vagas Venda R$ 650.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2079I4-uhIjm-tcRZaOgzG586vN+NazgnbTx6Pvs6+Dy932XsXXkbpl1omiEliOtfBeXvcQFG1+ZrVGfhLMU4mEEmlg-DKqoGPESIIfekx3miIogQhdyFqDQai39QNp1yq3KM+dpmuPR6y6EABWTbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cyVqayuR8K5+nCNsdlaQBkwnLGLQa6hvulYDDh6f6b0iCMAU96OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2079I4-uhIjm-tcRZaOgzG586vN+NazgnbTx6Pvs6+Dy932XsXXkbpl1omiEliOtfBeXvcQFG1+ZrVGfhLMU4mEEmlg-DKqoGPESIIfekx3miIogQhdyFqDQai39QNp1yq3KM+dpmuPR6y6EABWTbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3lWV3a0jK5OqVohNyaoElQvFE7FIvh6+k9fDgKauOU2DN1Br9aXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1x71oNo20YZr8E6Zo7jkQyez5WJ2Pizj0qN8Y-HvpbK0fjkX+7Zwo858LTaF2e9nLRHXtwNI1l6ZbYhXRrgRZigIlxSrCOSixvPE6d4bXEQhCMetRNK6WaldICn6H4R4j6MLNbnphaPe4LEGlV1QPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cyVqayuR8K5+nCNsdlaQBkwnLGLQa6hvulYDDh6f6b0iCMAU96OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3xO5+Jt6zkMqfIUB4WchA6i+rmEyuWGrn+fyrfEhOOC9pnVYNXa2b1vi6LOAl6U7fF3TOM9NkwpOucjGRO6er+nJnhp5jmAol2VaKpnUTdQhg0oqxdwyQKkY8WW2ENpngKJVdndqy+vU-DvMwRDQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cyVqayuR8K5+nCNsdlaQBkwnLGLQa6hvulYDDh6f6b0iCMAU96OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxZazo9zykpvvvsYVrGF5nWE74ekxejGkBup1qnIn4j4+NOkeNbVk5sBjr-qAnfziJF7Su14NxxXPO8reyvzUILcGX1wnwiOjXTNE79beDJs1CpssUtbnEO6dMWVrFwe8h24AtDxpiivd5vACkBaDrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3lWV3a0jK5OqVohNyaoElQvFE7FIvh6+k9fDgKauOU2DN1Br9aXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2pn-cJpyjojyNAADKa17HihgNqr6I-J8nu99q7q7uv71f37TfDCzYRh8aDWNgS3kbVgF4UbLxlaRLN3QxLpZazRNX4JsRSqnX+UTbofW0FM51sKnDZn4mL8ZoCy+X4xwhr1N-XFmDGcZqDAJGwNC-pHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8GpOnPFhmDnkKa0rpqdJOmW9YemfYKkA3HHbpN7Eq7w9GUgKGvbRuGNlc+o7iCqq7ubuzuCumuZyr2wpcGtNGaINoZf972EA==.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuwJV-Mxtyk0vvsNAc7HlgmzZ17+dzs7FjFqSwbbOpYvJ9p7yRO3-x746+rTeMHmunL5OHu4OKlFYdup6RgTGQKiwZEALujqlphnNHqYcHW1S4Q0Mzy5-nGT8RKm3wHMA1iG3BMHo+gKNdIa+XGFyTbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3lWV3a0jK5OqVohNyaoElQvFE7FIvh6+k9fDgKauOU2DN1Br9aXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2079I4-uhIjm-tcRZaOgzG586vN+NazgnbTx6Pvs6+Dy932XsXXkbpl1omiEliOtfBeXvcQFG1+ZrVGfhLMU4mEEmlg-DKqoGPESIIfekx3miIogQhdyFqDQai39QNp1yq3KM+dpmuPR6y6EABWTbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cyVqayuR8K5+nCNsdlaQBkwnLGLQa6hvulYDDh6f6b0iCMAU96OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg",
+      "preco": "R$ 650.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "2",
+      "area": "180",
+      "bairro": "BET Casa Jardim Paulista III",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://portal.kenlo.com.br/imovel/casa-itu-2-quartos-180-m/CA5279-BET?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "Kenlo - Portal Geral",
+      "titulo": "SL0188-BET Salão Vila Martins - Itu - SP Venda R$ 2.200.000",
+      "imagens": [
+        "https://imgs.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu10-8Nxf9jIPs9cLfoKP5CSZ0aC97NywnWmVxKHdj63gi8LPBcPxlqkb-on8G0KFsrx6X-w8IV8lV8lTACX6XrXfHlkKuDisqk7VErVKXmVHwT8MuT1ry3HnT6+31HUH1CKDWsidkxWVSqajGUB1QPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-LxlWNg7t8J5L5W4tBm6EHkQfAHeZO70vowoDEhvOsakmFZVMgp+TAquCtLr6tW7v7NmapwtVB+Y2adZ4LOA==.jpg"
+      ],
+      "imagem": "https://imgs.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu10-8Nxf9jIPs9cLfoKP5CSZ0aC97NywnWmVxKHdj63gi8LPBcPxlqkb-on8G0KFsrx6X-w8IV8lV8lTACX6XrXfHlkKuDisqk7VErVKXmVHwT8MuT1ry3HnT6+31HUH1CKDWsidkxWVSqajGUB1QPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J97wcFv+fQDV-LxlWNg7t8J5L5W4tBm6EHkQfAHeZO70vowoDEhvOsakmFZVMgp+TAquCtLr6tW7v7NmapwtVB+Y2adZ4LOA==.jpg",
+      "preco": "R$ 2.200.000",
+      "quartos": "",
+      "suites": "",
+      "vagas": "",
+      "area": "",
+      "bairro": "BET Salão Vila Martins",
+      "cidade": "Itu",
+      "tipo": "",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://portal.kenlo.com.br/imovel/salao-itu/SL0188-BET?from=sale"
+    },
+    {
+      "fonte": "Kenlo - Portal Geral",
+      "titulo": "CA5441-BET Casa Brasil - Itu - SP 515 m² 4 Quartos 1 Suíte 5 Banheiros 12 Vagas Venda R$ 1.700.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Vj+fQ23RoPlO82BOOjjQuiwoyEyou+902Y04nxmpHY2P72Z9nC1aMijo3YI2-8s4BAbe0eOHF6QMtgRkf7Y5yCByBr+ibWhX7OaasfSlhL1gMqyk9px0emA8a+9AIKwH-7Atj2lDaye+XpAm0DK7hHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3lWV3a0jK5OqVohNyaoElQvFE7FIvh6+k9fDgKauOU2DN1Br9aXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Vj+fQ23RoPlO82BOOjjQuiwoyEyou+902Y04nxmpHY2P72Z9nC1aMijo3YI2-8s4BAbe0eOHF6QMtgRkf7Y5yCByBr+ibWhX7OaasfSlhL1gMqyk9px0emA8a+9AIKwH-7Atj2lDaye+XpAm0DK7hHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwwFrOHUCwCc3lWV3a0jK5OqVohNyaoElQvFE7FIvh6+k9fDgKauOU2DN1Br9aXNpK3jLuLgWPayNjLujpxBut-XP4gBcdq7.jpg",
+      "preco": "R$ 1.700.000",
+      "quartos": "4",
+      "suites": "1",
+      "vagas": "12",
+      "area": "515",
+      "bairro": "BET Casa Brasil",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://portal.kenlo.com.br/imovel/casa-itu-4-quartos-515-m/CA5441-BET?from=sale"
+    },
+    {
+      "fonte": "Kenlo - Portal Geral",
+      "titulo": "AP2058-BET Apartamento Edifício Verona - Itu - SP 134 m² 3 Quartos 1 Suíte 4 Banheiros Venda R$ 900.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2hK3fJc1kc1s9o4Db+wnRacgqDP5frAvWKJ05Dbv7Xr0sPza8nS2twVyK6sFQf1gqlpYPcNFnp+Wu4-WRn4Xt+7EWJ4jTCGpFvAdrJCfk9L8z0NtRgNmFe6Z6X2ym8O2iKbLKrXqC+nQJC7KFp4MLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cyVqayuR8K5+nCNsdlaQBkwnLGLQa6hvulYDDh6f6b0iCMAU96OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2hK3fJc1kc1s9o4Db+wnRacgqDP5frAvWKJ05Dbv7Xr0sPza8nS2twVyK6sFQf1gqlpYPcNFnp+Wu4-WRn4Xt+7EWJ4jTCGpFvAdrJCfk9L8z0NtRgNmFe6Z6X2ym8O2iKbLKrXqC+nQJC7KFp4MLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+7A8NpPrJEh-cyVqayuR8K5+nCNsdlaQBkwnLGLQa6hvulYDDh6f6b0iCMAU96OrDp6CjIOyyR+rjLiqihdtPtJLIbZAPdZc=.jpg",
+      "preco": "R$ 900.000",
+      "quartos": "3",
+      "suites": "1",
+      "vagas": "",
+      "area": "134",
+      "bairro": "BET Apartamento Edifício Verona",
+      "cidade": "Itu",
+      "tipo": "apartamento",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://portal.kenlo.com.br/imovel/apartamento-itu-3-quartos-134-m/AP2058-BET?from=sale"
+    },
     {
       "fonte": "Marcio Marins",
       "titulo": "Progresso, Itu / SP Ref: AP-ILHAFLORES_1 Apartamento para Venda 44 m&sup2; 2 1 1 R$4.090,00 m� Apartamento de 44 m&sup2; no Condomínio Ilha das Flores, na vila Progresso, contando com 2 quartos, banheiro social, sala, cozinha com planejados, cooktop e forno,... R$ 180.000,00 Ver Detalhes",
@@ -113,6 +373,60 @@
     },
     {
       "fonte": "Utu-Guaçu Imóveis",
+      "titulo": "CA7810-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 590 m² 5 Quartos 5 Suítes 7 Banheiros 4 Vagas Venda R$ 4.500.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3lsyPF3-joFpeUDV4bnhiuEwJStyNSEkHa7o6HntrLi-PHTX9z455k-7qfaG1OsqIVpdNNiMEZ5O8t5fyDhQqybO2pfrTeP-lT-ZOprbkNpjjgUnhxC-0qQfoLzx3kU9ya3N+zKlTTdZuXRUQxnKLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3lsyPF3-joFpeUDV4bnhiuEwJStyNSEkHa7o6HntrLi-PHTX9z455k-7qfaG1OsqIVpdNNiMEZ5O8t5fyDhQqybO2pfrTeP-lT-ZOprbkNpjjgUnhxC-0qQfoLzx3kU9ya3N+zKlTTdZuXRUQxnKLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu25Ziexf5gdmo-gXfIGXgiCVhIWm+NqLoRm188vLprnEi5-yYp3M9Y4c3ZXePwSgjfBZQowkbx8pZOxBe0K2WdaPbWB0hRDXmH-qZZV8YXRa+kQegQxuwgPgZKespg8KgzqlBvz89ACAQoDfGAdeOuVHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJmasKiFzFT+BKuUu5lIyS0vb+bUTSZVA5-L+W-vLlOP6kEaz4OWSjh5YX-43XYdpVIsjqT3ZKQTQtYjFRp1L7qrmT9xL0.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3V+7O5h5jBvzvYEBafhjQeC04qZ34iugUixw47Y+u7nhc-dV+uH6Zwi6o-uMHvpkKt1QII-LWVAQLNRYSzyZKeJLUhRnR6nmnrBZb9JenBi5CMOyStt5VGiAbSD-VMN8HGcTvHiiSSoE7rHHX9TMLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3dD7ukwyEpnrMkFWpi4rAOw+Nm1utuJvE6z-sjujaqA6Zz-esTZw71nzf6oIH6Ll-9+f-UHKU19abhla0fpcZbYEmhvgjLTu2KWS+ADSl1c+SsqjCwI83KHXIK33F8h1hanMvHXmy68XrH5OUVQDrMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu18+7tVAvh1uzpdBdq+3hwmi75WKxum2kn2Z35P6uuiG4tjkBOXSwoZmjqj+HHmsvPF-QNwLNE1ad+5wbyHXAt2+EXtjoWSRrHScFalgY0x-2wBrlApMmFmoerK86Uc+-x+bCO+DmA6iEIPmXmxlQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://imgs.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3dD7ukwyEpnrMkFWpi4rAOw+Nm1utuJvE6z-sjujaqA6Zz-esTZw71nzf6oIH6Ll-9+f-UHKU19abhla0fpcZbYEmhvgjLTu2KWS+ADSl1c+SsqjCwI83KHXIK33F8h1hanMvHXmy68XrH5OUVQDrMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3lsyPF3-joFpeUDV4bnhiuEwJStyNSEkHa7o6HntrLi-PHTX9z455k-7qfaG1OsqIVpdNNiMEZ5O8t5fyDhQqybO2pfrTeP-lT-ZOprbkNpjjgUnhxC-0qQfoLzx3kU9ya3N+zKlTTdZuXRUQxnKLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+      "preco": "R$ 4.500.000",
+      "quartos": "5",
+      "suites": "5",
+      "vagas": "4",
+      "area": "590",
+      "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-590-m/CA7810-UTG?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "Utu-Guaçu Imóveis",
+      "titulo": "CA9309-UTG Casa Centro - Itu - SP 275.94 m² 3 Quartos 1 Suíte 4 Banheiros 4 Vagas Venda R$ 950.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hr2sBy+AguwtQ5UZC15hiawJyz--y6oFiuwJmLlIyK59v-RdjFk6EA84HfFgGCtat1a80uHWRfX7FBRif1e9eRA0p4+BainmL8eJVZZEFc1gZjrDlC3HfgQoqs+Bs-hROLCMPhhD+pFb3oL3NTNuNHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hr2sBy+AguwtQ5UZC15hiawJyz--y6oFiuwJmLlIyK59v-RdjFk6EA84HfFgGCtat1a80uHWRfX7FBRif1e9eRA0p4+BainmL8eJVZZEFc1gZjrDlC3HfgQoqs+Bs-hROLCMPhhD+pFb3oL3NTNuNHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJmasKiFzFT+BKuUu5lIyS0vb+bUTSZVA5-L+W-vLlOP6kEaz4OWSjh5YX-43XYdpVIsjqT3ZKQTQtYjFRp1L7qrmT9xL0.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2BewYli+kccnJQrBOHu4x7f-7K05cWDvkm00avT4unL85PhRcXc9cUSzevSFQCyjZVhbOUQI2ZpOfBeXjb0daylByBT+wGiu3iWcplgY0lQ7TwOsRlRx3e8V5ab-loIxSj8Nd3aoAvVdau6HlhiSbMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1tk99w06y0zg-c3RIiimA2h-KaW2Ne29F3L25LJvLTVx-3jf+eO+Nsl2PDhCQ6W779sQNcjI0EmVuNWXzrue67RM2dyghjUl3T6UYpgGlhb9VAgzDsI-AKzR930xW9h0SeDV+Gd7y+SfPD+K0VTQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1ZI-MlXzy4bmZAibZWY5hOw7piMuv2Co1mP0ojUupyF3MHSXMDlxK8Z8pKsAAOHjpY8RswZP0EnRO59RSPVAdyfC2hTsxTd42fdRIcdZ3tq5xMvqxoP2mm-ZZSL50Ibhwa0KMjqriqVQvG-XH97LLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxdL7o1l9E5mrMQdVuaFsQ++4J3Kt-e4m0u64MPKnq7Fis7fQNnj1N4wyqOpEl+lsvZKRvU1EG1cPtNHHEazcdu5FkJfhQeNqkbJEf4aRWh0-1souQ9p9F6Yc7Lx7VQ30guvNsyIi3ezXoXhJV9YOLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux5i2fB2zBYVm+sBXoGblQq58aeF2cbFt2ud4cjX5ZL-hMfudvvw74AV-b7tO1e8q4toQ+QlF3xJfdtnYTLXRLarA3l1-zy+lB-ubaZAbzdrmkQVgRFLwQCXQImB+HQRhyWAGd3GkDCiFqHRHlJ1DrMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hr2sBy+AguwtQ5UZC15hiawJyz--y6oFiuwJmLlIyK59v-RdjFk6EA84HfFgGCtat1a80uHWRfX7FBRif1e9eRA0p4+BainmL8eJVZZEFc1gZjrDlC3HfgQoqs+Bs-hROLCMPhhD+pFb3oL3NTNuNHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+      "preco": "R$ 950.000",
+      "quartos": "3",
+      "suites": "1",
+      "vagas": "4",
+      "area": "275.94",
+      "bairro": "UTG Casa Centro",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-276-m/CA9309-UTG?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "Utu-Guaçu Imóveis",
       "titulo": "CA9308-UTG Casa Parque Residencial Potiguara - Itu - SP 125.26 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 370.000",
       "imagens": [
         "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0hhj-lA4EcDgPg5f4CsjSKDzJWf3vzBjlbHvbnSk6zD55P5WcWA0Zs20qvhMU+Hr59dRdEWH2NcQthcVB-BQ6WCNXhDpSCohRTuRKljfnMP-CA9vxhImmyXDZen0AAtniOAW6-XjCCvTJfXP2JRUOlHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg"
@@ -153,7 +467,14 @@
       "fonte": "Utu-Guaçu Imóveis",
       "titulo": "CA9306-UTG Casa Centro - Itu - SP 501.69 m² 3 Quartos 1 Suíte 4 Banheiros Venda R$ 630.000 Aluguel R$ 3.000/mês",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0lL1cpMyhMZjNooX5qCoA-ZwNTJ4ouTsmm-w7GJpO-H9PL7cef9lYwB7rWpHESTi5Y4e4IgA1ggf8ZgYU3HD6m8Lnd-j2GxiUeTSKNAeXVX2CQswB4A7V63b7j80l4e8iicNOL8mgO1TIu3PQFYDrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0lL1cpMyhMZjNooX5qCoA-ZwNTJ4ouTsmm-w7GJpO-H9PL7cef9lYwB7rWpHESTi5Y4e4IgA1ggf8ZgYU3HD6m8Lnd-j2GxiUeTSKNAeXVX2CQswB4A7V63b7j80l4e8iicNOL8mgO1TIu3PQFYDrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0lL1cpMyhMZjNooX5qCoA-ZwNTJ4ouTsmm-w7GJpO-H9PL7cef9lYwB7rWpHESTi5Y4e4IgA1ggf8ZgYU3HD6m8Lnd-j2GxiUeTSKNAeXVX2CQswB4A7V63b7j80l4e8iicNOL8mgO1TIu3PQFYDrMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu21W3PRs2Rxvy9swfuGFnDugx4upooyyvlW0vaLsrYjY29zzfuvd6pIBz5n0PwarlZlkeeAhDE1bYrd2SxHmfoKuOiV+hGKH-h6XSep9EloJ8gcNuU4VxlG2caeIrFIx3i+bWvbDpQ-SbqHKOXNESf9HR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJmasKiFzFT+BKuUu5lIyS0vb+bUTSZVA5-L+W-vLlOP6kEaz4OWSjh5YX-43XYdpVIsjqT3ZKQTQtYjFRp1L7qrmT9xL0.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0VV-tZPyysQnZMCR+e0mGyGh6nP4Yu9jHiayLDyoZDA8ub9bpf+96Bk7JDhPnWxvI15TPAONWZZbdNhYwT6YYSKJUVLrhrJlBzhf4Z7fTNW+hELkhRJnXCVQpyc2lgNxTGSGaLdnQeuaYm5MH5TQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1pO-PAy-C5nv9YGWbyQmRGdwoutxteGjnaSx5aMiIP46dqmYZbe5dg89YmtQlKcuZFvSNo8GGVXTdtXYUXweJzdJ098jxq0+W7pEpdxY1IJgSNtyj0N71ujVLux11sz3A+VGc7Ipj-WVK3WHWRlQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu35188Jo6wYjtM82Q4eVkTG-7ISa1orJgnqN-bzZvZqL0un8Ap7p8KAH2+v3Nn+xr75uSe43HVBaNspfHUPRAKyNN0lbiTCWkXqcdeddGU5l+SAqyhgMmUqlT52j2wEU+ROdO-fcuDCNFofsPVBFPLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3058tRNwEcVs-EHQaOP4hObgrXF1eCZ9Wa8o57r5b3DidzOetv+jb1l4PDVNVWl65VAHIF4AUVVR-FhWxzWZaqxHl9gqTuBgHrzQrdZeUhY9Cs0zClM7QC2U6mn3n5gywCKG9DYqnKPUJrDDHFDQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
       ],
       "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0lL1cpMyhMZjNooX5qCoA-ZwNTJ4ouTsmm-w7GJpO-H9PL7cef9lYwB7rWpHESTi5Y4e4IgA1ggf8ZgYU3HD6m8Lnd-j2GxiUeTSKNAeXVX2CQswB4A7V63b7j80l4e8iicNOL8mgO1TIu3PQFYDrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
       "preco": "R$ 630.000",
@@ -166,13 +487,20 @@
       "tipo": "casa",
       "finalidade": "venda e aluguel",
       "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-502-m/CA9306-UTG?from=sale"
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-502-m/CA9306-UTG?from=sale",
+      "galeriaCompleta": true
     },
     {
       "fonte": "Utu-Guaçu Imóveis",
       "titulo": "CA9093-UTG Casa Vila Cleto - Itu - SP 88 m² 2 Quartos 1 Banheiro 1 Vaga Venda R$ 260.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Vtyd5T3ksDqtsjeaS4vHSYxYmw-eeI-VjP4qH6prfBhPG6YfiP0a8+gKHDDG6GjqR3fvN3FWNjQuc-ZTLKAbujZyJ1qhqnpkf3RJdablFLgDM-qz0Azx7pDYfyrVAH+A2SIPzpmzKXfY7XJ1sFC8FHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Vtyd5T3ksDqtsjeaS4vHSYxYmw-eeI-VjP4qH6prfBhPG6YfiP0a8+gKHDDG6GjqR3fvN3FWNjQuc-ZTLKAbujZyJ1qhqnpkf3RJdablFLgDM-qz0Azx7pDYfyrVAH+A2SIPzpmzKXfY7XJ1sFC8FHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Vtyd5T3ksDqtsjeaS4vHSYxYmw-eeI-VjP4qH6prfBhPG6YfiP0a8+gKHDDG6GjqR3fvN3FWNjQuc-ZTLKAbujZyJ1qhqnpkf3RJdablFLgDM-qz0Azx7pDYfyrVAH+A2SIPzpmzKXfY7XJ1sFC8FHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJmasKiFzFT+BKuUu5lIyS0vb+bUTSZVA5-L+W-vLlOP6kEaz4OWSjh5YX-43XYdpVIsjqT3ZKQTQtYjFRp1L7qrmT9xL0.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3w8ieJq-kontcsee+PhhGy65K+b6+aDp0mO9ovLn7PR-Mauc+Xh87hn-KvtT26muopuV+cnb357Qc1XHSDvY8KDEVRNhifVuXmRSpdLcXBK6DkgpzFc7QOeW6mQ-AB12gyrM6jojSKQaJnlOll6EfpHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJmasKiFzFT+BKuUu5lIyS0vb+bUTSZVA5-L+W-vLlOP6kEaz4OWSjh5YX-43XYdpVIsjqT3ZKQTQtYjFRp1L7qrmT9xL0.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1tH-d9v+RMll9YCB5bkoi2mxIq0yv2o-FyIpaqI5LTB39nBZveB0Z4D4P7uA0SPjYlpYNENMlJyW9V5aTfBZL2AI2YOvmKQqEDHTZx2bmhl8RAdlQsL21aYW4mW7UA+4QWJMvj0jDfVS436E1dDQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu109jfRzzxU9ktsIc7KMhyiBgru31vG+pmG507nGn+3L+s7QRujf2acdgYjXFQaStJI0fPoBHREjbscrGD7HYNa7PEpI+jCxrHLdaod+fTsE0xxogQpJ-GmXV5qKzWYL9QaLBqn+tgDSEvj9GUZ5ErMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1s0xgxSbFGOsBT9+RO1zjks-ynciLnlXpdKzsuCVZKPvMZhGt-GI0v+QFtypVh7xY3icsFUfjn4XnWmbm5wv7fiGO536-3h5Ts7uLDcYDXw9lnjaWjSVP96-c0TdEpa0pzOuQnFRbhA4mKNSBYqXyUq1-DTr8LGTIMmRk0n10UjkLzD8f04g==.png"
       ],
       "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Vtyd5T3ksDqtsjeaS4vHSYxYmw-eeI-VjP4qH6prfBhPG6YfiP0a8+gKHDDG6GjqR3fvN3FWNjQuc-ZTLKAbujZyJ1qhqnpkf3RJdablFLgDM-qz0Azx7pDYfyrVAH+A2SIPzpmzKXfY7XJ1sFC8FHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
       "preco": "R$ 260.000",
@@ -185,13 +513,21 @@
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-2-quartos-88-m/CA9093-UTG?from=sale"
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-2-quartos-88-m/CA9093-UTG?from=sale",
+      "galeriaCompleta": true
     },
     {
       "fonte": "Utu-Guaçu Imóveis",
       "titulo": "CA8157-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 513 m² 5 Quartos 4 Suítes 6 Banheiros Venda R$ 4.450.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3BZ+o1V3CU+qvgJeefhuzi18pu+19u1qXm80871r73J8sjdVf3ElN8W2rLVE3ClurVbWes6GFInZfRfayvFAqGOIklKkxewh12SRZ92TmxO8x4WmQdo2VCGGLv1r0cfxyj8O971gDOpR5-BWl5xSbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3BZ+o1V3CU+qvgJeefhuzi18pu+19u1qXm80871r73J8sjdVf3ElN8W2rLVE3ClurVbWes6GFInZfRfayvFAqGOIklKkxewh12SRZ92TmxO8x4WmQdo2VCGGLv1r0cfxyj8O971gDOpR5-BWl5xSbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3BZ+o1V3CU+qvgJeefhuzi18pu+19u1qXm80871r73J8sjdVf3ElN8W2rLVE3ClurVbWes6GFInZfRfayvFAqGOIklKkxewh12SRZ92TmxO8x4WmQdo2VCGGLv1r0cfxyj8O971gDOpR5-BWl5xSbMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2l99ok2vVIlifAke6+e4xTb2N2F1ti-kF-K1p79hLHk6N72UOP3zIFvz6-eKQ6mvolva-16AURDZNNHfDPyVtuMGHxLvWi9qxzDZOUYYUFx1jMJgkxgzmycfrKS-FMPiwOXFePTpzytTor+C2VHO+JHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJmasKiFzFT+BKuUu5lIyS0vb+bUTSZVA5-L+W-vLlOP6kEaz4OWSjh5YX-43XYdpVIsjqT3ZKQTQtYjFRp1L7qrmT9xL0.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2VL9dxr-jo0lO4-U5iklguLgJmZ28+8vnvJ84HtjrrG6M3YcOT+2b0n+qjcI1yLibVEfMEFLHhFTNloRCfEb7C9LF5p+QHSokHIX71-ei9Pggsroh1IxEqLRKG01QYUxQ+ETvn3nTyWE4bAXVtyDOhHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJmasKiFzFT+BKuUu5lIyS0vb+bUTSZVA5-L+W-vLlOP6kEaz4OWSjh5YX-43XYdpVIsjqT3ZKQTQtYjFRp1L7qrmT9xL0.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu38iwf9S4BljgMAadeKQmTGu5Z+-xtbctXmSwqyInp6H08OmUsLnzLE24fDIFXX9r-BnS-47C21AXLJdXhD3UYWdEV1U83y+oxvjTpFUf0Ri9Dg8wRZ2-VehA5GC-mduhxqZOcLlqSuCfbvNJkR8PLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux5H-opXyx4SlOcXTpi4sza83dmX6vDIkUmc8bbG4b3U9-rQRZbc+bc53ILJGAKx6Ld+SdIsCWdYIrBQZA2yD6OZA0BY-iuDuxvGHrQdQW5p8y9rpyZ32UqDGKGjrUUSih23Cd7+q3OXE6K9EVhdCrMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Bm+s5jzEcGv+U2fIS7ohCp5YSbyu2Dh1WKpcLrjpP9xZK6YeX604sUy67OEFKqrLVfYd0DEEFOO89+ADHNQpekP2gIszy2+1zNSJJfGzJe-C9svypS-QOcBYigzUxg7CWsJeLFo36wFo-cHQZDQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
       ],
       "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3BZ+o1V3CU+qvgJeefhuzi18pu+19u1qXm80871r73J8sjdVf3ElN8W2rLVE3ClurVbWes6GFInZfRfayvFAqGOIklKkxewh12SRZ92TmxO8x4WmQdo2VCGGLv1r0cfxyj8O971gDOpR5-BWl5xSbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
       "preco": "R$ 4.450.000",
@@ -204,13 +540,21 @@
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-513-m/CA8157-UTG?from=sale"
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-513-m/CA8157-UTG?from=sale",
+      "galeriaCompleta": true
     },
     {
       "fonte": "Utu-Guaçu Imóveis",
       "titulo": "CA9232-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 285.03 m² 4 Quartos 4 Suítes 4 Banheiros 6 Vagas Venda R$ 5.000.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1hp4fNF30g4sOdBRqGGgTu+5ZmXvdmpgRir+MPOs+-nzsjSeJvX+Js86a+uME7xgqxITZkVL11XW8V4ai3QD77FAmNonWO3qmSQEbB2f1II5gUuuTlLzlm5bZGTslgU+RyKFPjC9hzcRaa7LUNGO9hHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1hp4fNF30g4sOdBRqGGgTu+5ZmXvdmpgRir+MPOs+-nzsjSeJvX+Js86a+uME7xgqxITZkVL11XW8V4ai3QD77FAmNonWO3qmSQEbB2f1II5gUuuTlLzlm5bZGTslgU+RyKFPjC9hzcRaa7LUNGO9hHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1hp4fNF30g4sOdBRqGGgTu+5ZmXvdmpgRir+MPOs+-nzsjSeJvX+Js86a+uME7xgqxITZkVL11XW8V4ai3QD77FAmNonWO3qmSQEbB2f1II5gUuuTlLzlm5bZGTslgU+RyKFPjC9hzcRaa7LUNGO9hHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJmasKiFzFT+BKuUu5lIyS0vb+bUTSZVA5-L+W-vLlOP6kEaz4OWSjh5YX-43XYdpVIsjqT3ZKQTQtYjFRp1L7qrmT9xL0.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3VW3d1n6is6vpoFf7achQqnz6G3zfOp9kOHpJnptrLp8J-QA-jVmdlm+IfeOF+Fj-dgGMwYERpiXLZVby3UWLCwN1V8gBDUg2-qdJ0cZWZo8SMekBdq53eAB5yNsgMwxzuINarjrAqgVIzCKwFxCrMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Zh4PJ3uCpig+9IcY69kxuBwb6WzMWEpR-N-s-d5b-2j-OnVtnyy6kD9qjhFHmSlr5dWvAXMVtbfOhQWwLEX6rcF3YJoxeXt1rtSuFGbWAE4gdizDBi-3iODbSc3XEb6jz0ENfahSOiRpK3JndHEsJHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJmasKiFzFT+BKuUu5lIyS0vb+bUTSZVA5-L+W-vLlOP6kEaz4OWSjh5YX-43XYdpVIsjqT3ZKQTQtYjFRp1L7qrmT9xL0.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2hMidNr5iATq8sTGbK5uySg07q07OmS9kvJo633g5Pb09nhTuPf0aE44-T0LUObkZRLcf88GXI8arBLekbKQNugDX5PrWmvpHffeP5De0hsh1wqtR5o2nqBA7GozX9qgi6YF8nokXORUb3PIH51QPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2F84ftA6ik8nsU-YZCx5xGqgd25+Iy+txSsx6L9lZPw++XIX+j7k74k1Y7fOWKPiIQ0ffo+K2JXfdBGXULSQ9aEGVRPshDVo0-sHp1PYHtN2gMTtjpv1GWyRpyX0WBuy3G-B-ny73C1EKbBLloELLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3lj7-Fs3T0AjNUUfoG9hxWKg4ON9oy5qXaq+MjNgbPx59HtBsjg7r8IlIXNCAGJkJxeQ+YbaB1ef8cgQjzMeaHbGVV7hR+mrWXMXbdlcmR3wCIOvEsM4nmQVsKH6wMW5xi0B-fS9HCJcuXFGwBkGrMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg"
       ],
       "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1hp4fNF30g4sOdBRqGGgTu+5ZmXvdmpgRir+MPOs+-nzsjSeJvX+Js86a+uME7xgqxITZkVL11XW8V4ai3QD77FAmNonWO3qmSQEbB2f1II5gUuuTlLzlm5bZGTslgU+RyKFPjC9hzcRaa7LUNGO9hHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
       "preco": "R$ 5.000.000",
@@ -223,7 +567,8 @@
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-285-m/CA9232-UTG?from=sale"
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-285-m/CA9232-UTG?from=sale",
+      "galeriaCompleta": true
     },
     {
       "fonte": "Utu-Guaçu Imóveis",
@@ -248,7 +593,14 @@
       "fonte": "Utu-Guaçu Imóveis",
       "titulo": "CA0069-UTG Casa Parque Residencial Presidente Médici - Itu - SP 110.9 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 420.000 Aluguel R$ 3.000/mês",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu19K0dRxo0smgMsjXaGvm3mK9Zew6PybgGOH0b3cpbrw2Pv-UN3ZkaES64X4Qn6wird0VN4fExtwTfJ2axzDZr6gFnFvoGDVll3Sf+AeU1NE7yUYuzhXgQXocbqSp2Mv2xGBOePvtTeJTpfXWAx6MLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu19K0dRxo0smgMsjXaGvm3mK9Zew6PybgGOH0b3cpbrw2Pv-UN3ZkaES64X4Qn6wird0VN4fExtwTfJ2axzDZr6gFnFvoGDVll3Sf+AeU1NE7yUYuzhXgQXocbqSp2Mv2xGBOePvtTeJTpfXWAx6MLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu19K0dRxo0smgMsjXaGvm3mK9Zew6PybgGOH0b3cpbrw2Pv-UN3ZkaES64X4Qn6wird0VN4fExtwTfJ2axzDZr6gFnFvoGDVll3Sf+AeU1NE7yUYuzhXgQXocbqSp2Mv2xGBOePvtTeJTpfXWAx6MLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxxQ6+w1xU0st+coU+WbjgyH9K+b3OjEi16r+KSLvuKA+NPYWp-vmZAN3f7PHnGmtLBHdN4+Hl99bbhYXT-AX6m-AEB+qgKKiX7AEuZEHXtOwjoXuh5QyUmQBIT18F0yhD65MczisnLVYoXmUAVTQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0V-i-BquRxmgMZAQLuVnSuk39nRwcXcjVuX9bzvnLTG0drlbdn12IMf2qDaO2yKo6M5YeM+ChlrYrVdSj-zc9qNY3R6lBW8vU-OSbtgWkAPmgAQyBANm3yjU5n3+1kWhR6gL9X3ixStbLu6Ll1DQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1lA74hMxTI5kdIdW+ehuTGsgZrIv-yV922L0rWLs43+0fngV+npkbhg6qPdN1uO65J+atgVPhleO9VZXEPkAa63Z39A-CLW+mfTYuFHbTNY-iIyrhdeyEaoaril22kIyxqENMnKrgDWEqzgPmMBN9pHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJmasKiFzFT+BKuUu5lIyS0vb+bUTSZVA5-L+W-vLlOP6kEaz4OWSjh5YX-43XYdpVIsjqT3ZKQTQtYjFRp1L7qrmT9xL0.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0kiy-tT5UwZsNEmBIa55XO8gaq-t-Wbh12nyquN5bjqjcH9BvDSxY8T8IDhHwausL48FtgZElI8RvJKVCzMW4OQHSJ4-AGpn0nTUOVPaU5V4QQNmlIM5UC5Zry9624TxSioNajmrCeVUY3UD25TQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3s-3eBp-wwTrdEybb+i5im+zL6q2JKQrEHOxY7777-+0crUB+P3wYk81JLMNWKKrJlSYYwAA0x3OMpQdBfaB96MIXlPgAK8vlvAdbZqEmwQ2FkCtgcPwmOoRKWo8lsN8T2YVu-y8T+jfK66D1MNMLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg"
       ],
       "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu19K0dRxo0smgMsjXaGvm3mK9Zew6PybgGOH0b3cpbrw2Pv-UN3ZkaES64X4Qn6wird0VN4fExtwTfJ2axzDZr6gFnFvoGDVll3Sf+AeU1NE7yUYuzhXgQXocbqSp2Mv2xGBOePvtTeJTpfXWAx6MLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
       "preco": "R$ 420.000",
@@ -261,13 +613,21 @@
       "tipo": "casa",
       "finalidade": "venda e aluguel",
       "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-2-quartos-111-m/CA0069-UTG?from=sale"
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-2-quartos-111-m/CA0069-UTG?from=sale",
+      "galeriaCompleta": true
     },
     {
       "fonte": "Utu-Guaçu Imóveis",
       "titulo": "CA7514-UTG Casa Residencial Parque São Camilo - Itu - SP 180 m² 3 Quartos 3 Banheiros 2 Vagas Venda R$ 450.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0h6yJdF7Uk4tu0LGbHmly7c8dq39unHskChprXVvO-f7OHdQ9aC9ool8JOiHVSUr6kgTdslDnFgd+9RThv6Y7efNUBOmweTohmcFYdxGFJlhz83jBlM5QS4eab07Fce5HyXVcTZ+iWHb5jBBHFeSbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0h6yJdF7Uk4tu0LGbHmly7c8dq39unHskChprXVvO-f7OHdQ9aC9ool8JOiHVSUr6kgTdslDnFgd+9RThv6Y7efNUBOmweTohmcFYdxGFJlhz83jBlM5QS4eab07Fce5HyXVcTZ+iWHb5jBBHFeSbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0h6yJdF7Uk4tu0LGbHmly7c8dq39unHskChprXVvO-f7OHdQ9aC9ool8JOiHVSUr6kgTdslDnFgd+9RThv6Y7efNUBOmweTohmcFYdxGFJlhz83jBlM5QS4eab07Fce5HyXVcTZ+iWHb5jBBHFeSbMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu057zOtC7C46rOUeTu-vhRnf87mazuWBsU+oxYjvop-3197vZPzRzoQj3ZXwCEKsnJZlF4MmFU5gX-F5RCvJc6W7DVRorWeskWPCU5hHRndszwQiszB5wVe4DJGJ6mEciyODD9fnnRCvUJ3rX2J+HshHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJmasKiFzFT+BKuUu5lIyS0vb+bUTSZVA5-L+W-vLlOP6kEaz4OWSjh5YX-43XYdpVIsjqT3ZKQTQtYjFRp1L7qrmT9xL0.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1Y--o1cviYkzuAHDLSZ7BSZ0Z6P2smVk163+LH07pTkicqhesbw5cUz+rfdG0KwuIhHGMEqAxFWYbVHeUbsVb2cbXF2nziUjR--QqdUfW5l8kQOygZf-UfnRai2q0471xCYWvbjhB+CbvDcDntyDu9HR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJmasKiFzFT+BKuUu5lIyS0vb+bUTSZVA5-L+W-vLlOP6kEaz4OWSjh5YX-43XYdpVIsjqT3ZKQTQtYjFRp1L7qrmT9xL0.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2df4vJ331Iks-07W5y0ng2406Oet8yEowGRz7D2moTL58KvAfjsx48h7KT3AGeSuKtZXtYaKkUhbux3ewH7Xry9HCQNvwCpkXfqb51hQHht1DEPggZ-wVfnfrii2VIv1iCnM9Hn9RS1XannAwVXKLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxx-7NRPuQVigvoSWpOnjnOo5oHL49bArhqy5oL5uJT98+zQUJbfxN80-I7qGUag47JPVtYDM1pWY+95SwK1AanZJ0pX-CS0jEyQa4kWWnpX2R4WmUh181Tmd7ijzQcr3nGkIeuH9yWdR6zEMWBDQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://static-sites.kenlo.io/2.4.9/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hbwY82vikAo5sAU52n7TOG87LP-Y2btXS1obnIk6jnjs-1f+vT9KEg+pzuEWmrr6c8VMQaHl5FSLBeRSu7eLWnbUl15gCD43qQEZxWR1Fp6CtitTV73FuaasiMyWwd0i+4KPjejC6ya47jXU5YOLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg"
       ],
       "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0h6yJdF7Uk4tu0LGbHmly7c8dq39unHskChprXVvO-f7OHdQ9aC9ool8JOiHVSUr6kgTdslDnFgd+9RThv6Y7efNUBOmweTohmcFYdxGFJlhz83jBlM5QS4eab07Fce5HyXVcTZ+iWHb5jBBHFeSbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
       "preco": "R$ 450.000",
@@ -280,13 +640,21 @@
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-180-m/CA7514-UTG?from=sale"
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-180-m/CA7514-UTG?from=sale",
+      "galeriaCompleta": true
     },
     {
       "fonte": "Utu-Guaçu Imóveis",
       "titulo": "CA7550-UTG Casa Condomínio Campos de Santo Antônio - Itu - SP Condomínio Campos de Santo Antonio 400 m² 3 Quartos 2 Suítes 3 Banheiros 3 Vagas Venda R$ 1.800.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1Vq0tM+4Qxuo8MADOfin3Gg99uE29DA9XPN25nfmb-l2vmuVvv68LoC-vC2Sn2Bjr58fYcaAkJAX+1IZT-qcKqKPiByqT2LvWL-auRXHHZX-xppsS1Zm3++eZb9xQ4a+HinMu78shaJaL+6KFpRNLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1Vq0tM+4Qxuo8MADOfin3Gg99uE29DA9XPN25nfmb-l2vmuVvv68LoC-vC2Sn2Bjr58fYcaAkJAX+1IZT-qcKqKPiByqT2LvWL-auRXHHZX-xppsS1Zm3++eZb9xQ4a+HinMu78shaJaL+6KFpRNLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1Vq0tM+4Qxuo8MADOfin3Gg99uE29DA9XPN25nfmb-l2vmuVvv68LoC-vC2Sn2Bjr58fYcaAkJAX+1IZT-qcKqKPiByqT2LvWL-auRXHHZX-xppsS1Zm3++eZb9xQ4a+HinMu78shaJaL+6KFpRNLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu25C-epqyD01jZApc465mCC-xpqd442Ak2WYz8OMnpnZ1ZL-Xp3a2YEVwJbcEALysoE-HvI9DFwpaM10QD3wYpuyDmB+mTqJpW-2cblxaVVR3Qoeqy9Jw2q8UbKRylQIwBuGLNb1nT6ubaP-DE5lM9lHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJmasKiFzFT+BKuUu5lIyS0vb+bUTSZVA5-L+W-vLlOP6kEaz4OWSjh5YX-43XYdpVIsjqT3ZKQTQtYjFRp1L7qrmT9xL0.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Zc6NVwwx44gs0XGeOQmwWfgrqSzvSJvmK7xc3vmZzG8N3TU5-+w4AI24-2ImOp66pmd8Y9aHlzTelxe0DwRKy-EVNtrieGh32cEbhUYDV15QsjzzVyzkWpccKxqlgO8CS0CdXZtgfVRbvWG18ZOLMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0B8wNZpujIdpdMdBaKx5nKmz7qy646wlkizwK-ttO72+Mn8TMfY0twAyb7cPQe1vpBSWIUNdmJ6ePlAThC6f9miH1YO-jSCrFTJXoVCYmVa3jEdkU9e9V6jA5ue5kQQgQyhW9XTuyKuYKX9KwJDQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1dc7IJhvUsAvPYgUZG5pzSq2YSs486Dg1yc1cz0g7rbkOn+Ys7b1NkA343oTFCg9vVZTIViEG0pN8NjFE2zeLq9AFptmyONuUbVboJdby9X-x13lCtfx1y2eKCL9FcR0Av6BvKE+x6wZbz5JnpTQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
+        "https://static-sites.kenlo.io/2.4.9/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxt81tdi4jEeoNoVQaKZ4zu3xZ2N5oiJl02z9pXQsZ7q6c3wAIL-lLgQ26i2MH79i5ZvWNkeL31VPO9TYjrwR4SdBWdW+XywmADPSpFZTGRxgAEtrVJa6QOXQaaB6ENhgxubEszvtQ6GcfDhDFV1QPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
       ],
       "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1Vq0tM+4Qxuo8MADOfin3Gg99uE29DA9XPN25nfmb-l2vmuVvv68LoC-vC2Sn2Bjr58fYcaAkJAX+1IZT-qcKqKPiByqT2LvWL-auRXHHZX-xppsS1Zm3++eZb9xQ4a+HinMu78shaJaL+6KFpRNLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
       "preco": "R$ 1.800.000",
@@ -299,51 +667,284 @@
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-400-m/CA7550-UTG?from=sale"
+      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-400-m/CA7550-UTG?from=sale",
+      "galeriaCompleta": true
     },
     {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA7863-UTG Casa Condomínio Campos de Santo Antônio - Itu - SP Condomínio Campos de Santo Antonio 250 m² 3 Quartos 3 Suítes 4 Banheiros 2 Vagas Venda R$ 1.400.000",
+      "fonte": "Danilo Ferreira Imóveis",
+      "titulo": "CA1665-NIMC Casa Jardim do Estádio - Itu - SP 176 m² 2 Quartos 1 Banheiro 2 Vagas Venda Sob consulta",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0tYidRh3gchrNUnYbaBszKk2Nij58irnF+c373Zg+j-4u3CdezgyqkUjvejIFqUvI81R-o+GV15SfdXSwDrR5yCGH5svWW7nkyQaYxcU2V2wiM1yUZcxEHhApG21GAA8huVUcOCjwuTRv3ZBQYHF+JHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1VM4YtFzR4AlcYaQpuRizaV8aSU2eejrRSJo5DW5LzcztvZRvfT16cjlKSpTAKQjKlEX-ENM01Hf7d-fR7VVZuCYnxwsny3qGzmaZEYSXRozyM5rTtB6kWdBpiy6FAQ-3CVFeza7x+BHZLmLmBDQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwW9dLmaEcxA3GGbBI4ky8xYGWhKGpbEjQMgY9-OzN+PGxOqj2TarsXWWjgpAP-5zKJstkAYuoBGpKbVByMiAW4gL1hdfGp03WMGrIoW0WFVyfns16+CQpJQoN-5EDpD2gmZmuZhKfTZnCkwRXMg==.jpg"
       ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0tYidRh3gchrNUnYbaBszKk2Nij58irnF+c373Zg+j-4u3CdezgyqkUjvejIFqUvI81R-o+GV15SfdXSwDrR5yCGH5svWW7nkyQaYxcU2V2wiM1yUZcxEHhApG21GAA8huVUcOCjwuTRv3ZBQYHF+JHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
-      "preco": "R$ 1.400.000",
-      "quartos": "3",
-      "suites": "3",
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1VM4YtFzR4AlcYaQpuRizaV8aSU2eejrRSJo5DW5LzcztvZRvfT16cjlKSpTAKQjKlEX-ENM01Hf7d-fR7VVZuCYnxwsny3qGzmaZEYSXRozyM5rTtB6kWdBpiy6FAQ-3CVFeza7x+BHZLmLmBDQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwW9dLmaEcxA3GGbBI4ky8xYGWhKGpbEjQMgY9-OzN+PGxOqj2TarsXWWjgpAP-5zKJstkAYuoBGpKbVByMiAW4gL1hdfGp03WMGrIoW0WFVyfns16+CQpJQoN-5EDpD2gmZmuZhKfTZnCkwRXMg==.jpg",
+      "preco": "Sob consulta",
+      "quartos": "2",
+      "suites": "",
       "vagas": "2",
-      "area": "250",
-      "bairro": "UTG Casa Condomínio Campos de Santo Antônio",
+      "area": "176",
+      "bairro": "NIMC Casa Jardim do Estádio",
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-250-m/CA7863-UTG?from=sale"
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-176-m/CA1665-NIMC?from=sale"
     },
     {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA6408-UTG Casa Condomínio Campos de Santo Antônio - Itu - SP Condomínio Campos de Santo Antonio 265.34 m² 3 Quartos 3 Suítes 4 Banheiros 4 Vagas Venda R$ 1.275.000",
+      "fonte": "Danilo Ferreira Imóveis",
+      "titulo": "CA2972-NIMC Casa Condomínio Terras de São José II - Itu - SP 974 m² 6 Quartos 6 Suítes 9 Banheiros 6 Vagas Venda Sob consulta",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv-khQ-cJStlIDitQaYJOekTeh5qnE3frHtRSTyImGupPX2J6kc9zC464lw6TLSEyIq5JMXMcXKxFpPvZ5YiHDZqGxLXRSmGjSthvWRqJNei918xgdkExSxwq8dJr0yE5ghRjwFKqA8HLJTP+4URYYX-lYCt407ENDsQK-XFB8p0pK9JGl+XaFOuW-M4DugSALG1In8oevXbnpmdnCJ5YnGrlrPXoH40EZTKZew-iTSP984RIB5L+VWkncklvGh7Ymd5j9Vosez-EBnluVGLZH7Re9xtDDhPOlakSbbwxqqvzGuK2vfKClCrXjZGe-wsNB9d+UbcVLZ9DxXXs=.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0119PhSth4Jt8UQB5O6vXS3gZS94-ia8xu23bX7vqqDy8OhUsib+IB6yvKtNXOQ7b5cY-N8LHJ3Z9V6Zi76W5+8FndIjCnV9lzEaKMDHlJigQc81Q5z6UWyAbzw+F8-njyGCM-dpHaUdozEP3VDQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwW9dLmaEcxA3GGbBI4ky8xYGWhKGpbEjQMgY9-OzN+PGxOqj2TarsXWWjgpAP-5zKJstkAYuoBGpKbVByMiAW4gL1hdfGp03WMGrIoW0WFVyfns16+CQpJQoN-5EDpD2gmZmuZhKfTZnCkwRXMg==.jpg"
       ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv-khQ-cJStlIDitQaYJOekTeh5qnE3frHtRSTyImGupPX2J6kc9zC464lw6TLSEyIq5JMXMcXKxFpPvZ5YiHDZqGxLXRSmGjSthvWRqJNei918xgdkExSxwq8dJr0yE5ghRjwFKqA8HLJTP+4URYYX-lYCt407ENDsQK-XFB8p0pK9JGl+XaFOuW-M4DugSALG1In8oevXbnpmdnCJ5YnGrlrPXoH40EZTKZew-iTSP984RIB5L+VWkncklvGh7Ymd5j9Vosez-EBnluVGLZH7Re9xtDDhPOlakSbbwxqqvzGuK2vfKClCrXjZGe-wsNB9d+UbcVLZ9DxXXs=.jpg",
-      "preco": "R$ 1.275.000",
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0119PhSth4Jt8UQB5O6vXS3gZS94-ia8xu23bX7vqqDy8OhUsib+IB6yvKtNXOQ7b5cY-N8LHJ3Z9V6Zi76W5+8FndIjCnV9lzEaKMDHlJigQc81Q5z6UWyAbzw+F8-njyGCM-dpHaUdozEP3VDQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwW9dLmaEcxA3GGbBI4ky8xYGWhKGpbEjQMgY9-OzN+PGxOqj2TarsXWWjgpAP-5zKJstkAYuoBGpKbVByMiAW4gL1hdfGp03WMGrIoW0WFVyfns16+CQpJQoN-5EDpD2gmZmuZhKfTZnCkwRXMg==.jpg",
+      "preco": "Sob consulta",
+      "quartos": "6",
+      "suites": "6",
+      "vagas": "6",
+      "area": "974",
+      "bairro": "NIMC Casa Condomínio Terras de São José II",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-6-quartos-974-m/CA2972-NIMC?from=sale"
+    },
+    {
+      "fonte": "Danilo Ferreira Imóveis",
+      "titulo": "CA2914-NIMC Casa Condomínio Residencial Ilha das Flores - Itu - SP 50 m² 2 Quartos 1 Banheiro 1 Vaga Venda R$ 190.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu216z+NLxREkrekjfLGAjgSM95+Uy-WytWi8o6PKgbXy28jAeevD7Npv2JTVKFTpnKd0XMMkN350P8hofkPVeqmaLXtthDaLvkfNZOMeWHNSxgUIniB9+Eu1WoOTq2U3hX-gWtrkgCKRfY3YUANBPLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu216z+NLxREkrekjfLGAjgSM95+Uy-WytWi8o6PKgbXy28jAeevD7Npv2JTVKFTpnKd0XMMkN350P8hofkPVeqmaLXtthDaLvkfNZOMeWHNSxgUIniB9+Eu1WoOTq2U3hX-gWtrkgCKRfY3YUANBPLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg",
+      "preco": "R$ 190.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "1",
+      "area": "50",
+      "bairro": "MC Casa Condomínio Residencial Ilha das Flores",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-50-m/CA2914-NIMC?from=sale"
+    },
+    {
+      "fonte": "Danilo Ferreira Imóveis",
+      "titulo": "ED0015-NIMC Edícula Jardim Santa Laura - Itu - SP 48 m² 1 Quarto 1 Banheiro 1 Vaga Venda R$ 220.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux1+7PJp3j4ni5YbXrngg2y61arKx-K+oXuo25jQr6nGj8XwWu7skN5m+6muOUfwva1EXsA+KlFFf+RjSyDlYt2GPkELn2e8g0zVdZliRWBr+SIRyDhX60ehRsCh1AdpgRiUBdP7qzaxR62+MQZDErMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux1+7PJp3j4ni5YbXrngg2y61arKx-K+oXuo25jQr6nGj8XwWu7skN5m+6muOUfwva1EXsA+KlFFf+RjSyDlYt2GPkELn2e8g0zVdZliRWBr+SIRyDhX60ehRsCh1AdpgRiUBdP7qzaxR62+MQZDErMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg",
+      "preco": "R$ 220.000",
+      "quartos": "1",
+      "suites": "",
+      "vagas": "1",
+      "area": "48",
+      "bairro": "NIMC Edícula Jardim Santa Laura",
+      "cidade": "Itu",
+      "tipo": "",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/edicula-itu-1-quarto-48-m/ED0015-NIMC?from=sale"
+    },
+    {
+      "fonte": "Danilo Ferreira Imóveis",
+      "titulo": "CA0674-NIMC Casa Bosque Santa Rosa - Itu - SP 106 m² 2 Quartos 1 Banheiro 1 Vaga Venda R$ 265.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3dK-vtcvxsukpEuBZSOu3GD0pSU+feFo0uuvZzGsKz3xPLjQf787q462Km2A06o46RjePY3Oht1S+RhVUfyeLCJOXd7oyKT9kjqcroeUkZM+wQVyC9g2nm+YYW0zFhtnjyqVdCAtiSFbanPLVNsMLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3dK-vtcvxsukpEuBZSOu3GD0pSU+feFo0uuvZzGsKz3xPLjQf787q462Km2A06o46RjePY3Oht1S+RhVUfyeLCJOXd7oyKT9kjqcroeUkZM+wQVyC9g2nm+YYW0zFhtnjyqVdCAtiSFbanPLVNsMLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg",
+      "preco": "R$ 265.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "1",
+      "area": "106",
+      "bairro": "NIMC Casa Bosque Santa Rosa",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-106-m/CA0674-NIMC?from=sale"
+    },
+    {
+      "fonte": "Danilo Ferreira Imóveis",
+      "titulo": "CA1503-NIMC Casa Centro - Itu - SP 103.55 m² 2 Quartos 1 Banheiro Venda R$ 270.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hqiu01tjkavtQZXJCAhjfcwIfE3NzIkmvN-ZrSponZ-5P8ZJjGxK0-zbfZIkyujrNrT9odLFBgS+1iHUbgTqTYDiYA8gnUvxz6FJtkYWRM0gMQnQ9MmAf8UJKVr2Y1hwqGBOvSth62bZLEAF5YOOhHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNlaAGlRCQGbdM6BizlIPEgfSsa0iFNgU8oLiWrKCxP-70Tq2kJyWFjZYB-5HRLthSJLWCDGhMXnlIBjcB+RX9qPr2jE3ubQXIpABQJUKSgc46t2ZpMkZG-81Op3DpmcCuKRLcH9SIgA5Wf5vw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hqiu01tjkavtQZXJCAhjfcwIfE3NzIkmvN-ZrSponZ-5P8ZJjGxK0-zbfZIkyujrNrT9odLFBgS+1iHUbgTqTYDiYA8gnUvxz6FJtkYWRM0gMQnQ9MmAf8UJKVr2Y1hwqGBOvSth62bZLEAF5YOOhHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXmaoAkg3cSLBL6By9ztbAh6D9b0mDMFZr9O2f8abjPP3yHv-1cTvhqZQM9JTUJstJLIuZKWdLW3p4HxQW+QLxs+nIn27mZTWlpgJXT26Og8EqpDV1bFhPusNA9W-1yNi2aFPSEZmX0hZdfpu9lg==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxw-4tZCxTchstU1YbT7kRap1aejxIuis0S32siKha393Ib7Reb7+o1gyKrNL1+ygfI-foMJAlFVO+R7TzvpYI6yB0l3-iGyo2uWeKAbWTNrgSsWkDcP2lnnWsmO218i2yCvBqz-lA+Hfb33PUxsNLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNlaAGlRCQGbdM6BizlIPEgfSsa0iFNgU8oLiWrKCxP-70Tq2kJyWFjZYB-5HRLthSJLWCDGhMXnlIBjcB+RX9qPr2jE3ubQXIpABQJUKSgc46t2ZpMkZG-81Op3DpmcCuKRLcH9SIgA5Wf5vw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Vh54hA3D0QtucFROG5tgSK26W1yMy8gx-N2I7TlOjG4prEB87k0Yti1IX5Ml70vYxHfPcnHx9+PM5kWxv6VJjbEUBQnD2q+lfRQeFNbFMO7lkpyCtW9EWQBLfz-Xdt0GSpO93S9iW9SY3JHA1uN9lHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXmaoAkg3cSLBL6By9ztbAh6D9b0mDMFZr9O2f8abjPP3yHv-1cTvhqZQM9JTUJstJLIuZKWdLW3p4HxQW+QLxs+nIn27mZTWlpgJXT26Og8EqpDV1bFhPusNA9W-1yNi2aFPSEZmX0hZdfpu9lg==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0lDjN1c30YHvsk3QqOQuTCN7LqR1uy+t0DMw7XRs6KD953zGejfyKs+64rQInSCgqplSMYNAXFYTOVnHAHTboaFLWZhrxWy43LsCpVbZm14+jwMmh4KnHGlRYKc11M19x35KP7mpwLdcf7oDERXNMRHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXmaoAkg3cSLBL6By9ztbAh6D9b0mDMFZr9O2f8abjPP3yHv-1cTvhqZQM9JTUJstJLIuZKWdLW3p4HxQW+QLxs+nIn27mZTWlpgJXT26Og8EqpDV1bFhPusNA9W-1yNi2aFPSEZmX0hZdfpu9lg==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0E57epR2DokiMw0bbG9nQCg9Lim+-K-gku8xsz3mpLFjsKlQsTR59h687-8NHiJl-RdGfl9HVwmQMRoTED2YdewAVgM-ibJixTBaOFndHNXmg8qsyxZ7ma7T4SLp1I22QGmAPPp9TLXR5jFBgRBErMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNlaAGlRCQGbdM6BizlIPEgfSsa0iFNgU8oLiWrKCxP-70Tq2kJyWFjZYB-5HRLthSJLWCDGhMXnlIBjcB+RX9qPr2jE3ubQXIpABQJUKSgc46t2ZpMkZG-81Op3DpmcCuKRLcH9SIgA5Wf5vw.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2FQyN809DQcnvQSUeCFgjOi3J6jw9OShkLP0a6NtqHQzPrfe+LF1tk9z5TiQw6PsJ50YeYBPFp0WLBcVz-JYruHJGVMmhK8qUfvXZ9mGzZWxFkssRZT-kT8cMeg5nI74Ru9EfHAin+9VJHDD0BTQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hqiu01tjkavtQZXJCAhjfcwIfE3NzIkmvN-ZrSponZ-5P8ZJjGxK0-zbfZIkyujrNrT9odLFBgS+1iHUbgTqTYDiYA8gnUvxz6FJtkYWRM0gMQnQ9MmAf8UJKVr2Y1hwqGBOvSth62bZLEAF5YOOhHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNlaAGlRCQGbdM6BizlIPEgfSsa0iFNgU8oLiWrKCxP-70Tq2kJyWFjZYB-5HRLthSJLWCDGhMXnlIBjcB+RX9qPr2jE3ubQXIpABQJUKSgc46t2ZpMkZG-81Op3DpmcCuKRLcH9SIgA5Wf5vw.jpg",
+      "preco": "R$ 270.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "",
+      "area": "103.55",
+      "bairro": "NIMC Casa Centro",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-104-m/CA1503-NIMC?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "Danilo Ferreira Imóveis",
+      "titulo": "CA2995-NIMC Casa Jardim Novo Mundo - Itu - SP 106 m² 2 Quartos 1 Vaga Venda R$ 285.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0VW6fFMxQwaifsLbY2H4HWbxqjL2NiCvl+m58nmmOue-J-WePCB5KMN0oPJTnSdnIFqGMY-D14mO-tgQEfIVbXfJilpuhqjv2vfT7gdHHti-Ds1yzxOmwOFcrzxwHwVwx2MUfjxsiGnXp7-PH9+OLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0VW6fFMxQwaifsLbY2H4HWbxqjL2NiCvl+m58nmmOue-J-WePCB5KMN0oPJTnSdnIFqGMY-D14mO-tgQEfIVbXfJilpuhqjv2vfT7gdHHti-Ds1yzxOmwOFcrzxwHwVwx2MUfjxsiGnXp7-PH9+OLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg",
+      "preco": "R$ 285.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "1",
+      "area": "106",
+      "bairro": "NIMC Casa Jardim Novo Mundo",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-106-m/CA2995-NIMC?from=sale"
+    },
+    {
+      "fonte": "Danilo Ferreira Imóveis",
+      "titulo": "CA1795-NIMC Casa Condomínio Residencial Lumi - Itu - SP 70.15 m² 2 Quartos 1 Banheiro 1 Vaga Venda R$ 297.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu01-7o9JzRIRvsk9WrumrCq217mz+PGmvB3N2aTWlbX5197FVvXcwpt60KDSCgWDnZNXb9YXD2ZSRdhWSkXlX4ugLilMnWHTvWPvSuBITzZN-y0UvjJ1wXSbWqGc8gNtyS+aTtfz73aKEfrsKFFQSbpHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNlaAGlRCQGbdM6BizlIPEgfSsa0iFNgU8oLiWrKCxP-70Tq2kJyWFjZYB-5HRLthSJLWCDGhMXnlIBjcB+RX9qPr2jE3ubQXIpABQJUKSgc46t2ZpMkZG-81Op3DpmcCuKRLcH9SIgA5Wf5vw.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu01-7o9JzRIRvsk9WrumrCq217mz+PGmvB3N2aTWlbX5197FVvXcwpt60KDSCgWDnZNXb9YXD2ZSRdhWSkXlX4ugLilMnWHTvWPvSuBITzZN-y0UvjJ1wXSbWqGc8gNtyS+aTtfz73aKEfrsKFFQSbpHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNlaAGlRCQGbdM6BizlIPEgfSsa0iFNgU8oLiWrKCxP-70Tq2kJyWFjZYB-5HRLthSJLWCDGhMXnlIBjcB+RX9qPr2jE3ubQXIpABQJUKSgc46t2ZpMkZG-81Op3DpmcCuKRLcH9SIgA5Wf5vw.jpg",
+      "preco": "R$ 297.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "1",
+      "area": "70.15",
+      "bairro": "NIMC Casa Condomínio Residencial Lumi",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-70-m/CA1795-NIMC?from=sale"
+    },
+    {
+      "fonte": "Danilo Ferreira Imóveis",
+      "titulo": "CA1696-NIMC Casa Jardim Aeroporto I - Itu - SP 134.93 m² 4 Quartos 2 Suítes 3 Banheiros 2 Vagas Venda R$ 300.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3p39PxF+QgUg+oaVYeAhHWM2rmT+8i6qBqh9ZGIsIn18u-bXd7z19EP6Z62EnSpmaFLHccJbHl+dc4qHU3QTaCNPCVw-TKMom7QT7pqEmhSxh8psBJh6HuZe8Xz+1dphXH1Kfb8tT6wRaboOmt7GrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3p39PxF+QgUg+oaVYeAhHWM2rmT+8i6qBqh9ZGIsIn18u-bXd7z19EP6Z62EnSpmaFLHccJbHl+dc4qHU3QTaCNPCVw-TKMom7QT7pqEmhSxh8psBJh6HuZe8Xz+1dphXH1Kfb8tT6wRaboOmt7GrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg",
+      "preco": "R$ 300.000",
+      "quartos": "4",
+      "suites": "2",
+      "vagas": "2",
+      "area": "134.93",
+      "bairro": "NIMC Casa Jardim Aeroporto I",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-4-quartos-135-m/CA1696-NIMC?from=sale"
+    },
+    {
+      "fonte": "Danilo Ferreira Imóveis",
+      "titulo": "CA0825-NIMC Casa Jardim Novo Itu - Itu - SP 105.16 m² 3 Quartos 1 Banheiro 1 Vaga Venda R$ 300.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0B5++NAwgo1wvILReP7mAm2g6+N5dPGomDGxsv2srPj1djRY-D9x4sdi5OvCHL9tr5XH-wkK1JEW9BfFU33dI2MNVN88hi+oEyIfqZeHU9t5Awcgg153X+IR8mF1Vg5hQCcLPbcrhasZpK4Ilp3TM1HR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNlaAGlRCQGbdM6BizlIPEgfSsa0iFNgU8oLiWrKCxP-70Tq2kJyWFjZYB-5HRLthSJLWCDGhMXnlIBjcB+RX9qPr2jE3ubQXIpABQJUKSgc46t2ZpMkZG-81Op3DpmcCuKRLcH9SIgA5Wf5vw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0B5++NAwgo1wvILReP7mAm2g6+N5dPGomDGxsv2srPj1djRY-D9x4sdi5OvCHL9tr5XH-wkK1JEW9BfFU33dI2MNVN88hi+oEyIfqZeHU9t5Awcgg153X+IR8mF1Vg5hQCcLPbcrhasZpK4Ilp3TM1HR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXmaoAkg3cSLBL6By9ztbAh6D9b0mDMFZr9O2f8abjPP3yHv-1cTvhqZQM9JTUJstJLIuZKWdLW3p4HxQW+QLxs+nIn27mZTWlpgJXT26Og8EqpDV1bFhPusNA9W-1yNi2aFPSEZmX0hZdfpu9lg==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux9s0uVU1083w+YbB6e-p3eVz6SlovLDtB+t4Iv5s4v65PLRBcrg2qca-YHEH2X9lLZ6Q84FN2xYTbFUcgTsdpiNNyJb+gaW+lfsT5ppXzULjh8QwQgM+x7kBImR1AAB5TH8ANHdhSyFZabiMwVbNLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNlaAGlRCQGbdM6BizlIPEgfSsa0iFNgU8oLiWrKCxP-70Tq2kJyWFjZYB-5HRLthSJLWCDGhMXnlIBjcB+RX9qPr2jE3ubQXIpABQJUKSgc46t2ZpMkZG-81Op3DpmcCuKRLcH9SIgA5Wf5vw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0FLlfFfvRcEiNckQ6+D5iiD4J6U+oi8vVS21a7M773i2P7-f+P46pll1LDBEnL3vYhjRsMYK0J5Vuh6TB7pYtu7YHto+DmynVSSfbxoZFpRmj4TvjNM9nKiVr2o8wAz+HG9AvHR9w2WEqG2H1UNKLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNlaAGlRCQGbdM6BizlIPEgfSsa0iFNgU8oLiWrKCxP-70Tq2kJyWFjZYB-5HRLthSJLWCDGhMXnlIBjcB+RX9qPr2jE3ubQXIpABQJUKSgc46t2ZpMkZG-81Op3DpmcCuKRLcH9SIgA5Wf5vw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3c7wMt19AYOjZUyeLqVrRuX0b+y486Yi2GmqYr7nKHA2O26YueB56on7PX6KHShnYB3ef8aMGEidvYqADftfKyiEVhTrTOhpFuUVOZrW3tszjAAjz1byB68Raq910I9ix2rMczojxaqbf-lD11cRbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNlaAGlRCQGbdM6BizlIPEgfSsa0iFNgU8oLiWrKCxP-70Tq2kJyWFjZYB-5HRLthSJLWCDGhMXnlIBjcB+RX9qPr2jE3ubQXIpABQJUKSgc46t2ZpMkZG-81Op3DpmcCuKRLcH9SIgA5Wf5vw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Bl8ftBwwwir+w4ZrrisDjZ97ex9c69m2W5+ojNlOPs98j-TdXA8q1n8KfoMF+mro1IZs0eFltyY9ZKbwfAXZyiPHJRqXydtknoYYZUGXdH+zgxyhFK1UqYZLS952Yg5QX5Uv37gTTUVYHNRGR6CrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNlaAGlRCQGbdM6BizlIPEgfSsa0iFNgU8oLiWrKCxP-70Tq2kJyWFjZYB-5HRLthSJLWCDGhMXnlIBjcB+RX9qPr2jE3ubQXIpABQJUKSgc46t2ZpMkZG-81Op3DpmcCuKRLcH9SIgA5Wf5vw.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0dBiZc1+hAOlJQWDJrgmBHf-NyFvfLFvlmVpoH1s6v2ifO6DP7e5dgw-LzzQ1eRkpV+HfcnLEMkQfAhQzPlQr3QY0h7jgPXoXzyaeRfcTdW-Tk4thBo+h6FVLGNzkYp4BuaFff5oxOjVKTZNl8FLLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNlaAGlRCQGbdM6BizlIPEgfSsa0iFNgU8oLiWrKCxP-70Tq2kJyWFjZYB-5HRLthSJLWCDGhMXnlIBjcB+RX9qPr2jE3ubQXIpABQJUKSgc46t2ZpMkZG-81Op3DpmcCuKRLcH9SIgA5Wf5vw.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0B5++NAwgo1wvILReP7mAm2g6+N5dPGomDGxsv2srPj1djRY-D9x4sdi5OvCHL9tr5XH-wkK1JEW9BfFU33dI2MNVN88hi+oEyIfqZeHU9t5Awcgg153X+IR8mF1Vg5hQCcLPbcrhasZpK4Ilp3TM1HR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFNlaAGlRCQGbdM6BizlIPEgfSsa0iFNgU8oLiWrKCxP-70Tq2kJyWFjZYB-5HRLthSJLWCDGhMXnlIBjcB+RX9qPr2jE3ubQXIpABQJUKSgc46t2ZpMkZG-81Op3DpmcCuKRLcH9SIgA5Wf5vw.jpg",
+      "preco": "R$ 300.000",
+      "quartos": "3",
+      "suites": "",
+      "vagas": "1",
+      "area": "105.16",
+      "bairro": "NIMC Casa Jardim Novo Itu",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-3-quartos-105-m/CA0825-NIMC?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "Danilo Ferreira Imóveis",
+      "titulo": "CA1390-NIMC Casa Residencial Rio Araguaia - Itu - SP 100 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 300.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxpb3flo4EkCsZAXeYGHjC+GgIOo5u2G8Vy83LfxkZPV0OLkcf3F7Nwy4JnCP2bpsYV6GIw4YmRyWrl-Q0X7b9q9N1h-uhKTtE-gQ4t7fDtR4h8qnh1h3nmdcLKM5gY5hwKpLPXliT+cbYHtH3pEFrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxpb3flo4EkCsZAXeYGHjC+GgIOo5u2G8Vy83LfxkZPV0OLkcf3F7Nwy4JnCP2bpsYV6GIw4YmRyWrl-Q0X7b9q9N1h-uhKTtE-gQ4t7fDtR4h8qnh1h3nmdcLKM5gY5hwKpLPXliT+cbYHtH3pEFrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg",
+      "preco": "R$ 300.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "2",
+      "area": "100",
+      "bairro": "NIMC Casa Residencial Rio Araguaia",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-2-quartos-100-m/CA1390-NIMC?from=sale"
+    },
+    {
+      "fonte": "Danilo Ferreira Imóveis",
+      "titulo": "CA1082-NIMC Casa Jardim Estância Bom Viver - Itu - SP 103 m² 3 Quartos 2 Banheiros 1 Vaga Venda R$ 300.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2VAwdln2DcmnJtAep285wvcg4iS-s+8lXiy4YLhlLLrzMLvXeeO85E1gKT6CHz3voBZYuALDWR6OtBTVRbvdZnRECdNoB+J+GSUcuscHlhu9FowyS1P4EfgZMnp3l1u2A79MK7G9nTWcLHCOQVkTbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2VAwdln2DcmnJtAep285wvcg4iS-s+8lXiy4YLhlLLrzMLvXeeO85E1gKT6CHz3voBZYuALDWR6OtBTVRbvdZnRECdNoB+J+GSUcuscHlhu9FowyS1P4EfgZMnp3l1u2A79MK7G9nTWcLHCOQVkTbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtBn6YBiFzBHrBM7BbpwYfC1aWoak6DZVJo9bHLqvKyPPikHPzyOUGhj5sK+pTZPcNaGq6nA29JXUlRJSAB7hnmu8Tlr0XmXWjKpgc6CV6Qjt4p5Ho3LE8D8cMcuGy4gdjvaBzSUsvamAVXf9Y=.jpg",
+      "preco": "R$ 300.000",
+      "quartos": "3",
+      "suites": "",
+      "vagas": "1",
+      "area": "103",
+      "bairro": "NIMC Casa Jardim Estância Bom Viver",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.daniloferreiraimoveis.com.br/imovel/casa-itu-3-quartos-103-m/CA1082-NIMC?from=sale"
+    },
+    {
+      "fonte": "GS Imóveis Itu",
+      "titulo": "CA4131-GSQW Casa Condomínio Alphaville Castelo - Itu - SP 210 m² 3 Quartos 3 Suítes 4 Banheiros 4 Vagas Venda R$ 1.890.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxtO4uoy9BgzyNsZVZuGugKtwKrEyd27qUCZyp71mrXd0OzbV+qDkbwijvTtNgCAv6RuSNl5I3BJasxZWkbLX8KYMkhsmWmFmXedQ5poXDFV0CQioAtpxlSVVomCrwN1gRmUVdH4uzawbYXaL2N1QPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwWd1JlaEclgfHH7BPu0q5z4ST0POtZhiENFNr-bCdq-a0PaihEavsQ2CtlIoi5o3nBsdaIo+ZXzYXBDsncX9BuS-1rsSY9wy4NnTIpx8XH1ySmskqsXk3ME1XtIQb+W-03NigaECfTpnCgEcQbYevhC8jv-pYBw==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxtO4uoy9BgzyNsZVZuGugKtwKrEyd27qUCZyp71mrXd0OzbV+qDkbwijvTtNgCAv6RuSNl5I3BJasxZWkbLX8KYMkhsmWmFmXedQ5poXDFV0CQioAtpxlSVVomCrwN1gRmUVdH4uzawbYXaL2N1QPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwWd1JlaEclgfHH7BPu0q5z4ST0POtZhiENFNr-bCdq-a0PaihEavsQ2CtlIoi5o3nBsdaIo+ZXzYXBDsncX9BuS-1rsSY9wy4NnTIpx8XH1ySmskqsXk3ME1XtIQb+W-03NigaECfTpnCgEcQbYevhC8jv-pYBw==.jpg",
+      "preco": "R$ 1.890.000",
       "quartos": "3",
       "suites": "3",
       "vagas": "4",
-      "area": "265.34",
-      "bairro": "UTG Casa Condomínio Campos de Santo Antônio",
+      "area": "210",
+      "bairro": "GSQW Casa Condomínio Alphaville Castelo",
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-265-m/CA6408-UTG?from=sale"
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-210-m/CA4131-GSQW?from=sale"
     },
     {
       "fonte": "GS Imóveis Itu",
       "titulo": "CA3819-GSQW Casa Condomínio Villas do Golfe - Itu - SP 338 m² 3 Quartos 3 Suítes 4 Vagas Venda R$ 2.800.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxdG4t1vyilvq9oIf669pDis-MCryI26tWW29c3EuJnr0eTmXJz02tsi2pXJQlL1vr5VVsYuBGRgd7VBckbSW76uY2pprz60qkrpQZ54GW9J0iYjkxcI5mySQpn88VcT0DH8V-+F9muPSKL5BQNrSbMNAds57EIJ8Rm3W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxdG4t1vyilvq9oIf669pDis-MCryI26tWW29c3EuJnr0eTmXJz02tsi2pXJQlL1vr5VVsYuBGRgd7VBckbSW76uY2pprz60qkrpQZ54GW9J0iYjkxcI5mySQpn88VcT0DH8V-+F9muPSKL5BQNrSbMNAds57EIJ8Rm3W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxdG4t1vyilvq9oIf669pDis-MCryI26tWW29c3EuJnr0eTmXJz02tsi2pXJQlL1vr5VVsYuBGRgd7VBckbSW76uY2pprz60qkrpQZ54GW9J0iYjkxcI5mySQpn88VcT0DH8V-+F9muPSKL5BQNrSbMNAds57EIJ8Rm3W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux9+yMtLyCojtuo2VYWwlQmLxq+qzPTC9RWI2c3KhY-Cj9jIRcLS0rd6jo-8CEWbspU6HMIJbHhgWLVGRED3Z6KxBnlmoh3dqErWVoVDeVpr5zgKvRJf2GWYcp6oq0MO-T20E-3x9QSKZb3gJkBDQPlLANMx8QdQ+RK1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1p+zIlU4ywToNgLA537iyOu+aKNwsiwq06xoMjKso309Oj5AueF6qs6-4TDS3ODuvJkGdd7LEBhRudLG031D4TcDiRcowOyrR3EFoRJH1hx8BNozTYJm1WGQcTz71tg8SKSCajyqBCpU-H3C1B1QPlLANMx8QdQ+RK1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxk80eh1+iY7m5BEe4K1uBW-j4idtuipnEe3x4OG743m2Mf0AMXx7twyy6DXC0KWtZJrYM4XLGdeRshneTvBeoOuG2F98wSngmXDVb1jTHtr9S4dnTxMxgfgUK+c1Hg23w37LtDEuBS0aoDcCGB1QPlLANMx8QdQ+RK1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Z-+vgywBU518RARpOHmBmt8LmQ-I+AqEvLyKn45LPsy-LnTpqB+aBjw5zDH1WG4pJuTO13NExwRdVrdxDSD6GeOSV38xC9lmnGY7dBE3Nl5l5vyxFb6XfnWqqB5kYs0TGGCurVsTWQfankX0VFLLMNAds57EIJ8Rm3W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0NfgO9O1holjcEyVoPh5BTf4IW+xPOwo3m31smTnYHGzubgAc3179gulITKIk+LjYRCSt0qP0BjN-VkQhP7A7bFHkZboiueqRrXZJhmT2xnxDoyyRRalELmdIaO9GIBgHD9VuL7sSnXFpLcPnV3FrMNAds57EIJ8Rm3W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg"
       ],
       "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxdG4t1vyilvq9oIf669pDis-MCryI26tWW29c3EuJnr0eTmXJz02tsi2pXJQlL1vr5VVsYuBGRgd7VBckbSW76uY2pprz60qkrpQZ54GW9J0iYjkxcI5mySQpn88VcT0DH8V-+F9muPSKL5BQNrSbMNAds57EIJ8Rm3W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
       "preco": "R$ 2.800.000",
@@ -356,7 +957,8 @@
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-338-m/CA3819-GSQW?from=sale"
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-338-m/CA3819-GSQW?from=sale",
+      "galeriaCompleta": true
     },
     {
       "fonte": "GS Imóveis Itu",
@@ -419,7 +1021,14 @@
       "fonte": "GS Imóveis Itu",
       "titulo": "CA4166-GSQW Casa Jardim do Estádio - Itu - SP 111.86 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 370.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2544Y9wxhEeqekVWJadnDDc-5y9u+uY6V3T5JLuvuzJ153dDNnd+rwV2rHBC3emkYJXXuYhAn1-V8JqGh-3U6CHIElorgWu-1fUdeJZRGxn-xovvwtb1HaTbMeOq0MUgwK3AN3ArQuUXYujAndYDrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2544Y9wxhEeqekVWJadnDDc-5y9u+uY6V3T5JLuvuzJ153dDNnd+rwV2rHBC3emkYJXXuYhAn1-V8JqGh-3U6CHIElorgWu-1fUdeJZRGxn-xovvwtb1HaTbMeOq0MUgwK3AN3ArQuUXYujAndYDrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2544Y9wxhEeqekVWJadnDDc-5y9u+uY6V3T5JLuvuzJ153dDNnd+rwV2rHBC3emkYJXXuYhAn1-V8JqGh-3U6CHIElorgWu-1fUdeJZRGxn-xovvwtb1HaTbMeOq0MUgwK3AN3ArQuUXYujAndYDrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3lKlfFH1kwxkdAwYbuV5SvXgqKPt8e9p1vNoMrdvr+KxfH7fMvx658z-LTyDHGTs6F3fMd8HXFHOfFHWAHORNupLlNyrzSF+mHPH5B2aVN48R8TgB1s3n+oT7Pp50Rq6weaJfOAsjSgQrjbPAxlQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Y34s9U6ycOueQZcqGjmg2i9b6bvc3BikfKwYL4h6vjy9vVVdn3xIEC1rfXSwC8465KQdIkPltHaN4rXhXLfLicDlgK-z2c+UXUdJJAQEMEhz43kEwAxmaUAd2lxkEv4Tm7AOHx9x67U4LIBWFXMLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0JG9NxnwCs9qo8BQ6+xk3K3hcCewMay8k6Q8sPXnprY1uPGbcXV4rguzrHiMnevlYl-QuIsLkAnVfZjZR7GQKrRDntYlAOwi0bkdoF4SXdvjlo-myx51lW0bK+Lx2MMih+kPOzzmCe3d6rABVJsDrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu19A8+wzugVguZYzUaG7hTKY84GZvdKuh1+-4LzumKr375ikf-qH8Nhv1KfhCkTpgp5eGIJ-CHJ9beMhGTXlYIbaYyUPu2acqADqZodWaGNs2Cw8lzNT-H2AdLGVzHUMwGSLL-3kjh+rCaXPW31EJLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://static-sites.kenlo.io/2.4.9/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1l51uBn5U07r+sJX5S17Qq33oGF7tncl0rK-LD-5bXKy8SvGZrUzIsviYXBTU+DjP49WfYuY04lOuBATBD1RIfbNn9zshOwnWHnH5l7WlAM2C8onktS+nSjYpqssnEOySagNqLqjgOAVbnmDV5QErMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg"
       ],
       "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2544Y9wxhEeqekVWJadnDDc-5y9u+uY6V3T5JLuvuzJ153dDNnd+rwV2rHBC3emkYJXXuYhAn1-V8JqGh-3U6CHIElorgWu-1fUdeJZRGxn-xovvwtb1HaTbMeOq0MUgwK3AN3ArQuUXYujAndYDrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
       "preco": "R$ 370.000",
@@ -432,13 +1041,21 @@
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-2-quartos-112-m/CA4166-GSQW?from=sale"
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-2-quartos-112-m/CA4166-GSQW?from=sale",
+      "galeriaCompleta": true
     },
     {
       "fonte": "GS Imóveis Itu",
       "titulo": "CA4224-GSQW Casa Parque Residencial Presidente Médici - Itu - SP 272 m² 3 Quartos 3 Suítes 4 Banheiros 4 Vagas Venda R$ 1.250.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu25c54pj1wojrpYceJy+rRLYgqmQ-dqCg0fPyq3M5IvxxeLOB5nh7KUZjbHqTFesofN4SuEhLx17SuZAekHRfomFLXdmmiijlx7LXbRUGUF69VFjwSdC-QWCBcSeskEX7HiHV+-9ujyCcK3PGlMEHrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu25c54pj1wojrpYceJy+rRLYgqmQ-dqCg0fPyq3M5IvxxeLOB5nh7KUZjbHqTFesofN4SuEhLx17SuZAekHRfomFLXdmmiijlx7LXbRUGUF69VFjwSdC-QWCBcSeskEX7HiHV+-9ujyCcK3PGlMEHrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu25c54pj1wojrpYceJy+rRLYgqmQ-dqCg0fPyq3M5IvxxeLOB5nh7KUZjbHqTFesofN4SuEhLx17SuZAekHRfomFLXdmmiijlx7LXbRUGUF69VFjwSdC-QWCBcSeskEX7HiHV+-9ujyCcK3PGlMEHrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0hGwOB-6CoPltoHU7md+QuG5t3N5-idm02s4JSLkK39-OyvUdfv5JEv6PSrCwOCjYtaR8MCPlFQTuIjexWvftqRI2pU-zeGu3v9bL5jZ0ZXxwApl0pV73i9V8O9rGYC4yGvAPTe8xDRHKK4MFt3LthHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6ACng3cGrpK7hy6l9DFjaX4OxuHOgY-8rjJ8Pqzb-r3Gf+iLTrht5EC4o75P9pkDIenCmN6ACYldn9Dul2m6MTItH24NXTLoBxXSRyPicEnoDElJQVRr4QavnrtlYriLRLcH8uX0RZdbdj6yXMj6rlKQJF9Yg==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2lO6dZ2vwUjvfMrW4GkjAyOwauO3vOEjla6-c3YpurC+eavB-qOyocIjqfuEFqinYhXZoYqMkJlYN5bGh60Bqa8Nn8NszCohHSTRqdMGktZ9l9rkytnwFyYBsOH2Hhu2H+nIq7CoQerUov+DFABRbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2053+5FwBgFyMgzfpaPl3e2-Lmp9++G9EOMxLDMsYyLzt-RGfrR2I4h6bLVC0+vlohhafwWMh5aWux8HBbrDozYJ1ZYkxCmgn-pT5l9RnBq5SM7jwhP2HSCQJWw5VA04Rn9O9zbmgKBUIzfCBlDQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1dV3-40yBRuicBBDJ+B4BK43d7O4M+alH6b15bnp4LyxebbYNnAxadv3KvDAlCekIxpA-54Ah98TOR8GT21AtyMEkpKsxOHuXrkYpV9XmVf8hw4qCZe2FC3Tbb2rgEWhg+ZW6zTiQrVUqTCDg1YTbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu35IyclRyU8MnsFFYYWYrBu5xd++-ebBs2ezqIvhu5bx4sbEZJv12doS1o3dFGy1mbZHZsx9dmRGPcBdSQTEVYKMLnx+h3ypiULsQrJafE182xF3sxVzyGflRJeI3XQexRCVUvL-lgSTcJDGBHxZPMpHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6ACng3cGrpK7hy6l9DFjaX4OxuHOgY-8rjJ8Pqzb-r3Gf+iLTrht5EC4o75P9pkDIenCmN6ACYldn9Dul2m6MTItH24NXTLoBxXSRyPicEnoDElJQVRr4QavnrtlYriLRLcH8uX0RZdbdj6yXMj6rlKQJF9Yg==.jpg"
       ],
       "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu25c54pj1wojrpYceJy+rRLYgqmQ-dqCg0fPyq3M5IvxxeLOB5nh7KUZjbHqTFesofN4SuEhLx17SuZAekHRfomFLXdmmiijlx7LXbRUGUF69VFjwSdC-QWCBcSeskEX7HiHV+-9ujyCcK3PGlMEHrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
       "preco": "R$ 1.250.000",
@@ -451,13 +1068,21 @@
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-272-m/CA4224-GSQW?from=sale"
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-272-m/CA4224-GSQW?from=sale",
+      "galeriaCompleta": true
     },
     {
       "fonte": "GS Imóveis Itu",
       "titulo": "CA4223-GSQW Casa Vila Nova - Itu - SP 198 m² 2 Quartos 2 Banheiros Venda R$ 590.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2c--vNZyTVknMkQZ6Kspyarm6yKxcaelFSXo53Ug6Lf6IbeY+vj+tAl24jjPX+NqJN3SNwgGX9-XNRFVTXAe9rePz1Nu3zVikP9YKZeGmVr-iJ3uQUMlH2gTJSTp28I4TO5MPKJnQK1e5feGWZwHrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2c--vNZyTVknMkQZ6Kspyarm6yKxcaelFSXo53Ug6Lf6IbeY+vj+tAl24jjPX+NqJN3SNwgGX9-XNRFVTXAe9rePz1Nu3zVikP9YKZeGmVr-iJ3uQUMlH2gTJSTp28I4TO5MPKJnQK1e5feGWZwHrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2c--vNZyTVknMkQZ6Kspyarm6yKxcaelFSXo53Ug6Lf6IbeY+vj+tAl24jjPX+NqJN3SNwgGX9-XNRFVTXAe9rePz1Nu3zVikP9YKZeGmVr-iJ3uQUMlH2gTJSTp28I4TO5MPKJnQK1e5feGWZwHrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu15b1IxkzRkMiPQSWJ2xuRPf5Luq6Y-Dr02L6KzHsI7VhPPQX8mP0psxz-DuFBv9l-N-RPomGFwjZsRZRjbKcqKkIntxohez+wDxFZ5keU1l9Bs9nTlwmx7mUpO3ynMO4z6KLdT4hXWAQ-vnCmBCOLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2xa-PRK3hY8k8gADJ64u3ag24er2o2w6V+YxZrQm72K6uPzfNvPlpw794TEPQH2qq5uRYYbC05APvImXyPOT9uxHF4Lhw7XvXqQVKZ5TXtS0CgUnBJN-3SbfsamqnRo-SH-KazlliCeUvjoAVp9RbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0VBgdBLuRF7uJIpd+6bkXW-woa6vNCSg0Ox4J+Kjur62+DCfPb0kqYZ3pHfM1yjjLdXGs1+H3BIO9MldALHVoCQIVt4vResjGLfduJmHUhE2gBslT1T9lrkU4il+Xs27CO5UO-J8BmBXrvcBUdgDrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux5k29lM7U43uMQ8ZJG7jR6t7t2Kvu+d806yx8rJpOzYypjxTZ-v04szwOvRS3uugZM1T-gELkxmetFHezOzUqmdEkN8jjqUikSQXbtBX0xTwhktvSYBnH6QWaOg51IQggigK-3VhSLUdqH3UWt1QPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
+        "https://static-sites.kenlo.io/2.4.9/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2w+y4JR6i4JmeMTfbOOoHeJ6ZyP2vu99mXO6qTb7rXA+5-uGcXC6q1miKXOA0Gun4lFGtUZMHpQWsZYYBLyZaeqGUF4hRCIu2rcZppeTC9q3CIPnxtO4Uqif5Ge02kI0S2PFuqDkBy1CY7MGnFmCrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg"
       ],
       "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2c--vNZyTVknMkQZ6Kspyarm6yKxcaelFSXo53Ug6Lf6IbeY+vj+tAl24jjPX+NqJN3SNwgGX9-XNRFVTXAe9rePz1Nu3zVikP9YKZeGmVr-iJ3uQUMlH2gTJSTp28I4TO5MPKJnQK1e5feGWZwHrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
       "preco": "R$ 590.000",
@@ -470,13 +1095,21 @@
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-2-quartos-198-m/CA4223-GSQW?from=sale"
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-2-quartos-198-m/CA4223-GSQW?from=sale",
+      "galeriaCompleta": true
     },
     {
       "fonte": "GS Imóveis Itu",
       "titulo": "CA4198-GSQW Casa Centro - Itu - SP 130 m² 2 Quartos 1 Suíte 1 Banheiro 1 Vaga Venda R$ 600.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Bh1uNh4DljiNU9ALPh7AmX-ZmtwM2ZqFSX1KnyoOKC6pLtZuTf1bc-jYL6AHqytLFnVPs-CGF-QPh-QBLBZ5vQDklA8gG1+nKUEqtLemFS6BgKuUpN832UDJm99gVrxhGIWu6EqSmSZ4XqLAdDQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwWd1JlaEclgfHH7BPu0q5z4ST0POtZhiENFNr-bCdq-a0PaihEavsQ2CtlIoi5o3nBsdaIo+ZXzYXBDsncX9BuS-1rsSY9wy4NnTIpx8XH1ySmskqsXk3ME1XtIQb+W-03NigaECfTpnCgEcQbYevhC8jv-pYBw==.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Bh1uNh4DljiNU9ALPh7AmX-ZmtwM2ZqFSX1KnyoOKC6pLtZuTf1bc-jYL6AHqytLFnVPs-CGF-QPh-QBLBZ5vQDklA8gG1+nKUEqtLemFS6BgKuUpN832UDJm99gVrxhGIWu6EqSmSZ4XqLAdDQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwWd1JlaEclgfHH7BPu0q5z4ST0POtZhiENFNr-bCdq-a0PaihEavsQ2CtlIoi5o3nBsdaIo+ZXzYXBDsncX9BuS-1rsSY9wy4NnTIpx8XH1ySmskqsXk3ME1XtIQb+W-03NigaECfTpnCgEcQbYevhC8jv-pYBw==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Bh1uNh4DljiNU9ALPh7AmX-ZmtwM2ZqFSX1KnyoOKC6pLtZuTf1bc-jYL6AHqytLFnVPs-CGF-QPh-QBLBZ5vQDklA8gG1+nKUEqtLemFS6BgKuUpN832UDJm99gVrxhGIWu6EqSmSZ4XqLAdDQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0JbjY1W6RIZqdYbQr3uvSbC-bWW1e3Cr2K214GOhq7F7p-Hfefp145gyPPdGVql7a5HW+AIaxlUPvJYGSb2R57fZ0VxvgaA-HX8VoNlRUZu5jY2kxF03nGXZZaN9HwO3H+-Lu6DkjKdHPvqLwNyPLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2VBj8p03Cgzm-UBdoSdnyuXx9y51-6jg13J9qnKnvbH+d34De2O6JofzqnwMXKNl7A+fYE+AVFGeO5-ahzwZrCObHRooQeqoWfgHrcfakZp+wc7qQ912XqIe5+ozkw86guJBc3o73HcXfn0LmZ4D+dHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6ACng3cGrpK7hy6l9DFjaX4OxuHOgY-8rjJ8Pqzb-r3Gf+iLTrht5EC4o75P9pkDIenCmN6ACYldn9Dul2m6MTItH24NXTLoBxXSRyPicEnoDElJQVRr4QavnrtlYriLRLcH8uX0RZdbdj6yXMj6rlKQJF9Yg==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3ZH-ohP1B4inM8LV6KgmBia2d2G6OzC83XKqbDQs5TY-PTnedfh-7cN0r-4OF72lYpcQ9sWYkZfVeteWzvEcJuqLGhKphyjuVvDVIpBRUl6zQoWuzJixHKFc5ujq3th+32nN9TdmyHVFrLePXtNKcdHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6ACng3cGrpK7hy6l9DFjaX4OxuHOgY-8rjJ8Pqzb-r3Gf+iLTrht5EC4o75P9pkDIenCmN6ACYldn9Dul2m6MTItH24NXTLoBxXSRyPicEnoDElJQVRr4QavnrtlYriLRLcH8uX0RZdbdj6yXMj6rlKQJF9Yg==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3VFyt9OxgUTnPM-dqWg+SuG5Jux6NrAtBWI-4-Zpqre8MW6VvyH5KBvlK72VxuIn6BoYecrbVpjWulmTlnKXZqiJkJfjwmGtG7HcrZUGzRT-A8fj0gPn36eZbGzwHwv-xClJPbh9BedUKv4AH1NCrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPn6IKlRDCE7ZK6B-qkobOhPH4OUyPZlE69e6X8PDiOPvzTvr4JiWbiJgX5bzIP-VyKIuhCFkXAiQhbWJCpkKmhfrdnxO+LGvOugBWV0OYgcM+szYgb1hTuJcFsmi0y5TraBzSTdSLgA5FPNyvx31u9etSSZIw.jpg",
+        "https://static-sites.kenlo.io/2.4.9/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3ZsyPBx5jsvj+M6YLycpTfcwtSLwPG-kUGa6ZjJtYjjydP0Z+L1kosa8-bVPUChv4FEQvMrGEZQZfErSxrtTp6QIyEBrQeVlF-SVp5kSGFn7yEgzy9i31aLcYi3qkAy8DybJdrG9AuAc-z0UGJAJL5HR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6ACng3cGrpK7hy6l9DFjaX4OxuHOgY-8rjJ8Pqzb-r3Gf+iLTrht5EC4o75P9pkDIenCmN6ACYldn9Dul2m6MTItH24NXTLoBxXSRyPicEnoDElJQVRr4QavnrtlYriLRLcH8uX0RZdbdj6yXMj6rlKQJF9Yg==.jpg"
       ],
       "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Bh1uNh4DljiNU9ALPh7AmX-ZmtwM2ZqFSX1KnyoOKC6pLtZuTf1bc-jYL6AHqytLFnVPs-CGF-QPh-QBLBZ5vQDklA8gG1+nKUEqtLemFS6BgKuUpN832UDJm99gVrxhGIWu6EqSmSZ4XqLAdDQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwWd1JlaEclgfHH7BPu0q5z4ST0POtZhiENFNr-bCdq-a0PaihEavsQ2CtlIoi5o3nBsdaIo+ZXzYXBDsncX9BuS-1rsSY9wy4NnTIpx8XH1ySmskqsXk3ME1XtIQb+W-03NigaECfTpnCgEcQbYevhC8jv-pYBw==.jpg",
       "preco": "R$ 600.000",
@@ -489,7 +1122,8 @@
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-2-quartos-130-m/CA4198-GSQW?from=sale"
+      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-2-quartos-130-m/CA4198-GSQW?from=sale",
+      "galeriaCompleta": true
     },
     {
       "fonte": "GS Imóveis Itu",
@@ -549,23 +1183,532 @@
       "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-6-quartos-785-m/CA4010-GSQW?from=sale"
     },
     {
-      "fonte": "GS Imóveis Itu",
-      "titulo": "CA4217-GSQW Casa Condomínio Residencial Kurumin - Itu - SP 290 m² 3 Quartos 2 Suítes 2 Banheiros Venda R$ 2.300.000",
+      "fonte": "AP Imóveis Itu",
+      "titulo": "CA3295-APIT Casa Jardim Aeroporto I - Itu - SP 141.75 m² 3 Quartos 1 Suíte 2 Banheiros 1 Vaga Venda R$ 390.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0B22u8wwitjieYURq-gkXCmh4KRuM3Bl0u30baGr7aL957IfPXpxYU58r7xHnSVqvFsXMQpakQlWd4kRUTPZKSMNWhLrGe3o3zOFrVvH3Z2xT45gTUP-wqaZ5u8yhsS43mYIKPJtASsUY3vHXlxRbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxdYjM1vow48k+9cY5CgpzDexouN5eaQk2iVxbHGmaL3ienNep7hmJAByJDvKVqI6p9odMY3CkVkZdRUWR7GbYGDDkljnWa0oEaIb7RJf3tw2g8UiwsLgX2Aaoqe8m8pgiO5DcOJqxeGcvv2DFZrCrMNAds57EIJ8Rm3W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg"
       ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0B22u8wwitjieYURq-gkXCmh4KRuM3Bl0u30baGr7aL957IfPXpxYU58r7xHnSVqvFsXMQpakQlWd4kRUTPZKSMNWhLrGe3o3zOFrVvH3Z2xT45gTUP-wqaZ5u8yhsS43mYIKPJtASsUY3vHXlxRbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlLnaoBiA7LH7ZM60-vxI3H0PH6bkTTMVQ9o7CX+qG1Of+kS6DzOV+kgY0Q143IEONWJI2jMjQVACA6cGNeuULLu+-28RWnM27UpgFICFSQg9ottDNqMlpEq4gJoDHq1Z2uZhKAUsjamBYUOImhyTBxp-NbSt8=.jpg",
-      "preco": "R$ 2.300.000",
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxdYjM1vow48k+9cY5CgpzDexouN5eaQk2iVxbHGmaL3ienNep7hmJAByJDvKVqI6p9odMY3CkVkZdRUWR7GbYGDDkljnWa0oEaIb7RJf3tw2g8UiwsLgX2Aaoqe8m8pgiO5DcOJqxeGcvv2DFZrCrMNAds57EIJ8Rm3W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+      "preco": "R$ 390.000",
       "quartos": "3",
-      "suites": "2",
-      "vagas": "",
-      "area": "290",
-      "bairro": "GSQW Casa Condomínio Residencial Kurumin",
+      "suites": "1",
+      "vagas": "1",
+      "area": "141.75",
+      "bairro": "APIT Casa Jardim Aeroporto I",
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.gsimoveisitu.com.br/imovel/casa-itu-3-quartos-290-m/CA4217-GSQW?from=sale"
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-142-m/CA3295-APIT?from=sale"
+    },
+    {
+      "fonte": "AP Imóveis Itu",
+      "titulo": "CA4539-APIT Casa Condomínio Xapada Parque Ytu - Itu - SP 350 m² 3 Quartos 3 Suítes 6 Banheiros 4 Vagas Venda R$ 3.900.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1U24eNnuBECnMckAIGDmgmK3MCf2+2yllrO-bXau+zr7trIV82A1oIai63OGEKUjJBUetEQF1l7TcNHWh7bU72SMnJ78xOVpHfAeIxKT0Vv8h4IkEZtwnWpapSL-X8hxH2EJ-3Ekz6zF564DmZDErMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1U24eNnuBECnMckAIGDmgmK3MCf2+2yllrO-bXau+zr7trIV82A1oIai63OGEKUjJBUetEQF1l7TcNHWh7bU72SMnJ78xOVpHfAeIxKT0Vv8h4IkEZtwnWpapSL-X8hxH2EJ-3Ekz6zF564DmZDErMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu21ozdVJ9xE6gPVIY42dljvf86yt1vmViUrO5pLVgr3YzcH7Werp5bBi8ZnWNASO6vNPfNEdaFt+dt5cXzizWKGKGEF0oxClvGHOU7JxWmAQ7wsVokoL3EO8QpiI-FEb2y+bG-bZkn-UHZrABE4FTbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxlIz+BkwDgJgpM6X5yHhXO28qiyxNmYnGa14Y-u5bn-1cDZBs7h15kn7oG2KXWus6tZSd0hFkBJPrVeYFnGWdiGDihJrB+niWrtZOZlXkcM-wIcvzFZzma0foOm-lU+wyefBdjlrwquUrrsAFBcOLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu11Cj85euRoiq9sdd7XimjPZ0tWRt8+3oUitoZP1n+71j9z0VvfOkrstj6-zV1OF7LI6X9s6LX9WXsxzZi7kXKC-H2RyrCWupGj1YZZXSGxp9SYJvw1f4lykAbq89kcXhQCqIeHCrXaib-HJK3JHFMhHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6YGngvcErEcvkvokteW1-StaxyDYVNuobGZ+vvlPPv7TKz0Im3hrJYE+diKf9pJIJ6pSDQVQnhwbiId7FK4+OvGswCzIDnYuBAKChPH3pw1.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Z7wMpB+BQQovAbUu6U5iyJhYijusiLl0+PwrPv76P7+ODVa8bm5qVk0v7dFlCpnqd1Z81iOHtiVtl7eUbrB6uEZE9eij+HuWn3XrYXWzYQ2h8ykU0MmkubR4WurUQB5zi9UfHCgx61YqPPGV4GG-5HR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6YGngvcErEcvkvokteW1-StaxyDYVNuobGZ+vvlPPv7TKz0Im3hrJYE+diKf9pJIJ6pSDQVQnhwbiId7FK4+OvGswCzIDnYuBAKChPH3pw1.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0B+8c5U+Bw1pfcrTJSH5zWV8peNxdOfjGbN9biOlL-7+9+hQuD4lr001vTRNnOI7rZrYNU1PRFdSNVmWjPtWKitGUJ0vyG0mUXXSrB4ezNE2B45qwl3nVaef7ag8mEJwCz7FvrnqnPcYKPCXWZkRbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1U24eNnuBECnMckAIGDmgmK3MCf2+2yllrO-bXau+zr7trIV82A1oIai63OGEKUjJBUetEQF1l7TcNHWh7bU72SMnJ78xOVpHfAeIxKT0Vv8h4IkEZtwnWpapSL-X8hxH2EJ-3Ekz6zF564DmZDErMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+      "preco": "R$ 3.900.000",
+      "quartos": "3",
+      "suites": "3",
+      "vagas": "4",
+      "area": "350",
+      "bairro": "APIT Casa Condomínio Xapada Parque Ytu",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-350-m/CA4539-APIT?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "AP Imóveis Itu",
+      "titulo": "CA2292-APIT Casa Campos de Santo Antônio - Itu - SP 3 Quartos 3 Suítes 5 Banheiros 3 Vagas Venda R$ 4.256.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2hZ191xtiVhjJMiY46umji-hbKXvo6Ci3PN+Zz5krLFzpLxWsvpx48N-IjLEWmAnpFmYPoCEl1YROdBWE3WeYevAU9A-DCDjWnCRp5cRWp6-BEgkAZf5gD8RKOq3UAi6yyOFer0lweHQJjkMWR8EsFHR9ox5F9MqBG8WVByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2hZ191xtiVhjJMiY46umji-hbKXvo6Ci3PN+Zz5krLFzpLxWsvpx48N-IjLEWmAnpFmYPoCEl1YROdBWE3WeYevAU9A-DCDjWnCRp5cRWp6-BEgkAZf5gD8RKOq3UAi6yyOFer0lweHQJjkMWR8EsFHR9ox5F9MqBG8WVByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+      "preco": "R$ 4.256.000",
+      "quartos": "3",
+      "suites": "3",
+      "vagas": "3",
+      "area": "",
+      "bairro": "APIT Casa Campos de Santo Antônio",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos/CA2292-APIT?from=sale"
+    },
+    {
+      "fonte": "AP Imóveis Itu",
+      "titulo": "CA4557-APIT Casa Condomínio Vilas do Golfe - Itu - SP 261 m² 3 Quartos 3 Suítes 4 Banheiros 6 Vagas Venda R$ 2.600.000 Aluguel R$ 14.000/mês",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu11Eidd14zJktOkhcpimmhCAj56o-YihiRyf54PKiKzmifnvZfbT14Y1277aPG-pgZNdX9wia38jabBTShDdb7uFNyVphg6uqEPXYYBcfncO+wsfijhp4gDlYYmI5XQ1gzGnDejmhCKKfpvbUWZ1QPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwWdtNlaccngyRT+cdvk3qldXGgPSpPU3VZ1o797HL+Pe4aPv3HvzsWGerj9xRpo3KKt5UYNj2HWhCHGZ5J3BfqQD7qbmT4kGrLniV5BBfSAGA.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu11Eidd14zJktOkhcpimmhCAj56o-YihiRyf54PKiKzmifnvZfbT14Y1277aPG-pgZNdX9wia38jabBTShDdb7uFNyVphg6uqEPXYYBcfncO+wsfijhp4gDlYYmI5XQ1gzGnDejmhCKKfpvbUWZ1QPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwWdtNlaccngyRT+cdvk3qldXGgPSpPU3VZ1o797HL+Pe4aPv3HvzsWGerj9xRpo3KKt5UYNj2HWhCHGZ5J3BfqQD7qbmT4kGrLniV5BBfSAGA.jpg",
+      "preco": "R$ 2.600.000",
+      "quartos": "3",
+      "suites": "3",
+      "vagas": "6",
+      "area": "261",
+      "bairro": "APIT Casa Condomínio Vilas do Golfe",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda e aluguel",
+      "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-261-m/CA4557-APIT?from=sale"
+    },
+    {
+      "fonte": "AP Imóveis Itu",
+      "titulo": "CA3422-APIT Casa Vila Residencial São Domingos - Itu - SP 98.48 m² 3 Quartos 1 Suíte 2 Banheiros 2 Vagas Venda R$ 525.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Rnj-1e3SZugMUfWb+S5QWp4N2Jv4+3lEew87TnnrLQxc-TeOH5+p4x8-DWPmyvhPZCFsYYDUIhd+doRkfVfqmBYlRonRWgiUTOaLlie0EQ+R4JgCVA9WOQXrqW+HUI+Ty-V7bpjiCJU53eAWNcSNxHR9ox5F9MqBG8WVByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Rnj-1e3SZugMUfWb+S5QWp4N2Jv4+3lEew87TnnrLQxc-TeOH5+p4x8-DWPmyvhPZCFsYYDUIhd+doRkfVfqmBYlRonRWgiUTOaLlie0EQ+R4JgCVA9WOQXrqW+HUI+Ty-V7bpjiCJU53eAWNcSNxHR9ox5F9MqBG8WVByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+      "preco": "R$ 525.000",
+      "quartos": "3",
+      "suites": "1",
+      "vagas": "2",
+      "area": "98.48",
+      "bairro": "APIT Casa Vila Residencial São Domingos",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-98-m/CA3422-APIT?from=sale"
+    },
+    {
+      "fonte": "AP Imóveis Itu",
+      "titulo": "CA3716-APIT Casa Vila Padre Bento - Itu - SP 103.04 m² 3 Quartos 1 Suíte 2 Banheiros 2 Vagas Venda R$ 489.900",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxdN7fA+1hckuc0jBL+HuwWuz6rK5ceAq0au1ILctIPm2drmYtXx1sVi24DuHXL8vP5dQeYYPGNbXbggRC22A9nFOSQKmjye+EnPYqlhb05+0iAArRYL5lfoB4T2zG424geENsve8WuSHbvDWgQBErMNAds57EIJ8Rm3W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxdN7fA+1hckuc0jBL+HuwWuz6rK5ceAq0au1ILctIPm2drmYtXx1sVi24DuHXL8vP5dQeYYPGNbXbggRC22A9nFOSQKmjye+EnPYqlhb05+0iAArRYL5lfoB4T2zG424geENsve8WuSHbvDWgQBErMNAds57EIJ8Rm3W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+      "preco": "R$ 489.900",
+      "quartos": "3",
+      "suites": "1",
+      "vagas": "2",
+      "area": "103.04",
+      "bairro": "APIT Casa Vila Padre Bento",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-103-m/CA3716-APIT?from=sale"
+    },
+    {
+      "fonte": "AP Imóveis Itu",
+      "titulo": "CA4556-APIT Casa Condomínio Fazenda Vila Real de Itu - Itu - SP 450 m² 3 Quartos 3 Suítes 5 Banheiros 4 Vagas Venda R$ 4.500.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Nlzf9OyE0Em9A3AO-g5S2I97rF-NTElG2Y4I2T567C5eLHVuDO0NAm4aioTwD9qq9PR94XaUJJXdFjH0PAUqKANlRTqiDci3TGYrwZE2xe4zhtiUcIynW0QaX22HE8wgKgJNHjjg29cq-kGF5+RbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Nlzf9OyE0Em9A3AO-g5S2I97rF-NTElG2Y4I2T567C5eLHVuDO0NAm4aioTwD9qq9PR94XaUJJXdFjH0PAUqKANlRTqiDci3TGYrwZE2xe4zhtiUcIynW0QaX22HE8wgKgJNHjjg29cq-kGF5+RbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu00i0e0-wxkXpcg5fKOZphnexKiM7oiZrUDLqc38op+HhZjBYPrX6t0565KsC2mcqIRKb+MtI3wgdfgkfybIAbzfZSEKrjeBjXXfVqBkc3tMjyMNtywAn3ipbaGD-n0T22SsDsnSsymma--mUAQDHrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu15czuVf2gY1vOsCWryzjTCNgKmwy+Wch3+x44-PnKiF6p+iRd369dBniaXPS2T3vetHR8UDBGVCfrJNYg61RpXYZUVU-WXUunfQF4NvaERphgoRqzRu5ES9cqWzzWMhxyK6ENbv9CKtVLzPA0xlTbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux5a8sxi604TgvshfbyGmxKEzJWT7Mrc9W2I3aLvn43ji93IY9rGmatu-YPEF1ivuLZuVowIPhpHS9IjSh63Q7umEXxIggW9m1zLfoRjWm1UgAUvr1JCxFuDRsKHrnto8BbgAOr99T6BT6XBA1t7GdFHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6YGngvcErEcvkvokteW1-StaxyDYVNuobGZ+vvlPPv7TKz0Im3hrJYE+diKf9pJIJ6pSDQVQnhwbiId7FK4+OvGswCzIDnYuBAKChPH3pw1.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxd199J04Q00oMsQfoCmgxSJj6yR5+288Eehos-9ppr-y-mjQeX47bsHy7ytSGajnKlqe-EGD2drO9FZZh3IQYvbC1hI+CDQnmbLdINAantN1TgekE1on0CHYoig0V8J2RabWtzyhC+cd-3nMQFlQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2trldJszUYRzOBHfOGT4XCch8Ck9-qgnViw4JWHsvbRx+rPZs7G9rk926rzJU+StZA0au4CGmtIRPZ-H0L0VqmZE3cMqCmjtmXEYblDQm5J5TEpy0d-6n+lAcaGxWY1yny1E+KCugCxVPniCAVlQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Nlzf9OyE0Em9A3AO-g5S2I97rF-NTElG2Y4I2T567C5eLHVuDO0NAm4aioTwD9qq9PR94XaUJJXdFjH0PAUqKANlRTqiDci3TGYrwZE2xe4zhtiUcIynW0QaX22HE8wgKgJNHjjg29cq-kGF5+RbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+      "preco": "R$ 4.500.000",
+      "quartos": "3",
+      "suites": "3",
+      "vagas": "4",
+      "area": "450",
+      "bairro": "APIT Casa Condomínio Fazenda Vila Real de Itu",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-450-m/CA4556-APIT?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "AP Imóveis Itu",
+      "titulo": "CA2926-APIT Casa Brasil - Itu - SP 3 Quartos 1 Suíte 4 Banheiros 4 Vagas Venda R$ 990.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxtE8dB0-hk5gvc3R7qsoBHC+aSYyo2co0TN147yppP62t3PUePYl9sa64fvP16Qn-NgaYEnCxBYTPB-fzvLRJ25MFQJ+Ae8-k+QX5RaTE0L1AwLmzJU1HK6crnp51UT7CL4Vq359SeWFKmjMUdzSbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxtE8dB0-hk5gvc3R7qsoBHC+aSYyo2co0TN147yppP62t3PUePYl9sa64fvP16Qn-NgaYEnCxBYTPB-fzvLRJ25MFQJ+Ae8-k+QX5RaTE0L1AwLmzJU1HK6crnp51UT7CL4Vq359SeWFKmjMUdzSbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+      "preco": "R$ 990.000",
+      "quartos": "3",
+      "suites": "1",
+      "vagas": "4",
+      "area": "",
+      "bairro": "APIT Casa Brasil",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos/CA2926-APIT?from=sale"
+    },
+    {
+      "fonte": "AP Imóveis Itu",
+      "titulo": "CA2446-APIT Casa Condomínio Chácaras Flora - Itu - SP 450 m² 3 Quartos 3 Suítes 5 Banheiros 4 Vagas Venda R$ 2.600.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu142yOtu3jUnzcU-Y5yE4HCX5aLMzMyXsUuX1Jj-44He6sj0ff7dwtA6-pLENEeAvq88W4EpFXFFTddQdBfxUt26bEZegyGDh1T-VrZtQFhW5FoPvhgLyGeDUoOPpkM10S+5E6vApgnSEKy6OgBTRbMNAds57EIJ8Rm3W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu142yOtu3jUnzcU-Y5yE4HCX5aLMzMyXsUuX1Jj-44He6sj0ff7dwtA6-pLENEeAvq88W4EpFXFFTddQdBfxUt26bEZegyGDh1T-VrZtQFhW5FoPvhgLyGeDUoOPpkM10S+5E6vApgnSEKy6OgBTRbMNAds57EIJ8Rm3W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3VX7PRf2UYso5YZYY-h5RWozITM3szAp1iv9LmMlIjyjMrmY8PekKwS2qTPE2enurRVRcUiFk5kIt5dYyPRRICPEV1YlDuirXyVF4xaW0Vq-zMRzil73wSybIWyxlA0hQKZUsz4gxORfPvXXQZsGrMNAds57EIJ8Rm3W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2ln1eh3yjYiteYldryYnhKf76uM-POhg36bz4napuiKiMX6BMvb968dzI-VCWK2nJc7SfcJK1BlRM5GYU3PRN6fHSFrgD69mGydcp94T3trhQZpyCVznl+4fr2w23sR8iS5CPjalhSOYvn8XkNGO99HR9ox5F9MqBG8WVByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6YGngvcErEcvkvokteW1-StaxyDYVNuobGZ+vvlPPv7TKz0Im3hrJYE+diKf9pJIJ6pSDQVQnhwbiId7FK4+OvGswCzIDnYuBAKChPH3pw1.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Vf8NVKyC4BseUcQbCn5C2r-4qa3saekUOcyqqK5JjljJ7cZOHy5dE+7J-ZAgW8sK44RvMnGVB1OaxnQzn7aKmRB0VvpSDRhB7fSLpFWEFrj1o3vwZS4VqWWsSW-UEd-XqbG+jlhAW1TYXHPU5DH+FHR9ox5F9MqBG8WVByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6YGngvcErEcvkvokteW1-StaxyDYVNuobGZ+vvlPPv7TKz0Im3hrJYE+diKf9pJIJ6pSDQVQnhwbiId7FK4+OvGswCzIDnYuBAKChPH3pw1.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxdEzfFf6B4cw-tBQ7v7lh69052MotjF8n2X3q2Lkuzm-uPQYuaGmbdhivDDOGypnK1vRN8ILEsgZcVhaEfFTp6sGVRy+QGOrWvQSphaWWR13V0znkkVyQWXVLu18VQa0Hv9GtXegCGsSvv4JEJdFrMNAds57EIJ8Rm3W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1pb-N1EzygilpUmApDk7BWu86jPyPuoqGvPqY39nITd8-T0Gfnf1o56zLPZIGS166RcF+w6HRgpadN2SQTkWNqpbSJ0-jKKlFXtfqJZXEp1wT0TuhVP-2mCZ6+K8XwJ0g6LN6z+t3HWcp3gCGFaMLMNAds57EIJ8Rm3W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu142yOtu3jUnzcU-Y5yE4HCX5aLMzMyXsUuX1Jj-44He6sj0ff7dwtA6-pLENEeAvq88W4EpFXFFTddQdBfxUt26bEZegyGDh1T-VrZtQFhW5FoPvhgLyGeDUoOPpkM10S+5E6vApgnSEKy6OgBTRbMNAds57EIJ8Rm3W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+      "preco": "R$ 2.600.000",
+      "quartos": "3",
+      "suites": "3",
+      "vagas": "4",
+      "area": "450",
+      "bairro": "APIT Casa Condomínio Chácaras Flora",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-450-m/CA2446-APIT?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "AP Imóveis Itu",
+      "titulo": "CA4555-APIT Casa Condomínio Residencial Mont Blanc - Itu - SP 236 m² 3 Quartos 3 Suítes 5 Banheiros 4 Vagas Venda R$ 2.400.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu19Ay84rxzwjksE6f4KvkXSEhaW6+se6nUq4pJnbmvbfz5LmQPv4zI8995brEBv2mox7HsYQFFlQbc9GXD7xVNqpB2lsnB2prEr0dpQYEztq1gEYzQh9lEWmZ4Gn6UQU1zqJDfLxjDC+EqO4HwRTQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwWdtNlaccngyRT+cdvk3qldXGgPSpPU3VZ1o797HL+Pe4aPv3HvzsWGerj9xRpo3KKt5UYNj2HWhCHGZ5J3BfqQD7qbmT4kGrLniV5BBfSAGA.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu19Ay84rxzwjksE6f4KvkXSEhaW6+se6nUq4pJnbmvbfz5LmQPv4zI8995brEBv2mox7HsYQFFlQbc9GXD7xVNqpB2lsnB2prEr0dpQYEztq1gEYzQh9lEWmZ4Gn6UQU1zqJDfLxjDC+EqO4HwRTQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwWdtNlaccngyRT+cdvk3qldXGgPSpPU3VZ1o797HL+Pe4aPv3HvzsWGerj9xRpo3KKt5UYNj2HWhCHGZ5J3BfqQD7qbmT4kGrLniV5BBfSAGA.jpg",
+      "preco": "R$ 2.400.000",
+      "quartos": "3",
+      "suites": "3",
+      "vagas": "4",
+      "area": "236",
+      "bairro": "APIT Casa Condomínio Residencial Mont Blanc",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-236-m/CA4555-APIT?from=sale"
+    },
+    {
+      "fonte": "AP Imóveis Itu",
+      "titulo": "CA4187-APIT Casa Condomínio Portella - Itu - SP 400 m² 5 Quartos 5 Suítes 6 Banheiros 6 Vagas Venda R$ 2.000.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu15Jwd9c5xAzoME3eL2skiis2LqQy-SLiVuU9db6soTG8u-ZYNqHwpk+37fBHlyzlYFkR+UeI2B9R89TYj3wW6fYF1RRrRCjpVr6YL9FGHFI-BM1wAlU4nWHRZyI70E0-zO3PNXEoB+lU6DZOmJTQPlLANMx8QdQ+RK1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwWdtNlaccngyRT+cdvk3qldXGgPSpPU3VZ1o797HL+Pe4aPv3HvzsWGerj9xRpo3KKt5UYNj2HWhCHGZ5J3BfqQD7qbmT4kGrLniV5BBfSAGA.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu15Jwd9c5xAzoME3eL2skiis2LqQy-SLiVuU9db6soTG8u-ZYNqHwpk+37fBHlyzlYFkR+UeI2B9R89TYj3wW6fYF1RRrRCjpVr6YL9FGHFI-BM1wAlU4nWHRZyI70E0-zO3PNXEoB+lU6DZOmJTQPlLANMx8QdQ+RK1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2si8M9roys-tvAQDbGSvwCK7p292fupqgGkqYn7tqPf5eziBMHXzKkDioi2DGC1oZNsdN0hYkR3Rch3SRjLZInYDmpWihyw90PjZpodRG5y-1BpjwkJlV+iQ4CCrwYx4C-8MbaD+gulcZ7-A3VhJPhHR9ox5F9MqBG8WVByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6YGngvcErEcvkvokteW1-StaxyDYVNuobGZ+vvlPPv7TKz0Im3hrJYE+diKf9pJIJ6pSDQVQnhwbiId7FK4+OvGswCzIDnYuBAKChPH3pw1.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxZ94O92yxY0gvgdWLChs3CIhrmrouCeqxWOwLDqnYLk1tL0fvfM0rcB44raDU+q4oplGeB-bn1dPbBURBPrXp+MICgIgGmzpX7EZLIdXjZ5gD0Fli5I7niSQKmsqUU0-DCkFcnbm3SCTJf4OUFkELtHR9ox5F9MqBG8WVByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6YGngvcErEcvkvokteW1-StaxyDYVNuobGZ+vvlPPv7TKz0Im3hrJYE+diKf9pJIJ6pSDQVQnhwbiId7FK4+OvGswCzIDnYuBAKChPH3pw1.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3w-wdZk4DwOw-o-BbSRhRnc-tqV4Y2LnBis3bjPpu3bzNnzTMLC2pBh4PXyH1iOqIhpae0dImt-be1eV0L3XbqNOiNB82G2mmvuX50YE0pO-F0AsxV+zlKIXr71p2Jr9hv7Bd7Ti3WzHL3lE3d8RbMNAds57EIJ8Rm3W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hkzeJjtjNnv+wJQ7GHmymY2bWJ-oehtG6W+JHPiJLJy+nUAd-3kbAjzLLjNwOe7aFJSdoiMn9wROUnRCPFAo2EP1pwk2a0qhvOSpUbRWNp9QdvthRc3Vjifbfw8Htu4xOKDa7ZryG0YPrFKHcDErMNAds57EIJ8Rm3W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux0+4OVp3DRukvc4TeGi5Xmdg9yM98ucoBm506rumIvc0sCmApr85LsE8a7cOVyIr75MYMMpI2ZgN8JmbE21ebW9O0JVmmCJ-GOQSuVtTHBrwSMFgjYN5FboV76vp143hRmLBO3-gySOfp7bLnZ7GrMNAds57EIJ8Rm3W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu15Jwd9c5xAzoME3eL2skiis2LqQy-SLiVuU9db6soTG8u-ZYNqHwpk+37fBHlyzlYFkR+UeI2B9R89TYj3wW6fYF1RRrRCjpVr6YL9FGHFI-BM1wAlU4nWHRZyI70E0-zO3PNXEoB+lU6DZOmJTQPlLANMx8QdQ+RK1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwWdtNlaccngyRT+cdvk3qldXGgPSpPU3VZ1o797HL+Pe4aPv3HvzsWGerj9xRpo3KKt5UYNj2HWhCHGZ5J3BfqQD7qbmT4kGrLniV5BBfSAGA.jpg",
+      "preco": "R$ 2.000.000",
+      "quartos": "5",
+      "suites": "5",
+      "vagas": "6",
+      "area": "400",
+      "bairro": "APIT Casa Condomínio Portella",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-5-quartos-400-m/CA4187-APIT?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "AP Imóveis Itu",
+      "titulo": "CA2968-APIT Casa Condomínio Villa Di Capri II - Itu - SP 151 m² 3 Quartos 3 Suítes 4 Banheiros 4 Vagas Venda R$ 830.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1lJ1e923QxmtvUlRoK6sHSD0aPF4+eE9nWt1bf6krT--NzhefnhzcUb+LzoAl2riIxBRPd3Ant+XcZachHrAqy3NkV-rTqhu1zyXaFeEjBb314z1SpB21Tmc7Ob0Wlt4nGrFcvgtT67Q6fZMH5sFdhHR9ox5F9MqBG8WVByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1lJ1e923QxmtvUlRoK6sHSD0aPF4+eE9nWt1bf6krT--NzhefnhzcUb+LzoAl2riIxBRPd3Ant+XcZachHrAqy3NkV-rTqhu1zyXaFeEjBb314z1SpB21Tmc7Ob0Wlt4nGrFcvgtT67Q6fZMH5sFdhHR9ox5F9MqBG8WVByqR9Q9JGypDLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+      "preco": "R$ 830.000",
+      "quartos": "3",
+      "suites": "3",
+      "vagas": "4",
+      "area": "151",
+      "bairro": "APIT Casa Condomínio Villa Di Capri II",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-3-quartos-151-m/CA2968-APIT?from=sale"
+    },
+    {
+      "fonte": "Costa Rocha Imóveis",
+      "titulo": "CA6365-COX3 Casa Condomínio Xapada Parque Ytu - Itu - SP 408 m² 5 Quartos 5 Suítes 6 Banheiros 4 Vagas Venda R$ 5.500.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxlN6MlMyTQgstgXUJmiuXCA4LS+2P6dqF2WosPQmunQ3u3AZJj82bAQ0b7uN1P8g7NvHc04OUNoQs9WGS7AeIOvJ2N6pQbdh2vQZIRxGHZ3xwcetUxz5mG5T5ae-FUy+xCfK+PIgQOJQqDRGWBNT+1HR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9mA==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxlN6MlMyTQgstgXUJmiuXCA4LS+2P6dqF2WosPQmunQ3u3AZJj82bAQ0b7uN1P8g7NvHc04OUNoQs9WGS7AeIOvJ2N6pQbdh2vQZIRxGHZ3xwcetUxz5mG5T5ae-FUy+xCfK+PIgQOJQqDRGWBNT+1HR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9mA==.jpg",
+      "preco": "R$ 5.500.000",
+      "quartos": "5",
+      "suites": "5",
+      "vagas": "4",
+      "area": "408",
+      "bairro": "COX3 Casa Condomínio Xapada Parque Ytu",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-5-quartos-408-m/CA6365-COX3?from=sale"
+    },
+    {
+      "fonte": "Costa Rocha Imóveis",
+      "titulo": "CA6631-COX3 Casa Condomínio Fazenda Vila Real - Itu - SP 518.9 m² 5 Quartos 3 Suítes 8 Banheiros 9 Vagas Venda R$ 7.950.000 Aluguel R$ 28.000/mês",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3t19vNK5TE6o-czY5znoAC85prI4o2Sgmqx+s7ZppPn3u3-Qc7sz4YOzI3XDVuzroxCYvoJPWdyYcpBFTnac46wPj14nxiigxvieKpEW2kM8RwRn0t5+QfoBJKR-XAsgxn9E6OClTXRe7vAWGxxNLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3t19vNK5TE6o-czY5znoAC85prI4o2Sgmqx+s7ZppPn3u3-Qc7sz4YOzI3XDVuzroxCYvoJPWdyYcpBFTnac46wPj14nxiigxvieKpEW2kM8RwRn0t5+QfoBJKR-XAsgxn9E6OClTXRe7vAWGxxNLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9mA==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3lVjtlKuRMdn-cgQeO1kC6E+Kq0y+2Z92at-KqJvaLr2e-IGeGB+akg4JfUPQCutot+avYqGHt4ddQgADW3DonRGXtcunyshAD3QuFrU0lugiY2jyUAnwKBf5+r3Q8ryy6gJ+nWqhS7FqPKNnplQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5-w.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0NX0eBWvEg-yfNcf+ei5iShm5-L2vubgB+f17+Ir7zA0+b5cu3S4Ycu8KHES3Kpkp5rF9UfNmleXPJeZEHme6HfZl9gpyuI-E7XQIZ3f0NPxlgdv0lJykC5DJb93kAx2gqFL8jC8C6oQ5HJEGdTGrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9mA==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3h21fZE4BkBuJAHQeLmgAaC3oGzxcuVpn+u5rrRuZ-j3+b8c-z196kT77PcEU+BipZ+fIUWbUlGQuNEeDrJYaSSYFlMnAHQ-ACVF7FvcksO4SM4qktI-GydfciM2FQT9H+ILazCqDPdfoPlGH14BMFHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61TM=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Y4-PVN+hUntNVFd4OPgzXam4OI7f6iiny29qzNoa-q9f-OZd3s7asOjpH8HwSng5NXGeUMFVJ3R+V5TCXEAaOfH3EUhQLTiUrcVZdnGUlN8yEjzzRUwXHnW4rwqgZhgw-7Ivr1ugmICa7bClpYJLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9mA==.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0tIiZdTzTAHvfNDBpGBjSOa-rmb1efCkGmu3b2P7pPXis3PAefd94Bu+J7yS3qT7opJWvwgOkthW+N9TyzvDqvdYWVjjQSqgWuTSrVlbFJez1AOqEpK-WCTXJO0qFxv5TOCD9XDrT6zTqfBHAV4S91HR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61TM=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3t19vNK5TE6o-czY5znoAC85prI4o2Sgmqx+s7ZppPn3u3-Qc7sz4YOzI3XDVuzroxCYvoJPWdyYcpBFTnac46wPj14nxiigxvieKpEW2kM8RwRn0t5+QfoBJKR-XAsgxn9E6OClTXRe7vAWGxxNLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg",
+      "preco": "R$ 7.950.000",
+      "quartos": "5",
+      "suites": "3",
+      "vagas": "9",
+      "area": "518.9",
+      "bairro": "COX3 Casa Condomínio Fazenda Vila Real",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda e aluguel",
+      "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-5-quartos-519-m/CA6631-COX3?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "Costa Rocha Imóveis",
+      "titulo": "CA6634-COX3 Casa Condomínio Terras de São José I - Itu - SP 1350 m² 6 Quartos 5 Suítes 9 Banheiros 5 Vagas Venda R$ 25.000.000 Aluguel R$ 80.000/mês",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3dC3+9F2jwCqOYFbrGY4HaN+Lql5ueFrE2Hqcn1o6375ZvQcO7Y6t1k5qL6NH+vvo4+fvYbNE5YPsZ+ai3EBpmdGmpVjgfdtkbcT6QfYmVp3DY2k0177mfkDJGXykEZ0XikKNf7nSrQbJvZDFVNOLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3dC3+9F2jwCqOYFbrGY4HaN+Lql5ueFrE2Hqcn1o6375ZvQcO7Y6t1k5qL6NH+vvo4+fvYbNE5YPsZ+ai3EBpmdGmpVjgfdtkbcT6QfYmVp3DY2k0177mfkDJGXykEZ0XikKNf7nSrQbJvZDFVNOLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9mA==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2pEz+g-3BcaoOsLdoKPghHX0dWfyc7HimqxxJf8oL3--sOgUdrv768HyaSpIlP07qdYHdUYBEJ0QrFGGxfAZtjaO3ZN+COngU7xaKVqfk4F+R4tlUh+2GHjA8aP1FE70COOVPXZuDWhe5HsWEJ1QPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5-w.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3xY4PZ01ywBjZMgeYWvpyqt37LN2I2ms1bO5Z-Mjo-96obHUfiD9q0k7IzSPWOekbR9edkealFdY-FbHEO0Aa3dN3pVvDOcowDRbqNnHjt-jwspsjJN5QKcdpaU9VwJ3BqsOc3guwzVZavkOHllQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5-w.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu103j-Z35kseo-UJWuG8pw7ej76r6YbcrhvG-pr2vfbQicC6A+jw0I02-oeoOFmiiLY5d8MVYhF4aNBZHTHbbpzfYUJ7vgfWgmDyFJ4DQXJk7S5ruRBq5Ga-QZipxgFrgwWbJPLllyiTa6fCX1plQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5-w.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu01b3st85wcxjdUhA6e1hHGq5oDFtomHq1a70cPrupmFkP75bt3y87se1vGtV0KP761sQ-gBC04hfaxCZjyvQN+JP2JjmTuv-0TQab9tZXFnxCcCmU5C7kKpW7Ov-Uw53RqAAciJix+XTPzvDlByErMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9mA==.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxpZ4vxWuhIDsNgVa5uD7DCfgLq0vdWTrhjMxs7Unq-H6MXkX57n4ZEA-5X2NBumsfVsYt0pLkF0Y-dkGE3GX5vQJFxapBOou3zyH70Df1F-+A4UiAhK80uzfqOb2Hhu1xi+O8HWoSXSEIvhPmN8PLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9mA==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3dC3+9F2jwCqOYFbrGY4HaN+Lql5ueFrE2Hqcn1o6375ZvQcO7Y6t1k5qL6NH+vvo4+fvYbNE5YPsZ+ai3EBpmdGmpVjgfdtkbcT6QfYmVp3DY2k0177mfkDJGXykEZ0XikKNf7nSrQbJvZDFVNOLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg",
+      "preco": "R$ 25.000.000",
+      "quartos": "6",
+      "suites": "5",
+      "vagas": "5",
+      "area": "1350",
+      "bairro": "COX3 Casa Condomínio Terras de São José I",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda e aluguel",
+      "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-6-quartos-1-350-m/CA6634-COX3?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "Costa Rocha Imóveis",
+      "titulo": "CA5754-COX3 Casa Condomínio Santa Monica - Itu - SP 260 m² 3 Quartos 2 Suítes 4 Banheiros Venda R$ 1.800.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxk8jPxNuwcTucRFQI-msnSbzKam19e2hkSWvbzT55r1yuHTY+7Y0t4Fwb7iP3u+6IB-QcN3Yx1mTONcdyewA7mKYEFSrza8vXWSa5FrEkZa3CE8lglJ62q5BbSv9kQL3h+3O93WsCKXS5HnM0xXTsVHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9mA==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxk8jPxNuwcTucRFQI-msnSbzKam19e2hkSWvbzT55r1yuHTY+7Y0t4Fwb7iP3u+6IB-QcN3Yx1mTONcdyewA7mKYEFSrza8vXWSa5FrEkZa3CE8lglJ62q5BbSv9kQL3h+3O93WsCKXS5HnM0xXTsVHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61TM=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1la28BhyBAPyfQnUJKGnAPW15TN69eIgGuY4L7UlrT324bfbeDY65IS1fbzT0++jp9rYNYtPmt4ItNWTATOc6icOUp3oBOLvVvBFr1eYk1ugAwejBV32R6Id8Ly+GAw7B25OsTJgXWma578UHVDQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5-w.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2VNgI1y-jguluwSR++G5hCu4ZWQ+Oy8kXq62LTHnr3+-sbHTOre0pIhwZb9JXWDmL9ZQ-J4OEx1UOglYhHrTbu+LVhWrjCjp33iQ+pcEnR15AAtsxJp+VfjfL6B2k8NhQ2gOffkqjzdbKT3WVkHF-RHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61TM=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3df8otT+TIuz+QrR4bvgSq97IzL-NSGgmaQqa3cj7yHj+XEA52P7a8E7K2iPGyXsoF8HsJ+E2xoWax2SjbdZrusGmZLrCS0qnj2Q+dnR3B+hB00mj5+216XWZiw2wYU2hD5GavmtnK7CfHlMVJXT+VHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61TM=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu35fiohC3R0zovMFe+Tkoje21JXFveCiil+cx5TzuO7YxN7Ga9zYztkx2IfjH1yxkpRSZc4ZN2FCXeI-awHyUILaH1dzkweAv2eSCpwcX0NWjwsZzDZc6mD8YJqd91hs0GSdG83GhR+2T5DsB0dZNLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9mA==.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0xrjOhV3UwBnvo0a6Kiugmu+6WUv-2WgEay1oH3+uLXj-3jcZb-xIkw6aTCK2CshJM1eZkACUtkSrBQHDPSQrC3Z3pQsxyXt0XMQZJBZ0xr7g0rtChK-3CHW7P9-FcInn+1M9fd9DXQS-D5OXhHCrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9mA==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxk8jPxNuwcTucRFQI-msnSbzKam19e2hkSWvbzT55r1yuHTY+7Y0t4Fwb7iP3u+6IB-QcN3Yx1mTONcdyewA7mKYEFSrza8vXWSa5FrEkZa3CE8lglJ62q5BbSv9kQL3h+3O93WsCKXS5HnM0xXTsVHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9mA==.jpg",
+      "preco": "R$ 1.800.000",
+      "quartos": "3",
+      "suites": "2",
+      "vagas": "",
+      "area": "260",
+      "bairro": "COX3 Casa Condomínio Santa Monica",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-260-m/CA5754-COX3?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "Costa Rocha Imóveis",
+      "titulo": "CA6209-COX3 Casa Condomínio Residencial Una - Itu - SP 207.5 m² 3 Quartos 3 Suítes 4 Banheiros 3 Vagas Venda R$ 1.600.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1pC99tKwik-wtIVQJ63kxWF3p2uzPiJgwG1p63whpWe8sPveu3D9r0tgP-zHw6dtbBkWfI-Ok5UZcM-FDLodK2lDFJToiK+r3zPfeNndElsxiVutBRb4H+-Db6ApkYd5SeKUOrXlxOpdp2-IXpGLspHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9mA==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1pC99tKwik-wtIVQJ63kxWF3p2uzPiJgwG1p63whpWe8sPveu3D9r0tgP-zHw6dtbBkWfI-Ok5UZcM-FDLodK2lDFJToiK+r3zPfeNndElsxiVutBRb4H+-Db6ApkYd5SeKUOrXlxOpdp2-IXpGLspHR9o47l9MqBG1U1ByqR9Q9JGypDLdaOenJpi9mA==.jpg",
+      "preco": "R$ 1.600.000",
+      "quartos": "3",
+      "suites": "3",
+      "vagas": "3",
+      "area": "207.5",
+      "bairro": "COX3 Casa Condomínio Residencial Una",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-208-m/CA6209-COX3?from=sale"
+    },
+    {
+      "fonte": "Costa Rocha Imóveis",
+      "titulo": "CA6208-COX3 Casa Condomínio Xapada Parque Ytu - Itu - SP 393 m² 4 Quartos 4 Suítes 6 Banheiros 3 Vagas Venda R$ 3.900.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu05m-ItK0TIiqthCZ7yusRLY9aqPt8WjgBXJ6MLHn6-93PrxduTV7N8DiLzsOHyAnKVfe-EHHRp5Ts0jSgOzD4WhHnZq-WO1vHzqFutPBlZN2j4ZlxN85FWfBr2np1oe0haqD6KdlQjdXYW8LUNONLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu05m-ItK0TIiqthCZ7yusRLY9aqPt8WjgBXJ6MLHn6-93PrxduTV7N8DiLzsOHyAnKVfe-EHHRp5Ts0jSgOzD4WhHnZq-WO1vHzqFutPBlZN2j4ZlxN85FWfBr2np1oe0haqD6KdlQjdXYW8LUNONLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg",
+      "preco": "R$ 3.900.000",
+      "quartos": "4",
+      "suites": "4",
+      "vagas": "3",
+      "area": "393",
+      "bairro": "COX3 Casa Condomínio Xapada Parque Ytu",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-4-quartos-393-m/CA6208-COX3?from=sale"
+    },
+    {
+      "fonte": "Costa Rocha Imóveis",
+      "titulo": "CA5653-COX3 Casa Condomínio Villas do Golfe - Itu - SP 300 m² 3 Quartos 3 Suítes 4 Banheiros 5 Vagas Venda R$ 3.500.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2ljz8J0-iAzqMcJQKCMohah9JqM3tihl2W6xrjUgr7n2Jrda-zgw98Z0aKqCEKCuLNXRO54CxpTQ+xBTDzoBNvZEXd-iQGgtErjUolEWmNOjiMowS5KykmVepmu3A89-yeuTujUsTa9b4u8DGMDSbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2ljz8J0-iAzqMcJQKCMohah9JqM3tihl2W6xrjUgr7n2Jrda-zgw98Z0aKqCEKCuLNXRO54CxpTQ+xBTDzoBNvZEXd-iQGgtErjUolEWmNOjiMowS5KykmVepmu3A89-yeuTujUsTa9b4u8DGMDSbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9mA==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3g6yMJp41Iuq84fBo6dpXLf2Kyr2cWTvGPO4ojEmrGE9cfjU8z02aEV-IqvClWOiKtZRtwdEh52efFeYAPdTdvQAHJ7hxOHtHn3X4NxH2lp1TEowDMP-nyzBIqNplcU0niUOvmJkxG3UYm5LFJXDcNHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61TM=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0hr-uBhuxomr5Mgfq7gugOg3LW62PWmm0CR9LOTrqna6+jkQt3AyNoU0qzyHAaBl7N9St0Ban9JS+dRfCbUcNaeElR1-yCng0fcSLZkQUhXwBsdjDNy6Famca+q2Q51yxq6LsjdmjCgXI-+C2BlQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5-w.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2I5ysJT4UoCq5Q5QqKbnw+e8Yq99ouWqFyT6J33n5X38tKnZ5bcwq0I9YzOCwem6JxFS+AlLHtgSLJGYiDRYqCjGiFfhTa0jB2UVKJ9TUwFhR8clBFx3FCcfsn86mEp+nv8Oan+kiqyXrrGAWVwCrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9mA==.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Fn58t10TgOvOwcTJCCjhKh9aeUvseYvB-I+6HXmYzgjMXlZ5+HlZ4-7ZD6DQe2q5xaf8caFB5OX8tkTBu0bpmgF39csxSSgXzNdbJDUlUJ1hAOmz5AwFGXQrec0Uwc0H+EAdnZlyvVV47DMEVQLLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9mA==.jpg",
+        "https://static-sites.kenlo.io/2.4.12/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3p70-d8wAw-v8cGc5-vrnTd-Nqbude0il+34LTR55fw8tnYQtf169Fg44-YQ1KR75FSedV7a059YspAYBzIDpfYGVd0pSawhEXqTKZ9YGt30gE0qDVW9Aayf6eJ0kAs-wf1WvWd8n6UULr6CF1rJ7ZHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61TM=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2ljz8J0-iAzqMcJQKCMohah9JqM3tihl2W6xrjUgr7n2Jrda-zgw98Z0aKqCEKCuLNXRO54CxpTQ+xBTDzoBNvZEXd-iQGgtErjUolEWmNOjiMowS5KykmVepmu3A89-yeuTujUsTa9b4u8DGMDSbMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg",
+      "preco": "R$ 3.500.000",
+      "quartos": "3",
+      "suites": "3",
+      "vagas": "5",
+      "area": "300",
+      "bairro": "COX3 Casa Condomínio Villas do Golfe",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-300-m/CA5653-COX3?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "Costa Rocha Imóveis",
+      "titulo": "CA6488-COX3 Casa Residencial Portal dos Sabias - Itu - SP 125 m² 2 Quartos 1 Suíte 1 Banheiro 2 Vagas Venda R$ 640.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0hL8MMruRUmu88IYIC1gTGK6Z+v+Y6ksR6O5bXurbDl6dvacPjGmasP3KeqNH6prqxIfNorC3dTWN5zQjD1cKKMAGF4nRqupE7OcqZkGXV23FhsmQ98+2WVTKauzUYx8iCUEN+IlQi1UKCjPA1yNLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0hL8MMruRUmu88IYIC1gTGK6Z+v+Y6ksR6O5bXurbDl6dvacPjGmasP3KeqNH6prqxIfNorC3dTWN5zQjD1cKKMAGF4nRqupE7OcqZkGXV23FhsmQ98+2WVTKauzUYx8iCUEN+IlQi1UKCjPA1yNLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg",
+      "preco": "R$ 640.000",
+      "quartos": "2",
+      "suites": "1",
+      "vagas": "2",
+      "area": "125",
+      "bairro": "COX3 Casa Residencial Portal dos Sabias",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-2-quartos-125-m/CA6488-COX3?from=sale"
+    },
+    {
+      "fonte": "Costa Rocha Imóveis",
+      "titulo": "CA6438-COX3 Casa Condomínio Fazenda Vila Real - Itu - SP 285 m² 4 Quartos 4 Suítes 5 Banheiros 4 Vagas Venda R$ 5.950.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2BHzt1Xwzc5ysxcTY+emDWojq+F7N6bjHrK6JLTsqPAhcztfczf+pwY34j+F3+LopFvGtUcP3xYfs53ZhW0ZY2bHUhg+jiPgl7OTJxBf0dF7l45oAhN1gbhc6amqnMZ4j3gBM7HkT6xU-38D21DQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLNI=.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2BHzt1Xwzc5ysxcTY+emDWojq+F7N6bjHrK6JLTsqPAhcztfczf+pwY34j+F3+LopFvGtUcP3xYfs53ZhW0ZY2bHUhg+jiPgl7OTJxBf0dF7l45oAhN1gbhc6amqnMZ4j3gBM7HkT6xU-38D21DQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5-w.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hV6tZuwgsuquAmYO+hph6I256Ox+-Gq2WsyLXNuJj+1ufmB-iC8oYbwJXSOUGci4A0Xec4GHsgQ8wqSx+7XtyQOiV-jyWP+GnPZLV0R09I3BkSn0tO+QH8RsCM5kId3Ri3NKnpqwyRTLHiLUFDQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5-w.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxp5woJgxSUYgpEWUbTk5wSG5dXM4sa+m3mHwJz5tJr42envctfywtoP46uqT0OzjoNcd+R6EXdkN+gnagP4fpqpASNd+TOdvh+VZJZHBlpEw1Ftzytn1ljhfKWM5U4u-xOmGdnxiiOHVr30C0JTQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5-w.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxxFwdhcvB1kseAFcZuMmSXZxaer+cudsF+S2sL-uq2eipn5U+3a0N4GgbSvAk+t7ad8QME2KAUkd8N4eEbAc9e+B3xAuxmtvRqIH6ZXY1h100QziDdxnFqaAKO392wg1RqnBq-4pRewdPDXJF1lQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5-w.jpg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Nr9cM1vDgDtuM6GY-uvBGC3omX7sqlpxu82Jn2g6LEivLNWYLwx4wCw5TUPUWerIwgRu4gbExLZdEkRg3xR4e8DklogGGxiEbtY6d6X0gJxyQTiE5V5ECkBpmx3V0i-TCbFuL8hjKhcpm5IQJ1GrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9mA==.jpg",
+        "https://static-sites.kenlo.io/2.4.9/img/kenlo.svg",
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0Q78PZo6xwAkecrfaCx7Tin+7uQv8nHvBqs3YHkp+7B5PnzZ+rE+dBmlIWqEF2A76NdQvt9AV1dXM9VGDP4X6OKAX5tpiCli2LKELJMbmFKwBwcoDhVyACwQpiA1lse2w2HJ9f7mCirVJe7IAICNLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9mA==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2BHzt1Xwzc5ysxcTY+emDWojq+F7N6bjHrK6JLTsqPAhcztfczf+pwY34j+F3+LopFvGtUcP3xYfs53ZhW0ZY2bHUhg+jiPgl7OTJxBf0dF7l45oAhN1gbhc6amqnMZ4j3gBM7HkT6xU-38D21DQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLNI=.jpg",
+      "preco": "R$ 5.950.000",
+      "quartos": "4",
+      "suites": "4",
+      "vagas": "4",
+      "area": "285",
+      "bairro": "COX3 Casa Condomínio Fazenda Vila Real",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-4-quartos-285-m/CA6438-COX3?from=sale",
+      "galeriaCompleta": true
+    },
+    {
+      "fonte": "Costa Rocha Imóveis",
+      "titulo": "CA6343-COX3 Casa Condomínio Terras de São José I - Itu - SP 710 m² 5 Quartos 5 Suítes 9 Banheiros 7 Vagas Venda R$ 14.500.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2k3zON3wwkJz8A3WbOQsRig7K6T29imkk2zo86Glej47cbRB-zz4bwd5rHiHQO3nJZFXvAmMFopPcp9Vy36ftmGGml9+iC8-mWQErgWRFN6xURo1SBT-GyJV8ip1Ux16nqYPPrnpTaVba-vE1B9LLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2k3zON3wwkJz8A3WbOQsRig7K6T29imkk2zo86Glej47cbRB-zz4bwd5rHiHQO3nJZFXvAmMFopPcp9Vy36ftmGGml9+iC8-mWQErgWRFN6xURo1SBT-GyJV8ip1Ux16nqYPPrnpTaVba-vE1B9LLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg",
+      "preco": "R$ 14.500.000",
+      "quartos": "5",
+      "suites": "5",
+      "vagas": "7",
+      "area": "710",
+      "bairro": "COX3 Casa Condomínio Terras de São José I",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-5-quartos-710-m/CA6343-COX3?from=sale"
+    },
+    {
+      "fonte": "Costa Rocha Imóveis",
+      "titulo": "CA6619-COX3 Casa Condomínio Campos de Santo Antônio - Itu - SP 280 m² 3 Quartos 3 Suítes 4 Banheiros 2 Vagas Venda R$ 3.250.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux9uz-U11BkGo5MhDbCMkwqKx9Sm2seJolq86o30kp2HxMbdZuvS69sY+5zhO2KXspxEd-AOa3B5RclfXB7kZtiyBVNT-2Oq9kvgUL1PZE1X3FAJpzMA41uJZ7Lz3H886T2qEK-Ur36PYafNGUd3LLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux9uz-U11BkGo5MhDbCMkwqKx9Sm2seJolq86o30kp2HxMbdZuvS69sY+5zhO2KXspxEd-AOa3B5RclfXB7kZtiyBVNT-2Oq9kvgUL1PZE1X3FAJpzMA41uJZ7Lz3H886T2qEK-Ur36PYafNGUd3LLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg",
+      "preco": "R$ 3.250.000",
+      "quartos": "3",
+      "suites": "3",
+      "vagas": "2",
+      "area": "280",
+      "bairro": "COX3 Casa Condomínio Campos de Santo Antônio",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-3-quartos-280-m/CA6619-COX3?from=sale"
+    },
+    {
+      "fonte": "Costa Rocha Imóveis",
+      "titulo": "CA6189-COX3 Casa Condomínio Fazenda Vila Real - Itu - SP 499 m² 5 Quartos 5 Suítes 6 Banheiros 4 Vagas Venda R$ 5.300.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1psgNds3Skys+wDeYfgmgW4jpjK-dCz9UiR-7ryvpXa15jyBpvU0bcQga6vLH2otKk5WfwuDG9+edd2XBXEfZbQZX1c-zCyvn2TS+FcR3F5+DMjqRlX4VnoXJ73zA81wAWeMsnTlWulQIPFMQQFErMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1psgNds3Skys+wDeYfgmgW4jpjK-dCz9UiR-7ryvpXa15jyBpvU0bcQga6vLH2otKk5WfwuDG9+edd2XBXEfZbQZX1c-zCyvn2TS+FcR3F5+DMjqRlX4VnoXJ73zA81wAWeMsnTlWulQIPFMQQFErMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5-w.jpg",
+      "preco": "R$ 5.300.000",
+      "quartos": "5",
+      "suites": "5",
+      "vagas": "4",
+      "area": "499",
+      "bairro": "COX3 Casa Condomínio Fazenda Vila Real",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-5-quartos-499-m/CA6189-COX3?from=sale"
     },
     {
       "fonte": "Ferraz & Luiz Imóveis",
@@ -731,23 +1874,19 @@
     }
   ],
   "erros": [
-    "Kenlo - Portal Geral: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Grupo Kaion: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
-    "Danilo Ferreira Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Opção Imóveis Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Teixeira Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Cury Massoca Brokers: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
-    "AP Imóveis Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Bem Aqui Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Regina Marchi Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "SLA Imobiliária Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Proimóvel Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
-    "Costa Rocha Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Beto Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\""
   ],
   "resumoData": {
     "comData": 0,
-    "semData": 83,
-    "total": 34
+    "semData": 131,
+    "total": 82
   }
 }
