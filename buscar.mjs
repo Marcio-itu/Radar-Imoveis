@@ -106,6 +106,7 @@ function tituloSeguro(candidato) {
 const LIMITE_MESES = 6;
 const MEMORIA_PATH = "../radar-memoria.json";
 const LISTA_NEGRA_PATH = "../lista-negra.json";
+const PROVEDORES_PATH = "../provedores-estado.json";
 
 async function carregarJsonAuxiliar(caminhoRelativo) {
   try {
@@ -885,16 +886,18 @@ async function buscarBrightData(url, apiKey, zone, opcoes = {}) {
 async function buscarComJS(url, chaves, opcoes = {}) {
   const { hasDataKey, brightDataKey, brightDataZone } = chaves;
 
-  if (hasDataKey && !chaves.hasDataEsgotado) {
+  if (hasDataKey && !chaves.hasDataEsgotado && !chaves.hasDataPausado) {
     try {
       const resultado = await buscarHasData(url, hasDataKey, { renderJs: true });
+      chaves.hasDataRecuperou = true; // funcionou — se estava pausada antes, pode despausar
       return resultado;
     } catch (e) {
       if (e.semCredito) {
         // Créditos acabaram — não adianta tentar a HasData de novo pro
-        // resto dessa execução (podem ser centenas de imóveis pela frente).
-        // Anota isso e vai direto pra Bright Data daqui pra frente.
+        // resto dessa execução (podem ser centenas de imóveis pela frente),
+        // e também não pras próximas execuções por um tempo (ver main()).
         chaves.hasDataEsgotado = true;
+        chaves.hasDataPrecisaPausar = true;
         console.log(`  ⚠️ HasData sem créditos — usando só Bright Data pro resto desta busca.`);
       } else {
         console.log(`  ⚠️ HasData falhou (${e.message.slice(0, 250)}) — tentando Bright Data...`);
@@ -995,13 +998,24 @@ async function main() {
   const brightDataKey = process.env.BRIGHTDATA_API_KEY || "";
   const brightDataZone = process.env.BRIGHTDATA_ZONE || "";
 
+  // Lembrança entre uma busca e outra: se a HasData já avisou "sem crédito"
+  // recentemente, nem tenta de novo por um tempo — só volta a testar
+  // automaticamente depois do prazo (pra pegar sozinho se você recarregar
+  // os créditos, sem precisar mexer em nada).
+  const PAUSA_HASDATA_HORAS = 24;
+  const provedoresEstado = await carregarJsonAuxiliar(PROVEDORES_PATH);
+  const hasDataPausado = Boolean(
+    provedoresEstado.hasDataPausadoAte && new Date() < new Date(provedoresEstado.hasDataPausadoAte)
+  );
+
   const chaves = {
     hasDataKey,
     brightDataKey,
     brightDataZone,
+    hasDataPausado,
   };
 
-  console.log(`\n🟣 HasData: ${hasDataKey ? "✅ Configurado" : "❌ Não configurado"}`);
+  console.log(`\n🟣 HasData: ${hasDataKey ? "✅ Configurado" : "❌ Não configurado"}${hasDataPausado ? ` — ⏸️  pausada até ${provedoresEstado.hasDataPausadoAte} (sem crédito na última tentativa)` : ""}`);
   console.log(`☀️ Bright Data: ${(brightDataKey && brightDataZone) ? `✅ Configurado (zona: ${brightDataZone})` : "❌ Não configurado"}`);
 
   const todos = [];
@@ -1298,6 +1312,17 @@ async function main() {
 
   await writeFile(new URL(MEMORIA_PATH, import.meta.url), JSON.stringify(memoria, null, 2), "utf-8");
   await writeFile(new URL(LISTA_NEGRA_PATH, import.meta.url), JSON.stringify(listaNegra, null, 2), "utf-8");
+
+  // Atualiza e salva o estado de "pausa" da HasData, pra não ficar tentando
+  // de novo em toda busca futura enquanto os créditos não voltarem — só
+  // testa de novo depois de 24h, automaticamente.
+  if (chaves.hasDataRecuperou) {
+    delete provedoresEstado.hasDataPausadoAte;
+  } else if (chaves.hasDataPrecisaPausar) {
+    provedoresEstado.hasDataPausadoAte = new Date(Date.now() + PAUSA_HASDATA_HORAS * 60 * 60 * 1000).toISOString();
+    console.log(`\n⏸️  HasData sem créditos — pausando tentativas automáticas por 24h (até ${provedoresEstado.hasDataPausadoAte}).`);
+  }
+  await writeFile(new URL(PROVEDORES_PATH, import.meta.url), JSON.stringify(provedoresEstado, null, 2), "utf-8");
 
   const todosLimpos = todosValidos.map(({ _semJS, ...resto }) => resto);
 
