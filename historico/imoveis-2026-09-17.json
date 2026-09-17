@@ -1,7 +1,7 @@
 {
-  "atualizadoEm": "2026-09-17T21:12:34.292Z",
+  "atualizadoEm": "2026-09-17T21:18:49.465Z",
   "geradoEm": "2026-09-17",
-  "total": 34,
+  "total": 22,
   "imoveis": [
     {
       "fonte": "Marcio Marins",
@@ -112,483 +112,232 @@
       "galeriaCompleta": true
     },
     {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA8863-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 362.13 m² 4 Quartos 4 Suítes 4 Banheiros 4 Vagas Venda R$ 2.700.000",
+      "fonte": "Bem Aqui Imóveis",
+      "titulo": "CA1093-LILX Casa Condomínio Terras de São José - Itu - SP Condomínio Terras de São Jose I 780 m² 5 Quartos 5 Suítes 6 Banheiros 3 Vagas Venda Sob consulta",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2ds0MByyhIFiusrbbnhtySl8r+R2d2og32QycrsgOnEi578fODilN9i0uvRC1mhjKg9d4IaMkpAeshYQwzjcLDYMlR0pCC9n2rkF4J7TWgMxS8zsxJ6m13nALSh7mk9yjqkK6j1h2u0Y4HYLXdlQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuW9ZBg-AFw13HSOdMuBbukNeVhqz4OU6COlQ087jL-PLnNfv7BfWuc2e4iYkMuI3WKIgXZ5qpHiQfEHU1bHAc+1Ku7avU.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNvrGZj0s533xUPkfNBU4GPkXWam4eI6duC90Sz2bTdkbjJ65rfDdiByYcI3KvCAHGXv-Fhf9ErKEN+S+dLcg3IRraxPyd3qTucvEjoE5cXZER-5jEWny5pz1qVbaKsq1AvhRjwFKqA8HLJTP+4URYYX-lYCt407ENDsQK-XFB8p0pK9JGl+XaFOuW-M4DugSALG1In8oevXbnpmdnCJ5YnGrlrPXoH40EZTKZew-iTSP984RIB5LyVW0jA3l3A0rJ9K5-6V9pJlPILkVnAT+dIuxa8z9KRgqP-ZhjVLi9ioufbobLuU4ynRdiwYWGTtpwR4pTbLsZkA5+oCWl1QHNjLw0D5Re6qvXO4g6rcjWJtghHCVTfwI4npnZ9dBhc.jpg"
       ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2ds0MByyhIFiusrbbnhtySl8r+R2d2og32QycrsgOnEi578fODilN9i0uvRC1mhjKg9d4IaMkpAeshYQwzjcLDYMlR0pCC9n2rkF4J7TWgMxS8zsxJ6m13nALSh7mk9yjqkK6j1h2u0Y4HYLXdlQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuW9ZBg-AFw13HSOdMuBbukNeVhqz4OU6COlQ087jL-PLnNfv7BfWuc2e4iYkMuI3WKIgXZ5qpHiQfEHU1bHAc+1Ku7avU.jpg",
-      "preco": "R$ 2.700.000",
-      "quartos": "4",
-      "suites": "4",
-      "vagas": "4",
-      "area": "362.13",
-      "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-362-m/CA8863-UTG?from=sale"
-    },
-    {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA8786-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 350 m² 4 Quartos 4 Suítes 6 Banheiros 3 Vagas Venda R$ 3.700.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0dg0eNu90sbkckJRbqJly2Y6aSZ6+mFnWq68sLohaHZ0-nlBdf4ko860JLiN32A6Z81GuN9GWVQfONwHDjpdd7eYUhNpTqLrUSUc7UbQmxihjtqkzp7n1ijRaC12gAB+DH5E93-kQOzaqL8CFFNRbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0dg0eNu90sbkckJRbqJly2Y6aSZ6+mFnWq68sLohaHZ0-nlBdf4ko860JLiN32A6Z81GuN9GWVQfONwHDjpdd7eYUhNpTqLrUSUc7UbQmxihjtqkzp7n1ijRaC12gAB+DH5E93-kQOzaqL8CFFNRbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
-      "preco": "R$ 3.700.000",
-      "quartos": "4",
-      "suites": "4",
-      "vagas": "3",
-      "area": "350",
-      "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-350-m/CA8786-UTG?from=sale"
-    },
-    {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA8157-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 513 m² 5 Quartos 4 Suítes 6 Banheiros Venda R$ 4.450.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2l99ok2vVIlifAke6+e4xTb2N2F1ti-kF-K1p79hLHk6N72UOP3zIFvz6-eKQ6mvolva-16AURDZNNHfDPyVtuMGHxLvWi9qxzDZOUYYUFx1jMJgkxgzmycfrKS-FMPiwOXFePTpzytTor+C2VHO+JHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2l99ok2vVIlifAke6+e4xTb2N2F1ti-kF-K1p79hLHk6N72UOP3zIFvz6-eKQ6mvolva-16AURDZNNHfDPyVtuMGHxLvWi9qxzDZOUYYUFx1jMJgkxgzmycfrKS-FMPiwOXFePTpzytTor+C2VHO+JHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
-      "preco": "R$ 4.450.000",
-      "quartos": "5",
-      "suites": "4",
-      "vagas": "",
-      "area": "513",
-      "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-513-m/CA8157-UTG?from=sale"
-    },
-    {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA9310-UTG Casa Condomínio Plaza Athénée - Itu - SP Condomínio Plaza Athénée 433 m² 5 Quartos 4 Suítes 6 Banheiros Venda R$ 4.400.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0VKyMs0+TMztMU8GbbuuTCs0ruUzpK-kU7M4JHs7u7+6Oj8ZPfV5YIS1q-EA2KAn6p6e-kCa09Tf9ZDdEfqaN+kZnVckzeJnRX6fuVAGWBr4A9jqwdwwUXjAra2yUcv4j66Nf2BjRDJVOWjNn8ZKLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0VKyMs0+TMztMU8GbbuuTCs0ruUzpK-kU7M4JHs7u7+6Oj8ZPfV5YIS1q-EA2KAn6p6e-kCa09Tf9ZDdEfqaN+kZnVckzeJnRX6fuVAGWBr4A9jqwdwwUXjAra2yUcv4j66Nf2BjRDJVOWjNn8ZKLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
-      "preco": "R$ 4.400.000",
-      "quartos": "5",
-      "suites": "4",
-      "vagas": "",
-      "area": "433",
-      "bairro": "UTG Casa Condomínio Plaza Athénée",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-5-quartos-433-m/CA9310-UTG?from=sale"
-    },
-    {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA8631-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 248 m² 4 Quartos 1 Suíte 4 Banheiros 2 Vagas Venda R$ 2.200.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0U2zYNP3jAUn8hIBaHvoA2n3KSyxv6y93nG5s7fvJ386tj0Q-iCw54zwfL3HhuqtYk4ecEAMEl8XdZ8ewbXZqzaDnFwmACI92TXb4dLbGwP+lsJwDd59gSUfpWJ-F8WyyP5DdXm8yPRcJvPHVdDQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuW9ZBg-AFw13HSOdMuBbukNeVhqz4OU6COlQ087jL-PLnNfv7BfWuc2e4iYkMuI3WKIgXZ5qpHiQfEHU1bHAc+1Ku7avU.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0U2zYNP3jAUn8hIBaHvoA2n3KSyxv6y93nG5s7fvJ386tj0Q-iCw54zwfL3HhuqtYk4ecEAMEl8XdZ8ewbXZqzaDnFwmACI92TXb4dLbGwP+lsJwDd59gSUfpWJ-F8WyyP5DdXm8yPRcJvPHVdDQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuW9ZBg-AFw13HSOdMuBbukNeVhqz4OU6COlQ087jL-PLnNfv7BfWuc2e4iYkMuI3WKIgXZ5qpHiQfEHU1bHAc+1Ku7avU.jpg",
-      "preco": "R$ 2.200.000",
-      "quartos": "4",
-      "suites": "1",
-      "vagas": "2",
-      "area": "248",
-      "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-248-m/CA8631-UTG?from=sale"
-    },
-    {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA8839-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 380.18 m² 4 Quartos 4 Suítes 4 Banheiros 2 Vagas Venda R$ 7.300.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Y48oxC9gU4ttQZeKKgkACn3buJ-de9sEuPoo-OuuP2-Jz9Y-XxmZ8-27fDLnCAjJE9cd1-Pn16Is1-ZzbuftaQJCJ0mjOIlErOSoBKXV1o8hlpliZbxmulWsiK8kMX8CCMBP7ohDGeVqboK05lOsJHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Y48oxC9gU4ttQZeKKgkACn3buJ-de9sEuPoo-OuuP2-Jz9Y-XxmZ8-27fDLnCAjJE9cd1-Pn16Is1-ZzbuftaQJCJ0mjOIlErOSoBKXV1o8hlpliZbxmulWsiK8kMX8CCMBP7ohDGeVqboK05lOsJHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
-      "preco": "R$ 7.300.000",
-      "quartos": "4",
-      "suites": "4",
-      "vagas": "2",
-      "area": "380.18",
-      "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-380-m/CA8839-UTG?from=sale"
-    },
-    {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA8838-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 378 m² 4 Quartos 4 Suítes 4 Banheiros 2 Vagas Venda R$ 5.300.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0NM3I5x7Rs9is0yUpO-iwyH2qWp6vC4knSvwaLHpp7-xc7RcsyD7oo61bfIHVXp77xMQ+x-CFtZV8ogeAPJW5bbB0VvlBe3gQCSTqtNXGBU8RwgoDN2n3yce4WV8EYO-huqLd3prD+dYqrUMWNDTbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0NM3I5x7Rs9is0yUpO-iwyH2qWp6vC4knSvwaLHpp7-xc7RcsyD7oo61bfIHVXp77xMQ+x-CFtZV8ogeAPJW5bbB0VvlBe3gQCSTqtNXGBU8RwgoDN2n3yce4WV8EYO-huqLd3prD+dYqrUMWNDTbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
-      "preco": "R$ 5.300.000",
-      "quartos": "4",
-      "suites": "4",
-      "vagas": "2",
-      "area": "378",
-      "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-378-m/CA8838-UTG?from=sale"
-    },
-    {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA9164-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 370 m² 4 Quartos 4 Suítes 5 Banheiros Venda R$ 3.600.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3pe9Y9w5jQvuMYceq2FgTON9LKN6ujHr2Wt2q7Xk5nx8d3eR5zM0aY0i-XMA2at7IhDZ4cQEEB1Nvh6dQbIZ7iLI1R9mSayh2PLRotXfGZo7jgSkjxqnEazXbaw5wcQ3Sb9EraAtASoc4HoCFBHFrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3pe9Y9w5jQvuMYceq2FgTON9LKN6ujHr2Wt2q7Xk5nx8d3eR5zM0aY0i-XMA2at7IhDZ4cQEEB1Nvh6dQbIZ7iLI1R9mSayh2PLRotXfGZo7jgSkjxqnEazXbaw5wcQ3Sb9EraAtASoc4HoCFBHFrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
-      "preco": "R$ 3.600.000",
-      "quartos": "4",
-      "suites": "4",
-      "vagas": "",
-      "area": "370",
-      "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-370-m/CA9164-UTG?from=sale"
-    },
-    {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA8861-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 378.37 m² 4 Quartos 4 Suítes 6 Banheiros 4 Vagas Venda R$ 3.790.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1ZK9+5C+SwOuPMJW52giwmt9ICEu+WFvBmmyMiKv4rAjOOlW+be0boxjJLQQ2muopFPScd7KUlCbcNZRBOzQdqYA11UhWTT+kPQT55LRDVQxwc7gRpi-2K5QcGA5lIo+ziqIP3piAKzTYm7JXBjMMhHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1ZK9+5C+SwOuPMJW52giwmt9ICEu+WFvBmmyMiKv4rAjOOlW+be0boxjJLQQ2muopFPScd7KUlCbcNZRBOzQdqYA11UhWTT+kPQT55LRDVQxwc7gRpi-2K5QcGA5lIo+ziqIP3piAKzTYm7JXBjMMhHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
-      "preco": "R$ 3.790.000",
-      "quartos": "4",
-      "suites": "4",
-      "vagas": "4",
-      "area": "378.37",
-      "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-378-m/CA8861-UTG?from=sale"
-    },
-    {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA8256-UTG Casa Condomínio Plaza Athénée - Itu - SP 350 m² 4 Quartos 4 Suítes 4 Banheiros 4 Vagas Venda R$ 3.775.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2dj7+h3+CsPzOEWV6K3pwma-dS5wvaLo263pbbsm6jXkPzEB9+F2Y8E+5HeDmL1gpBjd-8FGGZredlBaQLqA4W6DSJqoTCPhl-CX4lCbTMMwV8ztBEKwnakQJSQ3UUf4A2MDbbJmBaAZ7jCJkxhMLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2dj7+h3+CsPzOEWV6K3pwma-dS5wvaLo263pbbsm6jXkPzEB9+F2Y8E+5HeDmL1gpBjd-8FGGZredlBaQLqA4W6DSJqoTCPhl-CX4lCbTMMwV8ztBEKwnakQJSQ3UUf4A2MDbbJmBaAZ7jCJkxhMLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
-      "preco": "R$ 3.775.000",
-      "quartos": "4",
-      "suites": "4",
-      "vagas": "4",
-      "area": "350",
-      "bairro": "UTG Casa Condomínio Plaza Athénée",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-350-m/CA8256-UTG?from=sale"
-    },
-    {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA8584-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio II 320 m² 4 Quartos 4 Suítes 6 Banheiros Venda R$ 3.250.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxZfyN98zUcBsM82QLWVoAKsht3R+saynk6s-7HRk5zmiZOvBsP+lo449-bBIFm3lZdOT4AobUNnbOAmREPbfJWgFyZ3+jCzokjEEp16fGNKxVAUmRFdyAW3XJaP9nI2wSWcJMzYkBylEor9HV11JKNHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxZfyN98zUcBsM82QLWVoAKsht3R+saynk6s-7HRk5zmiZOvBsP+lo449-bBIFm3lZdOT4AobUNnbOAmREPbfJWgFyZ3+jCzokjEEp16fGNKxVAUmRFdyAW3XJaP9nI2wSWcJMzYkBylEor9HV11JKNHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9NlKocxAmXSbYdvxzpztGR1-euZhnQMFc08rGZ+Ka1PKj7HaDseGerj40K5pKWP8RcZ8bkHWlWECw1I3BfqR-k+KGe8F8=.jpg",
-      "preco": "R$ 3.250.000",
-      "quartos": "4",
-      "suites": "4",
-      "vagas": "",
-      "area": "320",
-      "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-4-quartos-320-m/CA8584-UTG?from=sale"
-    },
-    {
-      "fonte": "Utu-Guaçu Imóveis",
-      "titulo": "CA8981-UTG Casa Condomínio Campos de Santo Antônio II - Itu - SP Condomínio Campos de Santo Antonio 384 m² 3 Quartos 3 Suítes 3 Banheiros 4 Vagas Venda R$ 4.700.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxtO4NxgtzojvJUJQIensiC65NWq7feY9HqS377NvLP57cXEdeWClbgT8oXDOH6tuPVfSeMgGWZgdsRZYzDDTYemPUV1kzePmhXXb+RFRmh+0h81lS95nlj8BqK92W4T3yOoCKPdhwLVUaPrUVVuErMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxtO4NxgtzojvJUJQIensiC65NWq7feY9HqS377NvLP57cXEdeWClbgT8oXDOH6tuPVfSeMgGWZgdsRZYzDDTYemPUV1kzePmhXXb+RFRmh+0h81lS95nlj8BqK92W4T3yOoCKPdhwLVUaPrUVVuErMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX9tAlbxQkVuRH+Eb6Eyzk9KU1qelOxuFN1o6-L6frPaxavf3EbSte2+jlJAT+dPIIc0Zaci2AnUHCDR0Yn5R5AC24KyZvQ==.jpg",
-      "preco": "R$ 4.700.000",
-      "quartos": "3",
-      "suites": "3",
-      "vagas": "4",
-      "area": "384",
-      "bairro": "UTG Casa Condomínio Campos de Santo Antônio II",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-384-m/CA8981-UTG?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1494-PR3 Casa Condomínio Villagio D Itália - Itu - SP 109.21 m² 3 Quartos 1 Suíte 2 Banheiros 1 Vaga Venda Sob consulta",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1p77ehn-zEDw9EYYOSz4jufwazP3POmknq-xbXMm4nw5-vxW9WFkrImwKz2MGnysaJMYN15IkUlWtZKSyTwc4iLDUFVnhTRhmfwT4FWZkNY0xMNsw9a-FmiVsCD6wAb9AarBtyFlSG9RZ2+W0VTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1p77ehn-zEDw9EYYOSz4jufwazP3POmknq-xbXMm4nw5-vxW9WFkrImwKz2MGnysaJMYN15IkUlWtZKSyTwc4iLDUFVnhTRhmfwT4FWZkNY0xMNsw9a-FmiVsCD6wAb9AarBtyFlSG9RZ2+W0VTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg",
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNvrGZj0s533xUPkfNBU4GPkXWam4eI6duC90Sz2bTdkbjJ65rfDdiByYcI3KvCAHGXv-Fhf9ErKEN+S+dLcg3IRraxPyd3qTucvEjoE5cXZER-5jEWny5pz1qVbaKsq1AvhRjwFKqA8HLJTP+4URYYX-lYCt407ENDsQK-XFB8p0pK9JGl+XaFOuW-M4DugSALG1In8oevXbnpmdnCJ5YnGrlrPXoH40EZTKZew-iTSP984RIB5LyVW0jA3l3A0rJ9K5-6V9pJlPILkVnAT+dIuxa8z9KRgqP-ZhjVLi9ioufbobLuU4ynRdiwYWGTtpwR4pTbLsZkA5+oCWl1QHNjLw0D5Re6qvXO4g6rcjWJtghHCVTfwI4npnZ9dBhc.jpg",
       "preco": "Sob consulta",
-      "quartos": "3",
-      "suites": "1",
-      "vagas": "1",
-      "area": "109.21",
-      "bairro": "PR3 Casa Condomínio Villagio D Itália",
+      "quartos": "5",
+      "suites": "5",
+      "vagas": "3",
+      "area": "780",
+      "bairro": "LILX Casa Condomínio Terras de São José",
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-109-m/CA1494-PR3?from=sale"
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-5-quartos-780-m/CA1093-LILX?from=sale"
     },
     {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1577-PR3 Casa Jardim Novo Itu - Itu - SP 94.99 m² 2 Quartos 1 Banheiro 1 Vaga Venda R$ 215.000",
+      "fonte": "Bem Aqui Imóveis",
+      "titulo": "CA2835-LILX Casa Condomínio Terras de São José - Itu - SP Condomínio Terras de São Jose I 600 m² 5 Quartos 5 Suítes 7 Banheiros 4 Vagas Venda Sob consulta",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0F1gclLxjIHvdYpBeeAuSfc5pmY0OvFsh6yxaTy46qD6Pr2WJ7u4bk047-uIAOCoqR7fuN9NXxhWtkjQh-WeY6lJ2hmpwOXt2fMROd8SDF16Cc7lw5S53CbDbKC2Hk3hCb0Bt-GgHGWTaTvPnNXCrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0F1gclLxjIHvdYpBeeAuSfc5pmY0OvFsh6yxaTy46qD6Pr2WJ7u4bk047-uIAOCoqR7fuN9NXxhWtkjQh-WeY6lJ2hmpwOXt2fMROd8SDF16Cc7lw5S53CbDbKC2Hk3hCb0Bt-GgHGWTaTvPnNXCrMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9LnaUcwwiWTrBI6RjvktXF1-esZxyOOwE79r6aq-TlP-ymTa3sWEeLr9xRprD5Hel6YNj2KSMXAldQFRNd+x7z+LeLsE36IGDY+kVHVhOSnI5y4WQ6.jpg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxlK0MIwvUYarchAd5u9sDG8zNiQzvqAgRqhxqjOnonf0MfEWOaDlZ1jiJXfE3Gd7qFVd9EIL2ljZdhnHiPnUofQeUVenWKQ-3-Eb4ZaHkBExjMJi01qlUmhR6L93Gwh3H6BNNXegCCpV6-AUAVVHrMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9LnaUcwwiWTrBI6RjvktXF1-esZxyOOwE79r6aq-TlP-ymTa3sWEeLr9xRprD5Hel6YNj2KSMXAldQFRNd+x7z+LeLsE36IGDY+kVHVhOSnI5y4WQ6.jpg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Ja0N9P2So5re0aBeH7gTeK-peJ29yAoWGTyrKMtJ7S6MP8XNbB6b1i877iNVOljbV4evkdAml5UKx2FAfbcd2qEVJTnT+SvHKdSOp6EzIM4xs5iQd3wFLmZLqq2m4CwzO0E6nHsRbSRZf5JFNHUMZHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJn6IFiFvETudM7B29ktCWhvb+b0XXO1tv87uZ-aG3aP3wTPz1OUSDp7ZGpM31Dvh4BM-0XUIAACZWBwcypQD6vbmF4lLmcXjAtlwSWB3fg9xq7GN3Pw==.jpg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2A+gY92yxcEj5MjA6KOhgeq2q6KtvG6vniQwr7-uZTx293-bdvlxdgwzI3zEgf3q480Htc4anB4YfNieTDWYL+yIldNvwSK+kXfV6VffmoMxQItnRQI3WOeB92b2WQ+63ChMqrW9iKCSpq8EXpsDrMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9LnaUcwwiWTrBI6RjvktXF1-esZxyOOwE79r6aq-TlP-ymTa3sWEeLr9xRprD5Hel6YNj2KSMXAldQFRNd+x7z+LeLsE36IGDY+kVHVhOSnI5y4WQ6.jpg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Z36-w33zQBiJskBYWOmQq80pet9uqeoW-M2cLInqnpxf-OR4KbwZlu+4GpNnGm4p5bRdECEWsmbc17dCHIZoKmAHh7ohK9+mjTSIpYZ1h75RsOrxwJ5AGib5qH7hsyxSa4VMPY8TavXL+4JgxzDrMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9LnaUcwwiWTrBI6RjvktXF1-esZxyOOwE79r6aq-TlP-ymTa3sWEeLr9xRprD5Hel6YNj2KSMXAldQFRNd+x7z+LeLsE36IGDY+kVHVhOSnI5y4WQ6.jpg",
-        "https://static-sites.kenlo.io/2.4.13/img/kenlo.svg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1ZNwP1OyTBkjpBHAYikvw+++66O-O2hol2Nx47wnOrikMjgc-XfkdAh3a-6NVSKjIt9Sv8eCFxoQbV3HELMc5jQAlFOpGOs9lz3RLgWSGd60i8jjDZW22a2XJXx0XsR2huZAKPiu3ORSvz6JnN1MNpHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJn6IFiFvETudM7B29ktCWhvb+b0XXO1tv87uZ-aG3aP3wTPz1OUSDp7ZGpM31Dvh4BM-0XUIAACZWBwcypQD6vbmF4lLmcXjAtlwSWB3fg9xq7GN3Pw==.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Bc6dB84S03vcgra+KaoA+9-t63u9yIth261s784Jj8y9zHUd6B-90i2LX2CHCOqq5fe9EoIUojIrI-ciLjXoe3HUhmpRaogVrkEIR-E1hM1DltvTN7ywqaAcWd0WMchXCXNMrmoTe2YKn5DV1tJLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNtBlKAcl13EG7pH70uywoXP1a2qOU7SZlVs-b+WrqS3Oq37TfrsWGerj40K5pLnDc9WBJuzBFlzV2RjKTES5y-Sr-XNr3L7Zy6Vy0ILHR+Ngstq+nY3LVsD58Mfsj22mZX8aArGDcY=.jpg"
       ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0F1gclLxjIHvdYpBeeAuSfc5pmY0OvFsh6yxaTy46qD6Pr2WJ7u4bk047-uIAOCoqR7fuN9NXxhWtkjQh-WeY6lJ2hmpwOXt2fMROd8SDF16Cc7lw5S53CbDbKC2Hk3hCb0Bt-GgHGWTaTvPnNXCrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg",
-      "preco": "R$ 215.000",
-      "quartos": "2",
-      "suites": "",
-      "vagas": "1",
-      "area": "94.99",
-      "bairro": "PR3 Casa Jardim Novo Itu",
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Bc6dB84S03vcgra+KaoA+9-t63u9yIth261s784Jj8y9zHUd6B-90i2LX2CHCOqq5fe9EoIUojIrI-ciLjXoe3HUhmpRaogVrkEIR-E1hM1DltvTN7ywqaAcWd0WMchXCXNMrmoTe2YKn5DV1tJLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNtBlKAcl13EG7pH70uywoXP1a2qOU7SZlVs-b+WrqS3Oq37TfrsWGerj40K5pLnDc9WBJuzBFlzV2RjKTES5y-Sr-XNr3L7Zy6Vy0ILHR+Ngstq+nY3LVsD58Mfsj22mZX8aArGDcY=.jpg",
+      "preco": "Sob consulta",
+      "quartos": "5",
+      "suites": "5",
+      "vagas": "4",
+      "area": "600",
+      "bairro": "LILX Casa Condomínio Terras de São José",
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-95-m/CA1577-PR3?from=sale",
-      "galeriaCompleta": true
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-5-quartos-600-m/CA2835-LILX?from=sale"
     },
     {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1546-PR3 Casa Vila Ianni - Itu - SP 80 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 230.000",
+      "fonte": "Bem Aqui Imóveis",
+      "titulo": "CA0411-LILX Casa Condomínio Terras de São José - Itu - SP Condomínio Terras de São Jose I 800 m² 5 Quartos 5 Suítes 6 Banheiros Venda Sob consulta",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2hn-vdvwQ0xkuQbTaOR4AuX9aSz2Y20iWmu2IvmoujU1t6iTe7Q7d4OzKDoLV6tgpVkTet3KGdIdsBAaSXRVsLRGElSgTSMpErcdItEbi8NhBAKyBIK6QPgbZ+x8H4o-R3gVf-VqgG0U-vJC0xDQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2hn-vdvwQ0xkuQbTaOR4AuX9aSz2Y20iWmu2IvmoujU1t6iTe7Q7d4OzKDoLV6tgpVkTet3KGdIdsBAaSXRVsLRGElSgTSMpErcdItEbi8NhBAKyBIK6QPgbZ+x8H4o-R3gVf-VqgG0U-vJC0xDQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0xZ5-JUyksGu48nWJ-vty2e46yOy+eHjH6ExpSHoKrK3J3aU-Dv8tgW6-6uS0+nvatnXcB8H31GQ8xrGDjhebWiNyYAqAap9kqdCqprcWMPhCUUyBQMlWqrGJX21loVgg+XNq+JoQ3JXpzRGlVkSbMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9LnaUcwwiWTrBI6RjvktXF1-esZxyOOwE79r6aq-TlP-ymTa3sWEeLr9xRprD5Hel6YNj2KSMXAldQFRNd+x7z+LeLsE36IGDY+kVHVhOSnI5y4WQ6.jpg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2x78N0z-RYyk+ZFYa6zkS21wK+L59SYvlaE-c3fpOjeisnVUv77xacg6oGpOHmR6qhDH+w3bX8iVqxFQRXlf6aGNnhWvSuSoADmV7RUZkFv-VksqCZXy0amTbaGynsq5zH6DsPFqSS3F63dWQx-P-tHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFJn6IFiFvETudM7B29ktCWhvb+b0XXO1tv87uZ-aG3aP3wTPz1OUSDp7ZGpM31Dvh4BM-0XUIAACZWBwcypQD6vbmF4lLmcXjAtlwSWB3fg9xq7GN3Pw==.jpg",
-        "https://static-sites.kenlo.io/2.4.13/img/kenlo.svg",
-        "https://imgs.kenlo.io/",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1s0xgxSbFGOsBT9+RO1zjks-ynciLnlXpdKzsuCVZKPvMZhGt-GI0v+QFtypVh7xY3icsFUfjn53DZmbm5wv7fiGO536-3h5Ts7uLDcYDQkNpjiKKsQgam4qU7TdF4aB4iarJ2GkWzA9bYZHVaqHy0nGLsapx4bk4YhVl-ykcJiQHoG4Cq+BR0kTjvWayAvw==.png"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNvontt4ug13RBhvJEDBoaXpC284pSetvTHlkCS3KKNtZSAiP-nX53pkd8jy7HqCE+g4qE-WNE+GmFAYuRYTkXKRIfFNmEPiGmyhErwF+RUWjt17gAfyAcP+lW3c7OV+wA31y7wFKqA8HLJTP+4URYYX-lYCt407ENDsQK-XFB8p0pK9JGl+XaFOuW-M4DugSALG1In8oevXbnpmdnCJ5YnGrlrPXoH40EZTKZew-iTSP984RIB5LyVW0jA3l3A0rJ9K5-6V9pJlPILkVnAT+dIuxa8z9KRgqP-ZhjVLi9ioufbobLuU4ynRdiwYWGTtpwR4pTbLsZkA5+oCWl1QHNjLw0D5Re6qvXO4g6rcjWJtghHCVTfwI4npnZ9dBhc.jpg"
       ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2hn-vdvwQ0xkuQbTaOR4AuX9aSz2Y20iWmu2IvmoujU1t6iTe7Q7d4OzKDoLV6tgpVkTet3KGdIdsBAaSXRVsLRGElSgTSMpErcdItEbi8NhBAKyBIK6QPgbZ+x8H4o-R3gVf-VqgG0U-vJC0xDQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg",
-      "preco": "R$ 230.000",
-      "quartos": "2",
-      "suites": "",
-      "vagas": "2",
-      "area": "80",
-      "bairro": "PR3 Casa Vila Ianni",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-80-m/CA1546-PR3?from=sale",
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1621-PR3 Casa Vila Cleto - Itu - SP 64 m² 2 Quartos 1 Banheiro Venda R$ 240.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1c24Y1DxxAznOEcQ+GfrAKw5L7ItojBvXu8vbrGn5XU-pvzAOzC9pkQ1-TdPUyijqx3H8AQDmJ6ZrlHayDjbry+bWZs-3yVoh-TQIBec3ta9lwjvRBR-GeXV6qg6Hsp9AGqFvbkiRKDTJ69H35MEMZHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9LnaUcwwiWTrBI6RjvktXF1-esZxyOOwE79r6aq-TlP-ymTa3sWEeLr9xRprD5Hel6YNj2KSMXAldQFRNd+x7z+LeLsE36IGDY+kVHVhOSnI5y4WQ6.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1c24Y1DxxAznOEcQ+GfrAKw5L7ItojBvXu8vbrGn5XU-pvzAOzC9pkQ1-TdPUyijqx3H8AQDmJ6ZrlHayDjbry+bWZs-3yVoh-TQIBec3ta9lwjvRBR-GeXV6qg6Hsp9AGqFvbkiRKDTJ69H35MEMZHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0Qd9LnaUcwwiWTrBI6RjvktXF1-esZxyOOwE79r6aq-TlP-ymTa3sWEeLr9xRprD5Hel6YNj2KSMXAldQFRNd+x7z+LeLsE36IGDY+kVHVhOSnI5y4WQ6.jpg",
-      "preco": "R$ 240.000",
-      "quartos": "2",
-      "suites": "",
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNvontt4ug13RBhvJEDBoaXpC284pSetvTHlkCS3KKNtZSAiP-nX53pkd8jy7HqCE+g4qE-WNE+GmFAYuRYTkXKRIfFNmEPiGmyhErwF+RUWjt17gAfyAcP+lW3c7OV+wA31y7wFKqA8HLJTP+4URYYX-lYCt407ENDsQK-XFB8p0pK9JGl+XaFOuW-M4DugSALG1In8oevXbnpmdnCJ5YnGrlrPXoH40EZTKZew-iTSP984RIB5LyVW0jA3l3A0rJ9K5-6V9pJlPILkVnAT+dIuxa8z9KRgqP-ZhjVLi9ioufbobLuU4ynRdiwYWGTtpwR4pTbLsZkA5+oCWl1QHNjLw0D5Re6qvXO4g6rcjWJtghHCVTfwI4npnZ9dBhc.jpg",
+      "preco": "Sob consulta",
+      "quartos": "5",
+      "suites": "5",
       "vagas": "",
-      "area": "64",
-      "bairro": "PR3 Casa Vila Cleto",
+      "area": "800",
+      "bairro": "LILX Casa Condomínio Terras de São José",
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-64-m/CA1621-PR3?from=sale"
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-5-quartos-800-m/CA0411-LILX?from=sale"
     },
     {
-      "fonte": "Proimóvel Itu",
-      "titulo": "Exclusivo CA0036-PR3 Casa Rancho Grande - Itu - SP 200 m² 1 Quarto 1 Banheiro Venda R$ 280.000",
+      "fonte": "Bem Aqui Imóveis",
+      "titulo": "CA2518-LILX Casa Vila Ianni - Itu - SP 130 m² 2 Quartos 1 Banheiro 1 Vaga Venda R$ 270.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgiY81u1BnzJVIG+bu4XLeh9jPuvy08hTKob-8lOL2jOimAZuA5d4VivetQnWFnvJObfcMahsmNrFQbEGsXZ+PdjwbvHPe+xiVC-FfCTgKh0V4jxIalhG5QYS07Ax3nCqpDaqetCeIUa3pCF1VU+0VXcVjrkAGoUnkGAkk4BJQt9-i42+QOP2qLZy802FeAkEjrMT5DLzkmcXCKssxGfN8OC1dtAcTDqdChv2CGaBdzycl7ryQLzGhsiyH17IBN5ivL6kt7b1DyVjRB6AOtV2pzJaZw7ewfRLGIVk69fU=.jpg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgiY81u1BnzJVIG+bu4XLeh9jPuvy08hTKob-8lOL2jOimAZuA5d4VivetQnWFnvJObfcMahsmNrFQbEGsXZ+PdjwbvHPe-x+dF-8MWiAHgFl22ghVjgnzXYSw70VinGauB-WB7DCFSL3rDlVdHKAZX4Yvvh1Op0HsChM58VgIocrz9HCcK+TuM56+1HgVURMj+8D8Ce7knJaTK5k5QKp8YnlYsQRFW-UVh6uDSLk8zC8thKuSUj2yoy7jwLB1Vo+tXq8-+dId11GUCa5cqkH41I7V2uK+c1-Zc0E38rjS.jpg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgiY81u1BnzJVIG+bu4XLeh9jPuoyw9hTN0cL64eyHiu6hBpuA49FlgIWqQnOC4vZMaPB7bm0hSrkgFU2sfb+vdjwbvHPe-x+dF-8MWiAHgFl22ghVjgnzXYSw70VinGauB-WB7DCFSL3rDlVdHKAZX4Yvvh1Op0HsChM58VgIocrz9HCcK+TuM56+1HgVURMj+8D8Ce7knJaTK5k5QKp8YnlYsQRFW-UVh6uDSLk8zC8thKuSUj2yoy7jwLB1Vo+tXq8-+dId11GUCa5cqkH41I7V2uK+c1-Zc0E38rjS.jpg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgiY81u1BnzJVIG+bu4XLeh9jPuoeygh280bj95euGhJuncJ33mdsV+IWrTwH2mPVJG-d7Hx0pPsQgbkSsfb+vdjwbvHPe-x+dF-8MWiAHgFl22ghVjgnzXYSw70VinGauB-WB7DCFSL3rDlVdHKAZX4Yvvh1Op0HsChM58VgIocrz9HCcK+TuM56+1HgVURMj+8D8Ce7knJaTK5k5QKp8YnlYsQRFW-UVh6uDSLk8zC8thKuSUj2yoy7jwLB1Vo+tXq8-+dId11GUCa5cqkH41I7V2uK+c1-Zc0E38rjS.jpg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgiY81u1BnzJVIG+bu4XLeh9jPuomy9Wq-o8-8ku2H+ZzTB5yFkasTjf-YT3PymfA9aIN8ahAhPLhUGESsfb+vdjwbvHPe-x+dF-8MWiAHgFl22ghVjgnzXYSw70VinGauB-WB7DCFSL3rDlVdHKAZX4Yvvh1Op0HsChM58VgIocrz9HCcK+TuM56+1HgVURMj+8D8Ce7knJaTK5k5QKp8YnlYsQRFW-UVh6uDSLk8zC8thKuSUj2yoy7jwLB1Vo+tXq8-+dId11GUCa5cqkH41I7V2uK+c1-Zc0E38rjS.jpg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgiY81u1BnzJVIG+bu4XLeh9jPuoq09R3G0rr74O6F-puhce2Gk9oS-YSqPAX36vZOHIB5a2ohObJRaEOsfb+vdjwbvHPe-x+dF-8MWiAHgFl22ghVjgnzXYSw70VinGauB-WB7DCFSL3rDlVdHKAZX4Yvvh1Op0HsChM58VgIocrz9HCcK+TuM56+1HgVURMj+8D8Ce7knJaTK5k5QKp8YnlYsQRFW-UVh6uDSLk8zC8thKuSUj2yoy7jwLB1Vo+tXq8-+dId11GUCa5cqkH41I7V2uK+c1-Zc0E38rjS.jpg",
-        "https://static-sites.kenlo.io/2.4.13/img/kenlo.svg",
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgiY81u1BnzJVIG+bu4XLeh9jPuvrG8WnK1rmP4+qC-5yvdpjz49tmiYCqTAPy7fdIF4F6bR0pTMUjHjCsfb+vdjwbvHPe-x+dF-8MWiAHgFl22ghVjgnzXYSw70VinGauB-WB7DCFSL3rDlVdHKAZX4Yvvh1Op0HsChM58VgIocrz9HCcK+TuM56+1HgVURMj+8D8Ce7knJaTK5k5QKp8YnlYsQRFW-UVh6uDSLk8zC8thKuSUj2yoy7jwLB1Vo+tXq8-+dId11GUCa5cqkH41I7V2uK+c1-Zc0E38rjS.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2xoiPwzzUllivUmXrW-hy+Z7JyY9f6E9XbMp43LkYny3pjHesSC0Jsfi-fLKQCur7RFetk9NmpTWdd7VS7tRoGZEn9zhWajt076Spp3dEBqgQsKpwl3lXGQYMOFqlQI-i34PMT7gDanbYXnW0cHD9tHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxNlasAiA+RHLJG4xvuz4DGjPSkaRuFZwY7pLCY8aTnOvihEfyiOUSjh5YX-43XEOheKKu3GG96ZHNlNDsQ6hzLnO7HpE3ZcD+O+20VFFbTnMIv9HhlMkdS-9tOpHq4l9jjOhLKC4uF.jpg"
       ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnnoqbn5d3mkz3xeJGNhUVRJJrgcly1BcIE0+1wgiY81u1BnzJVIG+bu4XLeh9jPuvy08hTKob-8lOL2jOimAZuA5d4VivetQnWFnvJObfcMahsmNrFQbEGsXZ+PdjwbvHPe+xiVC-FfCTgKh0V4jxIalhG5QYS07Ax3nCqpDaqetCeIUa3pCF1VU+0VXcVjrkAGoUnkGAkk4BJQt9-i42+QOP2qLZy802FeAkEjrMT5DLzkmcXCKssxGfN8OC1dtAcTDqdChv2CGaBdzycl7ryQLzGhsiyH17IBN5ivL6kt7b1DyVjRB6AOtV2pzJaZw7ewfRLGIVk69fU=.jpg",
-      "preco": "R$ 280.000",
-      "quartos": "1",
-      "suites": "",
-      "vagas": "",
-      "area": "200",
-      "bairro": "PR3 Casa Rancho Grande",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-1-quarto-200-m/CA0036-PR3?from=sale",
-      "galeriaCompleta": true
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1631-PR3 Casa Jardim Novo Mundo - Itu - SP 106 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 285.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1YiytdNuyYTiv1cTb3hsSat0N67yvSA8UicqKH4gq2E7cTkY8iFyJ4x1bXUNHGnmLI4VuImHGtXRMx4bivBBNaBA1dYjWaUiBzVeLADRDsN9DttvEhCzmWlZqSirwMJ9yy5G8nKpi+GXozaGXhTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1YiytdNuyYTiv1cTb3hsSat0N67yvSA8UicqKH4gq2E7cTkY8iFyJ4x1bXUNHGnmLI4VuImHGtXRMx4bivBBNaBA1dYjWaUiBzVeLADRDsN9DttvEhCzmWlZqSirwMJ9yy5G8nKpi+GXozaGXhTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg",
-      "preco": "R$ 285.000",
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2xoiPwzzUllivUmXrW-hy+Z7JyY9f6E9XbMp43LkYny3pjHesSC0Jsfi-fLKQCur7RFetk9NmpTWdd7VS7tRoGZEn9zhWajt076Spp3dEBqgQsKpwl3lXGQYMOFqlQI-i34PMT7gDanbYXnW0cHD9tHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxNlasAiA+RHLJG4xvuz4DGjPSkaRuFZwY7pLCY8aTnOvihEfyiOUSjh5YX-43XEOheKKu3GG96ZHNlNDsQ6hzLnO7HpE3ZcD+O+20VFFbTnMIv9HhlMkdS-9tOpHq4l9jjOhLKC4uF.jpg",
+      "preco": "R$ 270.000",
       "quartos": "2",
-      "suites": "",
-      "vagas": "2",
-      "area": "106",
-      "bairro": "PR3 Casa Jardim Novo Mundo",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-106-m/CA1631-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1427-PR3 Casa Alto - Itu - SP 85 m² 2 Quartos 1 Banheiro Venda R$ 290.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Np29V3+h0mv8dGR+Cdl3WO4r2o1dS1pXqm-szRg+3d3sH7VpmD7YIV1ITNLlmdtIRjRfktOGxcN+ZxHxjPW5ydOUMJriudq3iUZeMdTERnxgEIugcLw32ET7Oi+0MwhiyjFqvEoxS7c5zGUANTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Np29V3+h0mv8dGR+Cdl3WO4r2o1dS1pXqm-szRg+3d3sH7VpmD7YIV1ITNLlmdtIRjRfktOGxcN+ZxHxjPW5ydOUMJriudq3iUZeMdTERnxgEIugcLw32ET7Oi+0MwhiyjFqvEoxS7c5zGUANTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg",
-      "preco": "R$ 290.000",
-      "quartos": "2",
-      "suites": "",
-      "vagas": "",
-      "area": "85",
-      "bairro": "PR3 Casa Alto",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-85-m/CA1427-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA0706-PR3 Casa Jardim Aeroporto I - Itu - SP 120 m² 1 Quarto 1 Banheiro 1 Vaga Venda R$ 290.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux9Y8c1z6U0JosMYTJGwpiO7gKbK9YvArmuf8o+PraiBjZzGW9700a8fj7DZNwayvqU0Htx6PkIjXuh1Gi3TTYGtHCNw+2iIvU-Gf+t8TmNb4TtroQxM716zQLa8p3Ib9SK9U-aBgGuIUYTjW0B1FrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux9Y8c1z6U0JosMYTJGwpiO7gKbK9YvArmuf8o+PraiBjZzGW9700a8fj7DZNwayvqU0Htx6PkIjXuh1Gi3TTYGtHCNw+2iIvU-Gf+t8TmNb4TtroQxM716zQLa8p3Ib9SK9U-aBgGuIUYTjW0B1FrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg",
-      "preco": "R$ 290.000",
-      "quartos": "1",
       "suites": "",
       "vagas": "1",
-      "area": "120",
-      "bairro": "PR3 Casa Jardim Aeroporto I",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-1-quarto-120-m/CA0706-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1605-PR3 Casa Jardim Santa Laura - Itu - SP 150 m² 3 Quartos 2 Suítes 3 Banheiros 1 Vaga Venda R$ 295.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu25Bjo1p6kwTyesAQ4a0gGy6g9uO7NWwqx6705GTv5ni-970f9qF2qsE6YrBDVyqlZxDYfYLOmtcXNNhFVm0DoqvGGALqGG1vm6UH4pYH1pJ6BEsnxZM1UqFTbGQzXEaxA2cKNTfhDajdqLeM2VTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu25Bjo1p6kwTyesAQ4a0gGy6g9uO7NWwqx6705GTv5ni-970f9qF2qsE6YrBDVyqlZxDYfYLOmtcXNNhFVm0DoqvGGALqGG1vm6UH4pYH1pJ6BEsnxZM1UqFTbGQzXEaxA2cKNTfhDajdqLeM2VTQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg",
-      "preco": "R$ 295.000",
-      "quartos": "3",
-      "suites": "2",
-      "vagas": "1",
-      "area": "150",
-      "bairro": "PR3 Casa Jardim Santa Laura",
-      "cidade": "Itu",
-      "tipo": "casa",
-      "finalidade": "venda",
-      "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-150-m/CA1605-PR3?from=sale"
-    },
-    {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1544-PR3 Casa Jardim Aeroporto I - Itu - SP 130 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 300.000",
-      "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu19-+eJ0-zVggJcFR6fl7BS6+6GI2u6rnVWL5LrNopiAje75XpuOk4Q+yf6qLkCumL5fHoMEDBtFZ-VQYEDpbrinGCYAoGejumeSU7gaU1IM-hAKyQt6wnmnX8Lz2Fcf5QWFNc70shKlFfHvXVt+CrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg"
-      ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu19-+eJ0-zVggJcFR6fl7BS6+6GI2u6rnVWL5LrNopiAje75XpuOk4Q+yf6qLkCumL5fHoMEDBtFZ-VQYEDpbrinGCYAoGejumeSU7gaU1IM-hAKyQt6wnmnX8Lz2Fcf5QWFNc70shKlFfHvXVt+CrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwX91JmrxXkFqWGbRN7Ervl4aU1qWkPkWOYVU+873M-qayPqqnHLSNW0+DxctT27zqDOsed9qCSDQVc1FCAXwD5Re29rnZr1GrOHiU4xBJWF6NzpZ-5ik=.jpg",
-      "preco": "R$ 300.000",
-      "quartos": "2",
-      "suites": "",
-      "vagas": "2",
       "area": "130",
-      "bairro": "PR3 Casa Jardim Aeroporto I",
+      "bairro": "LILX Casa Vila Ianni",
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-130-m/CA1544-PR3?from=sale"
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-130-m/CA2518-LILX?from=sale"
     },
     {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1622-PR3 Casa Cidade Nova I - Itu - SP 120 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 310.000",
+      "fonte": "Bem Aqui Imóveis",
+      "titulo": "CA1532-LILX Casa Centro - Itu - SP 103 m² 2 Quartos 1 Banheiro Venda R$ 270.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1x4joNvyBkhyfoDWOeCtg2D2dSfy+nGomOw0suPj+3r0Ib4Z5r10ZIE9KT9Iw6Gofd5TeM9Gh1aSPBEFQ3beqfeDk9ToQnJlETzU5pmQEd+1iQ9ljh-3HSDfL2j3AMdxXu4MOKE7xC1XqG+HndlQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNvwhtj4ts0vTpms+0aU6WejDeew7md-vu+sHTN1ILmsOzk0JPke-vMk4oP45XwFWH8nKRDZe4GbnFraPJoQUDUDqLYN11hsiSz+GvSEYBeRUNRgQIIt0957n+VBJSd11AVgguDGq6drTeMVeXpB1MJCr9KAt8stFhX+AKpSRdyvwgS5oel4CDLfaapPtjgx3QYXVAy7oHwFffjnJmQZo1oFL4hPXoH4xwTV65f1uvISux44RMDv+uPFRGHlB-PhPAuPZiqV9ZLg6NRkA-LErcb4xq6ztXPgvOvOxiAYls6-O7J-vTiNauhBdWuc2e4iYkMyb-dIutKMIOZO2NXRn90IT4szQX6vvT5skf9bQWK+lVLCl+azoBqpjs0YBIDroRO+z31y9i2fACN.jpg"
       ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1x4joNvyBkhyfoDWOeCtg2D2dSfy+nGomOw0suPj+3r0Ib4Z5r10ZIE9KT9Iw6Gofd5TeM9Gh1aSPBEFQ3beqfeDk9ToQnJlETzU5pmQEd+1iQ9ljh-3HSDfL2j3AMdxXu4MOKE7xC1XqG+HndlQPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWuXd9Og-cEwlrBHbFIvkrqxNeVhK39Z0XUNVA78OuZrPGzaKv2BdWOU0fp0sku16-7Do8Jda7jXzZkdUNWbiId7FK4+OvGswCzIDSNth5HFUHf1pt4qw==.jpg",
-      "preco": "R$ 310.000",
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNvwhtj4ts0vTpms+0aU6WejDeew7md-vu+sHTN1ILmsOzk0JPke-vMk4oP45XwFWH8nKRDZe4GbnFraPJoQUDUDqLYN11hsiSz+GvSEYBeRUNRgQIIt0957n+VBJSd11AVgguDGq6drTeMVeXpB1MJCr9KAt8stFhX+AKpSRdyvwgS5oel4CDLfaapPtjgx3QYXVAy7oHwFffjnJmQZo1oFL4hPXoH4xwTV65f1uvISux44RMDv+uPFRGHlB-PhPAuPZiqV9ZLg6NRkA-LErcb4xq6ztXPgvOvOxiAYls6-O7J-vTiNauhBdWuc2e4iYkMyb-dIutKMIOZO2NXRn90IT4szQX6vvT5skf9bQWK+lVLCl+azoBqpjs0YBIDroRO+z31y9i2fACN.jpg",
+      "preco": "R$ 270.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "",
+      "area": "103",
+      "bairro": "LILX Casa Centro",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-103-m/CA1532-LILX?from=sale"
+    },
+    {
+      "fonte": "Bem Aqui Imóveis",
+      "titulo": "CA2128-LILX Casa Jardim Estância Bom Viver - Itu - SP 70 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 340.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0xc6OJ2twoDitJJA4Cb5S3c4Yip1+6esFjI2rjX4bbG+eOuYvzg1rhmjqz+JVWokr5jF9c9FUtdaMBAeTfMU6W4G3R4oAbJ+hzRRIRIeG1c5A0CqxdB9WOOQaCnp09g-jC4DtHXnQ62doy-CgNOTOtHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxNlasAiA+RHLJG4xvuz4DGjPSkaRuFZwY7pLCY8aTnOvihEfyiOUSjh5YX-43XEOheKKu3GG96ZHNlNDsQ6hzLnO7HpE3ZcD+O+20VFFbTnMIv9HhlMkdS-9tOpHq4l9jjOhLKC4uF.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0xc6OJ2twoDitJJA4Cb5S3c4Yip1+6esFjI2rjX4bbG+eOuYvzg1rhmjqz+JVWokr5jF9c9FUtdaMBAeTfMU6W4G3R4oAbJ+hzRRIRIeG1c5A0CqxdB9WOOQaCnp09g-jC4DtHXnQ62doy-CgNOTOtHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxNlasAiA+RHLJG4xvuz4DGjPSkaRuFZwY7pLCY8aTnOvihEfyiOUSjh5YX-43XEOheKKu3GG96ZHNlNDsQ6hzLnO7HpE3ZcD+O+20VFFbTnMIv9HhlMkdS-9tOpHq4l9jjOhLKC4uF.jpg",
+      "preco": "R$ 340.000",
       "quartos": "2",
       "suites": "",
       "vagas": "2",
-      "area": "120",
-      "bairro": "PR3 Casa Cidade Nova I",
+      "area": "70",
+      "bairro": "LILX Casa Jardim Estância Bom Viver",
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-2-quartos-120-m/CA1622-PR3?from=sale"
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-70-m/CA2128-LILX?from=sale"
     },
     {
-      "fonte": "Proimóvel Itu",
-      "titulo": "CA1172-PR3 Casa Cidade Nova I - Itu - SP 128.45 m² 3 Quartos 1 Suíte 1 Banheiro 2 Vagas Venda R$ 345.000",
+      "fonte": "Bem Aqui Imóveis",
+      "titulo": "CA2400-LILX Casa Jardim Novo Itu - Itu - SP 156 m² 3 Quartos 2 Vagas Venda R$ 350.000",
       "imagens": [
-        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv1VhFicpHygkZypEdQo-nmBTc0auT3uCTiFqx6bHJmo33j+7tXPrExdoZjYzDN1OroYBjX4R9K2dzbdB3fx3JQI66PUFyvGiQnErNa+ZWE29e0wYfqT5J1HmrVMKx8V834Rj7Ls-fgQ+8Ef7fREMJCr9KAt8stFhX+AKpSRdyvwgS5oel4CDLfaapPtjgx3QYXVAy7oHwFffjnJmQZo1oFL4hPXoH4xwTV65f1uvISux44RMDv+uPFRGHlB-PhPAuPZusX9hXyKRWwg3FGLQavk+5ldbHjPSkZx+AMFU4pr7L+-DlafrvZNaGWy3+0LQixL75apgLAc-0XUdiZ1c5MDwUqVy2qvTa4hirbC3YuBAKChPH25w1.jpg"
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Npipdv-B0Po8kuYoii4y6agtrI+-qTsWuT+5bGvovh7dP4Buf0z7lgwIfuHAL3kI08Fo1iE1FkNvtoGhXJBqaZC0Jw-xnQrRTcRZBGRkFNgBsrtSZi4kmTUbvzzX8z9ACeCNLUoAKrfbvlLFduErMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNtBlKAcl13EG7pH70uywoXP1a2qOU7SZlVs-b+WrqS3Oq37TfrsWGerj40K5pLnDc9WBJuzBFlzV2RjKTES5y-Sr-XNr3L7Zy6Vy0ILHR+Ngstq+nY3LVsD58Mfsj22mZX8aArGDcY=.jpg"
       ],
-      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv1VhFicpHygkZypEdQo-nmBTc0auT3uCTiFqx6bHJmo33j+7tXPrExdoZjYzDN1OroYBjX4R9K2dzbdB3fx3JQI66PUFyvGiQnErNa+ZWE29e0wYfqT5J1HmrVMKx8V834Rj7Ls-fgQ+8Ef7fREMJCr9KAt8stFhX+AKpSRdyvwgS5oel4CDLfaapPtjgx3QYXVAy7oHwFffjnJmQZo1oFL4hPXoH4xwTV65f1uvISux44RMDv+uPFRGHlB-PhPAuPZusX9hXyKRWwg3FGLQavk+5ldbHjPSkZx+AMFU4pr7L+-DlafrvZNaGWy3+0LQixL75apgLAc-0XUdiZ1c5MDwUqVy2qvTa4hirbC3YuBAKChPH25w1.jpg",
-      "preco": "R$ 345.000",
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Npipdv-B0Po8kuYoii4y6agtrI+-qTsWuT+5bGvovh7dP4Buf0z7lgwIfuHAL3kI08Fo1iE1FkNvtoGhXJBqaZC0Jw-xnQrRTcRZBGRkFNgBsrtSZi4kmTUbvzzX8z9ACeCNLUoAKrfbvlLFduErMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNtBlKAcl13EG7pH70uywoXP1a2qOU7SZlVs-b+WrqS3Oq37TfrsWGerj40K5pLnDc9WBJuzBFlzV2RjKTES5y-Sr-XNr3L7Zy6Vy0ILHR+Ngstq+nY3LVsD58Mfsj22mZX8aArGDcY=.jpg",
+      "preco": "R$ 350.000",
+      "quartos": "3",
+      "suites": "",
+      "vagas": "2",
+      "area": "156",
+      "bairro": "LILX Casa Jardim Novo Itu",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-3-quartos-156-m/CA2400-LILX?from=sale"
+    },
+    {
+      "fonte": "Bem Aqui Imóveis",
+      "titulo": "CA0521-LILX Casa Jardim Estância Bom Viver - Itu - SP 120 m² 3 Quartos 1 Suíte 2 Banheiros 2 Vagas Venda R$ 375.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv+Fs6itwx1CwvieFITb6CtgfC5a+e2fnAlUeJ5a7EnoPLyequXf3-jdk86JfXDwSnk5BSX84uAmRFRO5DWiDBeb2+GldLiR+orWfqXYVLGmMFwj4LnSthyQOZe8OJrk8Z4zCEXuyB8nTQCaC5XwwWUawNEtE06V9N4lGnUVdgqR9Qu4m9s2qFPub2JoCihipUBAow-56-X7-hkZaPK5RkVqk2dXwP61MDUbcUm+6GWehj7QEYoKGSV0nLwkKSh7V1KpOqC9dMnatSnwmVGOYb7E+zwY2R0qOqPETTYE5Bqu-AvKvxY5GATfSAZX2lv68G5InRLMtXGqyzA2JKYmRyND0s+x7z9OvHpwClICqV5xBfWEKYzoBquSRleB4RoA==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNv+Fs6itwx1CwvieFITb6CtgfC5a+e2fnAlUeJ5a7EnoPLyequXf3-jdk86JfXDwSnk5BSX84uAmRFRO5DWiDBeb2+GldLiR+orWfqXYVLGmMFwj4LnSthyQOZe8OJrk8Z4zCEXuyB8nTQCaC5XwwWUawNEtE06V9N4lGnUVdgqR9Qu4m9s2qFPub2JoCihipUBAow-56-X7-hkZaPK5RkVqk2dXwP61MDUbcUm+6GWehj7QEYoKGSV0nLwkKSh7V1KpOqC9dMnatSnwmVGOYb7E+zwY2R0qOqPETTYE5Bqu-AvKvxY5GATfSAZX2lv68G5InRLMtXGqyzA2JKYmRyND0s+x7z9OvHpwClICqV5xBfWEKYzoBquSRleB4RoA==.jpg",
+      "preco": "R$ 375.000",
       "quartos": "3",
       "suites": "1",
       "vagas": "2",
-      "area": "128.45",
-      "bairro": "PR3 Casa Cidade Nova I",
+      "area": "120",
+      "bairro": "LILX Casa Jardim Estância Bom Viver",
       "cidade": "Itu",
       "tipo": "casa",
       "finalidade": "venda",
       "dataPublicacao": null,
-      "link": "https://www.proimovel-itu.com.br/imovel/casa-itu-3-quartos-128-m/CA1172-PR3?from=sale"
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-3-quartos-120-m/CA0521-LILX?from=sale"
+    },
+    {
+      "fonte": "Bem Aqui Imóveis",
+      "titulo": "CA2956-LILX Casa Jardim Residencial Itaim - Itu - SP 104 m² 2 Quartos 1 Banheiro 2 Vagas Venda R$ 380.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu24ijo5fuBAvtJEJU4+HgimWjq7EwNOAnX2MpZL9p4rl88bYGe2Ax8UN8qXcOGSItawgau4HNRhoasloQEDbQqWpEEF9jx6ruQDpEON6YzZx2VBom05X+UOLU5KC-ngvwSSFVdHApB+IQoDvWwJsPr5HR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxNlasAiA+RHLJG4xvuz4DGjPSkaRuFZwY7pLCY8aTnOvihEfyiOUSjh5YX-43XEOheKKu3GG96ZHNlNDsQ6hzLnO7HpE3ZcD+O+20VFFbTnMIv9HhlMkdS-9tOpHq4l9jjOhLKC4uF.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu24ijo5fuBAvtJEJU4+HgimWjq7EwNOAnX2MpZL9p4rl88bYGe2Ax8UN8qXcOGSItawgau4HNRhoasloQEDbQqWpEEF9jx6ruQDpEON6YzZx2VBom05X+UOLU5KC-ngvwSSFVdHApB+IQoDvWwJsPr5HR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxNlasAiA+RHLJG4xvuz4DGjPSkaRuFZwY7pLCY8aTnOvihEfyiOUSjh5YX-43XEOheKKu3GG96ZHNlNDsQ6hzLnO7HpE3ZcD+O+20VFFbTnMIv9HhlMkdS-9tOpHq4l9jjOhLKC4uF.jpg",
+      "preco": "R$ 380.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "2",
+      "area": "104",
+      "bairro": "LILX Casa Jardim Residencial Itaim",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-104-m/CA2956-LILX?from=sale"
+    },
+    {
+      "fonte": "Bem Aqui Imóveis",
+      "titulo": "CA2689-LILX Casa Jardim Alberto Gomes - Itu - SP 100 m² 2 Quartos 2 Banheiros 2 Vagas Venda R$ 380.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hd3YNH+zA1lcgee7PmjDKm3Iy+zNGEi0KE4rHPkY3+iOLNUunyyoMwypT-HlSws6R4eNEKPxFIYLhUXDH0dragGXVVgibWhhT8fepHQTBZ71kzqSxN1gSUBZKJ3nc91AqLWuqIqxyeXI7MBkJ1QPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWtW9dAn7wDxQjDE7tLvxe-x4yWjKP6bBnTNQI18rHJrvS3b-enS7SNe2+jlJAT+aL6Ksd6NJ+vMlBAQGJ+IzMf1DbhtP-GkFDsdjWl5FwCVEGTi45k9CQoMQob-5IJ9TO41IqucAbAQA==.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3hd3YNH+zA1lcgee7PmjDKm3Iy+zNGEi0KE4rHPkY3+iOLNUunyyoMwypT-HlSws6R4eNEKPxFIYLhUXDH0dragGXVVgibWhhT8fepHQTBZ71kzqSxN1gSUBZKJ3nc91AqLWuqIqxyeXI7MBkJ1QPlLANk18QdW9hinR0InpwcS45urs3PTcKG1MI36iGwAF0wy6oK5APevm5PPedV-GacxP3wP61NeW6wcmvuVAupw6QEZovrFTQeShQjQiOM3eYWtW9dAn7wDxQjDE7tLvxe-x4yWjKP6bBnTNQI18rHJrvS3b-enS7SNe2+jlJAT+aL6Ksd6NJ+vMlBAQGJ+IzMf1DbhtP-GkFDsdjWl5FwCVEGTi45k9CQoMQob-5IJ9TO41IqucAbAQA==.jpg",
+      "preco": "R$ 380.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "2",
+      "area": "100",
+      "bairro": "LILX Casa Jardim Alberto Gomes",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-100-m/CA2689-LILX?from=sale"
+    },
+    {
+      "fonte": "Bem Aqui Imóveis",
+      "titulo": "CA2670-LILX Casa Rancho Grande - Itu - SP 100 m² 2 Quartos 2 Banheiros 3 Vagas Venda R$ 390.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu39o+uI25A8wnswVbO6ghimDm9yT1dfHjRvLo7rLhIr9-+PwY-3T9Zoy0pLZCFKIuZ5JeoQNDl9LarZhahC2e7mFYCZuqDLWogDGRolsUUp65B8UiS8B5mGod6CvyUMq9H6+K-z3uDShR5nFAHFEMLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNtBlKAcl13EG7pH70uywoXP1a2qOU7SZlVs-b+WrqS3Oq37TfrsWGerj40K5pLnDc9WBJuzBFlzV2RjKTES5y-Sr-XNr3L7Zy6Vy0ILHR+Ngstq+nY3LVsD58Mfsj22mZX8aArGDcY=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu39o+uI25A8wnswVbO6ghimDm9yT1dfHjRvLo7rLhIr9-+PwY-3T9Zoy0pLZCFKIuZ5JeoQNDl9LarZhahC2e7mFYCZuqDLWogDGRolsUUp65B8UiS8B5mGod6CvyUMq9H6+K-z3uDShR5nFAHFEMLMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNtBlKAcl13EG7pH70uywoXP1a2qOU7SZlVs-b+WrqS3Oq37TfrsWGerj40K5pLnDc9WBJuzBFlzV2RjKTES5y-Sr-XNr3L7Zy6Vy0ILHR+Ngstq+nY3LVsD58Mfsj22mZX8aArGDcY=.jpg",
+      "preco": "R$ 390.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "3",
+      "area": "100",
+      "bairro": "LILX Casa Rancho Grande",
+      "cidade": "Itu",
+      "tipo": "casa",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/casa-itu-2-quartos-100-m/CA2670-LILX?from=sale"
+    },
+    {
+      "fonte": "Bem Aqui Imóveis",
+      "titulo": "ED0006-LILX Edícula Parque América - Itu - SP 49.27 m² 2 Quartos 2 Banheiros 4 Vagas Venda R$ 400.000",
+      "imagens": [
+        "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3U93v9U5E4+wutEAJm5pna3g520w9iot1Wc8azcs4Tn8OT2eOjl864F8vX-GVmgi4RCX-sLFxtrSOZdHSLYcKqFEGRgqASPmkTxTqF4REVx5As3iBh9wHmQQYm10X46636gEavqpy20S4HGPEJfCrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNtBlKAcl13EG7pH70uywoXP1a2qOU7SZlVs-b+WrqS3Oq37TfrsWGerj40K5pLnDc9WBJuzBFlzV2RjKTES5y-Sr-XNr3L7Zy6Vy0ILHR+Ngstq+nY3LVsD58Mfsj22mZX8aArGDcY=.jpg"
+      ],
+      "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3U93v9U5E4+wutEAJm5pna3g520w9iot1Wc8azcs4Tn8OT2eOjl864F8vX-GVmgi4RCX-sLFxtrSOZdHSLYcKqFEGRgqASPmkTxTqF4REVx5As3iBh9wHmQQYm10X46636gEavqpy20S4HGPEJfCrMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNtBlKAcl13EG7pH70uywoXP1a2qOU7SZlVs-b+WrqS3Oq37TfrsWGerj40K5pLnDc9WBJuzBFlzV2RjKTES5y-Sr-XNr3L7Zy6Vy0ILHR+Ngstq+nY3LVsD58Mfsj22mZX8aArGDcY=.jpg",
+      "preco": "R$ 400.000",
+      "quartos": "2",
+      "suites": "",
+      "vagas": "4",
+      "area": "49.27",
+      "bairro": "LILX Edícula Parque América",
+      "cidade": "Itu",
+      "tipo": "",
+      "finalidade": "venda",
+      "dataPublicacao": null,
+      "link": "https://www.bemaquiimoveis.com.br/imovel/edicula-itu-2-quartos-49-m/ED0006-LILX?from=sale"
     },
     {
       "fonte": "Ferraz & Luiz Imóveis",
@@ -756,21 +505,22 @@
   "erros": [
     "Kenlo - Portal Geral: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Grupo Kaion: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
+    "Utu-Guaçu Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Danilo Ferreira Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Opção Imóveis Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Teixeira Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "GS Imóveis Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Cury Massoca Brokers: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
-    "AP Imóveis Itu: Bright Data HTTP 504 <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
-    "Bem Aqui Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
+    "AP Imóveis Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Regina Marchi Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "SLA Imobiliária Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
+    "Proimóvel Itu: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Costa Rocha Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\"",
     "Beto Imóveis: 0 imóveis (via Bright Data). HTML: 0 chars. \"/imovel/\": 0. \"/comprar/|/alugar/\": 0. Bloqueio: não. Início: \"\""
   ],
   "resumoData": {
     "comData": 0,
-    "semData": 83,
-    "total": 34
+    "semData": 71,
+    "total": 22
   }
 }
