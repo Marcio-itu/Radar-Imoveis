@@ -49,19 +49,19 @@
   },
   "https://www.grupokaion.com.br/imovel/casa-itu-5-quartos-443-m/CA0459-GK?from=sale": {
     "primeiraVez": "2026-09-10",
-    "ultimaVez": "2026-09-12"
+    "ultimaVez": "2026-09-17"
   },
   "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-127-m/CA1456-GK?from=sale": {
     "primeiraVez": "2026-09-10",
-    "ultimaVez": "2026-09-12"
+    "ultimaVez": "2026-09-17"
   },
   "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-105-m/CA2593-GK?from=sale": {
     "primeiraVez": "2026-09-10",
-    "ultimaVez": "2026-09-12"
+    "ultimaVez": "2026-09-17"
   },
   "https://www.grupokaion.com.br/imovel/casa-itu-4-quartos-198-m/CA2158-GK?from=sale": {
     "primeiraVez": "2026-09-10",
-    "ultimaVez": "2026-09-12"
+    "ultimaVez": "2026-09-17"
   },
   "https://www.grupokaion.com.br/imovel/casa-itu-2-quartos-300-m/CA0614-GK?from=sale": {
     "primeiraVez": "2026-09-10",
@@ -69,31 +69,31 @@
   },
   "https://www.grupokaion.com.br/imovel/casa-itu-2-quartos-83-m/CA0986-GK?from=sale": {
     "primeiraVez": "2026-09-10",
-    "ultimaVez": "2026-09-12"
+    "ultimaVez": "2026-09-17"
   },
   "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-110-m/CA2122-GK?from=sale": {
     "primeiraVez": "2026-09-10",
-    "ultimaVez": "2026-09-12"
+    "ultimaVez": "2026-09-17"
   },
   "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-180-m/CA2755-GK?from=sale": {
     "primeiraVez": "2026-09-10",
-    "ultimaVez": "2026-09-12"
+    "ultimaVez": "2026-09-17"
   },
   "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-200-m/CA0340-GK?from=sale": {
     "primeiraVez": "2026-09-10",
-    "ultimaVez": "2026-09-12"
+    "ultimaVez": "2026-09-17"
   },
   "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-200-m/CA2675-GK?from=sale": {
     "primeiraVez": "2026-09-10",
-    "ultimaVez": "2026-09-12"
+    "ultimaVez": "2026-09-17"
   },
   "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-96-m/CA2246-GK?from=sale": {
     "primeiraVez": "2026-09-10",
-    "ultimaVez": "2026-09-12"
+    "ultimaVez": "2026-09-17"
   },
   "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-227-m/CA2810-GK?from=sale": {
     "primeiraVez": "2026-09-10",
-    "ultimaVez": "2026-09-12"
+    "ultimaVez": "2026-09-17"
   },
   "https://www.utuguacu.com.br/imovel/casa-itu-3-quartos-173-m/CA8600-UTG?from=sale": {
     "primeiraVez": "2026-09-10",
@@ -930,5 +930,57 @@
   "https://www.imobiliariacostarocha.com.br/imovel/casa-itu-5-quartos-408-m/CA6365-COX3?from=sale": {
     "primeiraVez": "2026-09-15",
     "ultimaVez": "2026-09-15"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-4-quartos-460-m/CA0256-AUTE?from=sale": {
+    "primeiraVez": "2026-09-17",
+    "ultimaVez": "2026-09-17"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-3-quartos-340-m/CA0268-AUTE?from=sale": {
+    "primeiraVez": "2026-09-17",
+    "ultimaVez": "2026-09-17"
+  },
+  "https://portal.kenlo.com.br/imovel/chacara-itu-7-quartos-2-000-m/CH0236-ALY2?from=sale": {
+    "primeiraVez": "2026-09-17",
+    "ultimaVez": "2026-09-17"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-3-quartos-167-m/CA2830-EMPY?from=sale": {
+    "primeiraVez": "2026-09-17",
+    "ultimaVez": "2026-09-17"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-5-quartos-1-200-m/CA3590-IMRL?from=sale": {
+    "primeiraVez": "2026-09-17",
+    "ultimaVez": "2026-09-17"
+  },
+  "https://portal.kenlo.com.br/imovel/terreno-itu-3-138-m/TE2598-IMRL?from=sale": {
+    "primeiraVez": "2026-09-17",
+    "ultimaVez": "2026-09-17"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-3-quartos-302-m/CA6416-IMRL?from=sale": {
+    "primeiraVez": "2026-09-17",
+    "ultimaVez": "2026-09-17"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-5-quartos-434-m/CA6741-IMRL?from=sale": {
+    "primeiraVez": "2026-09-17",
+    "ultimaVez": "2026-09-17"
+  },
+  "https://portal.kenlo.com.br/imovel/terreno-itu-1-721-m/TE2519-IMRL?from=sale": {
+    "primeiraVez": "2026-09-17",
+    "ultimaVez": "2026-09-17"
+  },
+  "https://portal.kenlo.com.br/imovel/terreno-itu-2-001-m/TE2412-IMRL?from=sale": {
+    "primeiraVez": "2026-09-17",
+    "ultimaVez": "2026-09-17"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-4-quartos-450-m/CA4922-IMRL?from=sale": {
+    "primeiraVez": "2026-09-17",
+    "ultimaVez": "2026-09-17"
+  },
+  "https://portal.kenlo.com.br/imovel/casa-itu-4-quartos-415-m/CA4463-IMRL?from=sale": {
+    "primeiraVez": "2026-09-17",
+    "ultimaVez": "2026-09-17"
+  },
+  "https://www.grupokaion.com.br/imovel/casa-itu-3-quartos-143-m/CA1646-GK?from=sale": {
+    "primeiraVez": "2026-09-17",
+    "ultimaVez": "2026-09-17"
   }
 }
