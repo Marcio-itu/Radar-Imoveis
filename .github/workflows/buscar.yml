@@ -37,14 +37,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add imoveis.json historico/ radar-memoria.json lista-negra.json
+          git add imoveis.json historico/ radar-memoria.json lista-negra.json provedores-estado.json
           if ! git diff --staged --quiet; then
             git commit -m "Atualiza imoveis.json [automático]"
             git fetch origin main
             git rebase origin/main || (
               echo "🔁 Conflito detectado. Mantendo versão recém-gerada..."
-              git checkout --ours -- imoveis.json historico/*.json radar-memoria.json lista-negra.json
-              git add imoveis.json historico/*.json radar-memoria.json lista-negra.json
+              git checkout --ours -- imoveis.json historico/*.json radar-memoria.json lista-negra.json provedores-estado.json
+              git add imoveis.json historico/*.json radar-memoria.json lista-negra.json provedores-estado.json
               git rebase --continue
             )
             git push
