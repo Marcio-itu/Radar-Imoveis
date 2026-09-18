@@ -313,5 +313,26 @@
     "motivo": "data real de publicação com mais de 6 meses",
     "dataPublicacao": "2023-11-01",
     "dataExclusao": "2026-09-11"
+  },
+  "https://www.ferrazeluizimoveis.com.br/imovel/4353942/area-venda-itu-sp-melissa": {
+    "titulo": "Imóvel",
+    "fonte": "Ferraz & Luiz Imóveis",
+    "motivo": "data real de publicação com mais de 6 meses",
+    "dataPublicacao": "2026-01-15",
+    "dataExclusao": "2026-09-18"
+  },
+  "https://www.ferrazeluizimoveis.com.br/imovel/4353705/casa-em-condominio-venda-itu-sp-residencial-garden-ville": {
+    "titulo": "Imóvel",
+    "fonte": "Ferraz & Luiz Imóveis",
+    "motivo": "data real de publicação com mais de 6 meses",
+    "dataPublicacao": "2026-01-15",
+    "dataExclusao": "2026-09-18"
+  },
+  "https://www.ferrazeluizimoveis.com.br/imovel/4324144/terreno-venda-salto-sp-residencial-lagos-dicarai": {
+    "titulo": "Imóvel",
+    "fonte": "Ferraz & Luiz Imóveis",
+    "motivo": "data real de publicação com mais de 6 meses",
+    "dataPublicacao": "2026-01-15",
+    "dataExclusao": "2026-09-18"
   }
 }
