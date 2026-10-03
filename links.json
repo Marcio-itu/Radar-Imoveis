@@ -326,6 +326,37 @@
         }
       ],
       "criadoEm": "2026-10-03T13:20:13.349Z"
+    },
+    "i691sl": {
+      "itens": [
+        {
+          "titulo": "Pronto para Morar",
+          "imagem": "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202609171504441954.jpg",
+          "imagens": [
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202609171504441954.jpg",
+            "http://www.ferrazeluizimoveis.com.br/imagens/imoveis/202609171504441954.jpg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202609171504441954.jpg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202609171504447670.jpg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202609171504442361.jpg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202609171504447873.jpg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202609171504445464.jpg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202609171504442185.jpg"
+          ],
+          "preco": "R$ 185.000,00,",
+          "tipo": "apartamento",
+          "quartos": "",
+          "fonte": "Ferraz & Luiz Imóveis",
+          "suites": "",
+          "vagas": "",
+          "area": "",
+          "bairro": "venda",
+          "cidade": "itu",
+          "finalidade": "venda",
+          "link": "https://www.ferrazeluizimoveis.com.br/imovel/4353800/apartamento-venda-itu-sp-itaim",
+          "dataPublicacao": "2026-09-17"
+        }
+      ],
+      "criadoEm": "2026-10-03T15:54:48.936Z"
     }
   }
 }
