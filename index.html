@@ -1069,6 +1069,23 @@
     </div>
   </details>
 
+  <details class="painel" id="painel-fontes" style="padding:16px 24px;">
+    <summary style="cursor:pointer; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:600; color:var(--tinta-suave);">📡 Fontes de busca</summary>
+    <div style="margin-top:14px; font-family:Arial, Helvetica, sans-serif; font-size:13px;">
+      <p style="color:var(--tinta-suave); margin:0 0 10px;">
+        Adicione aqui o site de uma imobiliária pra entrar na próxima busca. Sempre considerando
+        1 página da listagem. Usa o mesmo token do GitHub configurado acima.
+      </p>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <input type="text" id="campo-fonte-nome" placeholder="Nome (ex: Imobiliária Tal)" style="flex:1; min-width:160px;">
+        <input type="url" id="campo-fonte-url" placeholder="https://..." style="flex:2; min-width:220px;">
+        <button class="botao botao-ouro" id="botao-adicionar-fonte">Adicionar fonte</button>
+      </div>
+      <p class="status" id="status-fontes"></p>
+      <div id="lista-fontes" style="margin-top:10px; display:flex; flex-direction:column; gap:6px;"></div>
+    </div>
+  </details>
+
   <!-- ========== BARRA DE SELEÇÃO ========== -->
   <div class="barra-selecao" id="barra-selecao" style="display:none;">
     <span class="contagem-selecao" id="contagem-selecao">0 imóveis selecionados</span>
@@ -1092,8 +1109,8 @@
 
   <p class="aviso" id="aviso-rodape">
     Os resultados vêm do arquivo <code>imoveis.json</code>, gerado automaticamente pelo GitHub Actions
-    a cada 48 horas. Para adicionar ou remover sites da busca, edite o arquivo <code>fontes.json</code>
-    no repositório. Para forçar uma atualização imediata, vá na aba <strong>Actions</strong> do
+    a cada 48 horas. Para adicionar ou remover sites da busca, use o painel <strong>📡 Fontes de busca</strong>
+    acima. Para forçar uma atualização imediata, vá na aba <strong>Actions</strong> do
     repositório → <strong>Buscar imóveis</strong> → <strong>Run workflow</strong>.
   </p>
 </main>
@@ -1410,6 +1427,195 @@ async function escreverLinksJson(aplicarMudanca, mensagemCommit, tentativas = 3)
   }
 }
 
+// ============================================================
+// FONTES DE BUSCA (fontes.json) — mesmo padrão do links.json acima
+// ============================================================
+
+const FONTES_PATH = "fontes.json";
+
+async function lerFontesJsonViaApi(){
+  const token = obterToken();
+  const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FONTES_PATH}?ref=${GITHUB_BRANCH}&_=${Date.now()}`;
+  const headers = { "Accept": "application/vnd.github.raw+json" };
+  if(token) headers["Authorization"] = "Bearer " + token;
+
+  const resp = await fetch(apiUrl, { headers });
+  if(!resp.ok) throw new Error("HTTP " + resp.status);
+
+  const bruto = await resp.text();
+  const parseado = JSON.parse(bruto);
+
+  if(parseado && typeof parseado.content === "string" && !Array.isArray(parseado)){
+    const conteudo = decodeURIComponent(escape(atob(parseado.content.replace(/\n/g, ""))));
+    return JSON.parse(conteudo);
+  }
+  return parseado;
+}
+
+async function lerFontesJsonViaRaw(){
+  const url = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${FONTES_PATH}?_=${Date.now()}`;
+  const resp = await fetch(url);
+  if(!resp.ok) throw new Error("HTTP " + resp.status);
+  return await resp.json();
+}
+
+async function lerFontesJson(){
+  try{
+    return await lerFontesJsonViaApi();
+  } catch(erroApi){
+    try{
+      return await lerFontesJsonViaRaw();
+    } catch(erroRaw){
+      throw new Error("Não consegui ler fontes.json.");
+    }
+  }
+}
+
+async function escreverFontesJson(aplicarMudanca, mensagemCommit, tentativas = 3){
+  const token = obterToken();
+  if(!token) throw new Error("Token do GitHub não configurado.");
+
+  const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FONTES_PATH}`;
+
+  for(let tentativa = 1; tentativa <= tentativas; tentativa++){
+    const respAtual = await fetch(apiUrl + `?ref=${GITHUB_BRANCH}&_=${Date.now()}`, {
+      headers: { "Authorization": "Bearer " + token, "Accept": "application/vnd.github+json" }
+    });
+    if(!respAtual.ok) throw new Error("Não consegui acessar o repositório.");
+    const atual = await respAtual.json();
+
+    const conteudoAtualTexto = decodeURIComponent(escape(atob(atual.content.replace(/\n/g, ""))));
+    const dadosAtuais = JSON.parse(conteudoAtualTexto);
+    const dadosNovos = aplicarMudanca(dadosAtuais);
+
+    const conteudoBase64 = btoa(unescape(encodeURIComponent(JSON.stringify(dadosNovos, null, 2))));
+
+    const respPut = await fetch(apiUrl, {
+      method: "PUT",
+      headers: {
+        "Authorization": "Bearer " + token,
+        "Accept": "application/vnd.github+json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        message: mensagemCommit,
+        content: conteudoBase64,
+        sha: atual.sha,
+        branch: GITHUB_BRANCH,
+      })
+    });
+
+    if(respPut.ok) return;
+
+    if(respPut.status === 409 && tentativa < tentativas){
+      await new Promise(r => setTimeout(r, 600));
+      continue;
+    }
+
+    const erro = await respPut.json().catch(() => ({}));
+    throw new Error("Falha ao salvar no GitHub.");
+  }
+}
+
+function renderizarListaFontes(lista){
+  const container = document.getElementById("lista-fontes");
+  if(!lista || lista.length === 0){
+    container.innerHTML = '<p style="color:var(--tinta-suave); margin:4px 0 0;">Nenhuma fonte cadastrada ainda.</p>';
+    return;
+  }
+  container.innerHTML = lista.map((fonte, indice) => `
+    <div style="display:flex; align-items:center; gap:8px; padding:8px 10px; border:1px solid var(--linha); border-radius:8px;">
+      <div style="flex:1; min-width:0;">
+        <div style="font-weight:600;">${(fonte.nome || "(sem nome)").replace(/</g, "&lt;")}</div>
+        <div style="color:var(--tinta-suave); font-size:12px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${(fonte.url || "").replace(/</g, "&lt;")}</div>
+      </div>
+      <button type="button" class="botao botao-fantasma botao-excluir-fonte" data-indice="${indice}" style="flex-shrink:0;">Excluir</button>
+    </div>
+  `).join("");
+
+  container.querySelectorAll(".botao-excluir-fonte").forEach(botao => {
+    botao.addEventListener("click", async () => {
+      const indice = Number(botao.dataset.indice);
+      const fonte = FONTES_CACHE[indice];
+      if(!fonte) return;
+      if(!confirm(`Excluir a fonte "${fonte.nome || fonte.url}"?`)) return;
+      await excluirFonte(indice);
+    });
+  });
+}
+
+let FONTES_CACHE = [];
+let FONTES_JA_CARREGADAS = false;
+
+async function carregarEExibirFontes(){
+  const status = document.getElementById("status-fontes");
+  try{
+    FONTES_CACHE = await lerFontesJson();
+    renderizarListaFontes(FONTES_CACHE);
+    FONTES_JA_CARREGADAS = true;
+  } catch(erro){
+    status.textContent = "Não consegui carregar a lista de fontes.";
+  }
+}
+
+async function adicionarFonte(){
+  const campoNome = document.getElementById("campo-fonte-nome");
+  const campoUrl = document.getElementById("campo-fonte-url");
+  const status = document.getElementById("status-fontes");
+
+  const nome = campoNome.value.trim();
+  const url = campoUrl.value.trim();
+
+  if(!url){
+    status.textContent = "Cole a URL da fonte antes de adicionar.";
+    return;
+  }
+  try{ new URL(url); } catch(e){
+    status.textContent = "Essa URL não parece válida.";
+    return;
+  }
+  if(!obterToken()){
+    status.textContent = "Configure o token do GitHub acima primeiro.";
+    return;
+  }
+
+  status.textContent = "Salvando...";
+  try{
+    await escreverFontesJson((listaAtual) => {
+      const proximaPrioridade = listaAtual.reduce((max, f) => Math.max(max, f.prioridade || 0), 0) + 1;
+      return [...listaAtual, {
+        nome: nome || url,
+        url,
+        jsNecessario: true,
+        prioridade: proximaPrioridade,
+        paginas: 1
+      }];
+    }, `Adiciona fonte: ${nome || url}`);
+
+    campoNome.value = "";
+    campoUrl.value = "";
+    status.textContent = "Fonte adicionada ✓";
+    await carregarEExibirFontes();
+  } catch(erro){
+    status.textContent = "Não consegui salvar. Confira o token do GitHub.";
+  }
+}
+
+async function excluirFonte(indice){
+  const status = document.getElementById("status-fontes");
+  status.textContent = "Excluindo...";
+  try{
+    await escreverFontesJson((listaAtual) => {
+      return listaAtual.filter((_, i) => i !== indice);
+    }, `Remove fonte: ${FONTES_CACHE[indice]?.nome || FONTES_CACHE[indice]?.url || ""}`);
+
+    status.textContent = "Fonte excluída ✓";
+    await carregarEExibirFontes();
+  } catch(erro){
+    status.textContent = "Não consegui excluir. Confira o token do GitHub.";
+  }
+}
+
 function gerarCodigoCurto(){
   return Math.random().toString(36).slice(2, 8);
 }
@@ -1516,6 +1722,7 @@ function prepararTelaModoCliente(){
   document.getElementById("ultima-atualizacao").textContent = "";
   document.getElementById("painel-filtros").style.display = "none";
   document.getElementById("painel-config").style.display = "none";
+  document.getElementById("painel-fontes").style.display = "none";
   document.getElementById("barra-selecao").style.display = "none";
   document.getElementById("aviso-rodape").style.display = "none";
 }
@@ -2074,6 +2281,12 @@ document.getElementById("botao-salvar-token").addEventListener("click", () => {
   campo.value = "";
   status.className = "status";
   status.textContent = "Token salvo neste navegador ✓";
+});
+
+document.getElementById("botao-adicionar-fonte").addEventListener("click", adicionarFonte);
+
+document.getElementById("painel-fontes").addEventListener("toggle", (ev) => {
+  if(ev.target.open && !FONTES_JA_CARREGADAS) carregarEExibirFontes();
 });
 
 document.getElementById("botao-reativar").addEventListener("click", async (ev) => {
