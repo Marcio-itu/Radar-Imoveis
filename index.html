@@ -1750,9 +1750,10 @@ function prepararTelaModoCliente(){
 }
 
 function montarLinkWhatsCard(item){
+  // Sem o link do anúncio de propósito — ele expõe o domínio da imobiliária/
+  // corretor de origem, e essa mensagem é disparada pelo próprio cliente.
   const partes = [`Olá! Gostei deste imóvel:`, item.titulo || "Imóvel"];
   if(item.preco) partes.push(item.preco);
-  partes.push(item.link);
   const mensagem = partes.join(" — ");
   return `https://wa.me/${WHATSAPP_CORRETOR}?text=${encodeURIComponent(mensagem)}`;
 }
