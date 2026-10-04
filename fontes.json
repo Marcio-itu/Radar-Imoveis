@@ -135,5 +135,12 @@
     "jsNecessario": true,
     "prioridade": 19,
     "paginas": 1
+  },
+  {
+    "nome": "Opção Imoveis",
+    "url": "https://www.opcaoimoveisitu.com.br/",
+    "jsNecessario": true,
+    "prioridade": 20,
+    "paginas": 1
   }
 ]
