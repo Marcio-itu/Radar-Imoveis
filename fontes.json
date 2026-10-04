@@ -121,5 +121,12 @@
     "paginas": 1,
     "parametroPagina": "pag",
     "plataforma": "imobibrasil"
+  },
+  {
+    "nome": "Alvaro Sbrissa",
+    "url": "https://www.alvarosbrissa.com.br/imoveis/a-venda",
+    "jsNecessario": true,
+    "prioridade": 18,
+    "paginas": 1
   }
 ]
