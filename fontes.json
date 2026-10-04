@@ -128,5 +128,12 @@
     "jsNecessario": true,
     "prioridade": 18,
     "paginas": 1
+  },
+  {
+    "nome": "Maxximus",
+    "url": "https://www.maxximusimoveis.com.br/",
+    "jsNecessario": true,
+    "prioridade": 19,
+    "paginas": 1
   }
 ]
