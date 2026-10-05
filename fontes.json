@@ -142,5 +142,12 @@
     "jsNecessario": true,
     "prioridade": 20,
     "paginas": 1
+  },
+  {
+    "nome": "Corretor Marcio Santos",
+    "url": "https://imoveis-itu-salto.com.br/",
+    "jsNecessario": true,
+    "prioridade": 21,
+    "paginas": 1
   }
 ]
