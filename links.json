@@ -1077,6 +1077,88 @@
         }
       ],
       "criadoEm": "2026-10-05T02:15:52.617Z"
+    },
+    "bp2gf9": {
+      "itens": [
+        {
+          "titulo": "Pronto para Morar",
+          "imagem": "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202609171504441954.jpg",
+          "imagens": [
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/thumb15-202609171504441954.jpg",
+            "http://www.ferrazeluizimoveis.com.br/imagens/imoveis/202609171504441954.jpg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202609171504441954.jpg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202609171504447670.jpg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202609171504442361.jpg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202609171504447873.jpg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202609171504445464.jpg",
+            "https://imgs1.cdn-imobibrasil.com.br/imagens/imoveis/202609171504442185.jpg"
+          ],
+          "preco": "R$ 185.000,00,",
+          "tipo": "apartamento",
+          "quartos": "",
+          "fonte": "Ferraz & Luiz Imóveis",
+          "suites": "",
+          "vagas": "",
+          "area": "",
+          "bairro": "venda",
+          "cidade": "itu",
+          "finalidade": "venda",
+          "link": "https://www.ferrazeluizimoveis.com.br/imovel/4353800/apartamento-venda-itu-sp-itaim",
+          "dataPublicacao": "2026-09-17"
+        },
+        {
+          "titulo": "Casa por preço de terreno! Comprar · Alto, Itu - SP R$ 150.000",
+          "imagem": "https://imoveis-itu-salto.com.br/imoveis/casa-por-preco-de-terreno/fotos/casa-a-venda-itu-interior-de-sao-paulo-espacoso-20260823152357.webp",
+          "imagens": [
+            "https://imoveis-itu-salto.com.br/imoveis/casa-por-preco-de-terreno/fotos/casa-a-venda-itu-interior-de-sao-paulo-espacoso-20260823152357.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/casa-por-preco-de-terreno/fotos/casa-a-venda-itu-interior-de-sao-paulo-amplo-20260823152357.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/casa-por-preco-de-terreno/fotos/casa-a-venda-itu-interior-de-sao-paulo-iluminado-20260823152440.webp",
+            "https://imoveis-itu-salto.com.br/simulador-financiamento-imovel-itu-salto-cabreuva-06.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/casa-aconchegante-com-quintal-amplo-varanda-e-muito-bem-localizada/fotos/casa-a-venda-itu-interior-de-sao-paulo-amplo-20261001191856.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/casa-incrivel-com-area-gourmet-churrasqueira-forno-e-fogao-a-lenha/fotos/casa-a-venda-itu-interior-de-sao-paulo-amplo-20260929131406.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/linda-casa-num-condominio-tranquilo-aconchegante-e-bem-localizado/fotos/casa-a-venda-itu-interior-de-sao-paulo-espacoso-20260903194638.webp"
+          ],
+          "preco": "R$ 150.000",
+          "tipo": "casa",
+          "quartos": "",
+          "fonte": "Corretor Marcio Santos",
+          "suites": "",
+          "vagas": "",
+          "area": "",
+          "bairro": "",
+          "cidade": "",
+          "finalidade": "",
+          "link": "https://imoveis-itu-salto.com.br/imoveis/casa-por-preco-de-terreno/",
+          "dataPublicacao": null
+        },
+        {
+          "titulo": "AP0831-ALY2 Apartamento Condomínio Parque Inca - Itu - SP Condomínio Residencial Parque Inca 45 m² 1 Quarto 1 Banheiro 1 Vaga Venda R$ 185.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2lm1c8roy8DpdQ5ZICGp2ze4J3F5eajkx7H1aiP56vY2fP-XfvMxZAn-I3vOWGB9qdFSuN2alkgO7hzZDzsft6LJllSv3yPo2z0Sqlxbmpa-1tjyyBS50GQWoeg7wAA9xCvOfHd8wmgHP7mW2ZZHrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdpMlKIDiFvHTrpM6ReyxNfBhqH4Pk3QMAI18+ua-PW3Na-3HPvwOWWtkpoCs8+IK8tcMIvjXzZXU3B2JT5WuUDgqPrHs1LocD+U4FdLCl+azoBqpjs0YBIDroRO+z31y9i2fQCN.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2lm1c8roy8DpdQ5ZICGp2ze4J3F5eajkx7H1aiP56vY2fP-XfvMxZAn-I3vOWGB9qdFSuN2alkgO7hzZDzsft6LJllSv3yPo2z0Sqlxbmpa-1tjyyBS50GQWoeg7wAA9xCvOfHd8wmgHP7mW2ZZHrMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdpMlKIDiFvHTrpM6ReyxNfBhqH4Pk3QMAI18+ua-PW3Na-3HPvwOWWtkpoCs8+IK8tcMIvjXzZXU3B2JT5WuUDgqPrHs1LocD+U4FdLCl+azoBqpjs0YBIDroRO+z31y9i2fQCN.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2lm1c8roy8DpdQ5ZICGp2ze4J3F5eajkx7H1aiP56vY2fP-XfvMxZAn-I3vOWGB9qdFSuN2alkgO7hzZDzsft6LJllSv3yPo2z0Sqlxbmpa-1tjyyBS50GQWoeg7wAA9xCvOfHd8wmgHP7mW2ZZHrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFMmKsClxCXH+dG6B2yz4aUgqeoOxyGZVBs-b7M-fa2OvejHa2jJSWhgYsA99iKf85aIp+nSDQVQHdxITcfrkKkrunIrlH5Yyif+kYAVEGTi45k9CQoMQob-5IJ9TO41IqucAfAQA==.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1Z+iNtA5Dw0z8A+Tofl5ASDzt2x7eiJixuH25iI7o7wjfj8bez347E44-PJMgH3uPBKHMcBDHskWLV9Sw76dKO5B38KmiK1+3r8Y6JkYy8NgxE7ljRN+gakTKKP904rwjivAuvaoXaNSqDmE3NTQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdpMlKIDiFvHTrpM6ReyxNfBhqH4Pk3QMAI18+ua-PW3Na-3HPvwOWWtkpoCs8+IK8tcMIvjXzZXU3B2JT5WuUDgqPrHs1LocD+U4FdLCl+azoBqpjs0YBIDroRO+z31y9i2fQCN.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0F-z+5QoxgbzMEbZLWSpRKN7KzJ19aXnmLL1p7NmLfc+erAZ-zFlJ0l65TvC26IvPBBe9UAHR9bScJdawDob466IUdeiCuT-3uWcIZIaVJ7-zoSk011zweIDYK1zHNp1yy0MuOEtzKsEqfpWkBWRbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFMmKsClxCXH+dG6B2yz4aUgqeoOxyGZVBs-b7M-fa2OvejHa2jJSWhgYsA99iKf85aIp+nSDQVQHdxITcfrkKkrunIrlH5Yyif+kYAVEGTi45k9CQoMQob-5IJ9TO41IqucAfAQA==.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxd91flx3TkAmcsBe4ixpCWb4oakt4ybg3mJw7f657bV+M-bWOnwmbAa1ZLXPXKX7ZE8TccmMWZoXbhVfjPjU4mpJnxj-Ce8nG-yfb5+Z0Ns1AstjyBX2gWyWpuU+FoznnGABs3SsAypco7LWGRDQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdpMlKIDiFvHTrpM6ReyxNfBhqH4Pk3QMAI18+ua-PW3Na-3HPvwOWWtkpoCs8+IK8tcMIvjXzZXU3B2JT5WuUDgqPrHs1LocD+U4FdLCl+azoBqpjs0YBIDroRO+z31y9i2fQCN.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux94i+9h5k4wtskffIO-sSTawY-EwMaor3OSwr3nu4vqipjcd+SOx6081oHSSnGFmalPd-4kLh9VZfJ7YgLmYNbbJ3FRgDm7-WeRZKIfZHVx2FA0szJ6nAKYT6WvyH5hhgOuFPbKi3KWarviXH55CrMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFMmKsClxCXH+dG6B2yz4aUgqeoOxyGZVBs-b7M-fa2OvejHa2jJSWhgYsA99iKf85aIp+nSDQVQHdxITcfrkKkrunIrlH5Yyif+kYAVEGTi45k9CQoMQob-5IJ9TO41IqucAfAQA==.jpg",
+            "https://static-sites.kenlo.io/2.4.15/img/kenlo.svg",
+            "https://www.google.com/images/cleardot.gif"
+          ],
+          "preco": "R$ 185.000",
+          "tipo": "apartamento",
+          "quartos": "1",
+          "fonte": "Alvaro Sbrissa",
+          "suites": "",
+          "vagas": "1",
+          "area": "45",
+          "bairro": "ALY2 Apartamento Condomínio Parque Inca",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.alvarosbrissa.com.br/imovel/apartamento-itu-1-quarto-45-m/AP0831-ALY2?from=sale",
+          "dataPublicacao": null
+        }
+      ],
+      "criadoEm": "2026-10-05T09:33:38.955Z"
     }
   }
 }
