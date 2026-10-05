@@ -995,6 +995,88 @@
         }
       ],
       "criadoEm": "2026-10-04T23:13:37.554Z"
+    },
+    "jwugsn": {
+      "itens": [
+        {
+          "titulo": "Casa por preço de terreno! Comprar · Alto, Itu - SP R$ 150.000",
+          "imagem": "https://imoveis-itu-salto.com.br/imoveis/casa-por-preco-de-terreno/fotos/casa-a-venda-itu-interior-de-sao-paulo-espacoso-20260823152357.webp",
+          "imagens": [
+            "https://imoveis-itu-salto.com.br/imoveis/casa-por-preco-de-terreno/fotos/casa-a-venda-itu-interior-de-sao-paulo-espacoso-20260823152357.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/casa-por-preco-de-terreno/fotos/casa-a-venda-itu-interior-de-sao-paulo-amplo-20260823152357.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/casa-por-preco-de-terreno/fotos/casa-a-venda-itu-interior-de-sao-paulo-iluminado-20260823152440.webp",
+            "https://imoveis-itu-salto.com.br/simulador-financiamento-imovel-itu-salto-cabreuva-06.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/casa-aconchegante-com-quintal-amplo-varanda-e-muito-bem-localizada/fotos/casa-a-venda-itu-interior-de-sao-paulo-amplo-20261001191856.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/casa-incrivel-com-area-gourmet-churrasqueira-forno-e-fogao-a-lenha/fotos/casa-a-venda-itu-interior-de-sao-paulo-amplo-20260929131406.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/linda-casa-num-condominio-tranquilo-aconchegante-e-bem-localizado/fotos/casa-a-venda-itu-interior-de-sao-paulo-espacoso-20260903194638.webp"
+          ],
+          "preco": "R$ 150.000",
+          "tipo": "casa",
+          "quartos": "",
+          "fonte": "Eu",
+          "suites": "",
+          "vagas": "",
+          "area": "",
+          "bairro": "",
+          "cidade": "",
+          "finalidade": "",
+          "link": "https://imoveis-itu-salto.com.br/imoveis/casa-por-preco-de-terreno/",
+          "dataPublicacao": null
+        },
+        {
+          "titulo": "Apartamento na Vila São José pertinho de tudo! Comprar · Vila São José, Itu - SP R$ 220.000",
+          "imagem": "https://imoveis-itu-salto.com.br/imoveis/apartamento-na-vila-sao-jose-pertinho-de-tudo/fotos/sala-estar-amplo-itu-padrao-popular-casa-sp-muito-bem-localizado-20260815213020.webp",
+          "imagens": [
+            "https://imoveis-itu-salto.com.br/imoveis/apartamento-na-vila-sao-jose-pertinho-de-tudo/fotos/sala-estar-amplo-itu-padrao-popular-casa-sp-muito-bem-localizado-20260815213020.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/apartamento-na-vila-sao-jose-pertinho-de-tudo/fotos/sala-estar-espacoso-itu-padrao-popular-casa-sp-muito-bem-localizado-20260815213020.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/apartamento-na-vila-sao-jose-pertinho-de-tudo/fotos/vista-ampla-local-amplo-itu-padrao-popular-casa-sp-muito-bem-localizado-20260815213020.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/apartamento-na-vila-sao-jose-pertinho-de-tudo/fotos/quarto-amplo-itu-padrao-popular-casa-sp-muito-bem-localizado-20260815213020.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/apartamento-na-vila-sao-jose-pertinho-de-tudo/fotos/quarto-iluminado-itu-padrao-popular-casa-sp-muito-bem-localizado-20260815213020.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/apartamento-na-vila-sao-jose-pertinho-de-tudo/fotos/cozinha-espacoso-itu-padrao-popular-casa-sp-muito-bem-localizado-20260815213020.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/apartamento-na-vila-sao-jose-pertinho-de-tudo/fotos/cozinha-iluminado-itu-padrao-popular-casa-sp-muito-bem-localizado-20260815213020.webp",
+            "https://imoveis-itu-salto.com.br/imoveis/apartamento-na-vila-sao-jose-pertinho-de-tudo/fotos/vista-ampla-local-espacoso-itu-padrao-popular-casa-sp-muito-bem-localizado-20260815213020.webp"
+          ],
+          "preco": "R$ 220.000",
+          "tipo": "apartamento",
+          "quartos": "",
+          "fonte": "Eu",
+          "suites": "",
+          "vagas": "",
+          "area": "",
+          "bairro": "Vila São José pertinho de tudo",
+          "cidade": "",
+          "finalidade": "",
+          "link": "https://imoveis-itu-salto.com.br/imoveis/apartamento-na-vila-sao-jose-pertinho-de-tudo/",
+          "dataPublicacao": null
+        },
+        {
+          "titulo": "CA0981-MBK Casa Cidade Nova I - Itu - SP 140.8 m² 3 Quartos 2 Banheiros 2 Vagas Venda R$ 300.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2J2+ux13RkivukZYK66lzmnwo+X4P6G81qT+LHwmLjJhfr2Y+XsxbIVjLesKA6Ss440QsUsb1JOfPtxQSXTeofcJFcNhRmTlEDvcOJiRWVl1gAZlhto41CnTZKH+XUN3wP-Gtb5gQ6gb7-BIF1nGOFHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxAlaQcwlvHGeNG6hm8lIeV1-f6a0mFM1U98+ue+aa3b-z7EPzsdz7-2MlXrsqVK84PJsfyDjMVHy4kImde6Emh4qPL9RvrYGvMulgVHRPRztwnpXZ9YFtE-81OuG+4gc+8Nw==.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2J2+ux13RkivukZYK66lzmnwo+X4P6G81qT+LHwmLjJhfr2Y+XsxbIVjLesKA6Ss440QsUsb1JOfPtxQSXTeofcJFcNhRmTlEDvcOJiRWVl1gAZlhto41CnTZKH+XUN3wP-Gtb5gQ6gb7-BIF1nGOFHR9ox7ltMqBezU0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxAlaQcwlvHGeNG6hm8lIeV1-f6a0mFM1U98+ue+aa3b-z7EPzsdz7-2MlXrsqVK84PJsfyDjMVHy4kImde6Emh4qPL9RvrYGvMulgVHRPRztwnpXZ9YFtE-81OuG+4gc+8Nw==.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2J2+ux13RkivukZYK66lzmnwo+X4P6G81qT+LHwmLjJhfr2Y+XsxbIVjLesKA6Ss440QsUsb1JOfPtxQSXTeofcJFcNhRmTlEDvcOJiRWVl1gAZlhto41CnTZKH+XUN3wP-Gtb5gQ6gb7-BIF1nGOFHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFKlKoEiFqXH7Af4h68wdbE1vb+OUmCMFM79b7M+fPlOq3wEaGkOWv608FTosWPYs5fcYnrWWUQAjsvczBGphOt76ORohewYDjLohwPClbfwI44uSdleApSuMNA9XDqmcC5ek0=.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0s44PhNzCwcy5oGX6Sh5zSG2YnFuNGfilS156765a6BxdjPbsz514Av97OiT2Tp47Y1VNZ5EU5ATuZZSyzNT5ugDVppnTKhoUXGXYRqXXZJ-DwdoC5znmuOc5GR7nVo3RCGMt7gjDG7TpC5D0J9Et5HR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFKlKoEiFqXH7Af4h68wdbE1vb+OUmCMFM79b7M+fPlOq3wEaGkOWv608FTosWPYs5fcYnrWWUQAjsvczBGphOt76ORohewYDjLohwPClbfwI44uSdleApSuMNA9XDqmcC5ek0=.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0dmjvlstgdhsNAJBKbgkTiFxbSM+5KcgVzN-7jym7Xe3s6jTMaG1ow+-q-3MnmmooBjZNAlI0p4NtBjZwS7br+wFiZr+gWtl2z9Xb0dGW5-hDAvkS90mkLlBciL5XoP2X2lDO79uw+HYrm8KGZTQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNZBm7xWwwvBSrpO7RnpxdaU1vOoa06GNVM7prmerPTiPvf6TbSiIjv00M1bodDcK55YaN6lWDYICiV1dX8QskWs4vmc+UDrM2zU-kICWB3fnMM79G5lMU0D8cMDpz2gjsrx.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuwJK3dw+4RcUu9sUYZa4lhe-34KK3duXgmKtx6-I5aye7JLlYNyAzZENw4jiHQ+xqaxGV+MZGHBiTfheR0fWYYypHid8ijWjtmDua4B5WzNkzlBjkD1o-XaXUcOA00UJ4halEc+Irxm2Z43IHFVYRbMNAdsz6EIJ9xa9SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdxAlaQcwlvHGeNG6hm8lIeV1-f6a0mFM1U98+ue+aa3b-z7EPzsdz7-2MlXrsqVK84PJsfyDjMVHy4kImde6Emh4qPL9RvrYGvMulgVHRPRztwnpXZ9YFtE-81OuG+4gc+8Nw==.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3c+ioJt6DUBw+5FY6KVjQmW1Jq97sqwlmeKvbbGue+A59nifPjV4qAd2LXRDWeO7PI-Wt04bnhCXsggeCSyB6CBGUp8oCaTqWL0QKVpemxU+yApqQZL9F6YYd2e8FMA4ByoUs-vkQm8QpnfGVxrMaNHR9ox7ltMqBezU0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFKlKoEiFqXH7Af4h68wdbE1vb+OUmCMFM79b7M+fPlOq3wEaGkOWv608FTosWPYs5fcYnrWWUQAjsvczBGphOt76ORohewYDjLohwPClbfwI44uSdleApSuMNA9XDqmcC5ek0=.jpg",
+            "https://static-sites.kenlo.io/2.4.14/img/kenlo.svg",
+            "https://imgs.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0lV940y4CVklsUdc4abizeugKapyYqHrhS1vZDpnqLi2uLwcsGA7YUT4azTTn2nj4h6G8J2LRtjSvUgVCv0AJmRYSRSvw69gGTVTatdaU1f3AIfkCwImlKmeKmT0nwu9hz4OdLvowWccYT+PmxDQPlLANk18QdW9hinR0InpwcW5JO3vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwXNZBm7xWwwvBSrpO7RnpxdaU1vOoa06GNVM7prmerPTiPvf6TbSiIjv00M1bodDcK55YaN6lWDYICiV1dX8QskWs4vmc+UDrM2zU-kICWB3fnMM79G5lMU0D8cMDpz2gjsrx.jpg"
+          ],
+          "preco": "R$ 300.000",
+          "tipo": "casa",
+          "quartos": "3",
+          "fonte": "SLA Imobiliária Itu",
+          "suites": "",
+          "vagas": "2",
+          "area": "140.8",
+          "bairro": "MBK Casa Cidade Nova I",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.slaimobiliariaitu.com.br/imovel/casa-itu-3-quartos-141-m/CA0981-MBK?from=sale",
+          "dataPublicacao": null
+        }
+      ],
+      "criadoEm": "2026-10-05T02:15:52.617Z"
     }
   }
 }
