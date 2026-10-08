@@ -156,5 +156,12 @@
     "jsNecessario": true,
     "prioridade": 22,
     "paginas": 1
+  },
+  {
+    "nome": "Imobiliária Lopes",
+    "url": "https://www.lopes.com.br/busca/venda/br/sp/itu",
+    "jsNecessario": true,
+    "prioridade": 23,
+    "paginas": 1
   }
 ]
