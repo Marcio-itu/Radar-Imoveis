@@ -156,5 +156,12 @@
     "jsNecessario": true,
     "prioridade": 23,
     "paginas": 1
+  },
+  {
+    "nome": "Marcio Santos",
+    "url": "https://imoveis-itu-salto.com.br",
+    "jsNecessario": true,
+    "prioridade": 24,
+    "paginas": 1
   }
 ]
