@@ -8,14 +8,6 @@
     "paginas": 1
   },
   {
-    "nome": "Marcio Marins",
-    "url": "https://www.marciomarins.com.br/imovel/venda",
-    "jsNecessario": false,
-    "prioridade": 3,
-    "plataforma": "imobibrasil",
-    "paginas": 1
-  },
-  {
     "nome": "Grupo Kaion",
     "url": "https://www.grupokaion.com.br/imoveis/a-venda/casa/itu",
     "jsNecessario": true,
