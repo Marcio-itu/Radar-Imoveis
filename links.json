@@ -1,3 +1,87 @@
 {
-  "links": {}
+  "links": {
+    "h7lpok": {
+      "itens": [
+        {
+          "titulo": "R$ 515.000 Apartamento 165m² 2 quartos 3 banheiros 1 vaga Condo.: R$ 980 Rua Portugal, Vila Roma - Itu Falar com o corretor",
+          "imagem": "https://betaimages.lopes.com.br/realestate/sml/v1/REO1009454/C2A15A83CC3CBDB409AA200F38376EAF.JPG",
+          "imagens": [
+            "https://betaimages.lopes.com.br/realestate/sml/v1/REO1009454/C2A15A83CC3CBDB409AA200F38376EAF.JPG",
+            "https://betaimages.lopes.com.br/realestate/sml/v1/REO1009454/EA4419B6FB06EAE1E08CBBE7C397191B.JPG",
+            "https://betaimages.lopes.com.br/realestate/sml/v1/REO1009454/F186D1035809DF8F94C68A5CEA9F1440.JPG",
+            "https://betaimages.lopes.com.br/realestate/sml/v1/REO1009454/563862C5F70182DD2DCA2529693A4093.JPG",
+            "https://betaimages.lopes.com.br/realestate/med/REO1009454/C2A15A83CC3CBDB409AA200F38376EAF.JPG",
+            "https://betaimages.lopes.com.br/realestate/med/REO1009454/EA4419B6FB06EAE1E08CBBE7C397191B.JPG",
+            "https://betaimages.lopes.com.br/realestate/med/REO1009454/F186D1035809DF8F94C68A5CEA9F1440.JPG",
+            "https://betaimages.lopes.com.br/realestate/med/REO1009454/563862C5F70182DD2DCA2529693A4093.JPG"
+          ],
+          "preco": "R$ 515.000",
+          "tipo": "apartamento",
+          "quartos": "2",
+          "fonte": "Imobiliária Lopes",
+          "suites": "",
+          "vagas": "1",
+          "area": "165",
+          "bairro": "Vila Roma",
+          "cidade": "",
+          "finalidade": "",
+          "link": "https://www.lopes.com.br/imovel/REO1009454/venda-apartamento-2-quartos-itu-vila-roma",
+          "dataPublicacao": null
+        },
+        {
+          "titulo": "AP0339-ALY2 Apartamento Edifício Absolutt Residencial - Itu - SP Condomínio Edifício Absolutt Residencial 82.5 m² 2 Quartos 2 Suítes 2 Banheiros 2 Vagas Venda R$ 530.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux9HjIxDyi0yjucDd7aOpxaKgt+228eelFrG8rrymIzc1triedzG9NFlifbWFmKjnYR9d+07LB5TRMxxHTuvc7-bJ0FhjGWzqEX9c6ZaRlRY8VsLjE936EenAaq271Vs93D0Cd+CuwumQ4LHX21DQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwWtpAnaMcwwuWE7BN4xe5lYLFgPH9bxuFYls7pr2b--S4bfv2SqjseWm+g5hGpM3cLs1OJM-0XXREVHdyLHdBuwTmu-XasEP7ZzSO8RwVFFbfwI44uSdleApSuMNA9XDqmcC7ek0=.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux9HjIxDyi0yjucDd7aOpxaKgt+228eelFrG8rrymIzc1triedzG9NFlifbWFmKjnYR9d+07LB5TRMxxHTuvc7-bJ0FhjGWzqEX9c6ZaRlRY8VsLjE936EenAaq271Vs93D0Cd+CuwumQ4LHX21DQPlLCdkx8QdQ8Bi1SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1+EkBnHl+8kYMGwWtpAnaMcwwuWE7BN4xe5lYLFgPH9bxuFYls7pr2b--S4bfv2SqjseWm+g5hGpM3cLs1OJM-0XXREVHdyLHdBuwTmu-XasEP7ZzSO8RwVFFbfwI44uSdleApSuMNA9XDqmcC7ek0=.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtux9HjIxDyi0yjucDd7aOpxaKgt+228eelFrG8rrymIzc1triedzG9NFlifbWFmKjnYR9d+07LB5TRMxxHTuvc7-bJ0FhjGWzqEX9c6ZaRlRY8VsLjE936EenAaq271Vs93D0Cd+CuwumQ4LHX21DQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdpMlKIDiFvHTrpM6ReyxNfBhqH4Pk3QMAI18+ua-PW3Na-3HPvwOWWtkpoCs8+IK8tcMIvjXzZXU3B2JT5WuUDgqPrHs1LocD+U4FdLCl+azoBqpjs0YBIDroRO+z31y9i2fQCN.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1k+ys186UhgnsMdZOGUkweZj7KxyNad9H2y5ZLzk5HJivGlWv2O7o0--KTNCHmh4vNoH+tiERpAUNdeWiHlAN+-ZlxQjRielhyXRYpPeWRT2h07mzl1ylaTBIqU11A34w2MKO-qiTCKRpK6LwVuNLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFMmKsClxCXH+dG6B2yz4aUgqeoOxyGZVBs-b7M-fa2OvejHa2jJSWhgYsA99iKf85aIp+nSDQVQHdxITcfrkKkrunIrlH5Yyif+kYAVEGTi45k9CQoMQob-5IJ9TO41IqucAfAQA==.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1dl7O9ozUpjt-A8e4Tgjmy63oazyeWWnXys373Vm43Qicb8ANrz04Jg8K7rKgWtnqtef9wQLHh9SPN5GkHKXNahO3dp+DOVulvya7ZxGEhz3wIblxdzxmuTXriU1kMA5y6+Osj+mhWAcqvAGEN2LLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFMmKsClxCXH+dG6B2yz4aUgqeoOxyGZVBs-b7M-fa2OvejHa2jJSWhgYsA99iKf85aIp+nSDQVQHdxITcfrkKkrunIrlH5Yyif+kYAVEGTi45k9CQoMQob-5IJ9TO41IqucAfAQA==.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu0d86ugruDYbr-ZBcZbmhhaF3q+NvI62h13J5KvG7+vF5dOjA+eC+IJllL-iEwWTi-Y-RMc-NRwpTqxxXkb0dYSEIH9MojagjXrJTZ1jBl0L5g9olihn6V+dR4OOx3E5xz+YCuHx8wy0HaG4E1xDQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdpMlKIDiFvHTrpM6ReyxNfBhqH4Pk3QMAI18+ua-PW3Na-3HPvwOWWtkpoCs8+IK8tcMIvjXzZXU3B2JT5WuUDgqPrHs1LocD+U4FdLCl+azoBqpjs0YBIDroRO+z31y9i2fQCN.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1Zd4tFZ1E0utpQuf4CMpxW85oC5xfKlhWeo84v4hJLlisPzcNj98Ys9jJC2SWHxoalPfdkdPEtad88mahC3DticE19KrmCRpFTDE7R9HERT9h0ZsQ1B5maOTa+92UA11CiDOqzkh3OwFbLXHEZaTbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFMmKsClxCXH+dG6B2yz4aUgqeoOxyGZVBs-b7M-fa2OvejHa2jJSWhgYsA99iKf85aIp+nSDQVQHdxITcfrkKkrunIrlH5Yyif+kYAVEGTi45k9CQoMQob-5IJ9TO41IqucAfAQA==.jpg",
+            "https://static-sites.kenlo.io/2.4.16/img/kenlo.svg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3929uxKvE4Yq-ElXoOmu3jc56GzouyWlH+V0p3pluzY5O+gYeqH6Ltl+rf5CHK9na5aYfcQDlI8Q9Z8ZB6zdI2qMnp4jmaFlk7LQqlKWjcPgxgxk0lAymmgTZqW208+23+AMvCGsBKvbozEMFMZSbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFMmKsClxCXH+dG6B2yz4aUgqeoOxyGZVBs-b7M-fa2OvejHa2jJSWhgYsA99iKf85aIp+nSDQVQHdxITcfrkKkrunIrlH5Yyif+kYAVEGTi45k9CQoMQob-5IJ9TO41IqucAfAQA==.jpg"
+          ],
+          "preco": "R$ 530.000",
+          "tipo": "apartamento",
+          "quartos": "2",
+          "fonte": "Alvaro Sbrissa",
+          "suites": "2",
+          "vagas": "2",
+          "area": "82.5",
+          "bairro": "ALY2 Apartamento Edifício Absolutt Residencial",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.alvarosbrissa.com.br/imovel/apartamento-itu-2-quartos-83-m/AP0339-ALY2?from=sale",
+          "dataPublicacao": null
+        },
+        {
+          "titulo": "CA4561-APIT Casa Jardim Santa Rosa - Itu - SP 75.65 m² 2 Quartos 1 Suíte 2 Banheiros 2 Vagas Venda R$ 550.000",
+          "imagem": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1pkzNVL4A8zvNQuVe6Joy3axI-NvciEg069ybHzv5zVy+GkY+nw7rB6gbfXN2+L4rxbR+Y9M25YZcZrQDPOT6WGDlhLnzK+pWbMVYIXRTdp0hBuzAVz40ajasPw2gU+yQ6ADa7aii3JFaXXCEVkMLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+          "imagens": [
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1pkzNVL4A8zvNQuVe6Joy3axI-NvciEg069ybHzv5zVy+GkY+nw7rB6gbfXN2+L4rxbR+Y9M25YZcZrQDPOT6WGDlhLnzK+pWbMVYIXRTdp0hBuzAVz40ajasPw2gU+yQ6ADa7aii3JFaXXCEVkMLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu1pkzNVL4A8zvNQuVe6Joy3axI-NvciEg069ybHzv5zVy+GkY+nw7rB6gbfXN2+L4rxbR+Y9M25YZcZrQDPOT6WGDlhLnzK+pWbMVYIXRTdp0hBuzAVz40ajasPw2gU+yQ6ADa7aii3JFaXXCEVkMLMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxZc-Y1N0SA1v5Y+AqK8vziq4IvP5oiehmW83M6TtojJhMDvAd30kYBn0ILxFnqwl4tYQto6IRhFY9Z0exnVQ6iLG0ZD-QOrjGvMbIxfSTNz8hA8uxVBn1-hQaapskczi3GGD+notXaRUK62EW1ZH+pHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6YGngvcErEcvkvokteW1-StaxyDYVNuobGZ+vvlPPv7TKz0Im3hrJYE+diKf9pJIJ6pSDQVQnhwbiId7FK4+OvGswCzIDnYuBAKChPH3pw1.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtuxsi8tVo3hEYk9cdWLCu5zW3woK5zIygvUe149bnouPQ2Zj6Q+f-85luif-0Q3KSsaJbdMUCDl9IPtt2QECvc9m8NXFgrQSquV3yfrFjUkB1zwQXsxgM4wajeJrp7Fwp1zD1VPDSkzCWYKTCEAF6IslHR9o47l9MqBG1U1ByqR9Q9JG2ozrBZrT0PpW61WIYQklkpNCiTqzwi82OZ5htFvpqLHoC91cXWaoQmvqIQKNz8k8NqufBERmHlELVhPYgYMf+HIVXm6YGngvcErEcvkvokteW1-StaxyDYVNuobGZ+vvlPPv7TKz0Im3hrJYE+diKf9pJIJ6pSDQVQnhwbiId7FK4+OvGswCzIDnYuBAKChPH3pw1.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2Rq7uN03hoHics1Qqa6ujCcgaeX2djG-F+828ralo7f68TPdtWGwsUa-YHVKV61vKw8RtkeNl0gXNhnYBDpU5WDPXZ4vRuCo0-DSIpYEkhchV8qmwt31AK4XIW89BshyhH7Der2gHCWaJ3EWgBARbMNAdIz7EIJ8RC9W0J8p0oF7Jq1qTLdaOenJpi9yWxNWAZ8vJq+TqjzwtiOK59nSeUyO3cb51URUaJf1-aKA+9jrwcLou-TCwSW3hrDkec3f8vtBcFPmaYKkxDKGOAav03vldWU1aSoPkjUMwBp-L6d8aaxOfemHaz3cSWAj54Ms8+IP9heMYXjXzZVXHE5MDwUqVy2qvTa4hirYXjWtl0VWAvP3NE=.jpg",
+            "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu204jZd2-hYCqM8nZ5GRkS-ChYaX7MargGHH2pDmtbjF6OnUbJrclIQ61Zn8MFKS6ohdX40nakFTW9h7fiPYfKyOeSN6vwWg-W7zFoN4GnhnzkQspx4BmHeaYr6m3XUfxRuhV9-juDeHRbjlOV9TQPlLCdkx8QdQ8Bi1SUxy8h8d55m-oS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdlNmaoHiAbASeYbuUrol9eWhaH9ah+GYAc087qWrPK0Nar3Ha+kOUSjh5ZGpM3IPc9PKs-0XXZLVThnLjVRp1LkteiL+gDqIHbY+0JHQAPNkQ==.jpg",
+            "https://static-sites.kenlo.io/2.4.16/img/kenlo.svg",
+            "https://www.google.com/images/cleardot.gif"
+          ],
+          "preco": "R$ 550.000",
+          "tipo": "casa",
+          "quartos": "2",
+          "fonte": "AP Imóveis Itu",
+          "suites": "1",
+          "vagas": "2",
+          "area": "75.65",
+          "bairro": "APIT Casa Jardim Santa Rosa",
+          "cidade": "Itu",
+          "finalidade": "venda",
+          "link": "https://www.apimoveisitu.com.br/imovel/casa-itu-2-quartos-76-m/CA4561-APIT?from=sale",
+          "dataPublicacao": null
+        }
+      ],
+      "criadoEm": "2026-11-15T18:35:34.214Z"
+    }
+  }
 }
